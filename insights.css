@@ -1,0 +1,478 @@
+/* INSIGHTS PAGE STYLES - PREMIUM OVERHAUL */
+
+:root {
+    --pib-primary: #1a6fa8;
+    --pib-secondary: #0b2c3d;
+    --pib-accent: #226de6;
+    --pib-bg-soft: #f4f7fa;
+    --pib-text-main: #1a2a3a;
+    --pib-text-muted: #5a7a99;
+    --pib-card-shadow: 0 10px 40px -10px rgba(11, 44, 61, 0.1);
+    --pib-card-hover-shadow: 0 20px 60px -15px rgba(11, 44, 61, 0.18);
+    --pib-glass: rgba(255, 255, 255, 0.8);
+    --pib-glass-border: rgba(255, 255, 255, 0.3);
+}
+
+.insights-section {
+    padding: 100px 0;
+    background: var(--pib-bg-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+/* BACKGROUND DECORATION */
+.insights-section::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    width: 40%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(26, 111, 168, 0.05) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.insights-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* FILTERS */
+.filter-container {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 8px;
+    background: var(--pib-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--pib-glass-border);
+    border-radius: 100px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn {
+    padding: 12px 28px;
+    background: transparent;
+    border: none;
+    border-radius: 100px;
+    color: var(--pib-text-muted);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.filter-btn.active {
+    color: #fff;
+    background: var(--pib-primary);
+    box-shadow: 0 8px 20px rgba(26, 111, 168, 0.3);
+}
+
+.filter-btn:not(.active):hover {
+    color: var(--pib-primary);
+    background: rgba(26, 111, 168, 0.05);
+}
+
+/* GRID */
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 40px;
+}
+
+@media (max-width: 1024px) {
+    .insights-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* CARD REDESIGN */
+.insight-card {
+    background: #fff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--pib-card-shadow);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.insight-card:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--pib-card-hover-shadow);
+}
+
+.insight-img {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+}
+
+.insight-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.insight-card:hover .insight-img img {
+    transform: scale(1.08);
+}
+
+.insight-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(11, 44, 61, 0.2));
+    pointer-events: none;
+}
+
+.insight-tag {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: var(--pib-glass);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--pib-glass-border);
+    color: var(--pib-primary);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.insight-body {
+    padding: 35px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.insight-metadata {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.insight-date, .reading-time {
+    font-size: 13px;
+    color: var(--pib-primary);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.insight-date i, .reading-time i {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.reading-time {
+    color: var(--pib-text-muted);
+    font-weight: 600;
+    padding-left: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.insight-body h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--pib-secondary);
+    margin-bottom: 18px;
+    line-height: 1.35;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.insight-card:hover h3 {
+    color: var(--pib-primary);
+}
+
+.insight-body p {
+    font-size: 16px;
+    color: var(--pib-text-muted);
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--pib-secondary);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+    width: fit-content;
+}
+
+.read-more i {
+    font-size: 16px;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.read-more:hover {
+    color: var(--pib-primary);
+}
+
+.read-more:hover i {
+    transform: translateX(8px);
+}
+
+/* CATEGORY SECTIONS */
+.insight-category-section {
+    margin-bottom: 100px;
+}
+
+.category-header {
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-header h2 {
+    font-size: clamp(32px, 4vw, 42px);
+    font-weight: 800;
+    color: var(--pib-secondary);
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.category-header h2 i {
+    font-size: 0.8em;
+    opacity: 0.2;
+}
+
+.category-header p {
+    font-size: 18px;
+    color: var(--pib-text-muted);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* NEWSLETTER OVERHAUL */
+.insights-newsletter {
+    background: linear-gradient(135deg, var(--pib-secondary) 0%, #114361 100%);
+    border-radius: 40px;
+    padding: 80px 40px !important;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.insights-newsletter::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(34, 109, 230, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.newsletter-content h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.newsletter-form {
+    max-width: 550px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    margin: 40px auto 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.newsletter-form input {
+    color: #fff;
+    padding-left: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+    background: #fff;
+    color: var(--pib-secondary);
+    padding: 16px 35px;
+    font-weight: 800;
+    border-radius: 50px; /* Fully rounded button */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: var(--pib-primary);
+    color: #fff;
+}
+
+/* ANIMATIONS */
+.insight-category-section {
+    animation: fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .insights-grid {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .insights-section {
+        padding: 60px 0 100px; /* Extra bottom padding for mobile sticky bar */
+    }
+
+    .page-hero-content p {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        max-width: 90%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .filter-container {
+        border-radius: 30px;
+        padding: 10px;
+        justify-content: center;
+        width: 100%;
+        max-width: 95%; /* Better margins on mobile */
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 8px;
+        background: #fff;
+        margin: 0 auto 40px;
+        box-shadow: 0 5px 25px rgba(11, 44, 61, 0.08);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 11px;
+        background: var(--pib-bg-soft);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        color: var(--pib-text-muted);
+        border-radius: 100px;
+        flex: 0 1 auto;
+    }
+
+    .filter-btn.active {
+        background: var(--pib-primary);
+        color: #fff;
+        border-color: var(--pib-primary);
+    }
+    
+    .insights-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .insight-body {
+        padding: 25px;
+    }
+
+    .insight-body h3 {
+        font-size: 20px;
+    }
+    
+    .insights-newsletter {
+        border-radius: 30px;
+        margin: 40px 10px;
+        padding: 50px 20px !important;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 16px 25px;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+        border-radius: 50px;
+        padding: 16px;
+    }
+}
+
+/* Extra small screen optimization */
+@media (max-width: 480px) {
+    .filter-container {
+        gap: 5px;
+        padding: 8px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+    
+    .category-header h2 {
+        font-size: 28px;
+    }
+}

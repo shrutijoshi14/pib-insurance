@@ -1,0 +1,231 @@
+/* INDUSTRIES PAGE STYLES */
+
+/* HERO */
+
+
+/* INTRO SECTION */
+.industries-intro {
+    background: #fff;
+    padding: 60px 0 20px;
+}
+
+.intro-text {
+    font-size: 17px;
+    color: #5a7a99;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* CARDS */
+.industry-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(11, 44, 61, 0.15);
+}
+
+.icon-wrap {
+    width: 80px;
+    height: 80px;
+    background: #f4f7fc;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+.icon-wrap i {
+    font-size: 32px;
+    color: #1a6fa8;
+}
+
+.industry-card:hover .icon-wrap {
+    background: #1a6fa8;
+}
+
+.industry-card:hover .icon-wrap i {
+    color: #fff;
+}
+
+.industry-card h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0b2c3d;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: #1a6fa8;
+    color: #fff;
+    transform: translateY(100%);
+    transition: all 0.4s ease;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.industry-card:hover .card-overlay {
+    transform: translateY(0);
+}
+
+/* MODAL */
+.industry-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 44, 61, 0.9);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.industry-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #fff;
+    max-width: 600px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 30px;
+    position: relative;
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Scrollbar for Modal */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f4f7fc;
+    border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #1a6fa8;
+    border-radius: 10px;
+}
+
+.industry-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: sticky;
+    top: 0;
+    align-self: flex-end;
+    margin: 16px 16px 0 0;
+    flex-shrink: 0;
+    background: #f4f7fc;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #0b2c3d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.modal-close:hover {
+    background: #1a6fa8;
+    color: #fff;
+}
+
+.modal-icon {
+    width: 100px;
+    height: 100px;
+    background: #f4f7fc;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -10px auto 30px;
+}
+
+.modal-icon i {
+    font-size: 48px;
+    color: #1a6fa8;
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0b2c3d;
+    margin-bottom: 20px;
+}
+
+.modal-body {
+    padding: 0 40px 40px;
+    overflow-y: visible;
+}
+
+.modal-desc {
+    font-size: 16px;
+    color: #5a7a99;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    /* Hero handled by insurance-layout.css */
+    
+    .modal-content {
+        padding: 0;
+        border-radius: 16px;
+    }
+
+    .modal-body {
+        padding: 0 20px 30px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+}

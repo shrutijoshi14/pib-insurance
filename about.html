@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='dns-prefetch' href='https://fonts.googleapis.com'>
+    <link rel='dns-prefetch' href='https://fonts.gstatic.com'>
+    <link rel='dns-prefetch' href='https://cdnjs.cloudflare.com'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About PIB Insurance Brokers Pvt. Ltd. | IRDAI Licensed</title>
+    <meta name="description" content="PIB Insurance Brokers Pvt. Ltd. is an IRDAI registered broker in India with offices in Mumbai and Delhi. Client-first approach with expert claims support.">
+    <link rel="canonical" href="https://pibinsurance.in/about.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pibinsurance.in/about.html">
+    <meta property="og:site_name" content="PIB Insurance Brokers Pvt. Ltd.">
+    <meta property="og:title" content="About PIB Insurance Brokers Pvt. Ltd. | IRDAI Licensed">
+    <meta property="og:description" content="PIB Insurance Brokers Pvt. Ltd. is an IRDAI registered broker in India with offices in Mumbai and Delhi. Client-first approach with expert claims support.">
+    <meta property="og:image" content="https://pibinsurance.in/assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pibinsurance.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://pibinsurance.in/about.html"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="PIB Insurance Brokers" loading="lazy">
+                </a>
+                <button class="claim-btn mobile-claim" onclick="window.location.href='claim.html'">
+                    <i class="fa fa-file-plus"></i>
+                    <span class="btn-text">ADD CLAIMS</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                    <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="contact-row">
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Write us</span>
+                        <span class="value">helpdesk@pibinsurance.in</span>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Talk to our experts</span>
+                        <span class="value">+91 9820419276</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <ul class="menu" id="mainMenu">
+                <li class="menu-header" style="display:none; list-style:none;">
+                    <span>Navigation</span>
+                    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </li>
+                <li><a href="about.html" class="active">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#">GROUP INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="group-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-users"></i></span>Group Health Insurance</a></li>
+                        <li><a href="group-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Group Personal Accident</a></li>
+                        <li><a href="group-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-file-shield"></i></span>Group Term Insurance</a></li>
+                        <li><a href="group-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Group Travel Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">COMMERCIAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="commercial-insurance.html?type=liability"><span class="sub-icon"><i class="fa fa-scale-balanced"></i></span>Liability Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=marine"><span class="sub-icon"><i class="fa fa-ship"></i></span>Marine Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=property"><span class="sub-icon"><i class="fa fa-building"></i></span>Property Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=fire"><span class="sub-icon"><i class="fa fa-fire"></i></span>Fire Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">INDIVIDUAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="individual-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-heart-pulse"></i></span>Term Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-stethoscope"></i></span>Health Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=home"><span class="sub-icon"><i class="fa fa-house"></i></span>Home Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=motor"><span class="sub-icon"><i class="fa fa-car"></i></span>Motor Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Travel Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Personal Accident</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">INDUSTRIES</a></li>
+                <li><a href="insights.html">INSIGHTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="claim.html" class="claim-btn desktop-claim">
+                <i class="fa fa-file-plus"></i>
+                <span class="btn-text">ADD CLAIMS</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="insurance-hero">
+        <div class="industries-hero-container">
+            <div class="industries-hero-content">
+                <h1>Our Mission & Vision</h1>
+                <p>We are more than just insurance brokers; we are your partners in risk management, dedicated to securing your future with integrity and expertise.</p>
+                <div class="breadcrumb-custom">HOME / ABOUT US</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="about-section">
+        <div class="about-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="about-image">
+                <img src="assets/family-insurance.png" alt="Happy Indian family protected by PIB Insurance" loading="lazy">
+            </div>
+
+            <!-- RIGHT TEXT -->
+            <div class="about-text">
+                <p>
+                    Established in 2019 by <b>Mr. Virendra Pandey</b>, an accomplished management professional from the
+                    <b>Indian Institute of Management (IIM) Indore</b>, PIB Insurance Broker has rapidly grown into a
+                    trusted name in the Indian insurance broking industry.
+                </p>
+
+                <p>
+                    Headquartered in <b>Mumbai</b>, the company has built a strong nationwide presence with
+                    <b>13 regional offices strategically spread across 4 zones (North, East, West and South),</b>
+                    delivering seamless services across <b>110+ cities in India.</b>
+                </p>
+
+                <p>
+                    PIB Insurance has established partnerships with all leading insurance providers, enabling it to
+                    design and deliver comprehensive insurance solutions tailored to the unique needs of individuals and
+                    businesses. Over the years, it has successfully catered to a diverse client base of <b>90,000+
+                        clients</b> covering multiple sectors and industries..
+                </p>
+
+                <p>
+                    Driven by its commitmemt to <b>trust, transparency, and customer-centricity</b>, PIB Insurance
+                    continues to strengthen its position as a reliable partner for businesses and individuals seeking
+                    risk protection and financial security.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CEO MESSAGE -->
+    <section class="ceo-section">
+        <div class="ceo-container">
+
+            <div class="ceo-img">
+                <img src="assets/CEO.jpeg" alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" loading="lazy">
+            </div>
+
+            <div class="ceo-text">
+                <span class="tag">MESSAGE FROM CEO’S DESK</span>
+
+                <p>
+                    At PIB Insurance Brokers, our vision is simple yet ambitious - to build India’s leading insurance
+                    broking company anchored on three strong pillars : Curated Solutions, Expert Advice, and Reliable
+                    Service.
+                </p>
+
+                <p>
+                    Insurance in India is still under-penetrated, and millions remain underinsured. That’s why our
+                    mission goes beyond just broking - it is about democratizing insurance, spreading awareness, and
+                    making India truly insurance literate. Every day, we challenge the conventional path, explore new
+                    ideas, and learn something new as we work alongside some of the brightest talent in the country.
+                </p>
+
+                <p>
+                    With a presence in 110+ locations across India and a dedicated team of 100+ professionals, we are
+                    proud to serve individuals and businesses with innovative risk management and insurance solutions
+                    that not only protect but also empower them. Our partnerships with all leading national and private
+                    insurers ensure that we bring the best coverage, at the most cost-effective terms, to help our
+                    clients thrive in a dynamic business landscape.
+                </p>
+
+                <p>
+                    For us, insurance is not just about policies - it’s about securing lives, securing businesses, and
+                    most importantly, #SecuringHappiness.
+                </p>
+
+                <p>
+                    Together, we are building more than a company - we are building trust, resilience, and a safer
+                    future for India.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROMISE SECTION -->
+    <section class="promise-section">
+        <div class="container">
+            <div class="promise-intro">
+                <p>PIB Insurance Brokers Pvt. Ltd. is an IRDAI-licensed direct broker (License No. 935) with offices in Mumbai
+                and New Delhi. We work for you — not for any insurer. That means we compare the market, recommend
+                what genuinely fits your needs, and stand with you through claims and renewals.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="promise-card h-100">
+                        <div class="promise-icon"><i class="fa fa-handshake"></i></div>
+                        <h3>WE PROMISE</h3>
+                        <p>To put your interests first. Always. We are independent brokers, which means we work for you — not the insurance companies. Our loyalty is to your protection and your peace of mind.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="promise-card h-100">
+                        <div class="promise-icon"><i class="fa fa-magnifying-glass-chart"></i></div>
+                        <h3>WE PROVIDE</h3>
+                        <p>Unbiased, expert advice backed by deep market analysis. We don't just sell policies; we design risk management strategies that ensure you get the best coverage at the right price.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="promise-card h-100">
+                        <div class="promise-icon"><i class="fa fa-shield-halved"></i></div>
+                        <h3>WE PROTECT</h3>
+                        <p>What matters most to you. From your family's health and future to your business assets and liabilities, we build the walls of financial security that keep your world safe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION VISION SECTION -->
+    <section class="mv-section">
+        <div class="mv-container">
+            <div class="mv-box mission">
+                <i class="fa-solid fa-bullseye"></i>
+                <div class="mv-content">
+                    <h3>MISSION</h3>
+                    <p>
+                        Our mission is to stand firmly on the side of our clients—delivering insurance solutions that are
+                        optimized for cost, coverage, and long-term value. We are committed to guiding individuals and
+                        businesses through every stage of their journey, from policy selection to claims support, ensuring
+                        trust, transparency, and protection at every step.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mv-box vision">
+                <i class="fa-solid fa-lightbulb"></i>
+                <div class="mv-content">
+                    <h3>VISION</h3>
+                    <p>
+                        Our vision is to be India’s most client-centric insurance broker, recognized for delivering
+                        customized solutions, fair pricing, and unwavering post-sales support. We aspire to redefine
+                        insurance broking by being not just a service provider, but a lifelong partner who safeguards our
+                        clients’ interests & builds enduring confidence in their financial security.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <!-- TOP CTA -->
+        <div class="footer-top">
+            <h2>TO GET INSURED CONTACT OUR EXPERTS NOW</h2>
+
+            <div class="footer-contact">
+                <span><i class="fa fa-phone"></i> +91 98204 19276 / +91 98204 19256</span>
+                <span><i class="fa fa-envelope"></i> helpdesk@pibinsurance.in</span>
+            </div>
+        </div>
+
+        <!-- MAIN FOOTER -->
+        <div class="footer-main">
+
+            <!-- LEFT -->
+            <div class="footer-col">
+                <h3>FOR SALES / QUERIES VISIT</h3>
+
+                <p class="office-title">Head Office Mumbai :</p>
+                <p>7th Floor, Mangalya Complex, Sangeet Plaza, Marol, Andheri East, Mumbai — 400059</p>
+
+                <hr>
+
+                <h3 class="mt">REGIONAL DELHI OFFICE</h3>
+                <p>Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
+
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank" rel="noopener" aria-label="PIB Insurance on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919820419276" target="_blank" rel="noopener" aria-label="Contact PIB Insurance on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- CENTER -->
+            <div class="footer-col center-box">
+                <h3>CERTIFICATES</h3>
+
+                <div class="certificate-box">
+                    <p><strong>IRDA License No. – 935,</strong></p>
+                    <hr>
+                    <p>Registration code for the Insurance Broker – IRDAI / DBI047 / 2023,</p>
+                    <hr>
+                    <p>Validity – 19/01/2024 to 18/01/2027.</p>
+                    <hr>
+                    <p>Corporate Identity Number – U67200MH2022PTC394803</p>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="footer-col">
+                <h3>FOR GRIEVANCES</h3>
+
+                <p><strong>Mr. Upendra Pandey – Grievance Officer</strong></p>
+                <hr>
+
+                <p>IRDAI Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+
+                <p>IFSCA Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+
+                <p>gro@pibinsurance.in</p>
+            </div>
+
+        </div>
+
+        <!-- LOCATIONS STRIP -->
+        <div class="footer-locations">
+            <h4>OUR PRESENCE ACROSS INDIA</h4>
+            <p>
+                <span>Mumbai</span> &middot; <span>Pune</span> &middot; <span>Raipur</span> &middot; <span>Ahmedabad</span> &middot; <span>Surat</span> &middot;
+                <span>Chennai</span> &middot; <span>Bengaluru</span> &middot; <span>Hyderabad</span> &middot; <span>Visakhapatnam</span> &middot;
+                <span>Cochin</span> &middot; <span>Guwahati</span> &middot; <span>Kolkata</span> &middot; <span>Patna</span> &middot; <span>Ranchi</span> &middot;
+                <span>Bhubaneswar</span> &middot; <span>Lucknow</span> &middot; <span>Bhopal</span> &middot; <span>Delhi</span> &middot;
+                <span>Jaipur</span> &middot; <span>Chandigarh</span>
+            </p>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            &copy; 2026 PIB Insurance Brokers Pvt. Ltd. All Right Reserved. | Designed by OCS
+        </div>
+
+    </footer>
+
+    <!-- MOBILE BOTTOM STICKY BAR -->
+    <div class="mobile-contact-bar">
+        <a href="mailto:helpdesk@pibinsurance.in" class="item">
+            <i class="fa fa-envelope"></i>
+            <span>Email Us</span>
+        </a>
+        <a href="tel:+919820419276" class="item">
+            <i class="fa fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='dns-prefetch' href='https://fonts.googleapis.com'>
+    <link rel='dns-prefetch' href='https://fonts.gstatic.com'>
+    <link rel='dns-prefetch' href='https://cdnjs.cloudflare.com'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commercial Insurance India | PIB Insurance Brokers Pvt. Ltd.</title>
+    <meta name="description" content="PIB Insurance Brokers Pvt. Ltd. provides Marine, Fire, Property and Liability Insurance for businesses across India. IRDAI registered. Get a free quote.">
+    <link rel="canonical" href="https://pibinsurance.in/commercial-insurance.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pibinsurance.in/commercial-insurance.html">
+    <meta property="og:site_name" content="PIB Insurance Brokers Pvt. Ltd.">
+    <meta property="og:title" content="Commercial Insurance India | PIB Insurance Brokers Pvt. Ltd.">
+    <meta property="og:description" content="PIB Insurance Brokers Pvt. Ltd. provides Marine, Fire, Property and Liability Insurance for businesses across India. IRDAI registered. Get a free quote.">
+    <meta property="og:image" content="https://pibinsurance.in/assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="insurance-layout.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pibinsurance.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Commercial Insurance",
+        "item": "https://pibinsurance.in/commercial-insurance.html"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="PIB Insurance Brokers" loading="lazy">
+                </a>
+                <button class="claim-btn mobile-claim" onclick="window.location.href='claim.html'">
+                    <i class="fa fa-file-plus"></i>
+                    <span class="btn-text">ADD CLAIMS</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                    <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="contact-row">
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Write us</span>
+                        <span class="value">helpdesk@pibinsurance.in</span>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Talk to our experts</span>
+                        <span class="value">+91 9820419276</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <ul class="menu" id="mainMenu">
+                <li class="menu-header" style="display:none; list-style:none;">
+                    <span>Navigation</span>
+                    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#">GROUP INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="group-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-users"></i></span>Group Health Insurance</a></li>
+                        <li><a href="group-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Group Personal Accident</a></li>
+                        <li><a href="group-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-file-shield"></i></span>Group Term Insurance</a></li>
+                        <li><a href="group-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Group Travel Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown active">
+                    <a href="#">COMMERCIAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="commercial-insurance.html?type=liability"><span class="sub-icon"><i class="fa fa-scale-balanced"></i></span>Liability Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=marine"><span class="sub-icon"><i class="fa fa-ship"></i></span>Marine Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=property"><span class="sub-icon"><i class="fa fa-building"></i></span>Property Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=fire"><span class="sub-icon"><i class="fa fa-fire"></i></span>Fire Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">INDIVIDUAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="individual-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-heart-pulse"></i></span>Term Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-stethoscope"></i></span>Health Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=home"><span class="sub-icon"><i class="fa fa-house"></i></span>Home Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=motor"><span class="sub-icon"><i class="fa fa-car"></i></span>Motor Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Travel Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Personal Accident</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">INDUSTRIES</a></li>
+                <li><a href="insights.html">INSIGHTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="claim.html" class="claim-btn desktop-claim">
+                <i class="fa fa-file-plus"></i>
+                <span class="btn-text">ADD CLAIMS</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="insurance-hero">
+        <div class="industries-hero-container">
+            <div class="industries-hero-content">
+                <h1>Commercial Insurance</h1>
+                <p>Your business is your life's work. Protect it from the complex risks of the modern marketplace with specialized commercial insurance solutions.</p>
+                <div class="breadcrumb-custom">HOME / COMMERCIAL INSURANCE</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="insurance-container">
+        <div class="container">
+            <div class="insurance-grid">
+                <!-- SIDEBAR -->
+                <aside class="insurance-sidebar">
+                    <ul class="sidebar-menu" id="insuranceSidebar">
+                        <li data-target="liability" class="active"><a href="javascript:void(0)"><i class="fa fa-scale-balanced"></i> Liability Insurance</a></li>
+                        <li data-target="marine"><a href="javascript:void(0)"><i class="fa fa-ship"></i> Marine Insurance</a></li>
+                        <li data-target="property"><a href="javascript:void(0)"><i class="fa fa-building"></i> Property Insurance</a></li>
+                        <li data-target="fire"><a href="javascript:void(0)"><i class="fa fa-fire"></i> Fire Insurance</a></li>
+                    </ul>
+                </aside>
+
+                <!-- MAIN CONTENT AREA -->
+                <main class="insurance-main" id="insuranceMainContent">
+                    <!-- Content will be loaded here via JS -->
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <h2>TO GET INSURED CONTACT OUR EXPERTS NOW</h2>
+            <div class="footer-contact">
+                <span><i class="fa fa-phone"></i> +91 98204 19276 / +91 98204 19256</span>
+                <span><i class="fa fa-envelope"></i> helpdesk@pibinsurance.in</span>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="footer-col">
+                <h3>FOR SALES / QUERIES VISIT</h3>
+                <p class="office-title">Head Office Mumbai :</p>
+                <p>7th Floor, Mangalya Complex, Sangeet Plaza, Marol, Andheri East, Mumbai — 400059</p>
+                <hr>
+                <h3 class="mt">REGIONAL DELHI OFFICE</h3>
+                <p>Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank" rel="noopener" aria-label="PIB Insurance on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919820419276" target="_blank" rel="noopener" aria-label="Contact PIB Insurance on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col center-box">
+                <h3>CERTIFICATES</h3>
+                <div class="certificate-box">
+                    <p><strong>IRDA License No. – 935,</strong></p>
+                    <hr>
+                    <p>Registration code for the Insurance Broker – IRDAI / DBI047 / 2023,</p>
+                    <hr>
+                    <p>Validity – 19/01/2024 to 18/01/2027.</p>
+                    <hr>
+                    <p>Corporate Identity Number – U67200MH2022PTC394803</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>FOR GRIEVANCES</h3>
+                <p><strong>Mr. Upendra Pandey – Grievance Officer</strong></p>
+                <hr>
+                <p>IRDAI Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>IFSCA Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>gro@pibinsurance.in</p>
+            </div>
+        </div>
+        <!-- LOCATIONS STRIP -->
+        <div class="footer-locations">
+            <h4>OUR PRESENCE ACROSS INDIA</h4>
+            <p>
+                <span>Mumbai</span> &middot; <span>Pune</span> &middot; <span>Raipur</span> &middot; <span>Ahmedabad</span> &middot; <span>Surat</span> &middot;
+                <span>Chennai</span> &middot; <span>Bengaluru</span> &middot; <span>Hyderabad</span> &middot; <span>Visakhapatnam</span> &middot;
+                <span>Cochin</span> &middot; <span>Guwahati</span> &middot; <span>Kolkata</span> &middot; <span>Patna</span> &middot; <span>Ranchi</span> &middot;
+                <span>Bhubaneswar</span> &middot; <span>Lucknow</span> &middot; <span>Bhopal</span> &middot; <span>Delhi</span> &middot;
+                <span>Jaipur</span> &middot; <span>Chandigarh</span>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 PIB Insurance Brokers Pvt. Ltd. All Right Reserved. | Designed by OCS
+        </div>
+    </footer>
+    
+    <!-- MOBILE BOTTOM STICKY BAR -->
+    <div class="mobile-contact-bar">
+        <a href="mailto:helpdesk@pibinsurance.in" class="item">
+            <i class="fa fa-envelope"></i>
+            <span>Email Us</span>
+        </a>
+        <a href="tel:+919820419276" class="item">
+            <i class="fa fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Content Data
+        const commercialInsuranceContent = {
+            liability: `
+                <h2>Protect Your Business from Unforeseen Liabilities</h2>
+                <img src="assets/Liability-Insurance.png" alt="Liability Insurance Illustration" loading="lazy">
+                <p>In the modern business landscape, legal risks are everywhere. Liability insurance provides a safety net against claims resulting from injuries and damage to people or property. It covers legal costs and payouts for which the insured party is found liable.</p>
+                <p>PIB Insurance Brokers offers a range of liability solutions including Director's & Officer's Liability, Professional Indemnity, and Cyber Liability to protect your business's financial and reputational health.</p>
+                <h3>Key Coverage Areas</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>General Liability:</strong> Protection against common risks like slip-and-fall accidents.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Professional Indemnity:</strong> Essential for consultants and service providers against errors and omissions.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>D&O Liability:</strong> Protects the personal assets of company directors and officers.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Cyber Liability:</strong> Coverage for data breaches and digital threats.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Product Liability:</strong> Protection against claims of damage caused by products sold.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Mitigate your business risks today.</h4>
+                    <p>Our experts will design a liability framework tailored to your industry.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `,
+            marine: `
+                <h2>Secure Your Goods Across Oceans and Lands</h2>
+                <img src="assets/Marine-Insurance (1).png" alt="Marine Insurance Illustration" loading="lazy">
+                <p>Global trade relies on the safe passage of goods. Marine insurance provides coverage for the loss or damage of ships, cargo, terminals, and any transport or property by which cargo is transferred, acquired, or held between the points of origin and final destination.</p>
+                <p>We provide comprehensive marine cargo and hull insurance to ensure that your supply chain remains resilient against the perils of transit.</p>
+                <h3>Why Marine Insurance?</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>Cargo Insurance:</strong> Covers goods in transit by sea, air, or land.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Hull Insurance:</strong> Protection for the vessel itself against physical damage.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Freight Insurance:</strong> Protects the shipping company against loss of freight.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Transit Risk:</strong> Coverage for loading and unloading mishaps.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Customized Clauses:</strong> Tailored to specific cargo types and routes.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Ensure your cargo arrives safely.</h4>
+                    <p>Contact us for specialized marine insurance solutions.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `,
+            property: `
+                <h2>Safeguard Your Business Assets</h2>
+                <img src="assets/Property-Insurance.png" alt="Property Insurance Illustration" loading="lazy">
+                <p>Your office, warehouse, and equipment are the foundation of your operations. Property insurance provides financial reimbursement to the owner or renter of a structure and its contents in the event of damage or theft.</p>
+                <p>PIB Insurance Brokers helps you protect your physical investments against fire, theft, vandalism, and natural disasters, ensuring you can rebuild and recover quickly.</p>
+                <h3>Comprehensive Protection</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>Building Coverage:</strong> Protection for the physical structure of your workplace.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Equipment & Machinery:</strong> Coverage for essential tools and industrial machines.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Inventory Protection:</strong> Safeguards your stock and raw materials.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Business Interruption:</strong> Compensation for lost income during property repairs.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Furniture & Fixtures:</strong> Coverage for office interiors and high-value assets.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Protect what you've built.</h4>
+                    <p>Talk to us about asset valuation and comprehensive property cover.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `,
+            fire: `
+                <h2>Specific Protection Against Fire and Allied Perils</h2>
+                <img src="assets/Fire-Insurance (1).png" alt="Fire Insurance Illustration" loading="lazy">
+                <p>Fire remains one of the most common and devastating risks for any business. Fire insurance is a contract of indemnity that gives the insured the right to be compensated for the loss caused by fire or other specified perils.</p>
+                <p>Our fire insurance plans provide an essential layer of security for industrial units, warehouses, and commercial spaces, covering both the structure and the valuable contents within.</p>
+                <h3>Allied Perils Covered</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>Lightning & Explosion:</strong> Coverage for natural and industrial explosions.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Storm & Flood:</strong> Protection against damage from severe weather conditions.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Impact Damage:</strong> Damage caused by road/rail vehicles or animals.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Riot & Strike:</strong> Coverage for damages resulting from civil unrest.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Earthquake & Subsidence:</strong> Add-on covers for geological risks.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Don't wait for a spark.</h4>
+                    <p>Get a fire insurance audit and quote from our experts.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `
+        };
+
+        const mainContent = document.getElementById('insuranceMainContent');
+        const sidebarItems = document.querySelectorAll('#insuranceSidebar li');
+
+        function switchContent(type) {
+            if (commercialInsuranceContent[type]) {
+                mainContent.innerHTML = commercialInsuranceContent[type];
+                sidebarItems.forEach(item => {
+                    if (item.dataset.target === type) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+                const newUrl = window.location.pathname + '?type=' + type;
+                window.history.pushState({ path: newUrl }, '', newUrl);
+            }
+        }
+
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                switchContent(item.dataset.target);
+            });
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type') || 'liability';
+            switchContent(type);
+        });
+
+        window.addEventListener('popstate', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type') || 'liability';
+            switchContent(type);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+

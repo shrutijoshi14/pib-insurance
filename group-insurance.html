@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='dns-prefetch' href='https://fonts.googleapis.com'>
+    <link rel='dns-prefetch' href='https://fonts.gstatic.com'>
+    <link rel='dns-prefetch' href='https://cdnjs.cloudflare.com'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Insurance Plans for Businesses | PIB Insurance Brokers</title>
+    <meta name="description" content="PIB Insurance Brokers Pvt. Ltd. offers Group Health, Personal Accident, and Travel Insurance for businesses across India. Get the right coverage today.">
+    <link rel="canonical" href="https://pibinsurance.in/group-insurance.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pibinsurance.in/group-insurance.html">
+    <meta property="og:site_name" content="PIB Insurance Brokers Pvt. Ltd.">
+    <meta property="og:title" content="Group Insurance Plans for Businesses | PIB Insurance Brokers">
+    <meta property="og:description" content="PIB Insurance Brokers Pvt. Ltd. offers Group Health, Personal Accident, and Travel Insurance for businesses across India. Get the right coverage today.">
+    <meta property="og:image" content="https://pibinsurance.in/assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="insurance-layout.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pibinsurance.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Group Insurance",
+        "item": "https://pibinsurance.in/group-insurance.html"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="PIB Insurance Brokers" loading="lazy">
+                </a>
+                <button class="claim-btn mobile-claim" onclick="window.location.href='claim.html'">
+                    <i class="fa fa-file-plus"></i>
+                    <span class="btn-text">ADD CLAIMS</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                    <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="contact-row">
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Write us</span>
+                        <span class="value">helpdesk@pibinsurance.in</span>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Talk to our experts</span>
+                        <span class="value">+91 9820419276</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <ul class="menu" id="mainMenu">
+                <li class="menu-header" style="display:none; list-style:none;">
+                    <span>Navigation</span>
+                    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li class="dropdown active">
+                    <a href="#">GROUP INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="group-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-users"></i></span>Group Health Insurance</a></li>
+                        <li><a href="group-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Group Personal Accident</a></li>
+                        <li><a href="group-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-file-shield"></i></span>Group Term Insurance</a></li>
+                        <li><a href="group-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Group Travel Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">COMMERCIAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="commercial-insurance.html?type=liability"><span class="sub-icon"><i class="fa fa-scale-balanced"></i></span>Liability Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=marine"><span class="sub-icon"><i class="fa fa-ship"></i></span>Marine Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=property"><span class="sub-icon"><i class="fa fa-building"></i></span>Property Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=fire"><span class="sub-icon"><i class="fa fa-fire"></i></span>Fire Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">INDIVIDUAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="individual-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-heart-pulse"></i></span>Term Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-stethoscope"></i></span>Health Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=home"><span class="sub-icon"><i class="fa fa-house"></i></span>Home Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=motor"><span class="sub-icon"><i class="fa fa-car"></i></span>Motor Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Travel Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Personal Accident</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">INDUSTRIES</a></li>
+                <li><a href="insights.html">INSIGHTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="claim.html" class="claim-btn desktop-claim">
+                <i class="fa fa-file-plus"></i>
+                <span class="btn-text">ADD CLAIMS</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="insurance-hero">
+        <div class="industries-hero-container">
+            <div class="industries-hero-content">
+                <h1>Group Insurance</h1>
+                <p>Employee benefits that protect your team, reduce your risk, and make your organization somewhere people want to stay.</p>
+                <div class="breadcrumb-custom">HOME / GROUP INSURANCE</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT SECTION -->
+    <section class="insurance-container">
+        <div class="container">
+            <div class="insurance-grid">
+                <!-- SIDEBAR -->
+                <aside class="insurance-sidebar">
+                    <ul class="sidebar-menu" id="insuranceSidebar">
+                        <li data-target="health" class="active"><a href="javascript:void(0)"><i class="fa fa-users"></i> Group Health Insurance</a></li>
+                        <li data-target="accident"><a href="javascript:void(0)"><i class="fa fa-shield-halved"></i> Group Personal Accident</a></li>
+                        <li data-target="term"><a href="javascript:void(0)"><i class="fa fa-file-shield"></i> Group Term Insurance</a></li>
+                        <li data-target="travel"><a href="javascript:void(0)"><i class="fa fa-plane"></i> Group Travel Insurance</a></li>
+                    </ul>
+                </aside>
+
+                <!-- MAIN CONTENT AREA -->
+                <main class="insurance-main" id="insuranceMainContent">
+                    <!-- Content will be loaded here via JS -->
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <h2>TO GET INSURED CONTACT OUR EXPERTS NOW</h2>
+            <div class="footer-contact">
+                <span><i class="fa fa-phone"></i> +91 98204 19276 / +91 98204 19256</span>
+                <span><i class="fa fa-envelope"></i> helpdesk@pibinsurance.in</span>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="footer-col">
+                <h3>FOR SALES / QUERIES VISIT</h3>
+                <p class="office-title">Head Office Mumbai :</p>
+                <p>7th Floor, Mangalya Complex, Sangeet Plaza, Marol, Andheri East, Mumbai — 400059</p>
+                <hr>
+                <h3 class="mt">REGIONAL DELHI OFFICE</h3>
+                <p>Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank" rel="noopener" aria-label="PIB Insurance on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919820419276" target="_blank" rel="noopener" aria-label="Contact PIB Insurance on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col center-box">
+                <h3>CERTIFICATES</h3>
+                <div class="certificate-box">
+                    <p><strong>IRDA License No. – 935,</strong></p>
+                    <hr>
+                    <p>Registration code for the Insurance Broker – IRDAI / DBI047 / 2023,</p>
+                    <hr>
+                    <p>Validity – 19/01/2024 to 18/01/2027.</p>
+                    <hr>
+                    <p>Corporate Identity Number – U67200MH2022PTC394803</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>FOR GRIEVANCES</h3>
+                <p><strong>Mr. Upendra Pandey – Grievance Officer</strong></p>
+                <hr>
+                <p>IRDAI Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>IFSCA Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>gro@pibinsurance.in</p>
+            </div>
+        </div>
+        <!-- LOCATIONS STRIP -->
+        <div class="footer-locations">
+            <h4>OUR PRESENCE ACROSS INDIA</h4>
+            <p>
+                <span>Mumbai</span> &middot; <span>Pune</span> &middot; <span>Raipur</span> &middot; <span>Ahmedabad</span> &middot; <span>Surat</span> &middot;
+                <span>Chennai</span> &middot; <span>Bengaluru</span> &middot; <span>Hyderabad</span> &middot; <span>Visakhapatnam</span> &middot;
+                <span>Cochin</span> &middot; <span>Guwahati</span> &middot; <span>Kolkata</span> &middot; <span>Patna</span> &middot; <span>Ranchi</span> &middot;
+                <span>Bhubaneswar</span> &middot; <span>Lucknow</span> &middot; <span>Bhopal</span> &middot; <span>Delhi</span> &middot;
+                <span>Jaipur</span> &middot; <span>Chandigarh</span>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 PIB Insurance Brokers Pvt. Ltd. All Right Reserved. | Designed by OCS
+        </div>
+    </footer>
+    
+    <!-- MOBILE BOTTOM STICKY BAR -->
+    <div class="mobile-contact-bar">
+        <a href="mailto:helpdesk@pibinsurance.in" class="item">
+            <i class="fa fa-envelope"></i>
+            <span>Email Us</span>
+        </a>
+        <a href="tel:+919820419276" class="item">
+            <i class="fa fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Content Data
+        const groupInsuranceContent = {
+            health: `
+                <h2>Protect Your Team with Group Health Insurance</h2>
+                <img src="assets/group-health-insurance.png" alt="Group Health Insurance Illustration" loading="lazy">
+                <p>In today's competitive business world, your employees are your greatest asset. Providing comprehensive Group Health Insurance is not just a benefit—it's a commitment to their well-being and a key factor in retaining top talent.</p>
+                <p>PIB Insurance Brokers offers tailored health insurance solutions that provide high-quality medical coverage for employees and their families, ensuring they have access to the best healthcare when they need it most.</p>
+                <h3>Key Features & Benefits</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>Comprehensive Coverage:</strong> Covers hospitalization expenses, including room rent, ICU charges, and nursing fees.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Cashless Treatments:</strong> Access to a wide network of hospitals for cashless claim settlement.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Maternity Benefits:</strong> Includes coverage for maternity and newborn baby expenses from day one.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Pre & Post Hospitalization:</strong> Covers medical expenses incurred before and after hospitalization.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Family Inclusion:</strong> Option to cover spouse, children, and dependent parents.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Need a customized quote for your organization?</h4>
+                    <p>Our experts will help you design the perfect plan for your workforce.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `,
+            accident: `
+                <h2>24/7 Protection with Group Personal Accident Insurance</h2>
+                <img src="assets/group-personal-accident.png" alt="Group Personal Accident Illustration" loading="lazy">
+                <p>Accidents are unpredictable and can have a devastating impact on an individual's life and their family's financial stability. Group Personal Accident Insurance provides a robust safety net for your employees, offering financial compensation in the event of accidental death or disability.</p>
+                <p>At PIB Insurance Brokers, we provide comprehensive accident coverage that works around the clock, worldwide, ensuring your workforce is protected whether they are at work, at home, or traveling.</p>
+                <h3>Coverage Highlights</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>Accidental Death:</strong> Provides a lump sum payment to the nominee in case of a fatal accident.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Permanent Total Disability:</strong> Compensation for life-altering injuries like loss of limbs or eyesight.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Permanent Partial Disability:</strong> Coverage for partial injuries such as loss of fingers or hearing.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Temporary Total Disability:</strong> Weekly compensation if an employee is unable to work for a temporary period.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Accidental Medical Expenses:</strong> Reimbursement for medical costs arising from an accident.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Secure your employees' future today.</h4>
+                    <p>Contact us to explore flexible group accident plans.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `,
+            term: `
+                <h2>Financial Security for Your Workforce with Group Term Life</h2>
+                <img src="assets/group-term-insurance.png" alt="Group Term Insurance Illustration" loading="lazy">
+                <p>Group Term Insurance is an essential component of any employee benefits package. It provides life cover to a group of people under a single master policy, ensuring that their families are financially supported in the event of an untimely death.</p>
+                <p>PIB Insurance Brokers helps organizations set up cost-effective Group Term Life plans that offer peace of mind to employees and demonstrate the company's long-term care for its staff members.</p>
+                <h3>Why Choose Group Term Insurance?</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>High Cover, Low Cost:</strong> Offers significant financial protection at much lower premiums compared to individual policies.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Simple Processing:</strong> Minimal medical underwriting and easy documentation for the entire group.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Tax Benefits:</strong> Premiums paid by the employer are treated as business expenses, providing tax advantages.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Employee Morale:</strong> Enhances employee loyalty and peace of mind by securing their families' futures.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Customizable Sum Assured:</strong> Sum assured can be fixed or linked to salary/designation levels.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Invest in your employees' peace of mind.</h4>
+                    <p>Talk to our advisors for a structured group term life plan.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `,
+            travel: `
+                <h2>Worry-Free Business Travel with Group Travel Insurance</h2>
+                <img src="assets/group-travel-insurance.png" alt="Group Travel Insurance Illustration" loading="lazy">
+                <p>In a globalized economy, business travel is frequent and necessary. However, it comes with its own set of risks, from medical emergencies in foreign lands to logistical nightmares like lost baggage or flight cancellations.</p>
+                <p>PIB Insurance Brokers provides comprehensive Group Travel Insurance designed for corporate employees. Our plans ensure that your team is well-covered against unforeseen events during their domestic and international trips.</p>
+                <h3>Key Coverage Areas</h3>
+                <ul class="features-list">
+                    <li><i class="fa fa-circle-check"></i> <strong>Medical Emergencies:</strong> Covers outpatient and inpatient medical expenses incurred while traveling abroad.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Trip Cancellation & Interruption:</strong> Reimbursement for non-refundable expenses if a trip is cancelled due to covered reasons.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Baggage Loss/Delay:</strong> Financial protection against the loss or delay of checked-in baggage.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>Personal Liability:</strong> Coverage for third-party damages or injuries caused by the employee during the trip.</li>
+                    <li><i class="fa fa-circle-check"></i> <strong>24/7 Global Assistance:</strong> Access to emergency help anywhere in the world.</li>
+                </ul>
+                <div class="cta-box mt-5 p-4 bg-light rounded text-center">
+                    <h4>Keep your business travelers safe.</h4>
+                    <p>Get a comprehensive travel insurance quote today.</p>
+                    <a href="contact.html" class="claim-btn d-inline-block mt-3 px-4 py-2" style="text-decoration:none;">GET A QUOTE</a>
+                </div>
+            `
+        };
+
+        const mainContent = document.getElementById('insuranceMainContent');
+        const sidebarItems = document.querySelectorAll('#insuranceSidebar li');
+
+        function switchContent(type) {
+            if (groupInsuranceContent[type]) {
+                mainContent.innerHTML = groupInsuranceContent[type];
+                sidebarItems.forEach(item => {
+                    if (item.dataset.target === type) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+                // Update URL without reloading
+                const newUrl = window.location.pathname + '?type=' + type;
+                window.history.pushState({ path: newUrl }, '', newUrl);
+            }
+        }
+
+        // Handle Sidebar Clicks
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                switchContent(item.dataset.target);
+            });
+        });
+
+        // Initialize based on URL parameter
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type') || 'health';
+            switchContent(type);
+        });
+
+        // Handle back/forward buttons
+        window.addEventListener('popstate', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type') || 'health';
+            switchContent(type);
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+

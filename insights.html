@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='dns-prefetch' href='https://fonts.googleapis.com'>
+    <link rel='dns-prefetch' href='https://fonts.gstatic.com'>
+    <link rel='dns-prefetch' href='https://cdnjs.cloudflare.com'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Insights & Industry Updates | PIB Insurance Brokers</title>
+    <meta name="description" content="Stay informed with expert perspectives on the Indian insurance landscape. Guides, regulatory updates, and market trends from PIB Insurance Brokers.">
+    <link rel="canonical" href="https://pibinsurance.in/insights.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pibinsurance.in/insights.html">
+    <meta property="og:site_name" content="PIB Insurance Brokers Pvt. Ltd.">
+    <meta property="og:title" content="Insurance Insights & Industry Updates | PIB Insurance Brokers">
+    <meta property="og:description" content="Stay informed with expert perspectives on the Indian insurance landscape. Guides, regulatory updates, and market trends from PIB Insurance Brokers.">
+    <meta property="og:image" content="https://pibinsurance.in/assets/featured-1.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="insights.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pibinsurance.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Insights",
+        "item": "https://pibinsurance.in/insights.html"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="PIB Insurance Brokers" loading="lazy">
+                </a>
+                <button class="claim-btn mobile-claim" onclick="window.location.href='claim.html'">
+                    <i class="fa fa-file-plus"></i>
+                    <span class="btn-text">ADD CLAIMS</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                    <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="contact-row">
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Write us</span>
+                        <span class="value">helpdesk@pibinsurance.in</span>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Talk to our experts</span>
+                        <span class="value">+91 9820419276</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <ul class="menu" id="mainMenu">
+                <li class="menu-header" style="display:none; list-style:none;">
+                    <span>Navigation</span>
+                    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#">GROUP INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="group-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-users"></i></span>Group Health Insurance</a></li>
+                        <li><a href="group-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Group Personal Accident</a></li>
+                        <li><a href="group-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-file-shield"></i></span>Group Term Insurance</a></li>
+                        <li><a href="group-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Group Travel Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">COMMERCIAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="commercial-insurance.html?type=liability"><span class="sub-icon"><i class="fa fa-scale-balanced"></i></span>Liability Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=marine"><span class="sub-icon"><i class="fa fa-ship"></i></span>Marine Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=property"><span class="sub-icon"><i class="fa fa-building"></i></span>Property Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=fire"><span class="sub-icon"><i class="fa fa-fire"></i></span>Fire Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">INDIVIDUAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="individual-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-heart-pulse"></i></span>Term Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-stethoscope"></i></span>Health Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=home"><span class="sub-icon"><i class="fa fa-house"></i></span>Home Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=motor"><span class="sub-icon"><i class="fa fa-car"></i></span>Motor Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Travel Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Personal Accident</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">INDUSTRIES</a></li>
+                <li><a href="insights.html" class="active">INSIGHTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="claim.html" class="claim-btn desktop-claim">
+                <i class="fa fa-file-plus"></i>
+                <span class="btn-text">ADD CLAIMS</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="insurance-hero">
+        <div class="industries-hero-container">
+            <div class="industries-hero-content">
+                <h1>Insurance Insights & Updates</h1>
+                <p>The perspectives, expertise, and guidance you need to make smarter insurance decisions for your business — and protect what you have built.</p>
+                <div class="breadcrumb-custom">HOME / INSIGHTS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSIGHTS SECTION -->
+    <section class="insights-section">
+        <div class="container">
+            <!-- FILTERS -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+                <button class="filter-btn" data-filter="guides" aria-pressed="false">Insurance Guides</button>
+                <button class="filter-btn" data-filter="regulatory" aria-pressed="false">Regulatory Updates</button>
+                <button class="filter-btn" data-filter="client" aria-pressed="false">Client Stories</button>
+                <button class="filter-btn" data-filter="market" aria-pressed="false">Market Updates</button>
+            </div>
+
+            <!-- SECTIONS WRAPPER -->
+            <div id="insightsSections">
+                
+                <!-- SECTION: INSURANCE GUIDES -->
+                <div class="insight-category-section" id="section-guides">
+                    <div class="category-header">
+                        <h2><i class="fa fa-book-open"></i> Insurance Guides</h2>
+                        <p>Clear, practical explanations of the insurance products that matter to your business — so you know exactly what you are buying, what it covers, and what it does not.</p>
+                    </div>
+                    <div class="insights-grid">
+                        <!-- Card 1 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Guides</span>
+                                <img src="assets/insurance-guides-1.jpg" alt="Group Health vs. Individual Mediclaim" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> October 24, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3>Group Health vs. Individual Mediclaim — What Indian Employers Need to Know</h3>
+                                <p>Understanding the key differences between group health insurance and individual mediclaim policies can help you make the right coverage decisions for your team.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Guides</span>
+                                <img src="assets/insurance-guides-2.jpg" alt="Marine Insurance Inland Routes" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> October 05, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 4 min read</span>
+                                </div>
+                                <h3>What Your Marine Insurance Policy May Not Cover on Inland Routes</h3>
+                                <p>Discover the common exclusions in marine insurance policies that apply to inland transportation and how to address coverage gaps.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: REGULATORY UPDATES -->
+                <div class="insight-category-section" id="section-regulatory">
+                    <div class="category-header">
+                        <h2><i class="fa fa-gavel"></i> Regulatory Updates</h2>
+                        <p>The latest from IRDAI, the Union Budget, and India's evolving compliance landscape — translated into plain language so you know what has changed and what it means for your coverage.</p>
+                    </div>
+                    <div class="insights-grid">
+                        <!-- Card 1 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Regulatory</span>
+                                <img src="assets/regulatory-updates-1.jpg" alt="IRDAI Composite Licence Framework" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> October 20, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 6 min read</span>
+                                </div>
+                                <h3>IRDAI's New Composite Licence Framework — What It Means for Your Business Insurance</h3>
+                                <p>Breaking down the recent regulatory changes from IRDAI and their impact on how businesses structure their insurance portfolios.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Regulatory</span>
+                                <img src="assets/regulatory-updates-2.jpg" alt="DPDP Act 2023 Cyber Liability" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> October 12, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 5 min read</span>
+                                </div>
+                                <h3>DPDP Act 2023 — Do You Need Cyber Liability Cover?</h3>
+                                <p>With India's new data protection legislation in effect, understand when cyber liability insurance becomes essential for your organization.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: CLIENT STORIES -->
+                <div class="insight-category-section" id="section-client">
+                    <div class="category-header">
+                        <h2><i class="fa fa-handshake-angle"></i> Client Stories</h2>
+                        <p>Real situations, real outcomes. How PIB Insurance Brokers has helped businesses and individuals navigate claims, structure the right coverage, and find stability when it mattered most.</p>
+                    </div>
+                    <div class="insights-grid">
+                        <!-- Card 1 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Stories</span>
+                                <img src="assets/client-stories-1.jpg" alt="Mumbai Construction Firm Story" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> October 10, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 4 min read</span>
+                                </div>
+                                <h3>How a Mumbai Construction Firm Protected 80 Employees Under One Group Policy</h3>
+                                <p>A real-world case study of how we helped a growing construction company transition to comprehensive group health coverage.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Stories</span>
+                                <img src="assets/client-stories-2.jpg" alt="Cashless Claim Medical Emergency" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> October 02, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 3 min read</span>
+                                </div>
+                                <h3>Cashless Claim Settlement During a Medical Emergency — How PIB Managed the Process</h3>
+                                <p>Step-by-step account of how our team coordinated with hospitals and insurers to ensure seamless cashless treatment for a client.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: MARKET UPDATES -->
+                <div class="insight-category-section" id="section-market">
+                    <div class="category-header">
+                        <h2><i class="fa fa-chart-line"></i> Market Updates</h2>
+                        <p>Quarterly observations on what is shifting in India's insurance market — pricing trends, product changes, and what to watch for at your next renewal.</p>
+                    </div>
+                    <div class="insights-grid">
+                        <!-- Card 1 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Market</span>
+                                <img src="assets/market-updates-1.jpg" alt="Q1 2026 Insurance Market Update" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> October 15, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                                </div>
+                                <h3>Q1 2026 India Insurance Market Update — What's Changed in Group Health Premiums</h3>
+                                <p>Analysis of recent premium trends in the group health insurance market and what businesses should expect at renewal.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="insight-card">
+                            <div class="insight-img">
+                                <span class="insight-tag">Market</span>
+                                <img src="assets/market-updates-2.jpg" alt="Marine Insurance Rates Overview" loading="lazy">
+                            </div>
+                            <div class="insight-body">
+                                <div class="insight-metadata">
+                                    <span class="insight-date"><i class="far fa-calendar-alt"></i> September 28, 2026</span>
+                                    <span class="reading-time"><i class="far fa-clock"></i> 6 min read</span>
+                                </div>
+                                <h3>Marine Insurance Rates in India — Q4 2025 Overview for Exporters</h3>
+                                <p>Quarterly review of marine insurance pricing trends affecting Indian exporters and importers, with insights on rate drivers.</p>
+                                <a href="#" class="read-more">Read More <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top insights-newsletter">
+            <div class="newsletter-content">
+        <div class="footer-top">
+            <h2>TO GET INSURED CONTACT OUR EXPERTS NOW</h2>
+            <div class="footer-contact">
+                <span><i class="fa fa-phone"></i> +91 98204 19276 / +91 98204 19256</span>
+                <span><i class="fa fa-envelope"></i> helpdesk@pibinsurance.in</span>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="footer-col">
+                <h3>FOR SALES / QUERIES VISIT</h3>
+                <p class="office-title">Head Office Mumbai :</p>
+                <p>7th Floor, Mangalya Complex, Sangeet Plaza, Marol, Andheri East, Mumbai — 400059</p>
+                <hr>
+                <h3 class="mt">REGIONAL DELHI OFFICE</h3>
+                <p>Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank" rel="noopener" aria-label="PIB Insurance on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919820419276" target="_blank" rel="noopener" aria-label="Contact PIB Insurance on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col center-box">
+                <h3>CERTIFICATES</h3>
+                <div class="certificate-box">
+                    <p><strong>IRDA License No. – 935,</strong></p>
+                    <hr>
+                    <p>Registration code for the Insurance Broker – IRDAI / DBI047 / 2023,</p>
+                    <hr>
+                    <p>Validity – 19/01/2024 to 18/01/2027.</p>
+                    <hr>
+                    <p>Corporate Identity Number – U67200MH2022PTC394803</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>FOR GRIEVANCES</h3>
+                <p><strong>Mr. Upendra Pandey – Grievance Officer</strong></p>
+                <hr>
+                <p>IRDAI Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>IFSCA Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>gro@pibinsurance.in</p>
+            </div>
+        </div>
+        <!-- LOCATIONS STRIP -->
+        <div class="footer-locations">
+            <h4>OUR PRESENCE ACROSS INDIA</h4>
+            <p>
+                <span>Mumbai</span> &middot; <span>Pune</span> &middot; <span>Raipur</span> &middot; <span>Ahmedabad</span> &middot; <span>Surat</span> &middot;
+                <span>Chennai</span> &middot; <span>Bengaluru</span> &middot; <span>Hyderabad</span> &middot; <span>Visakhapatnam</span> &middot;
+                <span>Cochin</span> &middot; <span>Guwahati</span> &middot; <span>Kolkata</span> &middot; <span>Patna</span> &middot; <span>Ranchi</span> &middot;
+                <span>Bhubaneswar</span> &middot; <span>Lucknow</span> &middot; <span>Bhopal</span> &middot; <span>Delhi</span> &middot;
+                <span>Jaipur</span> &middot; <span>Chandigarh</span>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 PIB Insurance Brokers Pvt. Ltd. All Right Reserved. | Designed by OCS
+        </div>
+    </footer>
+    
+    <!-- MOBILE BOTTOM STICKY BAR -->
+    <div class="mobile-contact-bar">
+        <a href="mailto:helpdesk@pibinsurance.in" class="item">
+            <i class="fa fa-envelope"></i>
+            <span>Email Us</span>
+        </a>
+        <a href="tel:+919820419276" class="item">
+            <i class="fa fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Filtering Logic with Smooth Transitions
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const sections = document.querySelectorAll('.insight-category-section');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class and aria-pressed from all buttons
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                
+                // Add active class and aria-pressed to clicked button
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+
+                const filter = btn.dataset.filter;
+
+                sections.forEach(section => {
+                    const sectionId = section.id.replace('section-', '');
+                    
+                    if (filter === 'all' || sectionId === filter) {
+                        section.style.display = 'block';
+                        // Re-trigger animation
+                        section.style.animation = 'none';
+                        section.offsetHeight; // Trigger reflow
+                        section.style.animation = 'fadeInUp 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
+
+                // Scroll slightly to the top of results if on mobile
+                if (window.innerWidth < 768) {
+                    const resultsTop = document.getElementById('insightsSections').offsetTop - 100;
+                    window.scrollTo({ top: resultsTop, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+

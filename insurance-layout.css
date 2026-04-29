@@ -1,0 +1,319 @@
+/* INSURANCE PAGE LAYOUT */
+
+
+
+.insurance-container {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.insurance-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* SIDEBAR */
+.insurance-sidebar {
+    position: sticky;
+    top: 80px; /* Reduced to sit closer to navbar */
+    height: fit-content;
+    z-index: 10;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(11, 44, 61, 0.05);
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    text-decoration: none;
+    color: #5a7a99;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sidebar-menu li a i {
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li.active a {
+    background: #f4f7fc;
+    color: #1a6fa8;
+    border-left-color: #1a6fa8;
+}
+
+/* MAIN CONTENT */
+.insurance-main {
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(11, 44, 61, 0.05);
+    min-height: 80vh; /* Ensures content area is tall enough for sidebar to stick */
+}
+
+.insurance-main h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0b2c3d;
+    margin-bottom: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.insurance-main img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.insurance-main p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #333;
+}
+
+@media (max-width: 576px) {
+    .features-list li {
+        gap: 12px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+}
+
+.features-list li i {
+    color: #1a6fa8;
+    margin-top: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .insurance-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .insurance-sidebar {
+        position: static;
+        margin-bottom: 40px;
+    }
+    
+    .sidebar-menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar-menu li {
+        flex: 1 1 200px;
+    }
+    
+    .sidebar-menu li a {
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .sidebar-menu li a:hover,
+    .sidebar-menu li.active a {
+        border-bottom-color: #1a6fa8;
+    }
+    
+    .insurance-main {
+        padding: 30px 20px;
+    }
+}
+
+/* PREMIUM CONTENT STYLING */
+.category-tag {
+    display: inline-block;
+    background: rgba(26, 111, 168, 0.1);
+    color: #1a6fa8;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e0e7ef, transparent);
+    width: 100%;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #0b2c3d;
+    margin-bottom: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.matter-item {
+    display: flex;
+    flex-direction: row; /* ICON AND TEXT IN ROW AS REQUESTED */
+    gap: 15px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.matter-item > div:not(.matter-icon) {
+    flex: 1; /* Ensure text takes all remaining space */
+}
+
+.matter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+
+.matter-icon {
+    font-size: 20px;
+    color: #1a6fa8;
+    background: #f4f7fc;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.consider-box {
+    background: linear-gradient(135deg, #0b2c3d 0%, #1a5276 100%);
+    padding: 40px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .consider-box {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+    
+    .consider-box h4 {
+        font-size: 18px;
+    }
+}
+
+.consider-box .section-title {
+    color: #fff;
+}
+
+.consider-content p {
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+/* CTA BOX RESPONSIVENESS */
+.cta-box h3 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+@media (max-width: 576px) {
+    .cta-box {
+        padding: 40px 20px !important;
+    }
+    
+    .cta-box h3 {
+        font-size: 24px;
+    }
+    
+    .cta-box p {
+        font-size: 14px;
+    }
+}
+
+.bg-primary {
+    background: #1a6fa8 !important;
+}
+
+.rounded-4 {
+    border-radius: 1.5rem !important;
+}
+
+/* HERO SECTION IMPROVEMENTS */
+
+/* RESPONSIVE UPDATES FOR WHY IT MATTERS */
+/* RESPONSIVE UPDATES FOR WHY IT MATTERS */
+@media (max-width: 1200px) { 
+    .why-matters-section {
+        padding: 40px 25px !important;
+    }
+    
+    .matter-item {
+        align-items: flex-start;
+        gap: 15px;
+        padding: 25px;
+    }
+    
+    .matter-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .why-matters-section {
+        padding: 25px 20px !important;
+    }
+    
+    .matter-item {
+        padding: 25px;
+    }
+    
+    .matter-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+    
+    .matter-item div {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}

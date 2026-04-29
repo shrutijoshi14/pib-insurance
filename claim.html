@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel='dns-prefetch' href='https://fonts.googleapis.com'>
+    <link rel='dns-prefetch' href='https://fonts.gstatic.com'>
+    <link rel='dns-prefetch' href='https://cdnjs.cloudflare.com'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File an Insurance Claim | PIB Insurance Brokers Pvt. Ltd.</title>
+    <meta name="description" content="File your insurance claim quickly and easily with PIB Insurance Brokers. Our team assists you at every step of the claims process.">
+    <link rel="canonical" href="https://pibinsurance.in/claim.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pibinsurance.in/claim.html">
+    <meta property="og:site_name" content="PIB Insurance Brokers Pvt. Ltd.">
+    <meta property="og:title" content="File an Insurance Claim | PIB Insurance Brokers Pvt. Ltd.">
+    <meta property="og:description" content="File your insurance claim quickly and easily with PIB Insurance Brokers. Our team assists you at every step of the claims process.">
+    <meta property="og:image" content="https://pibinsurance.in/assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="claim.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://pibinsurance.in/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "File a Claim",
+        "item": "https://pibinsurance.in/claim.html"
+      }]
+    }
+    </script>
+    
+    <!-- PDF Generation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <div class="logo-wrap">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="PIB Insurance Brokers" loading="lazy">
+                </a>
+                <button class="claim-btn mobile-claim" onclick="window.location.href='claim.html'">
+                    <i class="fa fa-file-plus"></i>
+                    <span class="btn-text">ADD CLAIMS</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+                    <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="contact-row">
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Write us</span>
+                        <span class="value">helpdesk@pibinsurance.in</span>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon"><i class="fa fa-phone"></i></div>
+                    <div class="contact-text">
+                        <span class="label">Talk to our experts</span>
+                        <span class="value">+91 9820419276</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <ul class="menu" id="mainMenu">
+                <li class="menu-header" style="display:none; list-style:none;">
+                    <span>Navigation</span>
+                    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li class="dropdown">
+                    <a href="#">GROUP INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="group-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-users"></i></span>Group Health Insurance</a></li>
+                        <li><a href="group-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Group Personal Accident</a></li>
+                        <li><a href="group-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-file-shield"></i></span>Group Term Insurance</a></li>
+                        <li><a href="group-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Group Travel Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">COMMERCIAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="commercial-insurance.html?type=liability"><span class="sub-icon"><i class="fa fa-scale-balanced"></i></span>Liability Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=marine"><span class="sub-icon"><i class="fa fa-ship"></i></span>Marine Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=property"><span class="sub-icon"><i class="fa fa-building"></i></span>Property Insurance</a></li>
+                        <li><a href="commercial-insurance.html?type=fire"><span class="sub-icon"><i class="fa fa-fire"></i></span>Fire Insurance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">INDIVIDUAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
+                    <ul class="submenu">
+                        <li><a href="individual-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-heart-pulse"></i></span>Term Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-stethoscope"></i></span>Health Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=home"><span class="sub-icon"><i class="fa fa-house"></i></span>Home Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=motor"><span class="sub-icon"><i class="fa fa-car"></i></span>Motor Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Travel Insurance</a></li>
+                        <li><a href="individual-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Personal Accident</a></li>
+                    </ul>
+                </li>
+                <li><a href="industries.html">INDUSTRIES</a></li>
+                <li><a href="insights.html">INSIGHTS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <a href="claim.html" class="claim-btn desktop-claim active">
+                <i class="fa fa-file-plus"></i>
+                <span class="btn-text">ADD CLAIMS</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="insurance-hero">
+        <div class="industries-hero-container">
+            <div class="industries-hero-content">
+                <h1>File Your Insurance Claim</h1>
+                <p>We're here for you when it matters most. Use our streamlined process to submit your claim details and our team will guide you through the rest.</p>
+                <div class="breadcrumb-custom">HOME / ADD CLAIMS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CLAIM SECTION -->
+    <section class="claim-section py-5">
+        <div class="container">
+            <div class="claim-grid">
+                <!-- Sidebar Tabs -->
+                <div class="claim-sidebar">
+                    <div class="sidebar-title">
+                        <h3>Insurance Types</h3>
+                        <p>Select category for quote</p>
+                    </div>
+                    <ul class="claim-tabs">
+                        <li class="active" data-type="car"><i class="fa fa-car"></i> Motor Insurance</li>
+                        <li data-type="bike"><i class="fa fa-motorcycle"></i> Bike Insurance</li>
+                        <li data-type="health"><i class="fa fa-stethoscope"></i> Health Insurance</li>
+                        <li data-type="travel"><i class="fa fa-plane"></i> Travel Insurance</li>
+                        <li data-type="life"><i class="fa fa-heart-pulse"></i> Life Insurance</li>
+                        <li data-type="home"><i class="fa fa-house"></i> Home Insurance</li>
+                    </ul>
+                    
+                    <div class="help-card mt-4">
+                        <i class="fa fa-headset"></i>
+                        <h4>Need Help?</h4>
+                        <p>Our experts are here to assist you with your quote calculation.</p>
+                        <a href="tel:+919820419276" class="btn btn-sm btn-outline-light mt-2">Call Expert</a>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="claim-content">
+                    <div class="content-header">
+                        <div class="header-text">
+                            <h2>Get an insurance quote<br><span>to get started!</span></h2>
+                            <p>Fill in the details below to receive a personalized quote directly from our experts.</p>
+                        </div>
+                        <div class="header-img">
+                            <img src="assets/get-insurance-two-img-1.jpg" alt="Get Quote" loading="lazy">
+                        </div>
+                    </div>
+
+                    <form class="quote-form mt-4" id="quoteForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Insurance Type</label>
+                                <select class="form-select" id="insuranceSelect">
+                                    <option value="car" selected>Car Insurance</option>
+                                    <option value="bike">Bike Insurance</option>
+                                    <option value="health">Health Insurance</option>
+                                    <option value="travel">Travel Insurance</option>
+                                    <option value="life">Life Insurance</option>
+                                    <option value="home">Home Insurance</option>
+                                </select>
+                            </div>
+
+                            <!-- Dynamic Fields Container -->
+                            <div id="dynamicFields" class="col-12 row g-3 m-0 p-0">
+                                <!-- JS will inject fields here -->
+                            </div>
+
+                            <!-- Progress Bar Section -->
+                            <div class="col-12 mt-4">
+                                <div class="limit-wrapper">
+                                    <div class="limit-info">
+                                        <label class="form-label" id="limitLabel">Sum Insured (Limit)</label>
+                                        <span class="amount-display">₹ <span id="limitValue">5,00,000</span></span>
+                                    </div>
+                                    <div class="progress-container">
+                                        <input type="range" class="form-range" id="limitRange" min="100000" max="5000000" step="50000" value="500000">
+                                        <div class="progress" style="height: 8px;">
+                                            <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="limit-labels">
+                                        <span id="limitMin">₹ 1L</span>
+                                        <span id="limitMax">₹ 50L</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <div class="calculation-box">
+                                    <div class="calc-row">
+                                        <span>Estimated Premium</span>
+                                        <span class="calc-value">₹ <span id="premiumAmount">4,500</span>*</span>
+                                    </div>
+                                    <p class="calc-note">*Final premium subject to underwriting and policy terms.</p>
+                                </div>
+                            </div>
+
+                            <!-- Quote button hidden for now as per audit requirement -->
+                            <!-- <div class="col-12">
+                                <button type="submit" class="get-quote-btn">
+                                    GET A QUOTE NOW <i class="fa fa-arrow-right ms-2"></i>
+                                </button>
+                            </div> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <h2>TO GET INSURED CONTACT OUR EXPERTS NOW</h2>
+            <div class="footer-contact">
+                <span><i class="fa fa-phone"></i> +91 98204 19276 / +91 98204 19256</span>
+                <span><i class="fa fa-envelope"></i> helpdesk@pibinsurance.in</span>
+            </div>
+        </div>
+        <div class="footer-main">
+            <div class="footer-col">
+                <h3>FOR SALES / QUERIES VISIT</h3>
+                <p class="office-title">Head Office Mumbai :</p>
+                <p>7th Floor, Mangalya Complex, Sangeet Plaza, Marol, Andheri East, Mumbai — 400059</p>
+                <hr>
+                <h3 class="mt">REGIONAL DELHI OFFICE</h3>
+                <p>Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank" rel="noopener" aria-label="PIB Insurance on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919820419276" target="_blank" rel="noopener" aria-label="Contact PIB Insurance on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col center-box">
+                <h3>CERTIFICATES</h3>
+                <div class="certificate-box">
+                    <p><strong>IRDA License No. – 935,</strong></p>
+                    <hr>
+                    <p>Registration code for the Insurance Broker – IRDAI / DBI047 / 2023,</p>
+                    <hr>
+                    <p>Validity – 19/01/2024 to 18/01/2027.</p>
+                    <hr>
+                    <p>Corporate Identity Number – U67200MH2022PTC394803</p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>FOR GRIEVANCES</h3>
+                <p><strong>Mr. Upendra Pandey – Grievance Officer</strong></p>
+                <hr>
+                <p>IRDAI Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>IFSCA Complaint Handling and Grievance Redressal Process</p>
+                <hr>
+                <p>gro@pibinsurance.in</p>
+            </div>
+        </div>
+        <!-- LOCATIONS STRIP -->
+        <div class="footer-locations">
+            <h4>OUR PRESENCE ACROSS INDIA</h4>
+            <p>
+                <span>Mumbai</span> &middot; <span>Pune</span> &middot; <span>Raipur</span> &middot; <span>Ahmedabad</span> &middot; <span>Surat</span> &middot;
+                <span>Chennai</span> &middot; <span>Bengaluru</span> &middot; <span>Hyderabad</span> &middot; <span>Visakhapatnam</span> &middot;
+                <span>Cochin</span> &middot; <span>Guwahati</span> &middot; <span>Kolkata</span> &middot; <span>Patna</span> &middot; <span>Ranchi</span> &middot;
+                <span>Bhubaneswar</span> &middot; <span>Lucknow</span> &middot; <span>Bhopal</span> &middot; <span>Delhi</span> &middot;
+                <span>Jaipur</span> &middot; <span>Chandigarh</span>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 PIB Insurance Brokers Pvt. Ltd. All Right Reserved. | Designed by OCS
+        </div>
+    </footer>
+
+    <!-- MOBILE BOTTOM STICKY BAR -->
+    <div class="mobile-contact-bar">
+        <a href="mailto:helpdesk@pibinsurance.in" class="item">
+            <i class="fa fa-envelope"></i>
+            <span>Email Us</span>
+        </a>
+        <a href="tel:+919820419276" class="item">
+            <i class="fa fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+    
+    <script src="script.js"></script>
+    <script>
+        const { jsPDF } = window.jspdf;
+        const range = document.getElementById('limitRange');
+        const displayValue = document.getElementById('limitValue');
+        const progressBar = document.getElementById('progressBar');
+        const premiumDisplay = document.getElementById('premiumAmount');
+        const select = document.getElementById('insuranceSelect');
+        const tabsList = document.querySelectorAll('.claim-tabs li');
+        const dynamicFields = document.getElementById('dynamicFields');
+        const limitMinText = document.getElementById('limitMin');
+        const limitMaxText = document.getElementById('limitMax');
+        const quoteForm = document.getElementById('quoteForm');
+
+        const config = {
+            car: {
+                name: 'Car Insurance',
+                rate: 0.025,
+                min: 200000,
+                max: 5000000,
+                step: 50000,
+                default: 500000,
+                fields: '<div class="col-md-6"><label class="form-label">Vehicle Reg. No</label><input type="text" name="vehicle_reg" class="form-control" placeholder="MH 01 AB 1234"></div><div class="col-md-6"><label class="form-label">Vehicle Model</label><input type="text" name="vehicle_model" class="form-control" placeholder="e.g. Honda City"></div>'
+            },
+            bike: {
+                name: 'Bike Insurance',
+                rate: 0.018,
+                min: 50000,
+                max: 500000,
+                step: 5000,
+                default: 100000,
+                fields: '<div class="col-md-6"><label class="form-label">Bike Reg. No</label><input type="text" name="bike_reg" class="form-control" placeholder="MH 02 XY 5678"></div><div class="col-md-6"><label class="form-label">Engine CC</label><input type="number" name="engine_cc" class="form-control" placeholder="e.g. 150"></div>'
+            },
+            health: {
+                name: 'Health Insurance',
+                rate: 0.009,
+                min: 300000,
+                max: 2000000,
+                step: 100000,
+                default: 500000,
+                fields: '<div class="col-md-6"><label class="form-label">Members Count</label><input type="number" name="members" class="form-control" value="1" min="1" max="10"></div><div class="col-md-6"><label class="form-label">Oldest Member Age</label><input type="number" name="age" class="form-control" placeholder="e.g. 35"></div>'
+            },
+            travel: {
+                name: 'Travel Insurance',
+                rate: 0.005,
+                min: 500000,
+                max: 10000000,
+                step: 100000,
+                default: 1000000,
+                fields: '<div class="col-md-6"><label class="form-label">Destination</label><input type="text" name="destination" class="form-control" placeholder="e.g. Europe"></div><div class="col-md-6"><label class="form-label">Trip Duration (Days)</label><input type="number" name="duration" class="form-control" placeholder="e.g. 15"></div>'
+            },
+            life: {
+                name: 'Life Insurance',
+                rate: 0.002,
+                min: 1000000,
+                max: 50000000,
+                step: 500000,
+                default: 5000000,
+                fields: '<div class="col-md-6"><label class="form-label">Annual Income</label><input type="number" name="income" class="form-control" placeholder="e.g. 10,00,000"></div><div class="col-md-6"><label class="form-label">Smoker?</label><select name="smoker" class="form-select"><option>No</option><option>Yes</option></select></div>'
+            },
+            home: {
+                name: 'Home Insurance',
+                rate: 0.0035,
+                min: 1000000,
+                max: 20000000,
+                step: 500000,
+                default: 2500000,
+                fields: '<div class="col-md-6"><label class="form-label">Property Value</label><input type="number" name="prop_value" class="form-control" placeholder="₹"></div><div class="col-md-6"><label class="form-label">Property Type</label><select name="prop_type" class="form-select"><option>Apartment</option><option>Villa</option></select></div>'
+            }
+        };
+
+        function switchType(type) {
+            const settings = config[type];
+            if (!settings) return;
+
+            range.min = settings.min;
+            range.max = settings.max;
+            range.step = settings.step;
+            range.value = settings.default;
+
+            limitMinText.innerText = '₹ ' + (settings.min / 100000 >= 1 ? (settings.min / 100000) + 'L' : (settings.min / 1000).toLocaleString('en-IN') + 'K');
+            limitMaxText.innerText = '₹ ' + (settings.max / 100000 >= 1 ? (settings.max / 100000) + 'L' : (settings.max / 1000).toLocaleString('en-IN') + 'K');
+
+            dynamicFields.innerHTML = settings.fields;
+            select.value = type;
+            tabsList.forEach(li => li.classList.toggle('active', li.dataset.type === type));
+
+            updateCalculation();
+        }
+
+        function updateCalculation() {
+            const val = parseInt(range.value);
+            displayValue.innerText = val.toLocaleString('en-IN');
+            
+            const min = parseInt(range.min);
+            const max = parseInt(range.max);
+            const percent = ((val - min) / (max - min)) * 100;
+            progressBar.style.width = percent + '%';
+
+            const type = select.value;
+            const rate = config[type].rate;
+            const premium = Math.round(val * rate);
+            premiumDisplay.innerText = premium.toLocaleString('en-IN');
+        }
+
+        function generatePDF(data) {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Header
+            doc.setFillColor(26, 111, 168);
+            doc.rect(0, 0, 210, 40, 'F');
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(22);
+            doc.text('PIB INSURANCE BROKERS', 15, 25);
+            doc.setFontSize(12);
+            doc.text('Your Risk Management Partners', 15, 33);
+
+            // Quote Title
+            doc.setTextColor(26, 111, 168);
+            doc.setFontSize(18);
+            doc.text('INSURANCE QUOTE ESTIMATE', 15, 55);
+            
+            // Customer Info
+            doc.setTextColor(0, 0, 0);
+            doc.setFontSize(12);
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 150, 55);
+            
+            const tableData = [
+                ['Customer Name', data.fullName],
+                ['Email', data.email],
+                ['Phone', data.phone],
+                ['Insurance Type', config[data.type].name],
+                ['Sum Insured (Limit)', `INR ${parseInt(data.limit).toLocaleString('en-IN')}`],
+                ['Estimated Annual Premium', `INR ${parseInt(data.premium).toLocaleString('en-IN')}*`]
+            ];
+
+            // Add dynamic fields
+            const formEntries = new FormData(quoteForm);
+            for (let [key, value] of formEntries) {
+                if (!['fullName', 'email', 'phone', 'type', 'limit'].includes(key)) {
+                    const label = key.replace('_', ' ').toUpperCase();
+                    tableData.push([label, value]);
+                }
+            }
+
+            doc.autoTable({
+                startY: 65,
+                head: [['Field', 'Details']],
+                body: tableData,
+                theme: 'striped',
+                headStyles: { fillColor: [26, 111, 168] }
+            });
+
+            // Footer
+            const finalY = doc.lastAutoTable.finalY || 150;
+            doc.setFontSize(10);
+            doc.setTextColor(100, 100, 100);
+            doc.text('*Disclaimer: This is an automated estimate based on standard rates. Final premium is subject to', 15, finalY + 20);
+            doc.text('underwriting approval, age, health status, and other policy-specific factors.', 15, finalY + 25);
+            
+            doc.setTextColor(26, 111, 168);
+            doc.text('PIB Insurance Brokers | helpdesk@pibinsurance.in | +91 9820419276', 15, 280);
+
+            doc.save(`PIB_Quote_${data.fullName.replace(/\s+/g, '_')}.pdf`);
+        }
+
+        async function submitToSheet(data) {
+            // NOTE: Replace with your actual Google Apps Script Web App URL
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_YOUR_SCRIPT_ID/exec';
+            
+            try {
+                // We use no-cors if just sending, or use a proper backend bridge
+                // For demonstration, we'll log it. In production, uncomment the fetch.
+                console.log('Sending data to Google Sheets:', data);
+                
+                /*
+                await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                */
+            } catch (error) {
+                console.error('Error submitting to sheet:', error);
+            }
+        }
+
+        range.addEventListener('input', updateCalculation);
+        select.addEventListener('change', () => switchType(select.value));
+        tabsList.forEach(li => li.addEventListener('click', () => switchType(li.dataset.type)));
+
+        quoteForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> GENERATING QUOTE...';
+
+            const formData = new FormData(quoteForm);
+            const data = {
+                fullName: formData.get('fullName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                type: select.value,
+                limit: range.value,
+                premium: premiumDisplay.innerText.replace(/,/g, '')
+            };
+
+            // 1. Generate PDF for customer
+            generatePDF(data);
+
+            // 2. Submit to Google Sheets for owner
+            await submitToSheet(data);
+
+            // 3. UI Feedback
+            setTimeout(() => {
+                alert('Success! Your quote PDF has been generated and our team has been notified. We will contact you shortly.');
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+            }, 1000);
+        });
+
+        // Initial load
+        switchType('car');
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
