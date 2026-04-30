@@ -399,7 +399,8 @@
 @media(max-width: 992px) {
     .about-container {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+        padding: 0 16px;
     }
     
     .about-image::before {
@@ -409,10 +410,11 @@
     .ceo-container {
         grid-template-columns: 1fr;
         gap: 30px;
+        padding: 0 16px;
     }
     
     .ceo-img {
-        max-width: 400px;
+        max-width: 100%;
         margin: 0 auto;
     }
     
@@ -428,20 +430,49 @@
 }
 
 @media(max-width: 768px) {
-    .about-hero {
-        height: 300px;
-    }
-    
-    .about-section, .ceo-section, .mv-section {
-        padding: 60px 20px;
+    .about-section, .ceo-section, .mv-section, .promise-section {
+        padding: 60px 0;
     }
     
     .mv-container {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
+        padding: 0 16px;
     }
     
     .mv-box {
         padding: 30px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .mv-box i {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px;
+    }
+
+    .mv-box h3 {
+        font-size: 22px;
+    }
+    
+    .promise-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .ceo-text p {
+        font-size: 14.5px;
+    }
+
+    .promise-card h3 {
+        font-size: 18px;
     }
 }

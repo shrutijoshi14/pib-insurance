@@ -4,7 +4,7 @@
 
 .insurance-container {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: var(--bg-body);
 }
 
 .insurance-grid {
@@ -26,10 +26,10 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(11, 44, 61, 0.05);
+    box-shadow: var(--shadow);
 }
 
 .sidebar-menu li a {
@@ -38,7 +38,7 @@
     gap: 15px;
     padding: 20px 25px;
     text-decoration: none;
-    color: #5a7a99;
+    color: var(--text-muted);
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -54,24 +54,24 @@
 
 .sidebar-menu li a:hover,
 .sidebar-menu li.active a {
-    background: #f4f7fc;
-    color: #1a6fa8;
-    border-left-color: #1a6fa8;
+    background: var(--gray-light);
+    color: var(--blue-main);
+    border-left-color: var(--blue-main);
 }
 
 /* MAIN CONTENT */
 .insurance-main {
-    background: #fff;
+    background: var(--card-bg);
     padding: 50px;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(11, 44, 61, 0.05);
+    box-shadow: var(--shadow-lg);
     min-height: 80vh; /* Ensures content area is tall enough for sidebar to stick */
 }
 
 .insurance-main h2 {
     font-size: 32px;
     font-weight: 800;
-    color: #0b2c3d;
+    color: var(--text-dark);
     margin-bottom: 25px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -86,7 +86,7 @@
 .insurance-main p {
     font-size: 16px;
     line-height: 1.8;
-    color: #444;
+    color: var(--text-dark);
     margin-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
 }
@@ -103,7 +103,7 @@
     gap: 15px;
     margin-bottom: 15px;
     font-size: 15px;
-    color: #333;
+    color: var(--text-dark);
 }
 
 @media (max-width: 576px) {
@@ -115,42 +115,72 @@
 }
 
 .features-list li i {
-    color: #1a6fa8;
+    color: var(--blue-main);
     margin-top: 5px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
+    .insurance-container {
+        padding: 40px 0;
+    }
+
     .insurance-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 16px;
     }
     
     .insurance-sidebar {
         position: static;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     
     .sidebar-menu {
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
+        background: transparent;
+        box-shadow: none;
     }
     
     .sidebar-menu li {
-        flex: 1 1 200px;
+        flex: 1 1 calc(50% - 10px);
+        background: var(--card-bg);
+        border-radius: 10px;
+        box-shadow: var(--shadow);
     }
     
     .sidebar-menu li a {
+        padding: 15px;
+        font-size: 13px;
         border-left: none;
-        border-bottom: 4px solid transparent;
+        border-bottom: 3px solid transparent;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 8px;
     }
     
     .sidebar-menu li a:hover,
     .sidebar-menu li.active a {
-        border-bottom-color: #1a6fa8;
+        border-bottom-color: var(--blue-main);
+        background: var(--card-bg);
     }
     
     .insurance-main {
         padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .insurance-main h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-menu li {
+        flex: 1 1 100%;
     }
 }
 
@@ -177,7 +207,7 @@
 .section-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #0b2c3d;
+    color: var(--text-dark);
     margin-bottom: 25px;
     position: relative;
     display: flex;
@@ -188,13 +218,13 @@
     display: flex;
     flex-direction: row; /* ICON AND TEXT IN ROW AS REQUESTED */
     gap: 15px;
-    background: #fff;
+    background: var(--card-bg);
     padding: 25px;
     border-radius: 20px;
     height: 100%;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-    border: 1px solid rgba(0,0,0,0.02);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-border);
 }
 
 .matter-item > div:not(.matter-icon) {
@@ -209,8 +239,8 @@
 
 .matter-icon {
     font-size: 20px;
-    color: #1a6fa8;
-    background: #f4f7fc;
+    color: var(--blue-main);
+    background: var(--gray-light);
     width: 45px;
     height: 45px;
     display: flex;

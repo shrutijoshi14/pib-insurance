@@ -255,34 +255,55 @@
 
 /* RESPONSIVE */
 @media(max-width: 992px) {
-    .info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .contact-grid {
+    .contact-grid-new {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
+        padding: 0 16px;
+    }
+
+    .info-card.flex-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .info-card i {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 28px;
     }
 }
 
 @media(max-width: 768px) {
-    .contact-hero {
-        height: 300px;
-    }
-    
-    .contact-info, .contact-main {
+    .contact-content {
         padding: 60px 0;
     }
     
-    .info-grid {
-        grid-template-columns: 1fr;
+    .contact-header h2 {
+        font-size: 26px;
     }
-    
-    .form-cta {
-        padding: 40px 20px;
+
+    .office {
+        padding: 20px;
     }
-    
+
     .map-section iframe {
         height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-card h4 {
+        font-size: 18px;
+    }
+
+    .info-card p {
+        font-size: 14px;
+    }
+
+    .office h4 {
+        font-size: 16px;
     }
 }

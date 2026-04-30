@@ -5,7 +5,7 @@
 
 /* INTRO SECTION */
 .industries-intro {
-    background: #fff;
+    background: var(--white);
     padding: 60px 0 20px;
 }
 
@@ -20,7 +20,7 @@
 
 /* CARDS */
 .industry-card {
-    background: #fff;
+    background: var(--card-bg);
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
@@ -33,8 +33,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-border);
 }
 
 .industry-card:hover {
@@ -45,7 +45,7 @@
 .icon-wrap {
     width: 80px;
     height: 80px;
-    background: #f4f7fc;
+    background: var(--gray-light);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
 
 .icon-wrap i {
     font-size: 32px;
-    color: #1a6fa8;
+    color: var(--blue-main);
 }
 
 .industry-card:hover .icon-wrap {
@@ -70,7 +70,7 @@
 .industry-card h4 {
     font-size: 20px;
     font-weight: 700;
-    color: #0b2c3d;
+    color: var(--text-dark);
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -118,7 +118,7 @@
 }
 
 .modal-content {
-    background: #fff;
+    background: var(--card-bg);
     max-width: 600px;
     width: 100%;
     max-height: 85vh;
@@ -130,6 +130,27 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    position: sticky;
+    top: 0;
+    background: var(--card-bg);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 40px;
+    border-bottom: 1.5px solid var(--gray-border);
+    border-radius: 30px 30px 0 0;
+}
+
+.modal-header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
 }
 
 /* Custom Scrollbar for Modal */
@@ -152,12 +173,7 @@
 }
 
 .modal-close {
-    position: sticky;
-    top: 0;
-    align-self: flex-end;
-    margin: 16px 16px 0 0;
-    flex-shrink: 0;
-    background: #f4f7fc;
+    background: var(--gray-light);
     border: none;
     width: 40px;
     height: 40px;
@@ -166,10 +182,10 @@
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    color: #0b2c3d;
+    color: var(--text-dark);
     cursor: pointer;
     transition: all 0.3s ease;
-    z-index: 10;
+    flex-shrink: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
@@ -179,53 +195,156 @@
 }
 
 .modal-icon {
-    width: 100px;
-    height: 100px;
-    background: #f4f7fc;
-    border-radius: 25px;
+    width: 60px;
+    height: 60px;
+    background: var(--gray-light);
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -10px auto 30px;
+    flex-shrink: 0;
 }
 
 .modal-icon i {
-    font-size: 48px;
-    color: #1a6fa8;
+    font-size: 28px;
+    color: var(--blue-main);
 }
 
 .modal-content h2 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 800;
-    color: #0b2c3d;
-    margin-bottom: 20px;
+    color: var(--text-dark);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .modal-body {
-    padding: 0 40px 40px;
+    padding: 30px 40px 40px;
     overflow-y: visible;
 }
 
 .modal-desc {
     font-size: 16px;
-    color: #5a7a99;
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
+.modal-inner-content {
+    text-align: left;
+}
+
+.modal-inner-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--blue-sky);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray-border);
+}
+
+.modal-inner-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 30px 0 15px;
+}
+
+.section-title {
+    font-weight: 800;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.modal-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.modal-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.modal-list li::before {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--blue-main);
+    font-size: 18px;
+}
+
+.modal-list li strong {
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 2px;
+}
+
 /* RESPONSIVE */
-@media (max-width: 768px) {
-    /* Hero handled by insurance-layout.css */
-    
-    .modal-content {
-        padding: 0;
-        border-radius: 16px;
+@media (max-width: 992px) {
+    .industries-intro {
+        padding: 40px 16px 20px;
+        text-align: center;
     }
 
-    .modal-body {
-        padding: 0 20px 30px;
+    .industry-card {
+        padding: 30px 20px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        border-radius: 20px;
+    }
+
+    .modal-header {
+        padding: 15px 20px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .modal-header-left {
+        gap: 12px;
+    }
+
+    .modal-icon {
+        width: 45px;
+        height: 45px;
+        border-radius: 10px;
+    }
+
+    .modal-icon i {
+        font-size: 20px;
     }
 
     .modal-content h2 {
-        font-size: 24px;
+        font-size: 18px;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-desc {
+        font-size: 14.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .industries-intro h1 {
+        font-size: 26px;
+    }
+
+    .intro-text {
+        font-size: 15px;
     }
 }
