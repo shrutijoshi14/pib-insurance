@@ -28,10 +28,16 @@
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html,
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   width: 100%;
+  max-width: 100vw;
   position: relative;
+  /* Removed overflow-x: hidden from body as it breaks position: sticky */
   -webkit-overflow-scrolling: touch;
 }
 
@@ -64,7 +70,11 @@ body {
 
 .logo img {
   height: 56px;
+  width: auto;
+  max-width: 220px;
   display: block;
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /* Logo + hamburger wrapper */
@@ -123,7 +133,7 @@ body {
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 2000; /* Increased z-index to stay above content */
   padding: 0 !important;
   transition: all 0.3s ease;
 }
@@ -444,7 +454,6 @@ html {
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-dark);
-  /* overflow-x: hidden; REMOVED because it breaks position: sticky */
 }
 
 /* Claim btn inside bottom bar */
@@ -524,6 +533,11 @@ body {
     height: 60px;
     width: 100%;
     max-width: 100vw;
+  }
+
+  .logo img {
+    height: 40px;
+    max-width: 140px;
   }
 
   /* Offset the page content so it doesn't hide under the fixed topbar */
@@ -692,14 +706,22 @@ body {
     display: none;
   }
 
-  .menu>li>a:hover,
-  .menu>li.active>a,
-  .menu>li>a.active {
+  .menu>li>a:hover:not(.drawer-logo),
+  .menu>li.active>a:not(.drawer-logo),
+  .menu>li>a.active:not(.drawer-logo) {
     background: var(--blue-main) !important;
     color: #fff !important;
     padding-left: 25px;
     border-left: 4px solid #fff;
   }
+
+  /* Specific reset for drawer logo to ensure no background/border on hover */
+  .menu .drawer-logo:hover {
+    background: none !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+
 
   /* Collapsible Submenus for Mobile */
   .menu .submenu {
@@ -2603,4 +2625,97 @@ a {
         white-space: normal;
         text-align: center;
     }
-}
+}
+/* ========== IMPROVED IMAGE HANDLING ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  font-style: italic; /* For broken images */
+  vertical-align: middle;
+  shape-margin: 0.75rem;
+  image-rendering: auto; /* Default for quality */
+}
+
+/* Fix for Safari/iOS high resolution */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Hero Background Mobile Optimization */
+@media (max-width: 768px) {
+  .hero {
+    background-position: center !important;
+  }
+  
+  .insurance-hero {
+    background-position: center !important;
+  }
+}
+
+/* Insight Cards Images */
+.insight-card .img-wrap {
+  height: 200px;
+  overflow: hidden;
+  background: #f0f4f8;
+  position: relative;
+}
+
+.insight-card .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.insight-card:hover .img-wrap img {
+  transform: scale(1.08);
+}
+
+/* Testimonial Profile Images */
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center; /* Better for portraits */
+  border: 2px solid var(--white);
+  box-shadow: 0 4px 12px rgba(11, 44, 61, 0.15);
+}
+
+/* Partner Logos */
+.partner-logo {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.partner-logo img {
+  max-height: 50px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.partner-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Hero Images Safety */
+.hero img, 
+.insurance-hero img,
+.industries-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

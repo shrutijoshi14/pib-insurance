@@ -5,18 +5,20 @@
     <link rel='dns-prefetch' href='https://fonts.googleapis.com'>
     <link rel='dns-prefetch' href='https://fonts.gstatic.com'>
     <link rel='dns-prefetch' href='https://cdnjs.cloudflare.com'>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File an Insurance Claim | PIB Insurance Brokers Pvt. Ltd.</title>
-    <meta name="description" content="File your insurance claim quickly and easily with PIB Insurance Brokers. Our team assists you at every step of the claims process.">
+    <meta name="description"
+        content="File your insurance claim quickly and easily with PIB Insurance Brokers. Our team assists you at every step of the claims process.">
     <link rel="canonical" href="https://pibinsurance.in/claim.html">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pibinsurance.in/claim.html">
     <meta property="og:site_name" content="PIB Insurance Brokers Pvt. Ltd.">
     <meta property="og:title" content="File an Insurance Claim | PIB Insurance Brokers Pvt. Ltd.">
-    <meta property="og:description" content="File your insurance claim quickly and easily with PIB Insurance Brokers. Our team assists you at every step of the claims process.">
+    <meta property="og:description"
+        content="File your insurance claim quickly and easily with PIB Insurance Brokers. Our team assists you at every step of the claims process.">
     <meta property="og:image" content="https://pibinsurance.in/assets/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +28,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="claim.css">
+    <link rel="stylesheet" href="style.css?v=1.1.2">
+    <link rel="stylesheet" href="claim.css?v=1.1.2">
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
 
     <!-- Schema.org JSON-LD -->
@@ -48,7 +50,7 @@
       }]
     }
     </script>
-    
+
     <!-- PDF Generation Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
@@ -61,7 +63,7 @@
         <div class="topbar-inner">
             <div class="logo-wrap">
                 <a href="index.html" class="logo">
-                    <img src="assets/logo.png" alt="PIB Insurance Brokers" loading="lazy">
+                    <img src="assets/logo.png" alt="PIB Insurance Brokers" width="167" height="50" loading="lazy">
                 </a>
                 <button class="claim-btn mobile-claim" onclick="window.location.href='claim.html'">
                     <i class="fa fa-file-plus"></i>
@@ -98,7 +100,7 @@
         <div class="nav-inner">
             <ul class="menu" id="mainMenu">
                 <li class="menu-header" style="display:none; list-style:none;">
-                    <span>Navigation</span>
+                    <a href="index.html" class="drawer-logo"><img src="assets/logo.png" alt="PIB Insurance Brokers" style="height: 32px; width: auto; filter: brightness(0) invert(1);"></a>
                     <button class="close-btn" id="closeBtn" aria-label="Close menu">
                         <i class="fa fa-times"></i>
                     </button>
@@ -107,30 +109,44 @@
                 <li class="dropdown">
                     <a href="#">GROUP INSURANCE <i class="fa fa-chevron-down caret"></i></a>
                     <ul class="submenu">
-                        <li><a href="group-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-users"></i></span>Group Health Insurance</a></li>
-                        <li><a href="group-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Group Personal Accident</a></li>
-                        <li><a href="group-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-file-shield"></i></span>Group Term Insurance</a></li>
-                        <li><a href="group-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Group Travel Insurance</a></li>
+                        <li><a href="group-health-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-users"></i></span>Group Health Insurance</a></li>
+                        <li><a href="group-personal-accident.html"><span class="sub-icon"><i
+                                        class="fa fa-shield-halved"></i></span>Group Personal Accident</a></li>
+                        <li><a href="group-term-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-file-shield"></i></span>Group Term Insurance</a></li>
+                        <li><a href="group-travel-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-plane"></i></span>Group Travel Insurance</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#">COMMERCIAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
                     <ul class="submenu">
-                        <li><a href="commercial-insurance.html?type=liability"><span class="sub-icon"><i class="fa fa-scale-balanced"></i></span>Liability Insurance</a></li>
-                        <li><a href="commercial-insurance.html?type=marine"><span class="sub-icon"><i class="fa fa-ship"></i></span>Marine Insurance</a></li>
-                        <li><a href="commercial-insurance.html?type=property"><span class="sub-icon"><i class="fa fa-building"></i></span>Property Insurance</a></li>
-                        <li><a href="commercial-insurance.html?type=fire"><span class="sub-icon"><i class="fa fa-fire"></i></span>Fire Insurance</a></li>
+                        <li><a href="liability-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-scale-balanced"></i></span>Liability Insurance</a></li>
+                        <li><a href="marine-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-ship"></i></span>Marine Insurance</a></li>
+                        <li><a href="property-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-building"></i></span>Property Insurance</a></li>
+                        <li><a href="fire-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-fire"></i></span>Fire Insurance</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#">INDIVIDUAL INSURANCE <i class="fa fa-chevron-down caret"></i></a>
                     <ul class="submenu">
-                        <li><a href="individual-insurance.html?type=term"><span class="sub-icon"><i class="fa fa-heart-pulse"></i></span>Term Insurance</a></li>
-                        <li><a href="individual-insurance.html?type=health"><span class="sub-icon"><i class="fa fa-stethoscope"></i></span>Health Insurance</a></li>
-                        <li><a href="individual-insurance.html?type=home"><span class="sub-icon"><i class="fa fa-house"></i></span>Home Insurance</a></li>
-                        <li><a href="individual-insurance.html?type=motor"><span class="sub-icon"><i class="fa fa-car"></i></span>Motor Insurance</a></li>
-                        <li><a href="individual-insurance.html?type=travel"><span class="sub-icon"><i class="fa fa-plane"></i></span>Travel Insurance</a></li>
-                        <li><a href="individual-insurance.html?type=accident"><span class="sub-icon"><i class="fa fa-shield-halved"></i></span>Personal Accident</a></li>
+                        <li><a href="term-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-heart-pulse"></i></span>Term Insurance</a></li>
+                        <li><a href="health-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-stethoscope"></i></span>Health Insurance</a></li>
+                        <li><a href="home-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-house"></i></span>Home Insurance</a></li>
+                        <li><a href="motor-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-car"></i></span>Motor Insurance</a></li>
+                        <li><a href="travel-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-plane"></i></span>Travel Insurance</a></li>
+                        <li><a href="accidental-insurance.html"><span class="sub-icon"><i
+                                        class="fa fa-shield-halved"></i></span>Personal Accident</a></li>
                     </ul>
                 </li>
                 <li><a href="industries.html">INDUSTRIES</a></li>
@@ -148,11 +164,12 @@
         <div class="industries-hero-container">
             <div class="industries-hero-content">
                 <div class="hero-header-row">
-                    <h1>File a Claim</h1>
+                    <h1 fetchpriority="high">File a Claim</h1>
                     <div class="hero-header-divider"></div>
                     <div class="hero-header-info">Support When It Matters Most</div>
                 </div>
-                <p>We're here for you when it matters most. Use our streamlined process to submit your claim details and our team will guide you through the rest.</p>
+                <p>We're here for you when it matters most. Use our streamlined process to submit your claim details and
+                    our team will guide you through the rest.</p>
                 <div class="breadcrumb-custom">HOME / ADD CLAIMS</div>
             </div>
         </div>
@@ -176,7 +193,7 @@
                         <li data-type="life"><i class="fa fa-heart-pulse"></i> Life Insurance</li>
                         <li data-type="home"><i class="fa fa-house"></i> Home Insurance</li>
                     </ul>
-                    
+
                     <div class="help-card mt-4">
                         <i class="fa fa-headset"></i>
                         <h4>Need Help?</h4>
@@ -193,27 +210,31 @@
                             <p>Fill in the details below to receive a personalized quote directly from our experts.</p>
                         </div>
                         <div class="header-img">
-                            <img src="assets/get-insurance-two-img-1.jpg" alt="Get Quote" loading="lazy">
+                            <img src="assets/get-insurance-two-img-1.jpg" alt="Get Quote" width="510" height="510"
+                                loading="lazy">
                         </div>
                     </div>
 
                     <form class="quote-form mt-4" id="quoteForm">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label class="form-label">Full Name</label>
-                                <input type="text" class="form-control" placeholder="Enter your name" required>
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" class="form-control"
+                                    placeholder="Enter your name" required>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Email Address</label>
-                                <input type="email" class="form-control" placeholder="Enter your email" required>
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="Enter your email" required>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required>
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                    placeholder="+91 XXXXX XXXXX" required>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label">Insurance Type</label>
-                                <select class="form-select" id="insuranceSelect">
+                                <label for="insuranceSelect" class="form-label">Insurance Type</label>
+                                <select class="form-select" id="insuranceSelect" name="type">
                                     <option value="car" selected>Car Insurance</option>
                                     <option value="bike">Bike Insurance</option>
                                     <option value="health">Health Insurance</option>
@@ -224,7 +245,8 @@
                             </div>
 
                             <!-- Dynamic Fields Container -->
-                            <div id="dynamicFields" class="col-12 row g-3 m-0 p-0">
+                            <div id="dynamicFields" class="col-12 row g-3 px-0"
+                                style="margin-left:0; margin-right:0; overflow-x:hidden;">
                                 <!-- JS will inject fields here -->
                             </div>
 
@@ -232,13 +254,17 @@
                             <div class="col-12 mt-4">
                                 <div class="limit-wrapper">
                                     <div class="limit-info">
-                                        <label class="form-label" id="limitLabel">Sum Insured (Limit)</label>
+                                        <label for="limitRange" class="form-label" id="limitLabel">Sum Insured
+                                            (Limit)</label>
                                         <span class="amount-display">₹ <span id="limitValue">5,00,000</span></span>
                                     </div>
                                     <div class="progress-container">
-                                        <input type="range" class="form-range" id="limitRange" min="100000" max="5000000" step="50000" value="500000">
+                                        <input type="range" class="form-range" id="limitRange" min="100000"
+                                            max="5000000" step="50000" value="500000">
                                         <div class="progress" style="height: 8px;">
-                                            <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%;"></div>
+                                            <div id="progressBar"
+                                                class="progress-bar progress-bar-striped progress-bar-animated"
+                                                role="progressbar" style="width: 10%;"></div>
                                         </div>
                                     </div>
                                     <div class="limit-labels">
@@ -289,8 +315,11 @@
                 <h3 class="mt">REGIONAL DELHI OFFICE</h3>
                 <p>Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank" rel="noopener" aria-label="PIB Insurance on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/919820419276" target="_blank" rel="noopener" aria-label="Contact PIB Insurance on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank"
+                        rel="noopener noreferrer" aria-label="PIB Insurance on LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/919820419276" target="_blank" rel="noopener noreferrer"
+                        aria-label="Contact PIB Insurance on WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-col center-box">
@@ -320,10 +349,14 @@
         <div class="footer-locations">
             <h4>OUR PRESENCE ACROSS INDIA</h4>
             <p>
-                <span>Mumbai</span> &middot; <span>Pune</span> &middot; <span>Raipur</span> &middot; <span>Ahmedabad</span> &middot; <span>Surat</span> &middot;
-                <span>Chennai</span> &middot; <span>Bengaluru</span> &middot; <span>Hyderabad</span> &middot; <span>Visakhapatnam</span> &middot;
-                <span>Cochin</span> &middot; <span>Guwahati</span> &middot; <span>Kolkata</span> &middot; <span>Patna</span> &middot; <span>Ranchi</span> &middot;
-                <span>Bhubaneswar</span> &middot; <span>Lucknow</span> &middot; <span>Bhopal</span> &middot; <span>Delhi</span> &middot;
+                <span>Mumbai</span> &middot; <span>Pune</span> &middot; <span>Raipur</span> &middot;
+                <span>Ahmedabad</span> &middot; <span>Surat</span> &middot;
+                <span>Chennai</span> &middot; <span>Bengaluru</span> &middot; <span>Hyderabad</span> &middot;
+                <span>Visakhapatnam</span> &middot;
+                <span>Cochin</span> &middot; <span>Guwahati</span> &middot; <span>Kolkata</span> &middot;
+                <span>Patna</span> &middot; <span>Ranchi</span> &middot;
+                <span>Bhubaneswar</span> &middot; <span>Lucknow</span> &middot; <span>Bhopal</span> &middot;
+                <span>Delhi</span> &middot;
                 <span>Jaipur</span> &middot; <span>Chandigarh</span>
             </p>
         </div>
@@ -348,8 +381,8 @@
     <!-- PDF Generation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
-    
-    <script src="script.js"></script>
+
+    <script src="script.js?v=1.1.2"></script>
     <script>
         const { jsPDF } = window.jspdf;
         const range = document.getElementById('limitRange');
@@ -371,7 +404,7 @@
                 max: 5000000,
                 step: 50000,
                 default: 500000,
-                fields: '<div class="col-md-6"><label class="form-label">Vehicle Reg. No</label><input type="text" name="vehicle_reg" class="form-control" placeholder="MH 01 AB 1234"></div><div class="col-md-6"><label class="form-label">Vehicle Model</label><input type="text" name="vehicle_model" class="form-control" placeholder="e.g. Honda City"></div>'
+                fields: '<div class="col-md-6"><label for="vehicle_reg" class="form-label">Vehicle Reg. No</label><input type="text" id="vehicle_reg" name="vehicle_reg" class="form-control" placeholder="MH 01 AB 1234"></div><div class="col-md-6"><label for="vehicle_model" class="form-label">Vehicle Model</label><input type="text" id="vehicle_model" name="vehicle_model" class="form-control" placeholder="e.g. Honda City"></div>'
             },
             bike: {
                 name: 'Bike Insurance',
@@ -380,7 +413,7 @@
                 max: 500000,
                 step: 5000,
                 default: 100000,
-                fields: '<div class="col-md-6"><label class="form-label">Bike Reg. No</label><input type="text" name="bike_reg" class="form-control" placeholder="MH 02 XY 5678"></div><div class="col-md-6"><label class="form-label">Engine CC</label><input type="number" name="engine_cc" class="form-control" placeholder="e.g. 150"></div>'
+                fields: '<div class="col-md-6"><label for="bike_reg" class="form-label">Bike Reg. No</label><input type="text" id="bike_reg" name="bike_reg" class="form-control" placeholder="MH 02 XY 5678"></div><div class="col-md-6"><label for="engine_cc" class="form-label">Engine CC</label><input type="number" id="engine_cc" name="engine_cc" class="form-control" placeholder="e.g. 150"></div>'
             },
             health: {
                 name: 'Health Insurance',
@@ -389,7 +422,7 @@
                 max: 2000000,
                 step: 100000,
                 default: 500000,
-                fields: '<div class="col-md-6"><label class="form-label">Members Count</label><input type="number" name="members" class="form-control" value="1" min="1" max="10"></div><div class="col-md-6"><label class="form-label">Oldest Member Age</label><input type="number" name="age" class="form-control" placeholder="e.g. 35"></div>'
+                fields: '<div class="col-md-6"><label for="members" class="form-label">Members Count</label><input type="number" id="members" name="members" class="form-control" value="1" min="1" max="10"></div><div class="col-md-6"><label for="age" class="form-label">Oldest Member Age</label><input type="number" id="age" name="age" class="form-control" placeholder="e.g. 35"></div>'
             },
             travel: {
                 name: 'Travel Insurance',
@@ -398,7 +431,7 @@
                 max: 10000000,
                 step: 100000,
                 default: 1000000,
-                fields: '<div class="col-md-6"><label class="form-label">Destination</label><input type="text" name="destination" class="form-control" placeholder="e.g. Europe"></div><div class="col-md-6"><label class="form-label">Trip Duration (Days)</label><input type="number" name="duration" class="form-control" placeholder="e.g. 15"></div>'
+                fields: '<div class="col-md-6"><label for="destination" class="form-label">Destination</label><input type="text" id="destination" name="destination" class="form-control" placeholder="e.g. Europe"></div><div class="col-md-6"><label for="duration" class="form-label">Trip Duration (Days)</label><input type="number" id="duration" name="duration" class="form-control" placeholder="e.g. 15"></div>'
             },
             life: {
                 name: 'Life Insurance',
@@ -407,7 +440,7 @@
                 max: 50000000,
                 step: 500000,
                 default: 5000000,
-                fields: '<div class="col-md-6"><label class="form-label">Annual Income</label><input type="number" name="income" class="form-control" placeholder="e.g. 10,00,000"></div><div class="col-md-6"><label class="form-label">Smoker?</label><select name="smoker" class="form-select"><option>No</option><option>Yes</option></select></div>'
+                fields: '<div class="col-md-6"><label for="income" class="form-label">Annual Income</label><input type="number" id="income" name="income" class="form-control" placeholder="e.g. 10,00,000"></div><div class="col-md-6"><label for="smoker" class="form-label">Smoker?</label><select id="smoker" name="smoker" class="form-select"><option>No</option><option>Yes</option></select></div>'
             },
             home: {
                 name: 'Home Insurance',
@@ -416,7 +449,7 @@
                 max: 20000000,
                 step: 500000,
                 default: 2500000,
-                fields: '<div class="col-md-6"><label class="form-label">Property Value</label><input type="number" name="prop_value" class="form-control" placeholder="₹"></div><div class="col-md-6"><label class="form-label">Property Type</label><select name="prop_type" class="form-select"><option>Apartment</option><option>Villa</option></select></div>'
+                fields: '<div class="col-md-6"><label for="prop_value" class="form-label">Property Value</label><input type="number" id="prop_value" name="prop_value" class="form-control" placeholder="₹"></div><div class="col-md-6"><label for="prop_type" class="form-label">Property Type</label><select id="prop_type" name="prop_type" class="form-select"><option>Apartment</option><option>Villa</option></select></div>'
             }
         };
 
@@ -442,7 +475,7 @@
         function updateCalculation() {
             const val = parseInt(range.value);
             displayValue.innerText = val.toLocaleString('en-IN');
-            
+
             const min = parseInt(range.min);
             const max = parseInt(range.max);
             const percent = ((val - min) / (max - min)) * 100;
@@ -457,7 +490,7 @@
         function generatePDF(data) {
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
-            
+
             // Header
             doc.setFillColor(26, 111, 168);
             doc.rect(0, 0, 210, 40, 'F');
@@ -471,12 +504,12 @@
             doc.setTextColor(26, 111, 168);
             doc.setFontSize(18);
             doc.text('INSURANCE QUOTE ESTIMATE', 15, 55);
-            
+
             // Customer Info
             doc.setTextColor(0, 0, 0);
             doc.setFontSize(12);
             doc.text(`Date: ${new Date().toLocaleDateString()}`, 150, 55);
-            
+
             const tableData = [
                 ['Customer Name', data.fullName],
                 ['Email', data.email],
@@ -509,7 +542,7 @@
             doc.setTextColor(100, 100, 100);
             doc.text('*Disclaimer: This is an automated estimate based on standard rates. Final premium is subject to', 15, finalY + 20);
             doc.text('underwriting approval, age, health status, and other policy-specific factors.', 15, finalY + 25);
-            
+
             doc.setTextColor(26, 111, 168);
             doc.text('PIB Insurance Brokers | helpdesk@pibinsurance.in | +91 9820419276', 15, 280);
 
@@ -519,12 +552,12 @@
         async function submitToSheet(data) {
             // NOTE: Replace with your actual Google Apps Script Web App URL
             const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_YOUR_SCRIPT_ID/exec';
-            
+
             try {
                 // We use no-cors if just sending, or use a proper backend bridge
                 // For demonstration, we'll log it. In production, uncomment the fetch.
                 console.log('Sending data to Google Sheets:', data);
-                
+
                 /*
                 await fetch(SCRIPT_URL, {
                     method: 'POST',
@@ -580,7 +613,6 @@
 </body>
 
 </html>
-
 
 
 

@@ -299,41 +299,58 @@
     filter: brightness(1.1);
 }
 
-/* RESPONSIVE */
+/* =============================================
+   RESPONSIVE — All Screen Sizes
+   ============================================= */
+
+/* Tablets (992px and below) */
 @media (max-width: 992px) {
     .claim-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
     }
 
     .claim-sidebar {
         position: static;
-        margin-bottom: 30px;
+        margin-bottom: 0;
     }
 
     .claim-tabs {
-        display: flex;
-        overflow-x: auto;
-        padding-bottom: 10px;
-        gap: 10px;
-        background: transparent;
-        box-shadow: none;
+        display: block; /* Back to vertical stack */
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(11, 44, 61, 0.05);
+        margin-bottom: 20px;
     }
 
     .claim-tabs li {
-        flex: 0 0 auto;
-        border-radius: 10px;
-        background: #fff;
-        border: 1.5px solid #e0e7ef;
-        padding: 12px 20px;
+        flex: 1 1 100%;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid #f0f4f8;
+        padding: 15px 20px;
+        white-space: normal;
+    }
+
+    .claim-tabs li:last-child {
+        border-bottom: none;
     }
 
     .claim-tabs li.active {
-        border-color: var(--pib-primary);
+        background: var(--pib-primary);
+        color: #fff;
     }
 
     .content-header {
         flex-direction: column-reverse;
         text-align: center;
+        gap: 16px;
+    }
+
+    .header-img img {
+        width: 100px;
+        height: 100px;
     }
 
     .claim-content {
@@ -343,4 +360,183 @@
     .header-text h2 {
         font-size: 24px;
     }
+
+    .help-card {
+        padding: 20px;
+    }
 }
+
+/* Tablets smaller (768px and below) */
+@media (max-width: 768px) {
+    .claim-section {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .claim-grid {
+        gap: 20px;
+    }
+
+    .sidebar-title h3 {
+        font-size: 18px;
+    }
+
+    .header-text h2 {
+        font-size: 22px;
+    }
+
+    .limit-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .amount-display {
+        font-size: 20px;
+    }
+
+    .calc-value {
+        font-size: 22px;
+    }
+
+    .limit-wrapper {
+        padding: 18px;
+    }
+
+    .calculation-box {
+        padding: 18px;
+    }
+}
+
+/* Mobile (576px and below) */
+@media (max-width: 576px) {
+    .claim-content {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .content-header {
+        padding-bottom: 20px;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-text h2 {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .header-text p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .claim-tabs li {
+        padding: 10px 14px;
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .quote-form .form-control,
+    .quote-form .form-select {
+        font-size: 14px;
+        padding: 10px 14px;
+    }
+
+    .quote-form .form-label {
+        font-size: 12px;
+    }
+
+    .limit-wrapper {
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    .limit-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .amount-display {
+        font-size: 18px;
+    }
+
+    .limit-labels {
+        font-size: 11px;
+    }
+
+    .calculation-box {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .calc-row span:first-child {
+        font-size: 14px;
+    }
+
+    .calc-value {
+        font-size: 20px;
+    }
+
+    .calc-note {
+        font-size: 10px;
+    }
+
+    .help-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .help-card i {
+        font-size: 24px;
+    }
+
+    .help-card h4 {
+        font-size: 15px;
+    }
+
+    .help-card p {
+        font-size: 12px;
+    }
+
+    .get-quote-btn {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+/* Small mobile (375px and below) */
+@media (max-width: 400px) {
+    .claim-content {
+        padding: 14px;
+    }
+
+    .sidebar-title {
+        margin-bottom: 15px;
+    }
+
+    .sidebar-title h3 {
+        font-size: 16px;
+    }
+
+    .header-text h2 {
+        font-size: 18px;
+    }
+
+    .claim-tabs li {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .amount-display {
+        font-size: 16px;
+    }
+
+    .calc-value {
+        font-size: 18px;
+    }
+}
+

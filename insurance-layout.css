@@ -17,7 +17,8 @@
 /* SIDEBAR */
 .insurance-sidebar {
     position: sticky;
-    top: 80px; /* Reduced to sit closer to navbar */
+    top: 80px;
+    /* Reduced to sit closer to navbar */
     height: fit-content;
     z-index: 10;
 }
@@ -65,7 +66,8 @@
     padding: 50px;
     border-radius: 20px;
     box-shadow: var(--shadow-lg);
-    min-height: 80vh; /* Ensures content area is tall enough for sidebar to stick */
+    min-height: 80vh;
+    /* Ensures content area is tall enough for sidebar to stick */
 }
 
 .insurance-main h2 {
@@ -78,9 +80,11 @@
 
 .insurance-main img {
     width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 15px;
     margin-bottom: 30px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .insurance-main p {
@@ -130,12 +134,12 @@
         gap: 20px;
         padding: 0 16px;
     }
-    
+
     .insurance-sidebar {
         position: static;
         margin-bottom: 30px;
     }
-    
+
     .sidebar-menu {
         display: flex;
         flex-wrap: wrap;
@@ -143,14 +147,14 @@
         background: transparent;
         box-shadow: none;
     }
-    
+
     .sidebar-menu li {
         flex: 1 1 calc(50% - 10px);
         background: var(--card-bg);
         border-radius: 10px;
         box-shadow: var(--shadow);
     }
-    
+
     .sidebar-menu li a {
         padding: 15px;
         font-size: 13px;
@@ -161,13 +165,13 @@
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .sidebar-menu li a:hover,
     .sidebar-menu li.active a {
         border-bottom-color: var(--blue-main);
         background: var(--card-bg);
     }
-    
+
     .insurance-main {
         padding: 30px 20px;
         border-radius: 15px;
@@ -216,7 +220,8 @@
 
 .matter-item {
     display: flex;
-    flex-direction: row; /* ICON AND TEXT IN ROW AS REQUESTED */
+    flex-direction: row;
+    /* ICON AND TEXT IN ROW AS REQUESTED */
     gap: 15px;
     background: var(--card-bg);
     padding: 25px;
@@ -227,13 +232,14 @@
     border: 1px solid var(--gray-border);
 }
 
-.matter-item > div:not(.matter-icon) {
-    flex: 1; /* Ensure text takes all remaining space */
+.matter-item>div:not(.matter-icon) {
+    flex: 1;
+    /* Ensure text takes all remaining space */
 }
 
 .matter-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -262,7 +268,7 @@
         padding: 30px 20px;
         border-radius: 15px;
     }
-    
+
     .consider-box h4 {
         font-size: 18px;
     }
@@ -287,11 +293,11 @@
     .cta-box {
         padding: 40px 20px !important;
     }
-    
+
     .cta-box h3 {
         font-size: 24px;
     }
-    
+
     .cta-box p {
         font-size: 14px;
     }
@@ -309,17 +315,17 @@
 
 /* RESPONSIVE UPDATES FOR WHY IT MATTERS */
 /* RESPONSIVE UPDATES FOR WHY IT MATTERS */
-@media (max-width: 1200px) { 
+@media (max-width: 1200px) {
     .why-matters-section {
         padding: 40px 25px !important;
     }
-    
+
     .matter-item {
         align-items: flex-start;
         gap: 15px;
         padding: 25px;
     }
-    
+
     .matter-icon {
         width: 45px;
         height: 45px;
@@ -331,17 +337,17 @@
     .why-matters-section {
         padding: 25px 20px !important;
     }
-    
+
     .matter-item {
         padding: 25px;
     }
-    
+
     .matter-icon {
         width: 42px;
         height: 42px;
         font-size: 18px;
     }
-    
+
     .matter-item div {
         font-size: 15px;
         line-height: 1.6;
