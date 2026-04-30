@@ -130,9 +130,9 @@
 
 .content-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
+    text-align: center;
     padding-bottom: 30px;
     border-bottom: 1px solid #f0f4f8;
 }
