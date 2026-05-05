@@ -51,7 +51,7 @@ const InsuranceDetail = () => {
             {/* HERO SECTION */}
             <section className={`insurance-hero ${data.heroClass}`}>
                 <div className="industries-hero-container">
-                    <MotionSection className="industries-hero-content">
+                    <div className="industries-hero-content">
                         <div className="hero-header-row">
                             <h1>{data.heroTitle}</h1>
                             <div className="hero-header-divider"></div>
@@ -59,7 +59,7 @@ const InsuranceDetail = () => {
                         </div>
                         <p>{data.heroText}</p>
                         <div className="breadcrumb-custom">{data.breadcrumb}</div>
-                    </MotionSection>
+                    </div>
                 </div>
             </section>
 

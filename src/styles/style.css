@@ -1154,7 +1154,7 @@ body {
   position: relative;
   height: 90vh;
   min-height: 600px;
-  background: url('/pib-insurance/assets/hero.jpeg');
+  background: url('../assets/hero.jpeg');
   background-position: center right;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2713,7 +2713,7 @@ a {
 .insurance-hero {
   height: 45vh;
   min-height: 400px;
-  background: url('/pib-insurance/assets/benefits-bg-2.jpg') no-repeat center center;
+  background: url('../assets/benefits-bg-2.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
@@ -2832,63 +2832,63 @@ a {
 
 /* Page Specific Hero Backgrounds */
 .hero-group-health {
-  background-image: url('/pib-insurance/assets/group-insurance-2.png') !important;
+  background-image: url('../assets/group-insurance-2.png') !important;
 }
 
 .hero-property {
-  background-image: url('/pib-insurance/assets/property-insurance.jpg') !important;
+  background-image: url('../assets/property-insurance.jpg') !important;
 }
 
 .hero-motor {
-  background-image: url('/pib-insurance/assets/motor-insurance.jpg') !important;
+  background-image: url('../assets/motor-insurance.jpg') !important;
 }
 
 .hero-about {
-  background-image: url('/pib-insurance/assets/group-meeting.png') !important;
+  background-image: url('../assets/group-meeting.png') !important;
 }
 
 .hero-industries {
-  background-image: url('/pib-insurance/assets/featured-3.jpg') !important;
+  background-image: url('../assets/featured-3.jpg') !important;
 }
 
 .hero-insights {
-  background-image: url('/pib-insurance/assets/market-updates-2.jpg') !important;
+  background-image: url('../assets/market-updates-2.jpg') !important;
 }
 
 .hero-contact {
-  background-image: url('/pib-insurance/assets/get-insurance-two-img-1.jpg') !important;
+  background-image: url('../assets/get-insurance-two-img-1.jpg') !important;
 }
 
 .hero-liability {
-  background-image: url('/pib-insurance/assets/liability-insurance.jpg') !important;
+  background-image: url('../assets/liability-insurance.jpg') !important;
 }
 
 .hero-marine {
-  background-image: url('/pib-insurance/assets/marine-insurance.png') !important;
+  background-image: url('../assets/marine-insurance.png') !important;
 }
 
 .hero-fire {
-  background-image: url('/pib-insurance/assets/fire-insurance.png') !important;
+  background-image: url('../assets/fire-insurance.png') !important;
 }
 
 .hero-term {
-  background-image: url('/pib-insurance/assets/term-insurance.jpg') !important;
+  background-image: url('../assets/term-insurance.jpg') !important;
 }
 
 .hero-health {
-  background-image: url('/pib-insurance/assets/health-insurance.jpg') !important;
+  background-image: url('../assets/health-insurance.jpg') !important;
 }
 
 .hero-home {
-  background-image: url('/pib-insurance/assets/Home-Insurance.png') !important;
+  background-image: url('../assets/Home-Insurance.png') !important;
 }
 
 .hero-travel {
-  background-image: url('/pib-insurance/assets/travel-insurance.jpg') !important;
+  background-image: url('../assets/travel-insurance.jpg') !important;
 }
 
 .hero-accidental {
-  background-image: url('/pib-insurance/assets/accidental-insurance.jpg') !important;
+  background-image: url('../assets/accidental-insurance.jpg') !important;
 }
 
 
@@ -3123,4 +3123,4 @@ img {
 
 main#main-content:focus {
   outline: none;
-}
+}

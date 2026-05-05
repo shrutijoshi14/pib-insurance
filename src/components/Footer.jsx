@@ -5,22 +5,22 @@ const Footer = () => {
         <>
             <footer className="footer">
                 <div className="footer-top">
-                    <h2>TO GET INSURED CONTACT OUR EXPERTS NOW</h2>
+                    <h2 data-aos="fade-up" data-aos-delay="200">TO GET INSURED CONTACT OUR EXPERTS NOW</h2>
                     <div className="footer-contact">
                         <span><i className="fa fa-phone"></i> +91 98204 19276 / +91 98204 19256</span>
                         <span><i className="fa fa-envelope"></i> info@pibinsurance.in</span>
                     </div>
                 </div>
                 <div className="footer-main">
-                    <div className="footer-col">
-                        <p className="office-title">REGISTERED OFFICE :</p>
-                        <p>A/203, Chintamani Plaza, Chakala, Andheri Kurla Road, Andheri East, Mumbai — 400093</p>
+                    <div data-aos="fade-up" data-aos-delay="200" data-aos="fade-up" data-aos-delay="200" className="footer-col">
+                        <p data-aos="fade-up" data-aos-delay="200" className="office-title" data-aos="fade-up" data-aos-delay="200">REGISTERED OFFICE :</p>
+                        <p data-aos="fade-up" data-aos-delay="200">A/203, Chintamani Plaza, Chakala, Andheri Kurla Road, Andheri East, Mumbai — 400093</p>
                         <hr />
-                        <p className="office-title">CORPORATE OFFICE :</p>
-                        <p>7th Floor, Mangalya Complex, Sangeet Plaza, Marol, Andheri East, Mumbai — 400059</p>
+                        <p data-aos="fade-up" data-aos-delay="300" className="office-title" data-aos="fade-up" data-aos-delay="200">CORPORATE OFFICE :</p>
+                        <p data-aos="fade-up" data-aos-delay="200">7th Floor, Mangalya Complex, Sangeet Plaza, Marol, Andheri East, Mumbai — 400059</p>
                         <hr />
-                        <h3 className="mt">REGIONAL DELHI OFFICE</h3>
-                        <p>Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
+                        <h3 className="mt" data-aos="fade-up" data-aos-delay="200">REGIONAL DELHI OFFICE</h3>
+                        <p data-aos="fade-up" data-aos-delay="200">Statesman's House, 8th Floor, Barakhamba Road, New Delhi — 110001</p>
                         <div className="social-icons">
                             <a href="https://www.linkedin.com/company/pib-insurance-brokers/" target="_blank" rel="noopener noreferrer" aria-label="PIB Insurance on LinkedIn">
                                 <i className="fab fa-linkedin-in"></i>
@@ -31,34 +31,34 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="footer-col center-box">
-                        <h3>CERTIFICATES</h3>
+                    <div data-aos="fade-up" data-aos-delay="300" data-aos="fade-up" data-aos-delay="300" className="footer-col center-box">
+                        <h3 data-aos="fade-up" data-aos-delay="200">CERTIFICATES</h3>
                         <div className="certificate-box">
-                            <p><strong>IRDAI License No. – 935,</strong></p>
+                            <p data-aos="fade-up" data-aos-delay="200"><strong>IRDAI License No. – 935,</strong></p>
                             <hr />
-                            <p>Registration code for the Insurance Broker – IRDAI / DBI047 / 2023,</p>
+                            <p data-aos="fade-up" data-aos-delay="200">Registration code for the Insurance Broker – IRDAI / DBI047 / 2023,</p>
                             <hr />
-                            <p>Validity – 19/01/2024 to 18/01/2027.</p>
+                            <p data-aos="fade-up" data-aos-delay="200">Validity – 19/01/2024 to 18/01/2027.</p>
                             <hr />
-                            <p>Corporate Identity Number – U67200MH2022PTC394803</p>
+                            <p data-aos="fade-up" data-aos-delay="200">Corporate Identity Number – U67200MH2022PTC394803</p>
                         </div>
                     </div>
 
-                    <div className="footer-col">
-                        <h3>FOR GRIEVANCES</h3>
-                        <p><strong>Mr. Upendra Pandey – Grievance Officer</strong></p>
+                    <div data-aos="fade-up" data-aos-delay="400" data-aos="fade-up" data-aos-delay="400" className="footer-col">
+                        <h3 data-aos="fade-up" data-aos-delay="200">FOR GRIEVANCES</h3>
+                        <p data-aos="fade-up" data-aos-delay="200"><strong>Mr. Upendra Pandey – Grievance Officer</strong></p>
                         <hr />
-                        <p>IRDAI Complaint Handling and Grievance Redressal Process</p>
+                        <p data-aos="fade-up" data-aos-delay="200">IRDAI Complaint Handling and Grievance Redressal Process</p>
                         <hr />
-                        <p>IFSCA Complaint Handling and Grievance Redressal Process</p>
+                        <p data-aos="fade-up" data-aos-delay="200">IFSCA Complaint Handling and Grievance Redressal Process</p>
                         <hr />
-                        <p>gro@pibinsurance.in</p>
+                        <p data-aos="fade-up" data-aos-delay="200">gro@pibinsurance.in</p>
                     </div>
                 </div>
 
                 <div className="footer-locations">
                     <h4>OUR PRESENCE ACROSS INDIA</h4>
-                    <p>
+                    <p data-aos="fade-up" data-aos-delay="200">
                         <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> ·
                         <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> ·
                         <span>Cochin</span> · <span>Guwahati</span> · <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> ·

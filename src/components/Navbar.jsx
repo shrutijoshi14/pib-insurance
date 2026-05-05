@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const location = useLocation();
+
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -47,19 +48,25 @@ const Navbar = () => {
                 closeMenu();
             }
         };
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
         window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (
         <>
             {/* TOPBAR */}
-            <motion.div 
-                className="topbar"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6 }}
-            >
+            <div className="topbar">
                 <div className="topbar-inner">
                     <div className="logo-wrap">
                         <Link to="/" className="logo">
@@ -95,33 +102,29 @@ const Navbar = () => {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </div>
 
             {/* NAV OVERLAY */}
-            <AnimatePresence>
-                {isMenuOpen && (
-                    <motion.div 
-                        className="nav-overlay show"
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        onClick={closeMenu}
-                    />
-                )}
-            </AnimatePresence>
+            {isMenuOpen && (
+                <div 
+                    className="nav-overlay show"
+                    onClick={closeMenu}
+                />
+            )}
 
             {/* NAVBAR */}
-            <motion.nav 
-                className="navbar"
+            <nav 
+                className={`navbar ${isScrolled ? 'scrolled' : ''}`}
                 style={{ 
-                    position: 'sticky', 
+                    position: isScrolled ? 'fixed' : 'sticky', 
                     top: 0, 
+                    width: '100%',
                     zIndex: 2000,
-                    background: 'linear-gradient(90deg, #0b2c3d 0%, #1a5276 40%, #1a6fa8 100%)'
+                    transition: 'all 0.4s ease',
+                    background: isScrolled ? 'rgba(11, 44, 61, 0.95)' : 'linear-gradient(90deg, #0b2c3d 0%, #1a5276 40%, #1a6fa8 100%)',
+                    boxShadow: isScrolled ? '0 4px 20px rgba(0, 0, 0, 0.1)' : 'none',
+                    backdropFilter: isScrolled ? 'blur(10px)' : 'none'
                 }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
             >
                 <div className="nav-inner">
                     <ul className={`menu ${isMenuOpen ? 'show' : ''}`} id="mainMenu">
@@ -188,7 +191,7 @@ const Navbar = () => {
                         <span className="btn-text">ADD CLAIMS</span>
                     </Link>
                 </div>
-            </motion.nav>
+            </nav>
         </>
     );
 };

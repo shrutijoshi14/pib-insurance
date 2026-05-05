@@ -1,6 +1,19 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const Preloader = () => {
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        // Only show the preloader if loading takes more than 200ms
+        const timer = setTimeout(() => {
+            setShow(true);
+        }, 200);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (!show) return null;
+
     return (
         <div className="pib-preloader">
             <div className="preloader-content">

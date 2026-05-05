@@ -11,7 +11,7 @@ const About = () => {
             />
             <section className="insurance-hero hero-about">
                 <div className="industries-hero-container">
-                    <MotionSection className="industries-hero-content">
+                    <div className="industries-hero-content">
                         <div className="hero-header-row">
                             <h1>About PIB Insurance</h1>
                             <div className="hero-header-divider"></div>
@@ -19,7 +19,7 @@ const About = () => {
                         </div>
                         <p>We are more than just insurance brokers; we are your partners in risk management, dedicated to securing your future with integrity and expertise.</p>
                         <div className="breadcrumb-custom">HOME / ABOUT US</div>
-                    </MotionSection>
+                    </div>
                 </div>
             </section>
 

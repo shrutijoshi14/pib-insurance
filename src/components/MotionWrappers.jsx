@@ -1,80 +1,48 @@
-import { motion } from 'framer-motion';
-
 export const MotionSection = ({ children, className, delay = 0 }) => {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.8, delay, ease: [0.2, 1, 0.3, 1] }}
+        <div
+            data-aos="fade-up"
+            data-aos-delay={delay * 1000}
             className={className}
         >
             {children}
-        </motion.div>
+        </div>
     );
 };
 
 export const MotionItem = ({ children, className, delay = 0, variant = "fadeUp" }) => {
-    const variants = {
-        fadeUp: {
-            initial: { opacity: 0, y: 40 },
-            animate: { opacity: 1, y: 0 }
-        },
-        zoomIn: {
-            initial: { opacity: 0, scale: 0.92 },
-            animate: { opacity: 1, scale: 1 }
-        },
-        fadeRight: {
-            initial: { opacity: 0, x: -40 },
-            animate: { opacity: 1, x: 0 }
-        },
-        fadeLeft: {
-            initial: { opacity: 0, x: 40 },
-            animate: { opacity: 1, x: 0 }
-        }
+    const aosVariants = {
+        fadeUp: "fade-up",
+        zoomIn: "zoom-in",
+        fadeRight: "fade-right",
+        fadeLeft: "fade-left",
+        textReveal: "fade-up"
     };
 
-    const selected = variants[variant] || variants.fadeUp;
+    const selectedAos = aosVariants[variant] || "fade-up";
 
     return (
-        <motion.div
-            initial={selected.initial}
-            whileInView={selected.animate}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.8, delay, ease: [0.2, 1, 0.3, 1] }}
+        <div
+            data-aos={selectedAos}
+            data-aos-delay={delay * 1000}
             className={className}
         >
             {children}
-        </motion.div>
+        </div>
     );
 };
 
 export const MotionList = ({ children, className, stagger = 0.1 }) => {
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: stagger,
-                delayChildren: 0.1
-            }
-        }
-    };
-
-    const item = {
-        hidden: { opacity: 0, y: 20 },
-        show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.2, 1, 0.3, 1] } }
-    };
-
+    // AOS doesn't natively do staggered children from a parent wrapper easily 
+    // unless we map over children and inject delays, but React children iteration 
+    // can be tricky. We will just return a div with standard fade-up and let 
+    // child MotionItems handle their own delays if provided.
     return (
-        <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.1 }}
+        <div
+            data-aos="fade-up"
             className={className}
         >
             {children}
-        </motion.div>
+        </div>
     );
 };

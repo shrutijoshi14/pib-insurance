@@ -15,3 +15,88 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* =========================================
+   GLOBAL ANIMATIONS & HOVER EFFECTS
+   ========================================= */
+
+/* Cards Hover (Lift Up) */
+.card, .insight-card, .testimonial-card, .process-step {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.card:hover, .insight-card:hover, .testimonial-card:hover, .process-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Images Zoom on Hover */
+.img-wrap {
+  overflow: hidden;
+}
+
+.img-wrap img {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .img-wrap img, 
+.insight-card:hover .img-wrap img {
+  transform: scale(1.05);
+}
+
+/* Buttons Hover */
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Links Hover */
+.footer-links a, .card a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-links a::after, .card a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after, .card a:hover::after {
+  width: 100%;
+}
+
+/* Forms Focus Animations */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Navbar Scrolled Animation */
+.navbar.scrolled {
+  animation: slideDown 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

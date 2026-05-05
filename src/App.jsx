@@ -1,5 +1,7 @@
 import { Suspense, lazy, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import Preloader from './components/Preloader';
@@ -14,18 +16,15 @@ const Claim = lazy(() => import('./pages/Claim'));
 const InsuranceDetail = lazy(() => import('./pages/InsuranceDetail'));
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    // Ensure preloader shows for at least 1.5s for brand impact
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1800);
-
-    return () => clearTimeout(timer);
+    // Initialize AOS
+    AOS.init({
+      duration: 600,
+      once: true,
+      offset: 20,
+      easing: 'ease-out-cubic',
+    });
   }, []);
-
-  if (loading) return <Preloader />;
 
   return (
     <Router basename={import.meta.env.BASE_URL}>
