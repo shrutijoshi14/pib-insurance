@@ -79,12 +79,31 @@
     }
   }
   </script>
-  <script type="module" crossorigin src="/pib-insurance/assets/index-qb6VdWoy.js"></script>
+
+  <!-- Start Single Page Apps for GitHub Pages -->
+  <script type="text/javascript">
+    (function(l) {
+      if (l.search[1] === 'p') {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&') 
+        }).filter(function(v) {
+          return v.indexOf('p=/') === 0
+        })[0];
+        if (decoded) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded.slice(3) +
+            (l.hash || '')
+          );
+        }
+      }
+    }(window.location))
+  </script>
+  <!-- End Single Page Apps for GitHub Pages -->
+  <script type="module" crossorigin src="/pib-insurance/assets/index-BR8oIYDC.js"></script>
   <link rel="modulepreload" crossorigin href="/pib-insurance/assets/chunk-BNv3lrIs.js">
   <link rel="modulepreload" crossorigin href="/pib-insurance/assets/preload-helper-CixvjRHz.js">
-  <link rel="modulepreload" crossorigin href="/pib-insurance/assets/jsx-runtime-kJazARoa.js">
-  <link rel="modulepreload" crossorigin href="/pib-insurance/assets/react-BJuGsbII.js">
-  <link rel="stylesheet" crossorigin href="/pib-insurance/assets/index-CvQgeb5J.css">
+  <link rel="modulepreload" crossorigin href="/pib-insurance/assets/jsx-runtime-F-zjkqIf.js">
+  <link rel="stylesheet" crossorigin href="/pib-insurance/assets/index-DldUMR5N.css">
 </head>
 <body>
   <div id="root" aria-label="PIB Insurance Platform"></div>
