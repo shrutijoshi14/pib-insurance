@@ -1,0 +1,17 @@
+@import "./styles/style.css";
+@import "./styles/about.css";
+@import "./styles/claim.css";
+@import "./styles/contact.css";
+@import "./styles/industries.css";
+@import "./styles/insights.css";
+@import "./styles/insurance-layout.css";
+
+/* Reset some default React/Vite styles if necessary */
+:root {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
