@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { jsPDF } from 'jspdf';
 import 'jspdf-autotable';
+import { MotionSection, MotionItem, MotionList } from '../components/MotionWrappers';
 import SEO from '../components/SEO';
 
 const config = {
@@ -212,7 +213,7 @@ const Claim = () => {
             />
             <section className="insurance-hero hero-claim">
                 <div className="industries-hero-container">
-                    <div className="industries-hero-content">
+                    <MotionSection className="industries-hero-content">
                         <div className="hero-header-row">
                             <h1>File a Claim</h1>
                             <div className="hero-header-divider"></div>
@@ -220,7 +221,7 @@ const Claim = () => {
                         </div>
                         <p>We're here for you when it matters most. Use our streamlined process to submit your claim details and our team will guide you through the rest.</p>
                         <div className="breadcrumb-custom">HOME / ADD CLAIMS</div>
-                    </div>
+                    </MotionSection>
                 </div>
             </section>
 
@@ -229,32 +230,36 @@ const Claim = () => {
                     <div className="claim-grid">
                         {/* Sidebar Tabs */}
                         <div className="claim-sidebar">
-                            <div className="sidebar-title">
-                                <h3>Insurance Types</h3>
-                                <p>Select category for quote</p>
-                            </div>
-                            <ul className="claim-tabs">
-                                {Object.entries(config).map(([key, cfg]) => (
-                                    <li 
-                                        key={key} 
-                                        className={insuranceType === key ? 'page-active' : ''} 
-                                        onClick={() => setInsuranceType(key)}
-                                    >
-                                        <i className={`fa ${key === 'car' ? 'fa-car' : key === 'bike' ? 'fa-motorcycle' : key === 'health' ? 'fa-stethoscope' : key === 'travel' ? 'fa-plane' : key === 'life' ? 'fa-heart-pulse' : 'fa-house'}`}></i> {cfg.name}
-                                    </li>
-                                ))}
-                            </ul>
+                            <MotionSection>
+                                <div className="sidebar-title">
+                                    <h3>Insurance Types</h3>
+                                    <p>Select category for quote</p>
+                                </div>
+                                <MotionList className="claim-tabs" stagger={0.1} component="ul">
+                                    {Object.entries(config).map(([key, cfg]) => (
+                                        <MotionItem 
+                                            key={key} 
+                                            className={insuranceType === key ? 'page-active' : ''} 
+                                            onClick={() => setInsuranceType(key)}
+                                            component="li"
+                                            inherit
+                                        >
+                                            <i className={`fa ${key === 'car' ? 'fa-car' : key === 'bike' ? 'fa-motorcycle' : key === 'health' ? 'fa-stethoscope' : key === 'travel' ? 'fa-plane' : key === 'life' ? 'fa-heart-pulse' : 'fa-house'}`}></i> {cfg.name}
+                                        </MotionItem>
+                                    ))}
+                                </MotionList>
 
-                            <div className="help-card mt-4">
-                                <i className="fa fa-headset"></i>
-                                <h4>Need Help?</h4>
-                                <p>Our experts are here to assist you with your quote calculation.</p>
-                                <a href="tel:+919820419276" className="btn btn-sm btn-outline-light mt-2">Call Expert</a>
-                            </div>
+                                <div className="help-card mt-4">
+                                    <i className="fa fa-headset"></i>
+                                    <h4>Need Help?</h4>
+                                    <p>Our experts are here to assist you with your quote calculation.</p>
+                                    <a href="tel:+919820419276" className="btn btn-sm btn-outline-light mt-2">Call Expert</a>
+                                </div>
+                            </MotionSection>
                         </div>
 
                         {/* Form Side */}
-                        <div className="claim-content">
+                        <MotionSection className="claim-content" delay={0.2}>
                             <div className="content-header">
                                 <div className="header-text text-center w-100">
                                     <h2>Get an insurance quote<br /><span>to get started!</span></h2>
@@ -389,7 +394,7 @@ const Claim = () => {
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </MotionSection>
                     </div>
                 </div>
             </section>

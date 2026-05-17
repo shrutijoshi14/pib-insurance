@@ -1,4 +1,76 @@
 export const insuranceData = {
+    'individual-insurance': {
+        title: 'Individual Insurance',
+        heroClass: 'hero-individual-hub',
+        heroTitle: 'Individual & Family Insurance',
+        heroInfo: 'Protecting Your Loved Ones',
+        heroText: 'Comprehensive insurance solutions designed to safeguard your family\'s health, life, assets, and future.',
+        breadcrumb: 'HOME / INDIVIDUAL INSURANCE',
+        sidebarType: 'individual',
+        contentTitle: 'Personalized Protection for Every Stage of Life',
+        contentText: 'Securing your future shouldn\'t be a one-size-fits-all approach. At PIB Insurance, we provide expert-led individual insurance solutions that adapt to your lifestyle. Whether you\'re a young professional seeking your first term plan or a parent looking for comprehensive family health cover, our experts curate the best-in-market options to ensure you are never under-insured.',
+        coveredTitle: 'What We Offer',
+        features: [
+            { icon: 'fa-heart-pulse', title: 'Life & Term Cover:', text: 'Ensure your family\'s lifestyle remains uninterrupted, no matter what.' },
+            { icon: 'fa-stethoscope', title: 'Health Insurance:', text: 'Access to premium hospital networks and specialized medical care.' },
+            { icon: 'fa-car', title: 'Motor Insurance:', text: 'Comprehensive protection for your vehicles with high claim settlement ratios.' },
+            { icon: 'fa-plane', title: 'Travel Insurance:', text: 'Global support for medical emergencies and trip disruptions.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-heart', text: 'Financial Safety Net: Protect your lifetime savings from being wiped out by a single medical crisis.' },
+            { icon: 'fa-piggy-bank', text: 'Tax Advantages: Maximize your savings with deductions under Section 80C and 80D.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Every individual and head of household who wants to ensure that their assets, health, and family\'s future are protected by a reliable, expert-managed insurance portfolio.'
+    },
+    'group-insurance': {
+        title: 'Group Insurance',
+        heroClass: 'hero-group-hub',
+        heroTitle: 'Group & Employee Benefits',
+        heroInfo: 'Empowering Your Workforce',
+        heroText: 'Attract, retain, and protect your talent with comprehensive group insurance solutions tailored for modern businesses.',
+        breadcrumb: 'HOME / GROUP INSURANCE',
+        sidebarType: 'group',
+        contentTitle: 'Build a More Resilient Organization',
+        contentText: 'Your people are your greatest asset. Group insurance is not just a statutory requirement; it is a powerful tool for talent retention and workplace morale. From startups to large corporations, we help HR leaders design benefits programs that provide real value to employees while maintaining cost-efficiency for the business through risk pooling and expert underwriting.',
+        coveredTitle: 'Key Group Solutions',
+        features: [
+            { icon: 'fa-users', title: 'Group Health Insurance:', text: 'Customizable medical covers for employees and their families.' },
+            { icon: 'fa-file-shield', title: 'Group Term Life:', text: 'Fundamental life cover at a fraction of the cost of individual plans.' },
+            { icon: 'fa-shield-halved', title: 'Personal Accident:', text: '24/7 protection for your team against accidental disability or death.' },
+            { icon: 'fa-plane-departure', title: 'Corporate Travel:', text: 'Securing your team during business trips domestic and abroad.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-user-check', text: 'Talent Retention: A strong health plan is a top reason why employees choose and stay with an employer.' },
+            { icon: 'fa-percent', text: 'Business Expense: Premiums paid by the employer are fully tax-deductible as a business expense.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Startups, SMEs, and Corporate entities looking to formalize their employee benefits and fulfill their duty of care toward their workforce.'
+    },
+    'commercial-insurance': {
+        title: 'Commercial Insurance',
+        heroClass: 'hero-commercial-hub',
+        heroTitle: 'Commercial & Business Risk',
+        heroInfo: 'Securing Your Enterprise',
+        heroText: 'Protect your business assets, infrastructure, and liability from the complex risks of the modern industrial landscape.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'commercial',
+        contentTitle: 'Advanced Risk Management for Businesses',
+        contentText: 'In the commercial world, a single incident — a fire, a cargo loss, or a professional error — can jeopardize years of growth. Our commercial insurance division specializes in identifying hidden risks and providing robust shields for your infrastructure, professional reputation, and balance sheet. We don\'t just sell policies; we partner with you to manage your risk portfolio.',
+        coveredTitle: 'Enterprise Protection',
+        features: [
+            { icon: 'fa-industry', title: 'Property & Fire:', text: 'Asset protection for your premises, machinery, and stock.' },
+            { icon: 'fa-ship', title: 'Marine & Cargo:', text: 'Transit security for your goods across sea, air, and road.' },
+            { icon: 'fa-scale-balanced', title: 'Liability Cover:', text: 'Protection against legal claims, professional errors, and cyber risks.' },
+            { icon: 'fa-hard-hat', title: 'Workmen\'s Compensation:', text: 'Fulfilling statutory requirements for employee safety on site.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-check', text: 'Asset Continuity: Ensure that a physical disaster doesn\'t mean a financial disaster for your company.' },
+            { icon: 'fa-landmark', text: 'Contractual Compliance: Many corporate contracts and government bids require active commercial insurance cover.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Manufacturers, logistics partners, IT firms, contractors, and retail chains that require professional risk transfer solutions.'
+    },
     'group-health-insurance': {
         title: 'Group Health Insurance',
         heroClass: 'hero-group-health',

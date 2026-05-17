@@ -30,20 +30,21 @@ export default function Hero() {
 
   return (
     <section className="relative h-[650px] md:h-[800px] flex items-center overflow-hidden bg-[#00384a]">
-      {/* Background Slides */}
-      {slides.map((slide, idx) => (
-        <div
-          key={idx}
-          className={`absolute inset-0 transition-opacity duration-1000 ${idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+      {/* Background Video */}
+      <div className="absolute inset-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover scale-105"
         >
-          <div 
-            className="absolute inset-0 bg-cover bg-center transition-transform duration-[10000ms] scale-105 group-hover:scale-100"
-            style={{ backgroundImage: `url(${slide.bg})` }}
-          ></div>
-          <div className="absolute inset-0 bg-[#00384a]/60"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#00384a] via-[#00384a]/40 to-transparent"></div>
-        </div>
-      ))}
+          <source src="/assets/hero_corporate_6.mp4" type="video/mp4" />
+        </video>
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-[#00384a]/65"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#00384a]/90 via-[#00384a]/40 to-transparent"></div>
+      </div>
 
       <div className="section-container relative z-30 w-full pt-10">
         <div className="max-w-4xl">

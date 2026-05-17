@@ -1,43 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://pibinsurance.in/index.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pibinsurance.in/about.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/about</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pibinsurance.in/group-insurance.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/group-insurance</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pibinsurance.in/commercial-insurance.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/commercial-insurance</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pibinsurance.in/individual-insurance.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/individual-insurance</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pibinsurance.in/industries.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/industries</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pibinsurance.in/insights.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/insights</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pibinsurance.in/contact.html</loc>
-    <lastmod>2026-04-28</lastmod>
+    <loc>https://pibinsurance.in/contact</loc>
+    <lastmod>2026-05-16</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/careers</loc>
+    <lastmod>2026-05-16</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/privacy-policy</loc>
+    <lastmod>2026-05-16</lastmod>
+    <priority>0.5</priority>
   </url>
 </urlset>

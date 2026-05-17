@@ -17,7 +17,7 @@
 /* SIDEBAR */
 .insurance-sidebar {
     position: sticky;
-    top: 80px;
+    top: 100px;
     /* Reduced to sit closer to navbar */
     height: fit-content;
     z-index: 10;
@@ -194,7 +194,7 @@
     }
 
     .sidebar-menu li a:hover,
-    .sidebar-menu li.active a {
+    .sidebar-menu li.page-active a {
         border-bottom-color: var(--blue-main);
         background: var(--card-bg);
     }
@@ -218,8 +218,8 @@
 /* PREMIUM CONTENT STYLING */
 .category-tag {
     display: inline-block;
-    background: rgba(26, 111, 168, 0.1);
-    color: #1a6fa8;
+    background: rgba(27, 117, 187, 0.1);
+    color: #1b75bb;
     padding: 6px 15px;
     border-radius: 50px;
     font-size: 12px;
@@ -230,9 +230,12 @@
 }
 
 .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #e0e7ef, transparent);
+    height: 2px;
+    background: linear-gradient(90deg, rgba(27, 117, 187, 0) 0%, rgba(27, 117, 187, 0.5) 50%, rgba(27, 117, 187, 0) 100%);
     width: 100%;
+    border: none;
+    margin: 50px 0;
+    border-radius: 2px;
 }
 
 .section-title {
@@ -246,7 +249,7 @@
     align-items: center;
     letter-spacing: -0.02em;
     padding-bottom: 12px;
-    border-bottom: 3px solid rgba(26, 111, 168, 0.15); /* Distinct underline */
+    border-bottom: 3px solid rgba(27, 117, 187, 0.15); /* Distinct underline */
 }
 
 .section-title i {
@@ -293,7 +296,7 @@
 }
 
 .consider-box {
-    background: linear-gradient(135deg, #0b2c3d 0%, #1a5276 100%);
+    background: var(--blue-dark);
     padding: 40px;
     border-radius: 20px;
     color: #fff;
@@ -340,7 +343,7 @@
 }
 
 .bg-primary {
-    background: #1a6fa8 !important;
+    background: #1b75bb !important;
 }
 
 .rounded-4 {

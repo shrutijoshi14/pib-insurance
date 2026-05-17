@@ -59,13 +59,13 @@ body {
 }
 
 /* Links Hover */
-.footer-links a, .card a {
+.footer-links a {
   position: relative;
   display: inline-block;
   text-decoration: none;
 }
 
-.footer-links a::after, .card a::after {
+.footer-links a::after {
   content: '';
   position: absolute;
   width: 0;
@@ -76,7 +76,7 @@ body {
   transition: width 0.3s ease;
 }
 
-.footer-links a:hover::after, .card a:hover::after {
+.footer-links a:hover::after {
   width: 100%;
 }
 

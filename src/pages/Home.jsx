@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -8,9 +8,45 @@ import {
 } from "../components/MotionWrappers";
 import SEO from "../components/SEO";
 
+const StatCounter = ({ end, duration = 2000, suffix = "" }) => {
+    const [count, setCount] = useState(0);
+    const countRef = useRef(null);
+    const hasAnimated = useRef(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated.current) {
+                    hasAnimated.current = true;
+                    let startTimestamp = null;
+                    const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                        setCount(Math.floor(progress * end));
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                }
+            },
+            { threshold: 0.5 }
+        );
+
+        if (countRef.current) {
+            observer.observe(countRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [end, duration]);
+
+    return <span ref={countRef}>{count}{suffix}</span>;
+};
+
 const Home = () => {
     const [activeTab, setActiveTab] = useState("commercial");
     const [expandedInsights, setExpandedInsights] = useState({});
+    const [expandedTestimonials, setExpandedTestimonials] = useState({});
 
     const toggleInsight = (id) => {
         setExpandedInsights((prev) => ({
@@ -19,10 +55,17 @@ const Home = () => {
         }));
     };
 
+    const toggleTestimonial = (id) => {
+        setExpandedTestimonials((prev) => ({
+            ...prev,
+            [id]: !prev[id],
+        }));
+    };
+
     return (
         <>
-            <SEO 
-                title="PIB Insurance Brokers | Expert Risk Management in India" 
+            <SEO
+                title="PIB Insurance Brokers | Expert Risk Management in India"
                 description="Secure your business and family with India's trusted IRDAI registered insurance broker. Expertise in Commercial and Group insurance."
                 canonical="https://pibinsurance.in/"
             />
@@ -49,12 +92,7 @@ const Home = () => {
                             <Link to="/contact" className="btn primary">
                                 GET QUOTE
                             </Link>
-                            <a
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSeSFMEm_15EtbVGivGYxcOvet9ZNOu7h3EjzjPRgYgYnv58Cw/viewform?usp=header"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="btn secondary"
-                            >
+                            <a href="#contact" className="btn secondary">
                                 REQUEST A CALL BACK
                             </a>
                         </div>
@@ -110,9 +148,10 @@ const Home = () => {
                     <MotionSection className="why-image" delay={0.2}>
                         <img
                             src={`${import.meta.env.BASE_URL}assets/group-meeting.png`}
-                            alt="PIB Insurance Experts discussing corporate strategy"
-                            width="1536"
-                            height="1024"
+                            alt="PIB Insurance team of experts discussing corporate strategy and risk management"
+                            width="1200"
+                            height="800"
+                            decoding="async"
                             loading="lazy"
                         />
                     </MotionSection>
@@ -186,6 +225,7 @@ const Home = () => {
                 </div>
             </section>
 
+
             {/* INSURANCE SOLUTIONS */}
             <section className="insurance-section">
                 <div className="container">
@@ -228,112 +268,135 @@ const Home = () => {
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/liability-insurance.jpg`}
                                         alt="Liability Insurance"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Liability Insurance</h4>
                                 <p>Protection against legal liabilities and claims.</p>
-                                <Link to="/liability-insurance">Learn More</Link>
+                                <Link to="/commercial-insurance/liability-insurance" aria-label="Learn more about Liability Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/property-insurance.jpg`}
+                                        src={`${import.meta.env.BASE_URL}assets/commercial-property-insurance.png`}
                                         alt="Property Insurance"
-                                        width="4500"
-                                        height="3000"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Property Insurance</h4>
                                 <p>Coverage for business assets and premises.</p>
-                                <Link to="/property-insurance">Learn More</Link>
+                                <Link to="/commercial-insurance/property-insurance" aria-label="Learn more about Property Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/business-interruption-insurance.png`}
                                         alt="Business Interruption Insurance"
-                                        width="1024"
-                                        height="434"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Business Interruption Insurance</h4>
                                 <p>Covers income loss during disruptions.</p>
-                                <Link to="/business-interruption-insurance">Learn More</Link>
+                                <Link to="/commercial-insurance/business-interruption-insurance" aria-label="Learn more about Business Interruption Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/fire-insurance.png`}
                                         alt="Fire Insurance"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Fire Insurance</h4>
                                 <p>Protection against fire-related risks.</p>
-                                <Link to="/fire-insurance">Learn More</Link>
+                                <Link to="/commercial-insurance/fire-insurance" aria-label="Learn more about Fire Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/marine-insurance.png`}
                                         alt="Marine Insurance"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Marine Insurance</h4>
                                 <p>Cargo and marine transit coverage.</p>
-                                <Link to="/marine-insurance">Learn More</Link>
+                                <Link to="/commercial-insurance/marine-insurance" aria-label="Learn more about Marine Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/workmen-compensation.png`}
                                         alt="Workmen's Compensation"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Workmen’s Compensation</h4>
                                 <p>Statutory liability coverage for employees.</p>
-                                <Link to="/workmens-compensation">Learn More</Link>
+                                <Link to="/commercial-insurance/workmens-compensation" aria-label="Learn more about Workmen’s Compensation">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/professional-indemnity.png`}
                                         alt="Professional Indemnity"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Professional Indemnity</h4>
                                 <p>Protection against professional errors and omissions.</p>
-                                <Link to="/professional-indemnity">Learn More</Link>
+                                <Link to="/commercial-insurance/professional-indemnity" aria-label="Learn more about Professional Indemnity">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/contractor.jpg`}
                                         alt="Contractor All Risk"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Contractor All Risk</h4>
                                 <p>Comprehensive coverage for construction projects.</p>
-                                <Link to="/contractor-all-risk">Learn More</Link>
+                                <Link to="/commercial-insurance/contractor-all-risk" aria-label="Learn more about Contractor All Risk Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/cybe-insurance.jpg`}
                                         alt="Cyber Insurance"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Cyber Insurance</h4>
                                 <p>Protection against digital threats and data breaches.</p>
-                                <Link to="/cyber-insurance">Learn More</Link>
+                                <Link to="/commercial-insurance/cyber-insurance" aria-label="Learn more about Cyber Insurance">Learn More</Link>
                             </div>
                         </MotionList>
                     </div>
@@ -349,50 +412,60 @@ const Home = () => {
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/group-insurance-1.jpg`}
                                         alt="Group Health"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Group Health Insurance</h4>
                                 <p>Employee group health coverage.</p>
-                                <Link to="/group-health-insurance">Learn More</Link>
+                                <Link to="/group-insurance/group-health-insurance" aria-label="Learn more about Group Health Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/employee-families.png`}
                                         alt="Group Term"
-                                        width="1024"
-                                        height="434"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Group Term Insurance</h4>
                                 <p>Life cover for employees and their families.</p>
-                                <Link to="/group-term-insurance">Learn More</Link>
+                                <Link to="/group-insurance/group-term-insurance" aria-label="Learn more about Group Term Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/group-insurance-2.png`}
                                         alt="Group Accident"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Group Personal Accident</h4>
                                 <p>Accident coverage for teams.</p>
-                                <Link to="/group-personal-accident">Learn More</Link>
+                                <Link to="/group-insurance/group-personal-accident" aria-label="Learn more about Group Personal Accident Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/group-insurance-3.jpg`}
                                         alt="Group Travel"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Group Travel Insurance</h4>
                                 <p>Travel coverage for employees.</p>
-                                <Link to="/group-travel-insurance">Learn More</Link>
+                                <Link to="/group-insurance/group-travel-insurance" aria-label="Learn more about Group Travel Insurance">Learn More</Link>
                             </div>
                         </MotionList>
                     </div>
@@ -402,14 +475,15 @@ const Home = () => {
                         className={`tab-content ${activeTab === "individual" ? "active" : ""}`}
                         id="individual"
                     >
-                        <MotionList className="grid grid-2-3">
+                        <MotionList className="grid grid-3-3">
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/term-insurance.jpg`}
                                         alt="Term Insurance"
-                                        width="6192"
-                                        height="4128"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
@@ -418,77 +492,82 @@ const Home = () => {
                                     Protect your business continuity with comprehensive term life
                                     coverage.
                                 </p>
-                                <Link to="/term-insurance">Learn More</Link>
+                                <Link to="/individual-insurance/term-insurance" aria-label="Learn more about Term Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/health-insurance.jpg`}
                                         alt="Health Insurance"
-                                        width="3840"
-                                        height="2160"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Health Insurance</h4>
                                 <p>Employee wellness and health coverage.</p>
-                                <Link to="/health-insurance">Learn More</Link>
+                                <Link to="/individual-insurance/health-insurance" aria-label="Learn more about Health Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/motor-insurance.jpg`}
                                         alt="Motor Insurance"
-                                        width="3840"
-                                        height="5760"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Motor Insurance</h4>
                                 <p>Fleet and vehicle insurance solutions.</p>
-                                <Link to="/motor-insurance">Learn More</Link>
+                                <Link to="/individual-insurance/motor-insurance" aria-label="Learn more about Motor Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/travel-insurance.jpg`}
                                         alt="Travel Insurance"
-                                        width="4160"
-                                        height="6240"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Travel Insurance</h4>
                                 <p>Corporate travel protection.</p>
-                                <Link to="/travel-insurance">Learn More</Link>
+                                <Link to="/individual-insurance/travel-insurance" aria-label="Learn more about Travel Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/accidental-insurance.jpg`}
                                         alt="Personal Accident"
-                                        width="2304"
-                                        height="3456"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Personal Accident</h4>
                                 <p>Accident and safety coverage.</p>
-                                <Link to="/accidental-insurance">Learn More</Link>
+                                <Link to="/individual-insurance/accidental-insurance" aria-label="Learn more about Personal Accident Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/Home-Insurance.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/individual-home-insurance.jpg`}
                                         alt="Home Insurance"
-                                        width="4500"
-                                        height="3000"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
                                         loading="lazy"
                                     />
                                 </div>
                                 <h4>Home Insurance</h4>
                                 <p>Asset and infrastructure protection.</p>
-                                <Link to="/home-insurance">Learn More</Link>
+                                <Link to="/individual-insurance/home-insurance" aria-label="Learn more about Home Insurance">Learn More</Link>
                             </div>
                         </MotionList>
                     </div>
@@ -516,11 +595,11 @@ const Home = () => {
                                 <div className="img-wrap">
                                     <img
                                         src={`${import.meta.env.BASE_URL}assets/featured-1.png`}
-                                        alt="Health Insurance"
+                                        alt="Detailed insights into health insurance trends and coverage options"
                                         width="2048"
                                         height="1117"
-                                        loading="lazy"
                                         decoding="async"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <div className="card-body">
@@ -541,6 +620,7 @@ const Home = () => {
                                     </div>
                                     <button
                                         className="read-more-btn"
+                                        aria-label={expandedInsights[1] ? "Show less about Group Health vs Individual Mediclaim" : "Read more about Group Health vs Individual Mediclaim"}
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             toggleInsight(1);
@@ -584,6 +664,7 @@ const Home = () => {
                                     </div>
                                     <button
                                         className="read-more-btn"
+                                        aria-label={expandedInsights[2] ? "Show less about IRDAI’s New Composite Licence Framework" : "Read more about IRDAI’s New Composite Licence Framework"}
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             toggleInsight(2);
@@ -629,6 +710,7 @@ const Home = () => {
                                     </div>
                                     <button
                                         className="read-more-btn"
+                                        aria-label={expandedInsights[3] ? "Show less about Risk Mitigation in the Tech Sector" : "Read more about Risk Mitigation in the Tech Sector"}
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             toggleInsight(3);
@@ -675,6 +757,7 @@ const Home = () => {
                                     </div>
                                     <button
                                         className="read-more-btn"
+                                        aria-label={expandedInsights[4] ? "Show less about Future of Corporate Insurance in India" : "Read more about Future of Corporate Insurance in India"}
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             toggleInsight(4);
@@ -686,6 +769,42 @@ const Home = () => {
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                    </MotionList>
+                </div>
+            </section>
+
+            {/* COUNTER SECTION */}
+            <section className="counter-section">
+                <div className="container">
+                    <MotionList className="counter-grid" stagger={0.1}>
+                        <div className="counter-item">
+                            <div className="counter-number">
+                                <StatCounter end={110} suffix="+" />
+                            </div>
+                            <div className="counter-label">Cities Covered</div>
+                            <div className="counter-line"></div>
+                        </div>
+                        <div className="counter-item">
+                            <div className="counter-number">
+                                <StatCounter end={279} suffix="+" />
+                            </div>
+                            <div className="counter-label">Corporate Clients</div>
+                            <div className="counter-line"></div>
+                        </div>
+                        <div className="counter-item">
+                            <div className="counter-number">
+                                <StatCounter end={371} suffix=" Cr" />
+                            </div>
+                            <div className="counter-label">Premium Under Management</div>
+                            <div className="counter-line"></div>
+                        </div>
+                        <div className="counter-item">
+                            <div className="counter-number">
+                                <StatCounter end={42} suffix=" Lakhs" />
+                            </div>
+                            <div className="counter-label">Claims Settled</div>
+                            <div className="counter-line"></div>
                         </div>
                     </MotionList>
                 </div>
@@ -703,65 +822,89 @@ const Home = () => {
 
                     <MotionList className="row g-4" stagger={0.1}>
                         <div className="col-lg-4">
-                            <div className="testimonial-card">
+                            <div className={`testimonial-card ${expandedTestimonials[1] ? "expanded" : ""}`}>
                                 <div className="profile mb-3">
                                     <img
-                                        src="https://images.unsplash.com/photo-1659353220482-554773c2f7fa?w=150"
-                                        alt="Rajesh Kumar"
+                                        src="https://placehold.co/150x150?text=NM"
+                                        alt="Mr. Nilesh Manik"
                                         className="profile-img"
                                     />
                                     <div className="profile-info">
-                                        <h6 className="mb-0">Rajesh Kumar</h6>
-                                        <small>CFO, Tech Solutions Ltd</small>
+                                        <h6 className="mb-0">Mr. Nilesh Manik</h6>
+                                        <small>Chartered Accountant</small>
                                     </div>
                                 </div>
-                                <p className="quote-text">
-                                    "PIB Insurance has been instrumental in streamlining our risk
-                                    management. Their expertise and responsiveness are unmatched
-                                    in the industry."
-                                </p>
+                                <i className="fa fa-quote-left quote-icon-main mb-3"></i>
+                                <div className="testimonial-content">
+                                    <p className="quote-text">
+                                        "PIB Insurance has helped us with specialized solutions tailored to our practice. Their team understands the nuances of professional risk and has ensured we are well protected with the right coverage."
+                                    </p>
+                                </div>
+                                <button
+                                    className="read-more-btn testimonial-toggle"
+                                    aria-label={expandedTestimonials[1] ? "Show less from Mr. Nilesh Manik" : "Read more from Mr. Nilesh Manik"}
+                                    onClick={() => toggleTestimonial(1)}
+                                >
+                                    {expandedTestimonials[1] ? "Read Less" : "Read More"}
+                                </button>
                             </div>
                         </div>
 
                         <div className="col-lg-4">
-                            <div className="testimonial-card">
+                            <div className={`testimonial-card ${expandedTestimonials[2] ? "expanded" : ""}`}>
                                 <div className="profile mb-3">
                                     <img
-                                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150"
-                                        alt="Priya Sharma"
+                                        src="https://placehold.co/150x150?text=UT"
+                                        alt="Mr. Umesh Thakkar"
                                         className="profile-img"
                                     />
                                     <div className="profile-info">
-                                        <h6 className="mb-0">Priya Sharma</h6>
-                                        <small>Director, Manufacturing Co</small>
+                                        <h6 className="mb-0">Mr. Umesh Thakkar</h6>
+                                        <small>Director, Nav Bharat Metallic Oxide Industries</small>
                                     </div>
                                 </div>
-                                <p className="quote-text">
-                                    "Working with PIB has given us peace of mind. Their
-                                    comprehensive approach to insurance has protected our
-                                    operations across multiple locations."
-                                </p>
+                                <i className="fa fa-quote-left quote-icon-main mb-3"></i>
+                                <div className="testimonial-content">
+                                    <p className="quote-text">
+                                        "We appreciate PIB Insurance's expertise in handling complex industrial and environmental risks. Their support across multiple coverage areas has been critical for our operations. Their proactive approach and strong technical expertise make them a highly reliable risk management partner."
+                                    </p>
+                                </div>
+                                <button
+                                    className="read-more-btn testimonial-toggle"
+                                    aria-label={expandedTestimonials[2] ? "Show less from Mr. Umesh Thakkar" : "Read more from Mr. Umesh Thakkar"}
+                                    onClick={() => toggleTestimonial(2)}
+                                >
+                                    {expandedTestimonials[2] ? "Read Less" : "Read More"}
+                                </button>
                             </div>
                         </div>
 
                         <div className="col-lg-4">
-                            <div className="testimonial-card">
+                            <div className={`testimonial-card ${expandedTestimonials[3] ? "expanded" : ""}`}>
                                 <div className="profile mb-3">
                                     <img
-                                        src="https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3NjM3MjY5Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                                        alt="Amit Desai"
+                                        src="https://placehold.co/150x150?text=MM"
+                                        alt="Mr. Mohan Makikum"
                                         className="profile-img"
                                     />
                                     <div className="profile-info">
-                                        <h6 className="mb-0">Amit Desai</h6>
-                                        <small>Founder, Logistics Pro</small>
+                                        <h6 className="mb-0">Mr. Mohan Makikum</h6>
+                                        <small>SVP, Welspun</small>
                                     </div>
                                 </div>
-                                <p className="quote-text">
-                                    "The team at PIB understands our business-specific risks and
-                                    their tailored solutions have significantly reduced our risk
-                                    exposure."
-                                </p>
+                                <i className="fa fa-quote-left quote-icon-main mb-3"></i>
+                                <div className="testimonial-content">
+                                    <p className="quote-text">
+                                        "PIB Insurance Brokers Private Limited has been providing insurance advisory and brokerage services to our organization for Group Medical, Group Personal Accident, and Group Term Life policies for several years. Over the years, they have consistently provided insurance services to me personally as well as to our organization. This association has been built on a long-standing professional relationship, continuity of service, and sustained engagement over time."
+                                    </p>
+                                </div>
+                                <button
+                                    className="read-more-btn testimonial-toggle"
+                                    aria-label={expandedTestimonials[3] ? "Show less from Mr. Mohan Makikum" : "Read more from Mr. Mohan Makikum"}
+                                    onClick={() => toggleTestimonial(3)}
+                                >
+                                    {expandedTestimonials[3] ? "Read Less" : "Read More"}
+                                </button>
                             </div>
                         </div>
                     </MotionList>
@@ -780,17 +923,19 @@ const Home = () => {
                     <MotionItem className="partners-scroll-wrapper" variant="zoomIn">
                         <div className="partners-scroll-track">
                             {[
-                                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+                                7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+                                7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
                             ].map((num, idx) => (
                                 <div key={idx} className="partner-logo">
                                     <img
-                                        src={`https://pibinsurance.in/assets/images/partners/${num}.png`}
-                                        alt="Insurance Partner"
+                                        src={`${import.meta.env.BASE_URL}images/partners/${num}.png`}
+                                        alt="Insurance Partner Logo"
+                                        width="150"
+                                        height="80"
                                         loading="lazy"
                                         decoding="async"
                                         onError={(e) => {
-                                            e.target.src = `https://placehold.co/150x80?text=Partner+${num}`;
-                                            e.target.onerror = null;
+                                            e.target.style.display = 'none';
                                         }}
                                     />
                                 </div>

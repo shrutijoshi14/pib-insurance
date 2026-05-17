@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MotionSection, MotionItem, MotionList } from '../components/MotionWrappers';
 import SEO from '../components/SEO';
 
 const Insights = () => {
@@ -112,7 +114,7 @@ const Insights = () => {
             />
             <section className="insurance-hero hero-insights">
                 <div className="industries-hero-container">
-                    <div className="industries-hero-content">
+                    <MotionSection className="industries-hero-content">
                         <div className="hero-header-row">
                             <h1>Insurance Insights</h1>
                             <div className="hero-header-divider"></div>
@@ -120,50 +122,60 @@ const Insights = () => {
                         </div>
                         <p>The perspectives, expertise, and guidance you need to make smarter insurance decisions for your business — and protect what you have built.</p>
                         <div className="breadcrumb-custom">HOME / INSIGHTS</div>
-                    </div>
+                    </MotionSection>
                 </div>
             </section>
 
             <section className="insights-section">
                 <div className="container">
                     {/* FILTERS */}
-                    <div className="filter-container">
+                    <MotionSection className="filter-container">
                         <button className={`filter-btn ${filter === 'all' ? 'active' : ''}`} onClick={() => setFilter('all')}>All</button>
                         <button className={`filter-btn ${filter === 'guides' ? 'active' : ''}`} onClick={() => setFilter('guides')}>Insurance Guides</button>
                         <button className={`filter-btn ${filter === 'regulatory' ? 'active' : ''}`} onClick={() => setFilter('regulatory')}>Regulatory Updates</button>
                         <button className={`filter-btn ${filter === 'client' ? 'active' : ''}`} onClick={() => setFilter('client')}>Client Stories</button>
                         <button className={`filter-btn ${filter === 'market' ? 'active' : ''}`} onClick={() => setFilter('market')}>Market Updates</button>
-                    </div>
+                    </MotionSection>
 
                     {/* SECTIONS WRAPPER */}
                     <div id="insightsSections">
-                        {sections.filter(s => filter === 'all' || s.id === filter).map(section => (
-                            <div key={section.id} className="insight-category-section" style={{ display: 'block' }}>
-                                <div className="category-header">
-                                    <h2><i className={`fa ${section.icon}`}></i> {section.title}</h2>
-                                    <p>{section.desc}</p>
-                                </div>
-                                <div className="insights-grid">
-                                    {section.items.map((item, idx) => (
-                                        <div key={idx} className="insight-card">
-                                            <div className="insight-img">
-                                                <span className="insight-tag">{item.tag}</span>
-                                                <img src={item.img} alt={item.title} loading="lazy" />
-                                            </div>
-                                            <div className="insight-body">
-                                                <div className="insight-metadata">
-                                                    <span className="insight-date"><i className="far fa-calendar-alt"></i> {item.date}</span>
-                                                    <span className="reading-time"><i className="far fa-clock"></i> {item.time}</span>
+                        <AnimatePresence mode="popLayout">
+                            {sections.filter(s => filter === 'all' || s.id === filter).map(section => (
+                                <motion.div 
+                                    key={section.id} 
+                                    className="insight-category-section" 
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.95 }}
+                                    transition={{ duration: 0.5 }}
+                                    layout
+                                >
+                                    <div className="category-header">
+                                        <h2><i className={`fa ${section.icon}`}></i> {section.title}</h2>
+                                        <p>{section.desc}</p>
+                                    </div>
+                                    <MotionList className="insights-grid" stagger={0.1}>
+                                        {section.items.map((item, idx) => (
+                                            <MotionItem key={idx} className="insight-card" inherit>
+                                                <div className="insight-img">
+                                                    <span className="insight-tag">{item.tag}</span>
+                                                    <img src={item.img} alt={item.title} loading="lazy" />
                                                 </div>
-                                                <h3>{item.title}</h3>
-                                                <p>{item.text}</p>
-                                                <a href="#" className="read-more">Read More <i className="fa fa-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
+                                                <div className="insight-body">
+                                                    <div className="insight-metadata">
+                                                        <span className="insight-date"><i className="far fa-calendar-alt"></i> {item.date}</span>
+                                                        <span className="reading-time"><i className="far fa-clock"></i> {item.time}</span>
+                                                    </div>
+                                                    <h3>{item.title}</h3>
+                                                    <p>{item.text}</p>
+                                                    <a href="#" className="read-more">Read More <i className="fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                                            </MotionItem>
+                                        ))}
+                                    </MotionList>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
                     </div>
                 </div>
             </section>

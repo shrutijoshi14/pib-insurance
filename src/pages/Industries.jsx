@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { MotionSection, MotionItem, MotionList } from '../components/MotionWrappers';
 import { industryData } from '../data/industryData';
 import SEO from '../components/SEO';
 
@@ -15,6 +17,20 @@ const Industries = () => {
         document.body.style.overflow = '';
     };
 
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        };
+        if (selectedIndustry) {
+            window.addEventListener('keydown', handleKeyDown);
+        }
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [selectedIndustry]);
+
     return (
         <>
             <SEO 
@@ -24,7 +40,7 @@ const Industries = () => {
             />
             <section className="insurance-hero hero-industries">
                 <div className="industries-hero-container">
-                    <div className="industries-hero-content">
+                    <MotionSection className="industries-hero-content">
                         <div className="hero-header-row">
                             <h1>Industries We Serve</h1>
                             <div className="hero-header-divider"></div>
@@ -32,25 +48,25 @@ const Industries = () => {
                         </div>
                         <p>Providing specialized risk management and insurance solutions tailored to the unique challenges of every industry across India.</p>
                         <div className="breadcrumb-custom">HOME / OUR INDUSTRIES</div>
-                    </div>
+                    </MotionSection>
                 </div>
             </section>
 
             {/* INTRO SECTION */}
-            <section className="industries-intro py-5">
+            <MotionSection className="industries-intro py-5">
                 <div className="container text-center">
                     <p className="intro-text">PIB Insurance brokers, helping SMEs and MSMe for a long time to protect their valuable assets. Being in transport or in offices. We serve the following industries.</p>
                 </div>
-            </section>
+            </MotionSection>
 
             {/* INDUSTRIES GRID */}
             <section className="industries-section py-5">
                 <div className="container">
-                    <div className="row g-4" id="industriesGrid">
+                    <MotionList className="row g-4" id="industriesGrid" stagger={0.08}>
                         {Object.keys(industryData).map((key) => {
                             const industry = industryData[key];
                             return (
-                                <div key={key} className="col-md-6 col-lg-3">
+                                <MotionItem key={key} className="col-md-6 col-lg-3" inherit>
                                     <div 
                                         className="industry-card" 
                                         onClick={() => openModal(key)}
@@ -65,38 +81,54 @@ const Industries = () => {
                                             <span>View Details <i className="fa-solid fa-arrow-right"></i></span>
                                         </div>
                                     </div>
-                                </div>
+                                </MotionItem>
                             );
                         })}
-                    </div>
+                    </MotionList>
                 </div>
             </section>
 
             {/* INDUSTRY MODAL */}
-            {selectedIndustry && (
-                <div className="industry-modal active" id="industryModal" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <div className="modal-header">
-                            <div className="modal-header-left">
-                                <div className="modal-icon" id="modalIcon">
-                                    <i className={`fa-solid ${selectedIndustry.icon}`}></i>
+            <AnimatePresence>
+                {selectedIndustry && (
+                    <motion.div 
+                        className="industry-modal active" 
+                        id="industryModal" 
+                        onClick={closeModal}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <motion.div 
+                            className="modal-content" 
+                            onClick={(e) => e.stopPropagation()}
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                        >
+                            <div className="modal-header">
+                                <div className="modal-header-left">
+                                    <div className="modal-icon" id="modalIcon">
+                                        <i className={`fa-solid ${selectedIndustry.icon}`}></i>
+                                    </div>
+                                    <h2 id="modalTitle">{selectedIndustry.title}</h2>
                                 </div>
-                                <h2 id="modalTitle">{selectedIndustry.title}</h2>
+                                <button className="modal-close" id="modalClose" aria-label="Close modal" onClick={closeModal}>
+                                    <i className="fa fa-times"></i>
+                                </button>
                             </div>
-                            <button className="modal-close" id="modalClose" aria-label="Close modal" onClick={closeModal}>
-                                <i className="fa fa-times"></i>
-                            </button>
-                        </div>
-                        <div className="modal-body">
-                            <div 
-                                className="modal-desc" 
-                                id="modalDesc" 
-                                dangerouslySetInnerHTML={{ __html: selectedIndustry.desc }}
-                            />
-                        </div>
-                    </div>
-                </div>
-            )}
+                            <div className="modal-body">
+                                <div 
+                                    className="modal-desc" 
+                                    id="modalDesc" 
+                                    dangerouslySetInnerHTML={{ __html: selectedIndustry.desc }}
+                                />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 };

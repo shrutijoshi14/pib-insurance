@@ -9,11 +9,13 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-        if (!isMenuOpen) {
-            document.body.style.overflow = 'hidden';
-        } else {
+        if (isMenuOpen) {
+            setIsMenuOpen(false);
+            setActiveDropdown(null);
             document.body.style.overflow = '';
+        } else {
+            setIsMenuOpen(true);
+            document.body.style.overflow = 'hidden';
         }
     };
 
@@ -25,22 +27,73 @@ const Navbar = () => {
 
     const handleDropdownToggle = (e, name) => {
         if (window.innerWidth < 992) {
-            e.preventDefault();
-            setActiveDropdown(activeDropdown === name ? null : name);
+            // If the user clicked the caret icon, toggle the dropdown submenu
+            if (e.target.classList.contains('caret') || e.target.closest('.caret')) {
+                e.preventDefault();
+                setActiveDropdown(activeDropdown === name ? null : name);
+            } else {
+                // If they clicked the parent item text, let it navigate and close the drawer
+                closeMenu();
+            }
         }
     };
 
-    const isGroupActive = ['/group-health-insurance', '/group-personal-accident', '/group-term-insurance', '/group-travel-insurance'].includes(location.pathname);
+    const isGroupActive = ['/group-insurance', '/group-insurance/group-health-insurance', '/group-insurance/group-personal-accident', '/group-insurance/group-term-insurance', '/group-insurance/group-travel-insurance'].includes(location.pathname);
     const isCommercialActive = [
-        '/liability-insurance', '/marine-insurance', '/property-insurance', '/fire-insurance',
-        '/workmens-compensation', '/professional-indemnity', '/business-interruption-insurance',
-        '/contractor-all-risk', '/cyber-insurance'
+        '/commercial-insurance', 
+        '/commercial-insurance/liability-insurance', '/commercial-insurance/marine-insurance', '/commercial-insurance/property-insurance', '/commercial-insurance/fire-insurance',
+        '/commercial-insurance/workmens-compensation', '/commercial-insurance/professional-indemnity', '/commercial-insurance/business-interruption-insurance',
+        '/commercial-insurance/contractor-all-risk', '/commercial-insurance/cyber-insurance'
     ].includes(location.pathname);
-    const isIndividualActive = ['/term-insurance', '/health-insurance', '/home-insurance', '/motor-insurance', '/travel-insurance', '/accidental-insurance'].includes(location.pathname);
+    const isIndividualActive = [
+        '/individual-insurance', 
+        '/individual-insurance/term-insurance', '/individual-insurance/health-insurance', '/individual-insurance/home-insurance', 
+        '/individual-insurance/motor-insurance', '/individual-insurance/travel-insurance', '/individual-insurance/accidental-insurance'
+    ].includes(location.pathname);
+
+    const isGroupSubmenuActive = [
+        '/group-insurance/group-health-insurance', 
+        '/group-insurance/group-personal-accident', 
+        '/group-insurance/group-term-insurance', 
+        '/group-insurance/group-travel-insurance'
+    ].includes(location.pathname);
+
+    const isCommercialSubmenuActive = [
+        '/commercial-insurance/liability-insurance', 
+        '/commercial-insurance/marine-insurance', 
+        '/commercial-insurance/property-insurance', 
+        '/commercial-insurance/fire-insurance',
+        '/commercial-insurance/workmens-compensation', 
+        '/commercial-insurance/professional-indemnity', 
+        '/commercial-insurance/business-interruption-insurance',
+        '/commercial-insurance/contractor-all-risk', 
+        '/commercial-insurance/cyber-insurance'
+    ].includes(location.pathname);
+
+    const isIndividualSubmenuActive = [
+        '/individual-insurance/term-insurance', 
+        '/individual-insurance/health-insurance', 
+        '/individual-insurance/home-insurance', 
+        '/individual-insurance/motor-insurance', 
+        '/individual-insurance/travel-insurance', 
+        '/individual-insurance/accidental-insurance'
+    ].includes(location.pathname);
 
     useEffect(() => {
         closeMenu();
     }, [location.pathname]);
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            if (isGroupSubmenuActive) {
+                setActiveDropdown('group');
+            } else if (isCommercialSubmenuActive) {
+                setActiveDropdown('commercial');
+            } else if (isIndividualSubmenuActive) {
+                setActiveDropdown('individual');
+            }
+        }
+    }, [isMenuOpen]);
 
     useEffect(() => {
         const handleResize = () => {
@@ -69,17 +122,19 @@ const Navbar = () => {
             <div className="topbar">
                 <div className="topbar-inner">
                     <div className="logo-wrap">
-                        <Link to="/" className="logo">
+                        <Link to="/" className="logo" aria-label="PIB Insurance Home">
                             <img src={`${import.meta.env.BASE_URL}assets/logo.png`} alt="PIB Insurance Brokers" width="167" height="50" loading="lazy" />
                         </Link>
-                        <Link to="/claim" className="claim-btn mobile-claim">
+                        <Link to="/claims" className="claim-btn mobile-claim">
                             <i className="fa fa-file-plus"></i>
                             <span className="btn-text">ADD CLAIMS</span>
                         </Link>
                         <button 
                             className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} 
                             id="menuToggle" 
-                            aria-label="Open navigation menu"
+                            aria-label="Toggle navigation menu"
+                            aria-expanded={isMenuOpen}
+                            aria-controls="mainMenu"
                             onClick={toggleMenu}
                         >
                             <i className={`fa ${isMenuOpen ? 'fa-times' : 'fa-bars'}`} id="menuIcon" aria-hidden="true"></i>
@@ -113,19 +168,7 @@ const Navbar = () => {
             )}
 
             {/* NAVBAR */}
-            <nav 
-                className={`navbar ${isScrolled ? 'scrolled' : ''}`}
-                style={{ 
-                    position: isScrolled ? 'fixed' : 'sticky', 
-                    top: 0, 
-                    width: '100%',
-                    zIndex: 2000,
-                    transition: 'all 0.4s ease',
-                    background: isScrolled ? 'rgba(11, 44, 61, 0.95)' : 'linear-gradient(90deg, #0b2c3d 0%, #1a5276 40%, #1a6fa8 100%)',
-                    boxShadow: isScrolled ? '0 4px 20px rgba(0, 0, 0, 0.1)' : 'none',
-                    backdropFilter: isScrolled ? 'blur(10px)' : 'none'
-                }}
-            >
+            <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="nav-inner">
                     <ul className={`menu ${isMenuOpen ? 'show' : ''}`} id="mainMenu">
                         <li className="menu-header" style={{ display: isMenuOpen ? 'flex' : 'none', listStyle: 'none' }}>
@@ -140,53 +183,75 @@ const Navbar = () => {
                         <li><NavLink to="/about" className={({isActive}) => isActive ? "page-active" : ""}>ABOUT US</NavLink></li>
                         
                         <li className={`dropdown ${activeDropdown === 'group' ? 'active' : ''} ${isGroupActive ? 'page-active' : ''}`}>
-                            <a href="#" onClick={(e) => handleDropdownToggle(e, 'group')}>
+                            <NavLink 
+                                to="/group-insurance"
+                                className="dropdown-trigger"
+                                onClick={(e) => handleDropdownToggle(e, 'group')}
+                                aria-haspopup="true"
+                                aria-expanded={activeDropdown === 'group'}
+                                aria-label="Group Insurance Menu"
+                            >
                                 GROUP INSURANCE <i className="fa fa-chevron-down caret" style={{ transform: activeDropdown === 'group' ? 'rotate(180deg)' : 'rotate(0deg)' }}></i>
-                            </a>
-                            <ul className="submenu">
-                                <li><NavLink to="/group-health-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-users"></i></span>Group Health Insurance</NavLink></li>
-                                <li><NavLink to="/group-term-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-file-shield"></i></span>Group Term Insurance</NavLink></li>
-                                <li><NavLink to="/group-personal-accident" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-shield-halved"></i></span>Group Personal Accident</NavLink></li>
-                                <li><NavLink to="/group-travel-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-plane"></i></span>Group Travel Insurance</NavLink></li>
+                            </NavLink>
+                            <ul className="submenu" role="menu">
+                                <li role="none"><NavLink to="/group-insurance/group-health-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-users"></i></span>Group Health Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/group-insurance/group-term-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-file-shield"></i></span>Group Term Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/group-insurance/group-personal-accident" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-shield-halved"></i></span>Group Personal Accident</NavLink></li>
+                                <li role="none"><NavLink to="/group-insurance/group-travel-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-plane"></i></span>Group Travel Insurance</NavLink></li>
                             </ul>
                         </li>
 
                         <li className={`dropdown ${activeDropdown === 'commercial' ? 'active' : ''} ${isCommercialActive ? 'page-active' : ''}`}>
-                            <a href="#" onClick={(e) => handleDropdownToggle(e, 'commercial')}>
+                            <NavLink 
+                                to="/commercial-insurance"
+                                className="dropdown-trigger"
+                                onClick={(e) => handleDropdownToggle(e, 'commercial')}
+                                aria-haspopup="true"
+                                aria-expanded={activeDropdown === 'commercial'}
+                                aria-label="Commercial Insurance Menu"
+                            >
                                 COMMERCIAL INSURANCE <i className="fa fa-chevron-down caret" style={{ transform: activeDropdown === 'commercial' ? 'rotate(180deg)' : 'rotate(0deg)' }}></i>
-                            </a>
-                            <ul className="submenu">
-                                <li><NavLink to="/liability-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-scale-balanced"></i></span>Liability Insurance</NavLink></li>
-                                <li><NavLink to="/marine-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-ship"></i></span>Marine Insurance</NavLink></li>
-                                <li><NavLink to="/property-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-building"></i></span>Property Insurance</NavLink></li>
-                                <li><NavLink to="/fire-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-fire"></i></span>Fire Insurance</NavLink></li>
-                                <li><NavLink to="/workmens-compensation" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-hard-hat"></i></span>Workmen’s Compensation</NavLink></li>
-                                <li><NavLink to="/professional-indemnity" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-user-tie"></i></span>Professional Indemnity</NavLink></li>
-                                <li><NavLink to="/business-interruption-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-clock-rotate-left"></i></span>Business Interruption</NavLink></li>
-                                <li><NavLink to="/contractor-all-risk" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-trowel-bricks"></i></span>Contractor All Risk</NavLink></li>
-                                <li><NavLink to="/cyber-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-shield-virus"></i></span>Cyber Insurance</NavLink></li>
+                            </NavLink>
+                            <ul className="submenu" role="menu">
+                                <li role="none"><NavLink to="/commercial-insurance/liability-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-scale-balanced"></i></span>Liability Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/marine-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-ship"></i></span>Marine Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/property-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-building"></i></span>Property Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/fire-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-fire"></i></span>Fire Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/workmens-compensation" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-hard-hat"></i></span>Workmen’s Compensation</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/professional-indemnity" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-user-tie"></i></span>Professional Indemnity</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/business-interruption-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-clock-rotate-left"></i></span>Business Interruption</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/contractor-all-risk" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-trowel-bricks"></i></span>Contractor All Risk</NavLink></li>
+                                <li role="none"><NavLink to="/commercial-insurance/cyber-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-shield-virus"></i></span>Cyber Insurance</NavLink></li>
                             </ul>
                         </li>
 
                         <li className={`dropdown ${activeDropdown === 'individual' ? 'active' : ''} ${isIndividualActive ? 'page-active' : ''}`}>
-                            <a href="#" onClick={(e) => handleDropdownToggle(e, 'individual')}>
+                            <NavLink 
+                                to="/individual-insurance"
+                                className="dropdown-trigger"
+                                onClick={(e) => handleDropdownToggle(e, 'individual')}
+                                aria-haspopup="true"
+                                aria-expanded={activeDropdown === 'individual'}
+                                aria-label="Individual Insurance Menu"
+                            >
                                 INDIVIDUAL INSURANCE <i className="fa fa-chevron-down caret" style={{ transform: activeDropdown === 'individual' ? 'rotate(180deg)' : 'rotate(0deg)' }}></i>
-                            </a>
-                            <ul className="submenu">
-                                <li><NavLink to="/term-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-heart-pulse"></i></span>Term Insurance</NavLink></li>
-                                <li><NavLink to="/health-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-stethoscope"></i></span>Health Insurance</NavLink></li>
-                                <li><NavLink to="/home-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-house"></i></span>Home Insurance</NavLink></li>
-                                <li><NavLink to="/motor-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-car"></i></span>Motor Insurance</NavLink></li>
-                                <li><NavLink to="/travel-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-plane"></i></span>Travel Insurance</NavLink></li>
-                                <li><NavLink to="/accidental-insurance" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-shield-halved"></i></span>Personal Accident</NavLink></li>
+                            </NavLink>
+                            <ul className="submenu" role="menu">
+                                <li role="none"><NavLink to="/individual-insurance/term-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-heart-pulse"></i></span>Term Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/individual-insurance/health-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-stethoscope"></i></span>Health Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/individual-insurance/home-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-house"></i></span>Home Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/individual-insurance/motor-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-car"></i></span>Motor Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/individual-insurance/travel-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-plane"></i></span>Travel Insurance</NavLink></li>
+                                <li role="none"><NavLink to="/individual-insurance/accidental-insurance" role="menuitem" className={({isActive}) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-shield-halved"></i></span>Personal Accident</NavLink></li>
                             </ul>
                         </li>
 
-                        <li><NavLink to="/industries" className={({isActive}) => isActive ? "page-active" : ""}>INDUSTRIES</NavLink></li>
-                        <li><NavLink to="/insights" className={({isActive}) => isActive ? "page-active" : ""}>INSIGHTS</NavLink></li>
-                        <li><NavLink to="/contact" className={({isActive}) => isActive ? "page-active" : ""}>CONTACT US</NavLink></li>
+                        <li><NavLink to="/industries" className={({isActive}) => isActive ? "page-active" : ""} aria-label="Industries we serve">INDUSTRIES</NavLink></li>
+                        <li><NavLink to="/insights" className={({isActive}) => isActive ? "page-active" : ""} aria-label="Insurance insights and articles">INSIGHTS</NavLink></li>
+                        <li><NavLink to="/careers" className={({isActive}) => isActive ? "page-active" : ""} aria-label="Careers at PIB Insurance">CAREERS</NavLink></li>
+                        <li><NavLink to="/contact" className={({isActive}) => isActive ? "page-active" : ""} aria-label="Contact PIB Insurance">CONTACT US</NavLink></li>
                     </ul>
-                    <Link to="/claim" className="claim-btn desktop-claim">
+                    <Link to="/claims" className="claim-btn desktop-claim">
                         <i className="fa fa-file-plus"></i>
                         <span className="btn-text">ADD CLAIMS</span>
                     </Link>

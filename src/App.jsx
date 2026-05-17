@@ -14,20 +14,32 @@ const Industries = lazy(() => import('./pages/Industries'));
 const Insights = lazy(() => import('./pages/Insights'));
 const Claim = lazy(() => import('./pages/Claim'));
 const InsuranceDetail = lazy(() => import('./pages/InsuranceDetail'));
+const ThankYou = lazy(() => import('./pages/ThankYou'));
+const Careers = lazy(() => import('./pages/Careers'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+
+function RouteChangeListener() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    AOS.refresh();
+  }, [pathname]);
+  return null;
+}
 
 function App() {
   useEffect(() => {
     // Initialize AOS
     AOS.init({
-      duration: 600,
+      duration: 800,
       once: true,
-      offset: 20,
-      easing: 'ease-out-cubic',
+      offset: 50,
+      easing: 'ease-out-quart',
     });
   }, []);
 
   return (
     <Router basename={import.meta.env.BASE_URL}>
+      <RouteChangeListener />
       <ScrollToTop />
       <Layout>
         <Suspense fallback={<Preloader />}>
@@ -37,12 +49,28 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/insights" element={<Insights />} />
-            <Route path="/claim" element={<Claim />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/claims" element={<Claim />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-            {/* Insurance Detail Routes */}
+            {/* Hierarchical Insurance Routes */}
+            <Route path="/individual-insurance" element={<InsuranceDetail />} />
+            <Route path="/individual-insurance/:type" element={<InsuranceDetail />} />
+            <Route path="/individual/:type" element={<InsuranceDetail />} />
+            
+            <Route path="/group-insurance" element={<InsuranceDetail />} />
+            <Route path="/group-insurance/:type" element={<InsuranceDetail />} />
+            <Route path="/group/:type" element={<InsuranceDetail />} />
+            
+            <Route path="/commercial-insurance" element={<InsuranceDetail />} />
+            <Route path="/commercial-insurance/:type" element={<InsuranceDetail />} />
+            <Route path="/commercial/:type" element={<InsuranceDetail />} />
+
+            {/* Fallback for old flat URLs or direct access */}
             <Route path="/:type" element={<InsuranceDetail />} />
 
-            {/* Fallback */}
+            {/* General Fallback */}
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>

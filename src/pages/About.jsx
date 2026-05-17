@@ -14,10 +14,7 @@ const About = () => {
                     <div className="industries-hero-content">
                         <div className="hero-header-row">
                             <h1>About PIB Insurance</h1>
-                            <div className="hero-header-divider"></div>
-                            <div className="hero-header-info">Our Journey & Expertise</div>
                         </div>
-                        <p>We are more than just insurance brokers; we are your partners in risk management, dedicated to securing your future with integrity and expertise.</p>
                         <div className="breadcrumb-custom">HOME / ABOUT US</div>
                     </div>
                 </div>
@@ -28,7 +25,7 @@ const About = () => {
                 <div className="about-container">
                     {/* LEFT IMAGE */}
                     <MotionItem className="about-image" variant="zoomIn">
-                        <img src={`${import.meta.env.BASE_URL}assets/family-insurance.png`} alt="Happy Indian family protected by PIB Insurance" width="800" height="600" loading="lazy" />
+                        <img src={`${import.meta.env.BASE_URL}assets/family-insurance.png`} alt="Happy Indian family protected by PIB Insurance coverage" width="800" height="600" loading="lazy" decoding="async" />
                     </MotionItem>
 
                     {/* RIGHT TEXT */}
@@ -65,7 +62,7 @@ const About = () => {
             <section className="ceo-section">
                 <div className="ceo-container">
                     <MotionItem className="ceo-img" variant="zoomIn">
-                        <img src={`${import.meta.env.BASE_URL}assets/CEO.jpeg`} alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" width="400" height="500" loading="lazy" />
+                        <img src={`${import.meta.env.BASE_URL}assets/CEO.jpeg`} alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
                     </MotionItem>
 
                     <MotionSection className="ceo-text" delay={0.2}>

@@ -1,9 +1,9 @@
 /* CLAIM & QUOTE PAGE STYLES */
 
 :root {
-    --pib-primary: #1a6fa8;
-    --pib-secondary: #0b2c3d;
-    --pib-accent: #2e86de;
+    --pib-primary: #1b75bb;
+    --pib-secondary: #2d3436;
+    --pib-accent: #1b75bb;
     --pib-bg-soft: #f4f7fc;
     --pib-text-main: #1a2a3a;
     --pib-text-muted: #5a7a99;
@@ -19,7 +19,7 @@
 /* SIDEBAR TABS */
 .claim-sidebar {
     position: sticky;
-    top: 80px;
+    top: 100px;
 }
 
 .sidebar-title {
@@ -97,7 +97,7 @@
 }
 
 .help-card {
-    background: linear-gradient(135deg, var(--pib-secondary), var(--pib-primary));
+    background: var(--pib-secondary);
     padding: 25px;
     border-radius: 15px;
     color: #fff;
@@ -339,7 +339,7 @@
         border-bottom: none;
     }
 
-    .claim-tabs li.active {
+    .claim-tabs li.page-active {
         background: var(--pib-primary);
         color: #fff;
     }
