@@ -3822,18 +3822,59 @@ main#main-content:focus {
 
   .mega-submenu-content {
     position: absolute;
-    top: 0;
     left: 100%;
     width: 420px;
     padding: 8px 0;
     background: #fff;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--gray-border);
-    border-radius: 0 var(--radius) var(--radius) var(--radius);
     z-index: 300;
     display: none;
-    max-height: 440px;
     overflow-y: auto;
+  }
+
+  /* Align submenu children right to their exact parent start and limit max-height to prevent viewport overflow */
+  .mega-subcategory-item:nth-child(1) .mega-submenu-content {
+    top: 0;
+    bottom: auto;
+    max-height: calc(100vh - 160px);
+    border-radius: 0 var(--radius) var(--radius) var(--radius);
+  }
+
+  .mega-subcategory-item:nth-child(2) .mega-submenu-content {
+    top: 0;
+    bottom: auto;
+    max-height: calc(100vh - 200px);
+    border-radius: 0 var(--radius) var(--radius) var(--radius);
+  }
+
+  .mega-subcategory-item:nth-child(3) .mega-submenu-content {
+    top: 0;
+    bottom: auto;
+    max-height: calc(100vh - 240px);
+    border-radius: 0 var(--radius) var(--radius) var(--radius);
+  }
+
+  .mega-subcategory-item:nth-child(4) .mega-submenu-content {
+    top: 0;
+    bottom: auto;
+    max-height: calc(100vh - 280px);
+    border-radius: 0 var(--radius) var(--radius) var(--radius);
+  }
+
+  .mega-subcategory-item:nth-child(5) .mega-submenu-content {
+    top: 0;
+    bottom: auto;
+    max-height: calc(100vh - 320px);
+    border-radius: 0 var(--radius) var(--radius) var(--radius);
+  }
+
+  /* For the last item, align with bottom to keep it fully in view */
+  .mega-subcategory-item:nth-child(6) .mega-submenu-content {
+    top: auto;
+    bottom: 0;
+    max-height: calc(100vh - 180px);
+    border-radius: var(--radius) var(--radius) var(--radius) 0;
   }
 
   .mega-subcategory-item:hover .mega-submenu-content {
