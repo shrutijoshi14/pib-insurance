@@ -13,7 +13,9 @@
       // Note: this is done before the script in index.html is run, which will
       // convert the query string back into a path and query string of the
       // original url and add it to the browser's history using window.history.replaceState
-      var pathSegmentsToKeep = 1;
+      // If you are using a custom domain (like pibinsurance.in), set this to 0.
+      // If you are using a GitHub subdomain (like user.github.io/repo), set this to 1.
+      var pathSegmentsToKeep = window.location.hostname.includes('github.io') ? 1 : 0;
 
       var l = window.location;
       l.replace(
