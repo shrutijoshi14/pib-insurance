@@ -81,13 +81,12 @@
 .claim-tabs li:hover {
     background: #f8faff;
     color: var(--pib-primary);
-    padding-left: 30px;
 }
 
 .claim-tabs li.page-active {
     background: var(--pib-primary);
     color: #fff;
-    padding-left: 35px; /* Extra emphasis on active */
+    padding-left: 19px; /* Compensate for 6px border to prevent text jumping */
     border-left: 6px solid var(--pib-accent);
 }
 
@@ -279,7 +278,13 @@
     font-style: italic;
 }
 
-/* BUTTON */
+/* BUTTONS */
+.btn-active-toggle {
+    background-color: var(--pib-secondary) !important;
+    color: #fff !important;
+    border-color: var(--pib-secondary) !important;
+}
+
 .get-quote-btn {
     width: 100%;
     padding: 18px;

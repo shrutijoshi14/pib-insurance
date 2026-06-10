@@ -8,7 +8,7 @@ const SuccessModal = ({ isOpen, onClose, countdown = 3 }) => {
         if (!isOpen) return;
 
         const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
+            if (e.key === 'Escape' && typeof onClose === 'function') {
                 onClose();
             }
         };

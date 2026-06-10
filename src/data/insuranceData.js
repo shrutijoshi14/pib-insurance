@@ -9,19 +9,23 @@ export const insuranceData = {
         sidebarType: 'individual',
         contentTitle: 'Personalized Protection for Every Stage of Life',
         contentText: 'Securing your future shouldn\'t be a one-size-fits-all approach. At PIB Insurance, we provide expert-led individual insurance solutions that adapt to your lifestyle. Whether you\'re a young professional seeking your first term plan or a parent looking for comprehensive family health cover, our experts curate the best-in-market options to ensure you are never under-insured.',
-        coveredTitle: 'What We Offer',
+        coveredTitle: 'Key Individual Solutions',
         features: [
-            { icon: 'fa-heart-pulse', title: 'Life & Term Cover:', text: 'Ensure your family\'s lifestyle remains uninterrupted, no matter what.' },
-            { icon: 'fa-stethoscope', title: 'Health Insurance:', text: 'Access to premium hospital networks and specialized medical care.' },
-            { icon: 'fa-car', title: 'Motor Insurance:', text: 'Comprehensive protection for your vehicles with high claim settlement ratios.' },
-            { icon: 'fa-plane', title: 'Travel Insurance:', text: 'Global support for medical emergencies and trip disruptions.' }
+            { icon: 'fa-heart-pulse', title: 'Term Insurance:', text: 'Ensure your family\'s financial stability and cover outstanding debts.' },
+            { icon: 'fa-stethoscope', title: 'Health Insurance:', text: 'Comprehensive medical protection for individual and family hospitalizations.' },
+            { icon: 'fa-house', title: 'Home Insurance:', text: 'Guard your structure, contents, and valuable assets from unforeseen perils.' },
+            { icon: 'fa-car', title: 'Motor Insurance:', text: 'Vibrant third-party and own damage shields for personal cars and two-wheelers.' },
+            { icon: 'fa-plane', title: 'Travel Insurance:', text: 'Global safety nets for medical emergencies, delays, and lost baggage during trips.' },
+            { icon: 'fa-shield-halved', title: 'Personal Accident:', text: 'Financial support against accidental death, total and partial disabilities.' }
         ],
         whyMatters: [
             { icon: 'fa-shield-heart', text: 'Financial Safety Net: Protect your lifetime savings from being wiped out by a single medical crisis.' },
             { icon: 'fa-piggy-bank', text: 'Tax Advantages: Maximize your savings with deductions under Section 80C and 80D.' }
         ],
         considerTitle: 'Who Should Consider This',
-        considerText: 'Every individual and head of household who wants to ensure that their assets, health, and family\'s future are protected by a reliable, expert-managed insurance portfolio.'
+        considerText: 'Every individual and head of household who wants to ensure that their assets, health, and family\'s future are protected by a reliable, expert-managed insurance portfolio.',
+        ctaTitle: 'Protect What Matters Most',
+        ctaText: 'Speak with our individual risk advisors to configure the perfect term, health, home, or motor plans for you and your family.'
     },
     'group-insurance': {
         title: 'Group Insurance',
@@ -35,17 +39,22 @@ export const insuranceData = {
         contentText: 'Your people are your greatest asset. Group insurance is not just a statutory requirement; it is a powerful tool for talent retention and workplace morale. From startups to large corporations, we help HR leaders design benefits programs that provide real value to employees while maintaining cost-efficiency for the business through risk pooling and expert underwriting.',
         coveredTitle: 'Key Group Solutions',
         features: [
-            { icon: 'fa-users', title: 'Group Health Insurance:', text: 'Customizable medical covers for employees and their families.' },
-            { icon: 'fa-file-shield', title: 'Group Term Life:', text: 'Fundamental life cover at a fraction of the cost of individual plans.' },
-            { icon: 'fa-shield-halved', title: 'Personal Accident:', text: '24/7 protection for your team against accidental disability or death.' },
-            { icon: 'fa-plane-departure', title: 'Corporate Travel:', text: 'Securing your team during business trips domestic and abroad.' }
+            { icon: 'fa-users', title: 'Group Health Insurance:', text: 'Customizable medical covers (GMC) for employees and their families.' },
+            { icon: 'fa-file-shield', title: 'Group Term Life:', text: 'Fundamental life cover (GTL) at a fraction of the cost of individual plans.' },
+            { icon: 'fa-shield-halved', title: 'Group Personal Accident:', text: 'Worldwide 24/7 protection for your team against accidental injuries and disability.' },
+            { icon: 'fa-plane', title: 'Group Travel Insurance:', text: 'Convenient cover for domestic and overseas corporate business journeys.' },
+            { icon: 'fa-plane-departure', title: 'Group Overseas Mediclaim:', text: 'Specialized healthcare shields for teams traveling internationally.' },
+            { icon: 'fa-heart-pulse', title: 'Employee Health & Wellness:', text: 'Comprehensive wellness packages, health coaching, and health checks.' },
+            { icon: 'fa-key', title: 'Keyman Insurance Solutions:', text: 'Financial safeguards against the loss of business-critical leaders.' }
         ],
         whyMatters: [
             { icon: 'fa-user-check', text: 'Talent Retention: A strong health plan is a top reason why employees choose and stay with an employer.' },
             { icon: 'fa-percent', text: 'Business Expense: Premiums paid by the employer are fully tax-deductible as a business expense.' }
         ],
         considerTitle: 'Who Should Consider This',
-        considerText: 'Startups, SMEs, and Corporate entities looking to formalize their employee benefits and fulfill their duty of care toward their workforce.'
+        considerText: 'Startups, SMEs, and Corporate entities looking to formalize their employee benefits and fulfill their duty of care toward their workforce.',
+        ctaTitle: 'Ready to empower your workforce?',
+        ctaText: 'Our employee benefits advisors will help you design a competitive group health, accident, and term life cover package.'
     },
     'commercial-insurance': {
         title: 'Commercial Insurance',
@@ -57,19 +66,196 @@ export const insuranceData = {
         sidebarType: 'commercial',
         contentTitle: 'Advanced Risk Management for Businesses',
         contentText: 'In the commercial world, a single incident — a fire, a cargo loss, or a professional error — can jeopardize years of growth. Our commercial insurance division specializes in identifying hidden risks and providing robust shields for your infrastructure, professional reputation, and balance sheet. We don\'t just sell policies; we partner with you to manage your risk portfolio.',
-        coveredTitle: 'Enterprise Protection',
+        coveredTitle: 'Enterprise Protection Categories',
         features: [
-            { icon: 'fa-industry', title: 'Property & Fire:', text: 'Asset protection for your premises, machinery, and stock.' },
-            { icon: 'fa-ship', title: 'Marine & Cargo:', text: 'Transit security for your goods across sea, air, and road.' },
-            { icon: 'fa-scale-balanced', title: 'Liability Cover:', text: 'Protection against legal claims, professional errors, and cyber risks.' },
-            { icon: 'fa-hard-hat', title: 'Workmen\'s Compensation:', text: 'Fulfilling statutory requirements for employee safety on site.' }
+            { icon: 'fa-scale-balanced', title: 'Liability & Financial:', text: 'Shield your directors, professional services, and digital assets from lawsuit risks.' },
+            { icon: 'fa-industry', title: 'Engineering & Industrial:', text: 'Asset continuity and mechanical breakdown cover for infrastructure and projects.' },
+            { icon: 'fa-building', title: 'Property & Fire:', text: 'Comprehensive safety nets for factories, warehouses, structures, and business interruptions.' },
+            { icon: 'fa-ship', title: 'Marine & Logistics:', text: 'Transit security for imports, exports, and cargo via sea, road, rail, and air.' },
+            { icon: 'fa-car', title: 'Motor & Fleet:', text: 'Consolidated commercial vehicle and corporate fleet protection plans.' },
+            { icon: 'fa-cubes', title: 'Miscellaneous Solutions:', text: 'Specialized covers including burglary, money-in-transit, and SME packages.' }
         ],
         whyMatters: [
             { icon: 'fa-shield-check', text: 'Asset Continuity: Ensure that a physical disaster doesn\'t mean a financial disaster for your company.' },
             { icon: 'fa-landmark', text: 'Contractual Compliance: Many corporate contracts and government bids require active commercial insurance cover.' }
         ],
         considerTitle: 'Who Should Consider This',
-        considerText: 'Manufacturers, logistics partners, IT firms, contractors, and retail chains that require professional risk transfer solutions.'
+        considerText: 'Manufacturers, logistics partners, IT firms, contractors, and retail chains that require professional risk transfer solutions.',
+        ctaTitle: 'Secure Your Business Assets & Operations',
+        ctaText: 'Consult our commercial underwriting specialists to design customized policies for your business risk exposure.'
+    },
+    'liability': {
+        title: 'Liability & Financial Lines',
+        heroClass: 'hero-liability-hub',
+        heroTitle: 'Liability & Financial Lines',
+        heroInfo: 'Protecting Reputation & Balance Sheets',
+        heroText: 'Manage professional liability, management risk, and commercial crime with expert-designed solutions.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE / LIABILITY & FINANCIAL',
+        sidebarType: 'liability',
+        contentTitle: 'Corporate Governance & Professional Risk Management',
+        contentText: 'In today’s litigious business environment, protecting your organization’s assets, officers, and directors from liabilities is paramount. We help you navigate complex regulatory requirements, corporate crime, and professional indemnity risks with specialized insurance shields.',
+        coveredTitle: 'Key Liability Solutions',
+        features: [
+            { icon: 'fa-scale-balanced', title: 'Public Liability Insurance:', text: 'Covers legal liabilities for third-party bodily injury and property damage.' },
+            { icon: 'fa-box-open', title: 'Product Liability Insurance:', text: 'Protects against lawsuits claiming injuries or damage caused by defective products.' },
+            { icon: 'fa-briefcase', title: 'Commercial General Liability:', text: 'Comprehensive unified cover for public, product, and advertising liability.' },
+            { icon: 'fa-user-tie', title: 'Professional Indemnity:', text: 'Protects professionals (doctors, lawyers, IT) against service errors or negligence claims.' },
+            { icon: 'fa-users-gear', title: 'Directors & Officers (D&O):', text: 'Shields executive leaders and board members from personal liability decisions.' },
+            { icon: 'fa-shield-virus', title: 'Cyber Insurance:', text: 'Guards against data breaches, ransomware, network outages, and digital extortion.' },
+            { icon: 'fa-triangle-exclamation', title: 'Errors & Omissions (E&O):', text: 'Protects service providers from delivery failures, delays, or advice mistakes.' },
+            { icon: 'fa-mask', title: 'Commercial Crime Insurance:', text: 'Protects enterprise cash, securities, and property from internal/external fraud.' },
+            { icon: 'fa-handshake-slash', title: 'Fidelity Guarantee Insurance:', text: 'Shields companies from financial losses arising from employee dishonesty or theft.' },
+            { icon: 'fa-file-signature', title: 'Title Insurance:', text: 'Safeguards real estate assets against transactions, encumbrances, or title defects.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-check', text: 'Reputational Safeguard: High-profile litigation is managed by expert legal teams funded by the policy.' },
+            { icon: 'fa-shield-heart', text: 'Personal Asset Protection: Ensures personal savings of key officers are secure from business-related lawsuits.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Directors, corporate officers, medical practitioners, IT consultancies, and chartered accountants seeking professional liability coverage.',
+        ctaTitle: 'Secure Your Enterprise Against Liability Risks',
+        ctaText: 'Speak to our liability specialists today to customize professional, D&O, and general liability shields.'
+    },
+    'engineering': {
+        title: 'Engineering & Industrial Risk',
+        heroClass: 'hero-engineering-hub',
+        heroTitle: 'Engineering & Industrial Risk',
+        heroInfo: 'Infrastructure & Project Security',
+        heroText: 'Comprehensive construction, machinery breakdown, and contractor plant coverage for large-scale industrial projects.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE / ENGINEERING & INDUSTRIAL',
+        sidebarType: 'engineering',
+        contentTitle: 'Asset Continuity & Mechanical Protection',
+        contentText: 'From site erection to commercial operation, engineering projects require robust risk transfer mechanisms. We secure your contractor machinery, boilers, and electronic assets against unforeseen breakdowns and construction site hazards.',
+        coveredTitle: 'Project & Engineering Protection Solutions',
+        features: [
+            { icon: 'fa-trowel-bricks', title: 'Contractors All Risk (CAR):', text: 'Covers physical damage to civil construction projects and surrounding property.' },
+            { icon: 'fa-screwdriver-wrench', title: 'Erection All Risk (EAR):', text: 'Covers risks during assembly, testing, and commissioning of plant machinery.' },
+            { icon: 'fa-gears', title: 'Machinery Breakdown:', text: 'Covers mechanical/electrical repair or replacement of operational factory equipment.' },
+            { icon: 'fa-truck-monster', title: 'Contractors Plant & Machinery:', text: 'Covers physical damage to earthmovers, cranes, and site equipment.' },
+            { icon: 'fa-laptop-code', title: 'Electronic Equipment Cover:', text: 'Protects servers, computers, control systems, and diagnostic tools.' },
+            { icon: 'fa-gauge', title: 'Boiler & Pressure Plant:', text: 'Guards against boiler explosions, damage to surrounding property, and liability.' },
+            { icon: 'fa-hard-hat', title: 'Workmen\'s Compensation:', text: 'Fulfills legal liabilities for on-site employee injuries and medical payments.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-industry', text: 'Project Security: Keeps infrastructure projects funded even after critical machinery failure.' },
+            { icon: 'fa-scale-balanced', text: 'Third-Party Coverage: Protects the project owners from liabilities surrounding construction hazards.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Real estate developers, infrastructure contractors, manufacturing plant owners, and engineering firms.',
+        ctaTitle: 'Protect Your Industrial Assets & Projects',
+        ctaText: 'Our engineering risk experts will help you select the ideal contractors all risk and mechanical breakdown covers.'
+    },
+    'property': {
+        title: 'Property & Fire',
+        heroClass: 'hero-property-hub',
+        heroTitle: 'Property & Fire Insurance',
+        heroInfo: 'Securing Your Physical Assets',
+        heroText: 'Guard your factories, offices, and stocks against fire, natural perils, and business interruption.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE / PROPERTY & FIRE',
+        sidebarType: 'property',
+        contentTitle: 'Physical Damage & Business Interruption Cover',
+        contentText: 'Your physical infrastructure — warehouses, factories, office premises, and machinery — is the foundation of your enterprise. Property and fire insurance ensures that a physical disaster doesn\'t lead to a financial collapse by covering restoration costs and lost profits.',
+        coveredTitle: 'Property & Fire Protection Solutions',
+        features: [
+            { icon: 'fa-fire-extinguisher', title: 'Standard Fire & Special Perils:', text: 'Covers structures, stock, and machinery against fire, storms, riots, and earthquakes.' },
+            { icon: 'fa-building', title: 'Property Insurance:', text: 'Protects commercial premises, warehouses, and offices from damage or loss.' },
+            { icon: 'fa-fire', title: 'Fire Insurance:', text: 'Fundamental protection against active fire, lightning, explosions, and smoke.' },
+            { icon: 'fa-warehouse', title: 'Industrial All Risk (IAR):', text: 'All-in-one comprehensive cover for large-scale manufacturing assets and properties.' },
+            { icon: 'fa-store', title: 'Bharat Sookshma Udyam:', text: 'Standardized policy tailored for micro-enterprises with values up to ₹5 crores.' },
+            { icon: 'fa-landmark', title: 'Bharat Laghu Udyam:', text: 'Standardized policy designed for small enterprises with values up to ₹50 crores.' },
+            { icon: 'fa-industry', title: 'Office, Factory & Warehouse:', text: 'Specialized package cover protecting structures, fittings, and operational stocks.' },
+            { icon: 'fa-clock-rotate-left', title: 'Business Interruption:', text: 'Compensates for loss of profits, rent, and fixed overheads during physical restoration.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-blanket', text: 'Asset Recovery: Minimizes out-of-pocket costs for reconstruction and restocking.' },
+            { icon: 'fa-chart-line', text: 'Revenue Protection: Business interruption support pays salaries and expenses during downtime.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'SMEs, warehouse operators, retail chains, and manufacturing companies.',
+        ctaTitle: 'Secure Your Physical Premises & Inventory',
+        ctaText: 'Get in touch with our fire insurance advisors to build robust property damage and business interruption shields.'
+    },
+    'marine': {
+        title: 'Marine & Logistics',
+        heroClass: 'hero-marine-hub',
+        heroTitle: 'Marine & Logistics Insurance',
+        heroInfo: 'Global Cargo & Hull Security',
+        heroText: 'Secure your supply chain across sea, air, rail, and road transit with comprehensive transit and liability covers.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE / MARINE & LOGISTICS',
+        sidebarType: 'marine',
+        contentTitle: 'Transit Security & Supply Chain Resilience',
+        contentText: 'Moving cargo around the globe exposes your inventory to multiple legal and physical risks. Marine cargo and hull policies cover transit damage, carrier liabilities, and vessel damage to keep your logistics operations running smoothly.',
+        coveredTitle: 'Marine & Logistics Solutions',
+        features: [
+            { icon: 'fa-ship', title: 'Marine Cargo Insurance:', text: 'Covers physical damage or loss to goods during international/domestic transit.' },
+            { icon: 'fa-truck-ramp-box', title: 'Inland Transit Insurance:', text: 'Covers cargo transit via rail, road, or air within the domestic territory.' },
+            { icon: 'fa-anchor', title: 'Import & Export Cargo:', text: 'Tailored global transit coverage backed by international trade clauses.' },
+            { icon: 'fa-ferry', title: 'Marine Hull Insurance:', text: 'Protects ships, barges, commercial vessels, and equipment from maritime hazards.' },
+            { icon: 'fa-business-time', title: 'Carrier\'s Legal Liability:', text: 'Shields transporters and cargo operators from damage claims during transit.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-globe', text: 'Global Supply Chain Security: Keeps global trade and shipping compliant with international cargo requirements.' },
+            { icon: 'fa-truck-fast', text: 'Transit Assurance: Protects cargo owner’s balance sheet from maritime transit catastrophes.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Exporters, importers, logistics companies, freight forwarders, and shipping fleet operators.',
+        ctaTitle: 'Streamline Your Global Logistics Security',
+        ctaText: 'Our marine cargo experts are ready to optimize your transit and hull risk insurance portfolios.'
+    },
+    'motor': {
+        title: 'Motor & Fleet',
+        heroClass: 'hero-motor-hub',
+        heroTitle: 'Commercial Motor & Fleet',
+        heroInfo: 'Automotive Asset Protection',
+        heroText: 'Protect your passenger-carrying vehicles, commercial delivery trucks, and company car fleets with high-speed claim settlements.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE / MOTOR & FLEET',
+        sidebarType: 'motor',
+        contentTitle: 'Automotive Risk Management',
+        contentText: 'Whether you operate a fleet of distribution trucks or luxury corporate cars, keeping your vehicles mobile is critical. Commercial motor insurance shields your business from third-party liabilities, damage, and accidents.',
+        coveredTitle: 'Fleet Protection Solutions',
+        features: [
+            { icon: 'fa-truck-front', title: 'Commercial Vehicle:', text: 'Comprehensive coverage for delivery trucks, mixers, and light commercial vehicles.' },
+            { icon: 'fa-car-side', title: 'Motor Fleet Cover:', text: 'Consolidates company-owned cars and vans under a single, easily-managed policy.' },
+            { icon: 'fa-bus', title: 'Passenger Carrying:', text: 'Covers transport vehicles including tourist buses, staff transport, and school buses.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-road', text: 'Roadside Security: Minimizes delays through quick towing, spot repairs, and cash settlements.' },
+            { icon: 'fa-scale-balanced', text: 'Statutory Shield: Fulfills third-party insurance mandates under the Motor Vehicles Act.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Logistics firms, school bus operators, travel agencies, and corporate entities managing vehicle fleets.',
+        ctaTitle: 'Optimize Your Commercial Fleet Protection',
+        ctaText: 'Contact our underwriters to customize unified fleet insurance packages with priority claim settlements.'
+    },
+    'miscellaneous': {
+        title: 'Miscellaneous Solutions',
+        heroClass: 'hero-miscellaneous-hub',
+        heroTitle: 'Miscellaneous & Specialized Insurance',
+        heroInfo: 'Tailored Risk Solutions',
+        heroText: 'Customized policies for event cancellation, burglary, money-in-transit, shop protection, and SME packages.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE / MISCELLANEOUS',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'Specialized Protections for Niche Risks',
+        contentText: 'Every business has unique exposures that standard fire or liability policies don\'t cover. Miscellaneous solutions fill these gaps with specific covers for cash burglary, employee dishonesty, event cancelations, and specialized SME risks.',
+        coveredTitle: 'Miscellaneous Protection Solutions',
+        features: [
+            { icon: 'fa-vault', title: 'Burglary Insurance:', text: 'Covers loss or damage to premises and assets caused by break-ins and theft.' },
+            { icon: 'fa-coins', title: 'Money Insurance:', text: 'Covers cash in safes, drawers, or during transit to banks/locations.' },
+            { icon: 'fa-handshake-slash', title: 'Fidelity Guarantee:', text: 'Protects the company against loss of money or property from dishonest employees.' },
+            { icon: 'fa-calendar-check', title: 'Event Insurance:', text: 'Shields organizers from losses due to cancellation, weather, or third-party liability.' },
+            { icon: 'fa-plane', title: 'Travel Insurance:', text: 'Covers business-critical travel emergencies, baggage delay, and delays.' },
+            { icon: 'fa-shop', title: 'Shop Insurance:', text: 'Package policy specifically designed for small retail shops and owners.' },
+            { icon: 'fa-box-tissue', title: 'SME Package Policies:', text: 'Combines property, business interruption, public liability, and burglary cover.' },
+            { icon: 'fa-shield-heart', title: 'Specialized Risk Covers:', text: 'Protects niche corporate liabilities, trade credit, and customized risks.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-halved', text: 'Niche Risk Cover: Ensures cash assets, public events, and burglary exposures are covered.' },
+            { icon: 'fa-box-open', text: 'All-in-One SME packages: Package policies bundle several misc covers at low group premiums.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Event organizers, bank and cash logistics teams, jewelers, retailers, and small businesses.',
+        ctaTitle: 'Protect Your Business From Specialized Risks',
+        ctaText: 'Consult our risk advisors to customize burglary, event, or customized SME package policies.'
     },
     'group-health-insurance': {
         title: 'Group Health Insurance',
@@ -199,7 +385,7 @@ export const insuranceData = {
         heroInfo: 'Legal & Professional Protection',
         heroText: 'In a world where litigation is increasing, a single legal claim can derail years of business growth.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'liability',
         contentTitle: 'Liability Insurance',
         contentText: 'In an increasingly litigious business environment, a single legal claim for negligence, error, or injury can be financially devastating. Liability Insurance is your business\'s legal defense fund and financial shield. It covers the costs of legal fees, settlements, and court-awarded damages, ensuring that a professional mistake or an accidental injury on your premises doesn\'t derail your organization\'s future.',
         coveredTitle: 'What\'s Covered',
@@ -229,7 +415,7 @@ export const insuranceData = {
         heroInfo: 'Cargo & Transit Security',
         heroText: 'Every consignment you send or receive represents a commitment. Don\'t leave its value exposed to transit risks.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'marine',
         contentTitle: 'Marine Insurance',
         contentText: 'Every consignment you send or receive represents a business commitment — and the moment goods leave your control, they\'re exposed to risks no logistics partner can fully absorb. Cargo damage, theft in transit, natural disaster, vessel accidents — any of these can result in significant financial loss. Marine Insurance protects your goods from origin to destination, giving you the confidence to trade without leaving value exposed.',
         coveredTitle: 'What\'s Covered',
@@ -259,7 +445,7 @@ export const insuranceData = {
         heroInfo: 'Asset & Infrastructure Protection',
         heroText: 'Your premises and machinery are the physical foundation of your business. Protect them against structural disasters.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'property',
         contentTitle: 'Property Insurance',
         contentText: 'Your premises, machinery, stock, and equipment are the physical foundation of your business. A fire, flood, earthquake, or large-scale theft can destroy years of investment in a matter of hours. Property Insurance ensures that the financial cost of rebuilding doesn\'t fall entirely on your business — and that you can get back to operating as quickly as possible.',
         coveredTitle: 'What\'s Covered',
@@ -289,7 +475,7 @@ export const insuranceData = {
         heroInfo: 'Fundamental Asset Protection',
         heroText: 'Fire Insurance is one of the most fundamental protections any property owner can carry.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'property',
         contentTitle: 'Fire Insurance',
         contentText: 'Fire Insurance is one of the most fundamental protections any property owner can carry — and one of the most commonly undervalued. A fire event, even a contained one, can cause structural damage, destroy stock, and bring operations to a halt. With the right coverage in place, the financial cost of recovery is transferred to the insurer, not absorbed by your business.',
         coveredTitle: 'What\'s Covered',
@@ -493,7 +679,7 @@ export const insuranceData = {
         heroInfo: 'Statutory Employer Liability',
         heroText: 'When a workplace injury occurs, the financial and legal consequences can be substantial. Workmen\'s Compensation Insurance transfers that liability away from the employer.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'engineering',
         contentTitle: 'Workmen\'s Compensation Insurance',
         contentText: 'Every employer carries a legal and moral obligation towards the people who power their operations. When a workplace injury or occupational illness occurs, the financial and legal consequences can be substantial — medical bills, wage loss claims, and litigation from employees or their families. Workmen\'s Compensation Insurance transfers that liability away from the employer and ensures affected workers receive timely, structured support.',
         coveredTitle: 'What\'s Covered',
@@ -520,7 +706,7 @@ export const insuranceData = {
         heroInfo: 'Expert Advice Protection',
         heroText: 'When your business delivers advice or expertise, you are exposed to risks that general liability policies do not address.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'liability',
         contentTitle: 'Professional Indemnity Insurance',
         contentText: 'When your business delivers advice, expertise, or professional services, you are exposed to a category of risk that general liability policies do not address — the financial consequence of a client claiming your work caused them loss. Professional Indemnity Insurance protects against allegations of negligence, errors, omissions, and breach of professional duty, covering both the cost of legal defence and any damages awarded against you.',
         coveredTitle: 'What\'s Covered',
@@ -548,7 +734,7 @@ export const insuranceData = {
         heroInfo: 'Income Loss Protection',
         heroText: 'Physical damage to your assets is only the beginning — the sustained revenue impact while operations are halted is often far more damaging.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'property',
         contentTitle: 'Business Interruption Insurance',
         contentText: 'Physical damage to your premises or assets is only the beginning of a loss event — the sustained revenue impact while operations are halted is often far more damaging. Business Interruption Insurance compensates for lost income and ongoing fixed costs during the period your business is unable to operate normally following an insured physical damage event. It is the coverage that determines whether a business survives a crisis or is consumed by it.',
         coveredTitle: 'What\'s Covered',
@@ -576,7 +762,7 @@ export const insuranceData = {
         heroInfo: 'Project & Site Protection',
         heroText: 'Construction projects are exposed to a distinct range of risks — structural collapse, equipment damage, and site accidents.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'engineering',
         contentTitle: 'Contractor All Risks (CAR) Insurance',
         contentText: 'Construction and infrastructure projects are exposed to a distinct and often underestimated range of risks — structural collapse, equipment damage, third-party accidents on site, and damage to adjacent properties. Contractor All Risks Insurance provides comprehensive coverage from the moment work commences until the project is handed over, ensuring that physical losses and liability events do not derail project economics or timelines.',
         coveredTitle: 'What\'s Covered',
@@ -604,7 +790,7 @@ export const insuranceData = {
         heroInfo: 'Digital Risk & Data Protection',
         heroText: 'As digital infrastructure becomes central to business, cyber insurance provides a critical last line of defense for data and reputation.',
         breadcrumb: 'HOME / COMMERCIAL INSURANCE',
-        sidebarType: 'commercial',
+        sidebarType: 'liability',
         contentTitle: 'Cyber Insurance',
         contentText: 'Digital infrastructure is now central to almost every business — and with that dependency comes exposure to a category of risk that traditional insurance policies were not built to address. Cyber Insurance provides financial protection against the direct losses, third-party liabilities, and regulatory consequences that follow a cyberattack, data breach, or system failure. As threats grow in scale and sophistication, cyber coverage is no longer optional for businesses that operate online or hold sensitive data.',
         coveredTitle: 'What\'s Covered',
@@ -624,5 +810,830 @@ export const insuranceData = {
         ],
         considerTitle: 'Who Should Consider This',
         considerText: 'E-commerce businesses, fintech and BFSI firms, healthcare providers, IT and SaaS companies, logistics operators with digital infrastructure, and any organisation that stores customer data.'
+    },
+    'public-liability-insurance': {
+        title: 'Public Liability Insurance',
+        heroClass: 'hero-public-liability',
+        heroTitle: 'Public Liability Insurance',
+        heroInfo: 'Premises & Operations Protection',
+        heroText: 'Protect your business from claims of third-party bodily injury or property damage occurring on your premises or due to operations.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Public Liability Insurance Solutions',
+        contentText: 'Any enterprise hosting visitors, clients, or vendors on its premises carries a permanent exposure to third-party injury claims. Public Liability Insurance is designed to cover legal defense fees, court settlements, and medical expenses arising from accidental injuries or property damage on business premises. It ensures that unforeseen slips, falls, or property damage do not result in heavy financial setbacks for your firm.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-user-injured', title: 'Third-party injury cover:', text: 'Medical treatment expenses and compensation payouts for visitors injured on your premises.' },
+            { icon: 'fa-building-circle-exclamation', title: 'Property damage liability:', text: 'Covers costs to repair or replace third-party assets damaged during your business activities.' },
+            { icon: 'fa-scale-balanced', title: 'Legal defence cost coverage:', text: 'All lawyer fees, administrative court costs, and investigation expenses incurred during litigation.' },
+            { icon: 'fa-umbrella', title: 'Defamation and libel:', text: 'Optional extension for commercial operations facing reputational or non-physical claims.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-heart', text: 'Shields cash flow from legal expenses: A single slip-and-fall lawsuit can easily cost lakhs in lawyer fees and settlements.' },
+            { icon: 'fa-building-user', text: 'Enhances business credibility: Clients and landlords favor organizations with active public liability coverage.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Retail stores, hotels, restaurants, shopping malls, factories, corporate offices, warehouses, and educational institutes.'
+    },
+    'product-liability-insurance': {
+        title: 'Product Liability Insurance',
+        heroClass: 'hero-product-liability',
+        heroTitle: 'Product Liability Insurance',
+        heroInfo: 'Product Safety & Defect Shield',
+        heroText: 'Safeguard your manufacturing or trade business against lawsuits claiming bodily injury or property damage caused by a product you sold or manufactured.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Product Liability Insurance',
+        contentText: 'In today\'s highly regulated consumer market, if a product you manufacture, distribute, or import is defective and causes injury or property damage, your business can be held strictly liable. Product Liability Insurance covers the massive costs of legal defense and court-awarded damages, protecting your balance sheet and corporate reputation throughout the supply chain.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-triangle-exclamation', title: 'Manufacturing defects:', text: 'Protection against errors occurring during the production process that make the product unsafe.' },
+            { icon: 'fa-compass-drafting', title: 'Design flaws:', text: 'Covers claims arising from inherently unsafe product designs or specifications.' },
+            { icon: 'fa-note-sticky', title: 'Inadequate warnings:', text: 'Covers failures to provide proper instructions, safety warnings, or correct usage labels.' },
+            { icon: 'fa-scale-balanced', title: 'Defence cost coverage:', text: 'Pays for expert witnesses, legal representation, and out-of-court settlements.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield', text: 'Strict liability exposure: Under modern consumer protection laws, courts can hold manufacturers liable even if there was no intentional negligence.' },
+            { icon: 'fa-truck-field', text: 'Supply chain requirement: Retail chains and global buyers often mandate product liability insurance from suppliers.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Manufacturers of consumer goods, pharmaceutical companies, food and beverage brands, machinery builders, importers, and e-commerce distributors.'
+    },
+    'commercial-general-liability': {
+        title: 'Commercial General Liability',
+        heroClass: 'hero-cgl',
+        heroTitle: 'Commercial General Liability (CGL)',
+        heroInfo: 'Comprehensive Business Liability',
+        heroText: 'Protect your enterprise with a unified liability policy covering public liability, product liability, and advertising injury under a single shield.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Commercial General Liability (CGL)',
+        contentText: 'Commercial General Liability (CGL) is the gold standard for business protection. Rather than managing separate public and product liability policies, CGL bundles both coverages and adds protection against advertising injuries (such as libel, slander, or copyright infringement). It is an essential cover for modern companies looking to minimize administrative overhead and ensure comprehensive risk transfer.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-building-shield', title: 'Premises & operations:', text: 'Protects against third-party bodily injury and property damage happening at your locations.' },
+            { icon: 'fa-box-open', title: 'Products & completed operations:', text: 'Covers claims arising from defective goods after they leave your hands or projects after completion.' },
+            { icon: 'fa-bullhorn', title: 'Personal & advertising injury:', text: 'Protects against allegations of libel, slander, copyright violation, or invasion of privacy in your marketing.' },
+            { icon: 'fa-suitcase-medical', title: 'Immediate medical payments:', text: 'Covers prompt medical care costs for third parties injured on your property, regardless of fault.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-layer-group', text: 'Eliminates coverage gaps: A single, comprehensive policy ensures there are no disputes between different liability underwriters.' },
+            { icon: 'fa-handshake', text: 'Satisfies multinational contracts: Major clients, particularly overseas, require high-limit CGL policies to activate contracts.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'IT and software firms, multinational enterprises, manufacturing companies, construction contractors, and global service providers.'
+    },
+    'directors-officers-liability': {
+        title: 'Directors & Officers Liability',
+        heroClass: 'hero-do',
+        heroTitle: 'Directors & Officers (D&O) Liability',
+        heroInfo: 'Executive Decisions & Leadership Protection',
+        heroText: 'Shield your corporate executives and board members from personal liability arising from decisions made on behalf of the company.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Directors & Officers (D&O) Liability',
+        contentText: 'Leading an enterprise involves complex decisions. When shareholders, employees, regulatory bodies, or competitors claim a management error led to financial loss, directors and officers can be held personally liable. D&O Insurance protects executives\' personal assets from the crippling cost of legal defense and financial settlements, enabling confident corporate governance.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-user-tie', title: 'Personal asset protection (Side A):', text: 'Covers individual directors and officers when the company is legally unable to indemnify them.' },
+            { icon: 'fa-building-columns', title: 'Corporate reimbursement (Side B):', text: 'Reimburses the company when it indemnifies its directors and officers for legal defense.' },
+            { icon: 'fa-money-bill-transfer', title: 'Entity securities coverage (Side C):', text: 'Protects the corporation itself against securities lawsuits and shareholder claims.' },
+            { icon: 'fa-gavel', title: 'Regulatory investigations:', text: 'Covers legal representation during regulatory inquiries, audits, and official investigations.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-user-shield', text: 'Attracts top-tier talent: Elite executives will not join corporate boards without robust D&O protection in place.' },
+            { icon: 'fa-triangle-exclamation', text: 'Protects personal wealth: Ensures that management actions do not jeopardize the homes and personal savings of board members.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Listed corporations, venture-backed startups, non-profit boards, and companies seeking external funding or planning IPOs.'
+    },
+    'errors-omissions-insurance': {
+        title: 'Errors & Omissions Insurance',
+        heroClass: 'hero-eo',
+        heroTitle: 'Errors & Omissions (E&O) Insurance',
+        heroInfo: 'Professional Service & Advice Security',
+        heroText: 'Protect your professional services firm against allegations of negligence, errors, or failure to perform contract terms.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Errors & Omissions (E&O) Insurance Solutions',
+        contentText: 'For professional consultants, service providers, and advice-oriented businesses, a simple mistake or omission can lead to severe financial damage for a client. If a client sues for negligence, breach of duty, or failure to deliver services as promised, E&O Insurance covers your legal fees and any compensation payouts. It is the safety net that preserves your reputation and business continuity.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-circle-xmark', title: 'Negligence and errors:', text: 'Claims that advice, designs, or services were flawed and resulted in financial losses.' },
+            { icon: 'fa-file-signature', title: 'Breach of contract:', text: 'Protects against claims that services did not meet the standards or deadlines agreed upon in writing.' },
+            { icon: 'fa-user-tie', title: 'Defence cost coverage:', text: 'Legal counsel fees, court expenses, expert witness charges, and out-of-court settlements.' },
+            { icon: 'fa-clock', title: 'Retroactive coverage:', text: 'Optional cover for errors committed in the past that only come to light during the current policy period.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-halved', text: 'Fills standard liability gaps: General liability does not cover financial losses caused by professional advice; E&O is designed specifically for this.' },
+            { icon: 'fa-heart-circle-check', text: 'Secures contract approvals: IT clients and corporate buyers regularly demand active E&O cover before signing service agreements.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'IT consultants, marketing agencies, recruitment firms, architects, engineers, management consultants, and travel coordinators.'
+    },
+    'commercial-crime-insurance': {
+        title: 'Commercial Crime Insurance',
+        heroClass: 'hero-crime',
+        heroTitle: 'Commercial Crime Insurance',
+        heroInfo: 'Internal & External Asset Protection',
+        heroText: 'Protect your corporate assets from financial loss due to employee theft, fraud, forgery, or cyber-enabled financial crime.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Commercial Crime Insurance Solutions',
+        contentText: 'Modern businesses face complex threats to their capital, both from internal staff dishonesty and sophisticated external criminals. Commercial Crime Insurance covers direct losses of money, securities, and other property resulting from fraudulent transfers, forgery, counterfeiting, and employee theft. It acts as a final safeguard for your liquid assets against fraud.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-user-ninja', title: 'Employee dishonesty:', text: 'Covers theft of cash, stock, or equipment by directors, employees, or contracted staff.' },
+            { icon: 'fa-money-bill-transfer', title: 'Computer and funds transfer fraud:', text: 'Covers unauthorized instructions sent to banks to transfer funds out of company accounts.' },
+            { icon: 'fa-file-signature', title: 'Forgery or alteration:', text: 'Protects against forged checks, drafts, promissory notes, or financial instruments.' },
+            { icon: 'fa-coins', title: 'Counterfeit currency:', text: 'Covers loss resulting from accepting counterfeit paper currency in good faith.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-triangle-exclamation', text: 'Internal threats are hard to detect: Employee fraud and embezzlement can persist undetected for years, accumulating massive losses.' },
+            { icon: 'fa-shield', text: 'Safeguards liquidity: Directly restores stolen funds, ensuring a single major fraud incident does not lead to corporate insolvency.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Financial institutions, retail businesses, manufacturing operations with large inventory, and services companies with large cash/security transactions.'
+    },
+    'fidelity-guarantee-insurance': {
+        title: 'Fidelity Guarantee Insurance',
+        heroClass: 'hero-fidelity',
+        heroTitle: 'Fidelity Guarantee Insurance',
+        heroInfo: 'Employee Dishonesty Coverage',
+        heroText: 'Shield your business from direct financial losses arising from acts of fraud, forgery, or theft committed by employees in the course of their duties.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Fidelity Guarantee Insurance Solutions',
+        contentText: 'Fidelity Guarantee Insurance is a specialized policy focused on protecting employers from direct pecuniary loss due to dishonesty, embezzlement, or forgery by their employees. When trust is breached, this coverage steps in to restore the stolen cash or property, offering peace of mind to business owners who delegate handling of inventory and finances to staff.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-user-lock', title: 'Direct financial loss:', text: 'Replaces cash, bank deposits, and liquid assets stolen by staff members.' },
+            { icon: 'fa-boxes-packing', title: 'Stock and inventory theft:', text: 'Covers physical inventory or warehouse goods stolen by warehouse staff or logistics personnel.' },
+            { icon: 'fa-file-pen', title: 'Forgery of signatures:', text: 'Covers direct losses from unauthorized alteration or signature of company financial instruments by employees.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-user-shield', text: 'Acts as a tool for internal trust: Provides financial support while trusting staff with vital cash and materials management.' },
+            { icon: 'fa-circle-check', text: 'Flexible grouping: Policies can be structured on individual names, specific job posts (e.g. cashier), or a blanket basis.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Retailers, wholesalers, warehouse operators, shipping agencies, and businesses with dedicated cash-handling staff.'
+    },
+    'title-insurance': {
+        title: 'Title Insurance',
+        heroClass: 'hero-title',
+        heroTitle: 'Title Insurance',
+        heroInfo: 'Real Estate Asset Security',
+        heroText: 'Protect developers, lenders, and property buyers against financial losses arising from defects in property titles or legal disputes.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'liability',
+        contentTitle: 'Title Insurance',
+        contentText: 'Real estate transactions represent significant capital investments. A hidden title defect, outstanding lien, or ownership dispute can halt construction or invalidate purchase deeds. Title Insurance protects developers, buyers, and lenders against legal challenges and monetary losses resulting from defects in the land title that existed prior to purchasing.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-file-signature', title: 'Ownership disputes:', text: 'Covers litigation costs if someone claims previous ownership of your purchased plot or property.' },
+            { icon: 'fa-gavel', title: 'Title defects:', text: 'Covers errors in public records, invalid deeds, or forged signature disputes from historical transfers.' },
+            { icon: 'fa-circle-dollar-to-slot', title: 'Outstanding liens:', text: 'Protects against unpaid property taxes or historic mortgages registered against the property.' },
+            { icon: 'fa-scale-balanced', title: 'Legal defence cost:', text: 'Pays all legal expenses needed to defend title rights in local courts.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-halved', text: 'Secures project finance: Lenders routinely require title insurance policies before disbursing commercial real estate loans.' },
+            { icon: 'fa-building', text: 'Protects RERA compliance: Essential for developers in India under RERA mandates to ensure clean title handovers.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Real estate developers, institutional investors, housing finance companies, commercial property buyers, and legal practitioners.'
+    },
+    'erection-all-risk': {
+        title: 'Erection All Risk',
+        heroClass: 'hero-ear',
+        heroTitle: 'Erection All Risk (EAR)',
+        heroInfo: 'Plant & Machinery Installation Protection',
+        heroText: 'Protect machinery, electrical equipment, and industrial plants from physical damage during installation, testing, and commissioning phases.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'engineering',
+        contentTitle: 'Erection All Risk (EAR) Insurance Solutions',
+        contentText: 'Installing complex industrial plant and machinery involves significant risks, from accidental dropping and assembly errors to fires and testing failures. Erection All Risk (EAR) Insurance provides comprehensive physical damage cover for components, materials, and equipment from arrival at the site, through storage, erection, testing, and final commissioning.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-gears', title: 'Material damage to plant:', text: 'Covers physical damage to machines, structural steelwork, and materials during installation.' },
+            { icon: 'fa-fire-burner', title: 'Testing and commissioning cover:', text: 'Protects the plant against mechanical or electrical breakdowns occurring during testing operations.' },
+            { icon: 'fa-warehouse', title: 'Storage on site:', text: 'Protects components stored at the installation site against fire, flood, theft, and landslide.' },
+            { icon: 'fa-scale-balanced', title: 'Third-party liability extension:', text: 'Covers bodily injury and property damage to third parties arising from erection activities.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-circle-exclamation', text: 'Assembly and testing are high-risk phases: Brand new machinery is highly vulnerable to design, erection, or calibration errors when powered up.' },
+            { icon: 'fa-file-contract', text: 'Fulfills contractor obligations: Machinery suppliers and installation contractors require EAR to safeguard their financial exposure.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Industrial manufacturers setting up new plants, electrical contractors, mechanical engineers, machinery manufacturers, and infrastructure developers.'
+    },
+    'machinery-breakdown': {
+        title: 'Machinery Breakdown',
+        heroClass: 'hero-mbd',
+        heroTitle: 'Machinery Breakdown Insurance',
+        heroInfo: 'Operational Equipment Security',
+        heroText: 'Protect your operational factory machinery from sudden, unforeseen mechanical or electrical breakdowns and physical damage.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'engineering',
+        contentTitle: 'Machinery Breakdown (MBD) Insurance',
+        contentText: 'When critical production machines break down, a business faces immediate repair costs and potential production delays. Machinery Breakdown Insurance covers sudden, unforeseen physical damage to operational machinery due to short circuits, vibration, design errors, bad workmanship, or operational mistakes. It serves as an essential protection for capital-intensive industries.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-bolt', title: 'Electrical breakdown:', text: 'Covers damage to motors, alternators, and electronics caused by short circuits or voltage fluctuations.' },
+            { icon: 'fa-wrench', title: 'Mechanical disruption:', text: 'Protects against centrifugal force damage, piston seizure, or lubrication failures.' },
+            { icon: 'fa-screwdriver-wrench', title: 'Operator error:', text: 'Covers accidental damage due to operational mistakes, lack of skill, or foreign body entry.' },
+            { icon: 'fa-handshake', title: 'Replacement or repair:', text: 'Covers cost of replacement parts, expert technician charges, and transport of damaged parts.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-industry', text: 'Complements fire insurance: Standard fire policies exclude internal mechanical or electrical failures; MBD fills this major operational gap.' },
+            { icon: 'fa-screwdriver-wrench', text: 'Supports business continuity: Minimizes downtime by ensuring funds for repairs are made available immediately.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Manufacturers, engineering workshops, plastic molding companies, printing presses, and cold storage facilities.'
+    },
+    'contractors-plant-machinery': {
+        title: 'Contractors Plant & Machinery',
+        heroClass: 'hero-cpm',
+        heroTitle: 'Contractors Plant & Machinery (CPM)',
+        heroInfo: 'Mobile Construction Equipment Cover',
+        heroText: 'Protect expensive mobile construction machinery, excavators, and site equipment from accidental damage, breakdown, or theft.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'engineering',
+        contentTitle: 'Contractors Plant & Machinery (CPM)',
+        contentText: 'Mobile construction equipment such as excavators, cranes, dumpers, and road rollers operate in harsh environments. Contractors Plant & Machinery (CPM) Insurance covers physical damage and mechanical breakdowns of mobile machinery deployed at project sites. It ensures that accidental tipping, collision, or fire does not stop your project.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-truck-monster', title: 'Accidental site damage:', text: 'Covers losses from site collisions, landslides, accidental overturning, or flooding.' },
+            { icon: 'fa-fire', title: 'Fire and natural hazards:', text: 'Protects equipment against fire, lightning, earthquake, storm, and inundation.' },
+            { icon: 'fa-user-ninja', title: 'Theft and vandalism:', text: 'Covers burglary of plant items or damage caused by malicious acts at construction sites.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-halved', text: 'Protects asset investments: Cranes and heavy loaders are highly capital-intensive; CPM protects these valuable assets.' },
+            { icon: 'fa-road', text: 'Multi-site flexibility: Covers machinery as it moves across different project sites under a single policy.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Construction contractors, civil engineering companies, equipment leasing agencies, and mining operators.'
+    },
+    'electronic-equipment': {
+        title: 'Electronic Equipment Insurance',
+        heroClass: 'hero-eei',
+        heroTitle: 'Electronic Equipment Insurance',
+        heroInfo: 'All-Risk IT & Electronic Protection',
+        heroText: 'Protect your valuable computers, servers, medical devices, and other microelectronics from physical damage, voltage surges, and data loss.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'engineering',
+        contentTitle: 'Electronic Equipment Insurance Solutions',
+        contentText: 'Electronic systems are highly sensitive to power surges, water damage, and human errors. Electronic Equipment Insurance is an all-risk policy that covers computers, data processing hardware, telecommunications equipment, and diagnostics systems. It also covers the cost of restoring lost data and operating extra systems during recovery.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-laptop', title: 'Hardware physical damage:', text: 'Covers computers, servers, UPS systems, and networking hardware against accidental damage.' },
+            { icon: 'fa-bolt-lightning', title: 'Electrical surges:', text: 'Protects components from voltage spikes, induction currents, and short circuits.' },
+            { icon: 'fa-database', title: 'Data media and records:', text: 'Covers the costs of reproducing and rebuilding databases and records lost due to hardware damage.' },
+            { icon: 'fa-clock-rotate-left', title: 'Increased cost of working:', text: 'Compensates for extra expenses (e.g. leasing replacement servers) to keep operations running.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield', text: 'All-risk cover format: Provides protection for almost all sudden physical damage, unless specifically excluded.' },
+            { icon: 'fa-hospital', title: 'Vital for specialized electronics:', text: 'Crucial for high-end medical equipment, graphics workstations, and server hubs.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Software parks, IT companies, diagnostic laboratories, hospitals, television studios, and telecommunication providers.'
+    },
+    'boiler-pressure-plant': {
+        title: 'Boiler & Pressure Plant',
+        heroClass: 'hero-boiler',
+        heroTitle: 'Boiler & Pressure Plant Insurance',
+        heroInfo: 'Pressurized Equipment Protection',
+        heroText: 'Protect pressurized boilers, steam containers, and chemical reactors against physical damage and third-party liabilities from explosion or implosion.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'engineering',
+        contentTitle: 'Boiler & Pressure Plant Insurance',
+        contentText: 'Boilers and pressurized vessels operate under extreme temperatures and pressures. An explosion or implosion can cause catastrophic damage to the plant, nearby buildings, and personnel. Boiler & Pressure Plant Insurance covers the physical damage to the boiler itself, surrounding property, and third-party liability claims resulting from pressure plant failures.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-gauge-high', title: 'Explosion & implosion damage:', text: 'Covers physical tearing apart of boilers or pressure vessels due to pressure conditions.' },
+            { icon: 'fa-building', title: 'Surrounding property damage:', text: 'Covers damage to the owner\'s buildings, machinery, and offices caused by an explosion.' },
+            { icon: 'fa-scale-balanced', title: 'Third-party liability cover:', text: 'Protects the business against lawsuits for third-party bodily injury or property damage.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-circle-exclamation', text: 'Standard fire exclusions: Traditional fire insurance policies exclude explosions originating within boilers or steam engines; BPP is required.' },
+            { icon: 'fa-shield', text: 'Fulfills legal compliance: Pressurized vessels are regulated under the Boiler Act, requiring financial protection.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Chemical manufacturers, textile factories, power generating stations, sugar mills, and paper manufacturing plants.'
+    },
+    'standard-fire-special-perils': {
+        title: 'Standard Fire & Special Perils',
+        heroClass: 'hero-sfsp',
+        heroTitle: 'Standard Fire & Special Perils',
+        heroInfo: 'Basic Asset & Property Shield',
+        heroText: 'Protect your commercial buildings, plant, machinery, and stock from fire, natural disasters, and malicious damage.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'property',
+        contentTitle: 'Standard Fire & Special Perils (SFSP) Insurance',
+        contentText: 'Standard Fire & Special Perils Insurance is the foundation of any business asset protection plan. It covers commercial properties, raw materials, stock, and machinery against fire, lightning, explosions, and natural disasters (like floods, landslides, and storms), as well as human perils such as riots, strikes, and malicious acts.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-fire', title: 'Fire and lightning:', text: 'Covers physical damage to structures and assets directly caused by fire, lightning, or gas explosion.' },
+            { icon: 'fa-cloud-showers-heavy', title: 'Natural disasters (STFI):', text: 'Storms, cyclones, typhoons, tempests, floods, inundations, and landslides.' },
+            { icon: 'fa-users-slash', title: 'Social perils:', text: 'Physical damage caused by riots, strikes, civil commotion, and malicious mischief.' },
+            { icon: 'fa-plane-arrival', title: 'Impact damage:', text: 'Damage caused by road vehicles, animals, or aircraft falling onto the property.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-building-shield', text: 'Protects major capital investments: Protects the physical buildings and machinery that represent the foundation of your enterprise.' },
+            { icon: 'fa-file-contract', text: 'Universal contract prerequisite: Landlords and banking institutions require active SFSP cover before signing commercial agreements.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Warehouse operators, manufacturing entities, commercial office building owners, retail store networks, and cold storages.'
+    },
+    'industrial-all-risk': {
+        title: 'Industrial All Risk',
+        heroClass: 'hero-iar',
+        heroTitle: 'Industrial All Risk (IAR)',
+        heroInfo: 'Comprehensive Factory Protection',
+        heroText: 'A comprehensive, single-policy solution for large-scale industrial units covering fire, machinery breakdown, and business interruption.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'property',
+        contentTitle: 'Industrial All Risk (IAR) Insurance',
+        contentText: 'For large-scale manufacturing facilities, holding multiple separate policies (Fire, Machinery Breakdown, Business Interruption) creates administrative complexity and risk of coverage gaps. Industrial All Risk (IAR) is a unified policy designed for industrial assets exceeding ₹100 crores. It covers all risks of physical loss or damage, operational machinery breakdowns, and the resulting business interruption losses under a single framework.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-fire-extinguisher', title: 'All physical losses:', text: 'Covers physical damage to buildings, plant, and stock from fire, flood, storm, and natural perils.' },
+            { icon: 'fa-gears', title: 'Machinery breakdown:', text: 'Includes protection for sudden mechanical or electrical breakdown of production machinery.' },
+            { icon: 'fa-chart-line-down', title: 'Business interruption (FLOP):', text: 'Replaces gross profit lost due to production stoppages following physical damage or machine breakdown.' },
+            { icon: 'fa-user-secret', title: 'Burglary and theft:', text: 'Protects factory stock, tools, and finished goods against burglary or theft.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield', text: 'Broad, all-risk protection: Covers all causes of loss unless they are explicitly excluded, offering the highest level of security available.' },
+            { icon: 'fa-handshake', text: 'Simplified administration: One policy, one underwriter, and one claims contact point for all physical and operational risks.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Large chemical factories, automobile manufacturing plants, metal refineries, textile mills, and mega-power stations with total assets over ₹100 crores.'
+    },
+    'bharat-sookshma-udyam': {
+        title: 'Bharat Sookshma Udyam',
+        heroClass: 'hero-sookshma',
+        heroTitle: 'Bharat Sookshma Udyam Suraksha',
+        heroInfo: 'Micro-Enterprise Asset Protection',
+        heroText: 'Standardized property and asset protection tailored for micro-enterprises with total assets up to ₹5 crores.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'property',
+        contentTitle: 'Bharat Sookshma Udyam Suraksha',
+        contentText: 'Bharat Sookshma Udyam Suraksha is a standardized property insurance policy introduced under IRDAI guidelines specifically for micro-enterprises. It covers physical assets (including buildings, plant, machinery, fixtures, and stock) up to a value of ₹5 crores against fire, natural disasters, theft, and accidental damage, ensuring small businesses have robust financial protection.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-fire', title: 'Standard perils cover:', text: 'Fire, explosions, lightning, earthquakes, landslides, and storms.' },
+            { icon: 'fa-shield-virus', title: 'Theft cover:', text: 'Burglary and theft occurring within 90 days of a covered natural disaster or physical incident.' },
+            { icon: 'fa-money-bill', title: 'Waiver of underinsurance:', text: 'Claims are settled up to the sum insured without applying average clauses for minor variations.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-heart-circle-check', text: 'Designed for micro-business: Standardized terms make it simple to understand, purchase, and claim.' },
+            { icon: 'fa-percent', text: 'Highly cost-effective: Regulated tariffs keep premiums affordable for small traders and micro-manufacturers.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Retail shopkeepers, micro-manufacturing units, boutique offices, small warehouses, and family workshops with total assets up to ₹5 crores.'
+    },
+    'bharat-laghu-udyam': {
+        title: 'Bharat Laghu Udyam',
+        heroClass: 'hero-laghu',
+        heroTitle: 'Bharat Laghu Udyam Suraksha',
+        heroInfo: 'Small & Medium Business Asset Cover',
+        heroText: 'Standardized property and asset protection tailored for small-to-medium enterprises with total assets between ₹5 crores and ₹50 crores.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'property',
+        contentTitle: 'Bharat Laghu Udyam Suraksha',
+        contentText: 'Bharat Laghu Udyam Suraksha is a standardized IRDAI property policy designed for small and medium-sized enterprises with asset values between ₹5 crores and ₹50 crores. It protects your business properties, machinery, structures, and stock from physical damage caused by fire, weather anomalies, social unrest, and burglary under simplified, transparent terms.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-fire-extinguisher', title: 'Comprehensive fire & weather:', text: 'Protects factory sheds and machinery against fire, cyclones, floods, and landslides.' },
+            { icon: 'fa-users', title: 'Social commotion & strike:', text: 'Covers physical damage to assets caused by riots, public strikes, and malicious acts.' },
+            { icon: 'fa-boxes-packing', title: 'In-built extensions:', text: 'Includes automatic cover for removal of debris, professional fees (architects/surveyors), and minor alterations.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-halved', text: 'Robust protection limits: Designed specifically for growing medium enterprises with asset values up to ₹50 crores.' },
+            { icon: 'fa-circle-check', text: 'Transparent claims handling: Standardized terms across all insurers ensure a predictable and fair claims experience.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Mid-sized manufacturing units, large printing presses, cold storages, medium warehouses, and wholesale distributors.'
+    },
+    'office-factory-warehouse': {
+        title: 'Office, Factory & Warehouse',
+        heroClass: 'hero-office-package',
+        heroTitle: 'Office, Factory & Warehouse Package',
+        heroInfo: 'Multi-Location Commercial Property Cover',
+        heroText: 'Package insurance protecting your physical building structures, office assets, stocks, and machinery under a single, flexible commercial policy.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'property',
+        contentTitle: 'Office, Factory & Warehouse Insurance',
+        contentText: 'Whether you operate a high-tech corporate office, a busy factory floor, or a multi-location distribution warehouse, your physical infrastructure is vulnerable to fire, theft, machinery breakdowns, and transit losses. This package policy brings together property damage, burglary, public liability, and electronic equipment coverage under a single plan designed to secure your daily operations.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-warehouse', title: 'Commercial building cover:', text: 'Protects physical building structures, sheds, boundary walls, and gates from damage.' },
+            { icon: 'fa-desktop', title: 'Office contents & fittings:', text: 'Covers computers, server equipment, air conditioners, furniture, and fittings.' },
+            { icon: 'fa-boxes-stacked', title: 'Stock & raw materials:', text: 'Protects materials, components, work-in-progress, and finished goods stored at your locations.' },
+            { icon: 'fa-scale-balanced', title: 'Occupier\'s liability:', text: 'Includes basic public liability to protect against injury claims from site visitors.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield', text: 'Comprehensive operations cover: Simplifies risk management by bundling multiple business covers under one policy.' },
+            { icon: 'fa-location-dot', text: 'Scalable across locations: Enables consolidated coverage for companies operating multiple offices, warehouses, and factories.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Logistics companies with multiple distribution centers, corporate head offices, manufacturing firms, and retail store operators.'
+    },
+    'inland-transit-insurance': {
+        title: 'Inland Transit Insurance',
+        heroClass: 'hero-inland-transit',
+        heroTitle: 'Inland Transit Insurance',
+        heroInfo: 'Domestic Cargo & Logistics Security',
+        heroText: 'Protect your goods from accidental damage, theft, or loss during domestic transit via road, rail, or air.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'marine',
+        contentTitle: 'Inland Transit Insurance Solutions',
+        contentText: 'For businesses distributing products across domestic markets, cargo transit involves significant risks, including truck overturns, train collisions, warehouse fire accidents, and theft. Inland Transit Insurance protects goods while in transit over land within India, covering cargo owners and logistics partners from heavy financial losses due to transport disasters.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-truck-front', title: 'Road vehicle accidents:', text: 'Covers cargo damage resulting from truck collisions, overturning, or breakdown.' },
+            { icon: 'fa-train', title: 'Rail derailments & incidents:', text: 'Covers cargo damage or loss occurring during transit on domestic railways.' },
+            { icon: 'fa-user-ninja', title: 'Theft & non-delivery:', text: 'Protects against loss from cargo theft, robbery, or missing packages during transit.' },
+            { icon: 'fa-fire-burner', title: 'Fire and transit storage:', text: 'Covers fire damage to goods while loaded on vehicles or in temporary warehouses.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-money-bill-trend-up', text: 'Protects cargo value: Prevents logistics and distribution incidents from impacting your business profitability.' },
+            { icon: 'fa-handshake', text: 'Supports supply contracts: Fulfills transport agreements that require cargo value to be insured during delivery.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Wholesale distributors, manufacturing firms, e-commerce businesses, logistics partners, and freight forwarders.'
+    },
+    'import-export-cargo': {
+        title: 'Import & Export Cargo',
+        heroClass: 'hero-import-export',
+        heroTitle: 'Import & Export Cargo Insurance',
+        heroInfo: 'International Marine Cargo Security',
+        heroText: 'Protect international cargo shipments from loss or damage during ocean voyages, air freight, and global land transits.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'marine',
+        contentTitle: 'Import & Export Cargo Insurance',
+        contentText: 'Global trade involves shipping goods across ocean routes and international air hubs, exposing cargo to weather extremes, rough handling, vessel collisions, and piracy. Import & Export Cargo Insurance provides international marine cargo coverage, protecting cargo values from port to port, and during storage, until the goods reach the final consignee.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-ship', title: 'Ocean voyage perils:', text: 'Covers vessel collision, sinking, fire, heavy weather washouts, and piracy losses.' },
+            { icon: 'fa-plane-departure', title: 'Air freight hazards:', text: 'Covers accidental damage, cargo handling errors, and flight incidents.' },
+            { icon: 'fa-shield-halved', title: 'Institute Cargo Clauses (A, B, C):', text: 'Enables flexible coverage tiers, from all-risk (A) to restricted coverage options (C).' },
+            { icon: 'fa-handshake', title: 'General Average contributions:', text: 'Covers compulsory sharing of costs for cargo sacrificed to save a vessel in distress.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-globe', text: 'Critical for international trade: Essential for satisfying standard international trade shipping terms (CIF, FOB).' },
+            { icon: 'fa-triangle-exclamation', text: 'Protects high-value cargo: Ensures long overseas transit delays or vessel damage does not cause capital loss.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Importers, exporters, trading houses, international logistics providers, and manufacturers sourcing global raw materials.'
+    },
+    'marine-hull-insurance': {
+        title: 'Marine Hull Insurance',
+        heroClass: 'hero-hull',
+        heroTitle: 'Marine Hull & Machinery Insurance',
+        heroInfo: 'Vessel & Marine Asset Protection',
+        heroText: 'Protect commercial ships, tugs, barges, and drilling rigs against physical damage, collisions, and liability events.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'marine',
+        contentTitle: 'Marine Hull & Machinery Insurance',
+        contentText: 'Vessels and offshore assets are exposed to harsh marine environments. Marine Hull Insurance covers physical damage to the ship\'s structure, machinery, and equipment, as well as collision liability claims from other vessel owners. It provides critical protection for shipowners and maritime operators.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-anchor', title: 'Vessel hull physical damage:', text: 'Covers physical damage to the ship\'s structure, decks, and fittings from marine hazards.' },
+            { icon: 'fa-gears', title: 'Machinery & equipment damage:', text: 'Covers damage to ship engines, boilers, generators, and navigation systems.' },
+            { icon: 'fa-ship', title: 'Collision liability (4/4ths clause):', text: 'Covers legal liability for damage caused to another vessel in a collision.' },
+            { icon: 'fa-life-ring', title: 'Salvage and towage charges:', text: 'Covers costs to recover or tow a disabled vessel to port.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-building-columns', text: 'Required for vessel financing: Shipping banks require active hull coverage before financing commercial vessels.' },
+            { icon: 'fa-shield', text: 'Protects maritime assets: Mitigates high repair costs for ship machinery and hull damage.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Commercial shipowners, port operators, towing companies, barge operators, and offshore drilling contractors.'
+    },
+    'carriers-legal-liability': {
+        title: 'Carrier’s Legal Liability',
+        heroClass: 'hero-carrier',
+        heroTitle: 'Carrier’s Legal Liability Insurance',
+        heroInfo: 'Transporter & Logistics Liability',
+        heroText: 'Protect cargo transporters and logistics providers from legal liabilities for cargo loss, damage, or delay during transport.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'marine',
+        contentTitle: 'Carrier’s Legal Liability Insurance',
+        contentText: 'Under cargo carriage laws, transporters are responsible for the safety of cargo in their custody. If cargo is damaged, stolen, or lost in transit, the cargo owner can sue the transporter. Carrier’s Legal Liability Insurance protects transporters by covering legal defense fees and cargo damage settlements.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-scale-balanced', title: 'Cargo loss & damage liability:', text: 'Covers legal liability for damage to cargo in custody from road accidents, fires, or water.' },
+            { icon: 'fa-user-ninja', title: 'Theft from transport vehicles:', text: 'Covers cargo theft from trucks parked at transport yards or transit points.' },
+            { icon: 'fa-clock', title: 'Delays in delivery:', text: 'Covers cargo delay liability claims if specified under transport contracts.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-truck-front', text: 'Protects logistics cash flow: Prevents client claims from disrupting transport company margins.' },
+            { icon: 'fa-file-signature', title: 'Secures corporate clients:', text: 'Manufacturing clients require transporters to hold active liability coverage to qualify for delivery contracts.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Truck fleet operators, logistics companies, freight consolidators, and cargo transport agencies.'
+    },
+    'commercial-vehicle-insurance': {
+        title: 'Commercial Vehicle Insurance',
+        heroClass: 'hero-commercial-vehicle',
+        heroTitle: 'Commercial Vehicle Insurance',
+        heroInfo: 'Business Fleet & Transport Protection',
+        heroText: 'Protect company-owned trucks, trailers, and delivery vans from road accidents, natural disasters, theft, and third-party liabilities.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'motor',
+        contentTitle: 'Commercial Vehicle Insurance Solutions',
+        contentText: 'Commercial vehicles are vital to distribution networks. Road accidents, vehicle damage, or cargo thefts can directly impact business operations. Commercial Vehicle Insurance covers vehicle repair costs, towing charges, and mandatory third-party liability claims, protecting your transportation assets.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-truck', title: 'Own damage coverage:', text: 'Covers repair costs for business trucks, vans, or trailers from road accidents.' },
+            { icon: 'fa-scale-balanced', title: 'Third-party liability cover:', text: 'Covers legal liabilities for third-party injury, death, or property damage from vehicle accidents.' },
+            { icon: 'fa-fire-burner', title: 'Fire and natural hazards:', text: 'Protects vehicles against fire, lightning, storms, floods, and earthquakes.' },
+            { icon: 'fa-key', title: 'Theft & total loss:', text: 'Replaces vehicle value if stolen or damaged beyond repair.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-gavel', text: 'Fulfills legal requirements: Third-party liability insurance is mandatory under the Motor Vehicles Act.' },
+            { icon: 'fa-road', text: 'Ensures fleet continuity: Minimizes truck repair delays, keeping your distribution fleet moving.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Logistics companies, manufacturing businesses with transport fleets, distribution agencies, and e-commerce companies.'
+    },
+    'motor-fleet-insurance': {
+        title: 'Motor Fleet Insurance',
+        heroClass: 'hero-motor-fleet',
+        heroTitle: 'Motor Fleet Insurance',
+        heroInfo: 'Consolidated Vehicle Fleet Cover',
+        heroText: 'Consolidate coverage for all company-owned cars, delivery vans, and trucks under a single fleet policy with simplified administration.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'motor',
+        contentTitle: 'Motor Fleet Insurance Solutions',
+        contentText: 'Managing individual insurance policies for a large fleet of corporate cars and delivery trucks creates significant administrative work and risk of missed renewals. Motor Fleet Insurance consolidates all company-owned vehicles under a single policy, offering uniform coverage terms, volume premium discounts, and a single renewal date.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-car-side', title: 'Own damage for entire fleet:', text: 'Covers accident repair costs for all fleet cars, utility vehicles, and vans.' },
+            { icon: 'fa-scale-balanced', title: 'Consolidated third-party liability:', text: 'Protects the enterprise against third-party claims from any fleet vehicle.' },
+            { icon: 'fa-truck-front', title: 'New vehicle additions:', text: 'Enables automatic coverage for new vehicles added during the policy term.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-folder-open', text: 'Simplifies administration: One policy document, one underwriter, and one renewal date for all fleet vehicles.' },
+            { icon: 'fa-percent', text: 'Reduces premium costs: Fleet risk pooling enables volume discounts compared to individual policies.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Companies with sales employee car fleets, logistics firms, courier companies, and taxi operators.'
+    },
+    'passenger-carrying-vehicle': {
+        title: 'Passenger Carrying Vehicle',
+        heroClass: 'hero-passenger-vehicle',
+        heroTitle: 'Passenger Carrying Vehicle Insurance',
+        heroInfo: 'Public Transport & Passenger Protection',
+        heroText: 'Protect commercial buses, staff shuttles, and passenger vehicles against accidents, vehicle damage, and passenger liabilities.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'motor',
+        contentTitle: 'Passenger Carrying Vehicle Insurance',
+        contentText: 'Operating commercial buses, employee shuttles, or tourist coaches involves a duty of care toward passengers. Passenger Carrying Vehicle Insurance covers physical damage to the vehicle and includes mandatory passenger liability cover to protect against passenger injury or death claims following accidents.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-bus', title: 'Vehicle physical damage:', text: 'Covers repair costs for buses, coaches, or cabs from collisions and fires.' },
+            { icon: 'fa-users', title: 'Passenger liability coverage:', text: 'Covers legal liability and medical costs for passenger injuries from road accidents.' },
+            { icon: 'fa-scale-balanced', title: 'Third-party liability cover:', text: 'Covers third-party injury, death, and property damage claims.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-gavel', text: 'Fulfills public transport regulations: Passenger liability coverage is mandatory under motor transport laws.' },
+            { icon: 'fa-shield', text: 'Protects against liability claims: Avoids large claims from passenger injury lawsuits.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Private bus operators, corporate employee shuttle providers, school bus operators, and travel agencies.'
+    },
+    'burglary-insurance': {
+        title: 'Burglary Insurance',
+        heroClass: 'hero-burglary',
+        heroTitle: 'Burglary & Housebreaking Insurance',
+        heroInfo: 'Business Property Theft Protection',
+        heroText: 'Protect your commercial premises, office assets, and warehouse inventory against theft and burglary.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'Burglary Insurance Solutions',
+        contentText: 'While fire policies protect against natural disasters, business properties remain vulnerable to theft. Burglary Insurance covers losses of stock, raw materials, office fittings, and machinery resulting from break-ins involving force or violence, protecting your physical assets from criminal acts.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-vault', title: 'Theft of warehouse stock:', text: 'Covers raw materials, components, and finished goods stolen during a break-in.' },
+            { icon: 'fa-desktop', title: 'Office assets & tools:', text: 'Covers theft of computers, servers, office furniture, and specialized machinery.' },
+            { icon: 'fa-house-chimney-crack', title: 'Damage to premises:', text: 'Covers repair costs for doors, windows, and walls damaged by thieves during entry.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-halved', text: 'Essential property protection: Property fire policies exclude theft; burglary insurance covers this critical security risk.' },
+            { icon: 'fa-lock', text: 'Protects high-value stock: Replaces the value of stolen goods, protecting business cash flow.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Wholesale warehouses, retail showrooms, manufacturing workshops, and offices holding high-value hardware.'
+    },
+    'money-insurance': {
+        title: 'Money Insurance',
+        heroClass: 'hero-money',
+        heroTitle: 'Money Insurance',
+        heroInfo: 'Cash-in-Transit & Cash-in-Safe Protection',
+        heroText: 'Protect business cash, currency notes, and cheques during transit to banks or while stored in safes at office premises.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'Money Insurance Solutions',
+        contentText: 'Retailers, cash-collection agencies, and companies with heavy cash transactions face risks from robbery and theft. Money Insurance protects business cash, cheques, and postal orders while in transit between locations or while stored in locked safes on company premises.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-money-bill-transfer', title: 'Money in transit:', text: 'Covers theft or robbery of cash while being transported by employees between premises and banks.' },
+            { icon: 'fa-vault', title: 'Money in locked safe:', text: 'Covers theft of cash from locked safes or strongrooms on company premises.' },
+            { icon: 'fa-cash-register', title: 'Money at till/counter:', text: 'Covers theft of cash from cash registers or cash counters during business hours.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-heart', text: 'Protects liquid capital: Ensures that a cash transit robbery does not result in direct capital loss.' },
+            { icon: 'fa-handshake', text: 'Covers cash transport risks: Crucial for retail businesses and petrol pumps with daily cash deposits.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Retail chains, petrol pumps, cash-management companies, banks, and businesses with daily cash collection operations.'
+    },
+    'event-insurance': {
+        title: 'Event Insurance',
+        heroClass: 'hero-event',
+        heroTitle: 'Commercial Event Insurance',
+        heroInfo: 'Event Cancellation & Liability Protection',
+        heroText: 'Protect corporate events, exhibitions, and public conferences from financial loss due to cancellations, property damage, and liability claims.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'Event Insurance Solutions',
+        contentText: 'Organizing corporate exhibitions, product launches, or conferences involves significant upfront investments. If an event is cancelled due to weather, venue damage, or speaker travel disruption, losses can be substantial. Event Insurance covers non-refundable venue deposits and includes event liability cover to protect against third-party injuries.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-calendar-xmark', title: 'Event cancellation cover:', text: 'Covers non-refundable venue, catering, and marketing costs if the event is cancelled due to weather or venue damage.' },
+            { icon: 'fa-scale-balanced', title: 'Public liability cover:', text: 'Covers third-party injury or property damage claims happening during the event.' },
+            { icon: 'fa-guitar', title: 'Equipment & stage damage:', text: 'Covers physical damage to audio-visual gear, stages, and exhibition booths.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield', text: 'Protects event investments: Reimburses upfront event setup costs if cancellation occurs.' },
+            { icon: 'fa-people-group', text: 'Bundles liability cover: Essential for securing venue bookings, as venues require liability insurance.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Event managers, exhibition organizers, corporate marketing teams, and conference planners.'
+    },
+    'travel-insurance-misc': {
+        title: 'Travel Insurance',
+        heroClass: 'hero-travel-misc',
+        heroTitle: 'Commercial Travel Insurance',
+        heroInfo: 'Business Travel Protection',
+        heroText: 'Protect employees during domestic or international business trips against medical emergencies, flight delays, and baggage loss.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'Commercial Travel Insurance Solutions',
+        contentText: 'Business travel is essential for client meetings and projects. Medical emergencies abroad, flight cancellations, or lost documents can create heavy costs. Commercial Travel Insurance protects employees during business travel, covering medical care, travel delays, and lost baggage.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-suitcase-medical', title: 'Emergency medical expenses:', text: 'Covers outpatient treatments and emergency hospitalization costs during travel.' },
+            { icon: 'fa-plane-slash', title: 'Trip delays & cancellations:', text: 'Covers flight cancellations, delays, and hotel rebookings.' },
+            { icon: 'fa-passport', title: 'Loss of passport & luggage:', text: 'Covers passport replacement fees and lost baggage compensation.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-users', text: 'Fulfills employer duty of care: Protects employees traveling on company business.' },
+            { icon: 'fa-globe', text: 'Required for travel visas: Essential for obtaining travel visas for several international markets.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Companies with frequent business travel, export organizations, and multinational corporations.'
+    },
+    'shop-insurance': {
+        title: 'Shop Insurance',
+        heroClass: 'hero-shop',
+        heroTitle: 'Shopkeeper’s Package Insurance',
+        heroInfo: 'All-in-One Retail Outlet Protection',
+        heroText: 'Protect your retail store structure, interior fittings, and stock from fire, burglary, natural hazards, and liability claims.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'Shop Insurance Solutions',
+        contentText: 'Retail shopkeepers face multiple risks, from fires and thefts to customer slips and cash transit robberies. Shopkeeper’s Package Insurance bundles property damage, burglary, public liability, and cash-in-transit coverages under a single, affordable policy designed for retail shops.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-shop', title: 'Shop building & contents:', text: 'Covers fire and weather damage to the shop building, shelves, counters, and stock.' },
+            { icon: 'fa-lock', title: 'Burglary & theft cover:', text: 'Covers losses from break-ins or theft of stock and contents.' },
+            { icon: 'fa-scale-balanced', title: 'Public liability cover:', text: 'Protects against liability claims from customers injured inside the shop.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield', text: 'Simple business cover: Bundles multiple retail covers under a single policy, reducing admin work.' },
+            { icon: 'fa-percent', text: 'Cost-effective premiums: Packaged format keeps coverage affordable for small traders.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Retail outlets, clothing stores, supermarkets, pharmacies, and hardware shops.'
+    },
+    'sme-package-policies': {
+        title: 'SME Package Policies',
+        heroClass: 'hero-sme',
+        heroTitle: 'SME Package Insurance',
+        heroInfo: 'All-in-One Small Business Cover',
+        heroText: 'Protect your small or medium enterprise with a package policy bundling property, liability, and machinery break-down coverages.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'SME Package Insurance Solutions',
+        contentText: 'SMEs face several operational and liability risks but often have limited time to manage multiple insurance policies. SME Package Insurance is a flexible, all-in-one policy that bundles property damage, burglary, machinery breakdown, and public liability coverages, offering simplified insurance management.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-building-shield', title: 'Property damage cover:', text: 'Covers fire, weather, and accidental damage to offices, factories, and machinery.' },
+            { icon: 'fa-gears', title: 'Machinery breakdown cover:', text: 'Includes protection for sudden mechanical or electrical breakdowns.' },
+            { icon: 'fa-scale-balanced', title: 'Public liability cover:', text: 'Covers third-party liability claims arising from business operations.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield', text: 'Eliminates coverage gaps: Multi-risk packaging ensures key business exposures are covered.' },
+            { icon: 'fa-folder-open', text: 'Simplifies administration: One policy document and one renewal date for all business coverages.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Startups, small manufacturers, engineering workshops, and service providers.'
+    },
+    'specialized-risk-covers': {
+        title: 'Specialized Risk Covers',
+        heroClass: 'hero-specialized',
+        heroTitle: 'Specialized Risk & Trade Credit Cover',
+        heroInfo: 'Custom Risk Transfer Solutions',
+        heroText: 'Protect your enterprise from specialized financial risks, including trade credit failures, political risk, and environmental liabilities.',
+        breadcrumb: 'HOME / COMMERCIAL INSURANCE',
+        sidebarType: 'miscellaneous',
+        contentTitle: 'Specialized Risk Insurance Solutions',
+        contentText: 'Standard insurance policies exclude complex risks such as client payment defaults (trade credit), political instability, and environmental clean-up liabilities. Specialized Risk Covers are custom-underwritten policies designed to protect enterprises from these complex financial and operational risks.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-money-bill-trend-up', title: 'Trade credit cover:', text: 'Protects against unpaid invoice losses if a client faces insolvency or default.' },
+            { icon: 'fa-globe-asia', title: 'Political risk cover:', text: 'Covers asset damage or operational disruptions from currency restrictions, war, or nationalisation.' },
+            { icon: 'fa-biohazard', title: 'Environmental liability:', text: 'Covers clean-up costs and liabilities following accidental pollution incidents.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-halved', text: 'Protects cash flow from trade defaults: Ensures unpaid invoices do not impact business liquidity.' },
+            { icon: 'fa-handshake', text: 'Enables export expansion: Confidently enter new international markets knowing trade credit risks are covered.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Exporting companies, raw material suppliers, large service providers, and infrastructure developers.'
+    },
+    'employee-health-wellness': {
+        title: 'Employee Health & Wellness',
+        heroClass: 'hero-wellness',
+        heroTitle: 'Employee Health & Wellness Programs',
+        heroInfo: 'Corporate Health & Preventive Care',
+        heroText: 'Go beyond basic health insurance with preventive care, mental health support, and wellness programs for employees.',
+        breadcrumb: 'HOME / GROUP INSURANCE',
+        sidebarType: 'group',
+        contentTitle: 'Employee Health & Wellness Programs',
+        contentText: 'Modern businesses recognize that employee health goes beyond managing hospitalization claims. Employee Health & Wellness Programs focus on preventive care, health check-ups, fitness activities, and mental health support, helping you build a healthier and more engaged corporate workforce.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-heart-circle-check', title: 'Preventive health check-ups:', text: 'Annual or bi-annual corporate health screening packages for employees.' },
+            { icon: 'fa-brain', title: 'Mental health support (EAP):', text: 'Access to professional counseling sessions and mental health support.' },
+            { icon: 'fa-dumbbell', title: 'Corporate fitness challenges:', text: 'Interactive programs promoting physical fitness and wellness activities.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-users', text: 'Boosts team productivity: Healthier employees take fewer sick leaves, enhancing overall output.' },
+            { icon: 'fa-heart-pulse', text: 'Reduces health premiums: Active preventive care helps control hospitalization claims and premium increases.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Startups, corporate businesses, and organizations focused on employee wellness and team engagement.'
+    },
+    'keyman-insurance': {
+        title: 'Keyman Insurance Solutions',
+        heroClass: 'hero-keyman',
+        heroTitle: 'Keyman Insurance Solutions',
+        heroInfo: 'Key Leadership & Financial Protection',
+        heroText: 'Protect your business from financial disruption and credit risks following the loss of vital business leaders.',
+        breadcrumb: 'HOME / GROUP INSURANCE',
+        sidebarType: 'group',
+        contentTitle: 'Keyman Insurance Solutions',
+        contentText: 'The success of an enterprise often depends on a few key executives or founders. The sudden loss or illness of a key person can disrupt client relationships, stop projects, and impact bank loans. Keyman Insurance is a term life policy taken by the company on the life of a key executive, ensuring funds are available to manage operations during transition.',
+        coveredTitle: 'What\'s Covered',
+        features: [
+            { icon: 'fa-key', title: 'Pecuniary compensation:', text: 'Provides capital to hire and onboard a qualified replacement for the key leader.' },
+            { icon: 'fa-building-columns', title: 'Debt and loan repayment:', text: 'Secures bank loans that were personally guaranteed by the key executive.' },
+            { icon: 'fa-shield-halved', title: 'Secures business continuity:', text: 'Provides funds to manage operations, reassuring clients and stakeholders during a transition.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-percent', text: 'Fully tax-deductible premiums: Premiums paid by the company are deductible as a business expense.' },
+            { icon: 'fa-chart-line', text: 'Maintains market confidence: Reassures lenders and investors of financial stability during a transition.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'Partnerships, family businesses, technology firms, and enterprises relying on a few key executives.'
+    },
+    'group-overseas-mediclaim': {
+        title: 'Group Overseas Mediclaim',
+        heroClass: 'hero-group-overseas-mediclaim',
+        heroTitle: 'Group Overseas Mediclaim',
+        heroInfo: 'Global Medical & Travel Protection',
+        heroText: 'Secure your employees with comprehensive overseas health and medical coverage during business travel and international assignments.',
+        breadcrumb: 'HOME / GROUP INSURANCE',
+        sidebarType: 'group',
+        contentTitle: 'Group Overseas Mediclaim Solutions',
+        contentText: 'Sending employees abroad for client projects, corporate meetings, or international assignments involves significant responsibilities. If an employee faces a medical emergency in a foreign country, medical bills can be extremely high. Group Overseas Mediclaim provides global hospitalization coverage, outpatient treatments, medical evacuation, and travel emergency support, ensuring your employees are protected wherever they go.',
+        coveredTitle: "What's Covered",
+        features: [
+            { icon: 'fa-hospital', title: 'Global Hospitalization cover:', text: 'Covers emergency inpatient treatments, ICU charges, surgeries, and physician fees abroad.' },
+            { icon: 'fa-truck-medical', title: 'Emergency Medical Evacuation:', text: 'Covers transportation to the nearest qualified medical facility or repatriation back home.' },
+            { icon: 'fa-suitcase-medical', title: 'Outpatient treatment benefit:', text: 'Includes coverage for physician visits, prescribed medicines, and emergency dental pain care.' },
+            { icon: 'fa-plane-slash', title: 'Travel contingency support:', text: 'Covers expenses due to trip delay, baggage loss, and passport replacement.' }
+        ],
+        whyMatters: [
+            { icon: 'fa-shield-heart', text: 'Protects against high overseas costs: Avoid paying out-of-pocket for expensive medical treatments in markets like the US or Europe.' },
+            { icon: 'fa-user-check', text: 'Boosts employee confidence: Traveling employees work with peace of mind knowing their health and safety are secured.' },
+            { icon: 'fa-file-shield', text: 'Compliance for travel visas: Crucial for meeting mandatory travel insurance visa requirements in several countries.' }
+        ],
+        considerTitle: 'Who Should Consider This',
+        considerText: 'IT companies, SaaS developers, consultancies, export-oriented businesses, and organizations with frequent employee travel or overseas client meetings.'
     }
 };
+

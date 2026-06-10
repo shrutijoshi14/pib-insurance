@@ -131,7 +131,7 @@ const Contact = () => {
                             <div className="hero-header-divider"></div>
                             <div className="hero-header-info">Expert Risk Support</div>
                         </div>
-                        <p>Whether you have a question about our services or need expert risk advice, our team is here to help you across our 20+ locations in India.</p>
+                        <p>Whether you have a question about our services or need expert risk advice, our team is here to help you across our 30+ locations in India.</p>
                         <div className="breadcrumb-custom">HOME / CONTACT US</div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ const Contact = () => {
                             <aside className="contact-sidebar">
                                 <MotionList className="info-grid-vertical" stagger={0.1}>
                                     {/* HELP DESK */}
-                                    <MotionItem className="info-card flex-card">
+                                    <MotionItem className="info-card flex-card" variant="fadeRight">
                                         <i className="fa-solid fa-headset"></i>
                                         <div>
                                             <h4>Help Desk</h4>
@@ -161,7 +161,7 @@ const Contact = () => {
                                     </MotionItem>
 
                                     {/* CORPORATE */}
-                                    <MotionItem className="info-card flex-card">
+                                    <MotionItem className="info-card flex-card" variant="fadeRight">
                                         <i className="fa-solid fa-building"></i>
                                         <div>
                                             <h4>Corporate</h4>
@@ -171,7 +171,7 @@ const Contact = () => {
                                     </MotionItem>
 
                                     {/* ADDRESS CARD */}
-                                    <MotionItem className="info-card flex-card">
+                                    <MotionItem className="info-card flex-card" variant="fadeRight">
                                         <i className="fa-solid fa-location-dot"></i>
                                         <div>
                                             <h4>Address</h4>
@@ -182,7 +182,7 @@ const Contact = () => {
                             </aside>
 
                             {/* RIGHT SIDE: Form */}
-                            <MotionSection className="contact-form-side-wrapper" delay={0.2}>
+                            <MotionSection className="contact-form-side-wrapper" delay={0.2} variant="fadeLeft">
                                 <div className="contact-form-container">
                                     <h3 className="form-title">Business Inquiry</h3>
                                     <form onSubmit={handleSubmit} className="business-form">
@@ -325,7 +325,10 @@ const Contact = () => {
                                                 { name: 'Raipur', email: 'raipur@pibinsurance.in' },
                                                 { name: 'Ahmedabad', email: 'ahmedabad@pibinsurance.in' },
                                                 { name: 'Surat', email: 'surat@pibinsurance.in' },
-                                                { name: 'Bhopal', email: 'bhopal@pibinsurance.in' }
+                                                { name: 'Nagpur', email: 'nagpur@pibinsurance.in' },
+                                                { name: 'Nashik', email: 'nashik@pibinsurance.in' },
+                                                { name: 'Vadodara', email: 'vadodara@pibinsurance.in' },
+                                                { name: 'Rajkot', email: 'rajkot@pibinsurance.in' }
                                             ].map(city => (
                                                 <div key={city.name} className="city-email-tag">
                                                     <div className="city-tag-top">
@@ -350,7 +353,12 @@ const Contact = () => {
                                                 { name: 'Bengaluru', email: 'bengaluru@pibinsurance.in' },
                                                 { name: 'Hyderabad', email: 'hyderabad@pibinsurance.in' },
                                                 { name: 'Visakhapatnam', email: 'visakhapatnam@pibinsurance.in' },
-                                                { name: 'Kochi', email: 'kochi@pibinsurance.in' }
+                                                { name: 'Kochi', email: 'kochi@pibinsurance.in' },
+                                                { name: 'Coimbatore', email: 'coimbatore@pibinsurance.in' },
+                                                { name: 'Madurai', email: 'madurai@pibinsurance.in' },
+                                                { name: 'Vijaywada', email: 'vijaywada@pibinsurance.in' },
+                                                { name: 'Mangalore', email: 'mangalore@pibinsurance.in' },
+                                                { name: 'Mysore', email: 'mysore@pibinsurance.in' }
                                             ].map(city => (
                                                 <div key={city.name} className="city-email-tag">
                                                     <div className="city-tag-top">
@@ -374,7 +382,12 @@ const Contact = () => {
                                                 { name: 'Delhi', email: 'delhi@pibinsurance.in' },
                                                 { name: 'Jaipur', email: 'jaipur@pibinsurance.in' },
                                                 { name: 'Chandigarh', email: 'chandigarh@pibinsurance.in' },
-                                                { name: 'Lucknow', email: 'lucknow@pibinsurance.in' }
+                                                { name: 'Lucknow', email: 'lucknow@pibinsurance.in' },
+                                                { name: 'Bhopal', email: 'bhopal@pibinsurance.in' },
+                                                { name: 'Ludhiana', email: 'ludhiana@pibinsurance.in' },
+                                                { name: 'Agra', email: 'agra@pibinsurance.in' },
+                                                { name: 'Kanpur', email: 'kanpur@pibinsurance.in' },
+                                                { name: 'Amritsar', email: 'amritsar@pibinsurance.in' }
                                             ].map(city => (
                                                 <div key={city.name} className="city-email-tag">
                                                     <div className="city-tag-top">
@@ -399,7 +412,8 @@ const Contact = () => {
                                                 { name: 'Patna', email: 'patna@pibinsurance.in' },
                                                 { name: 'Ranchi', email: 'ranchi@pibinsurance.in' },
                                                 { name: 'Bhubaneswar', email: 'bhubaneswar@pibinsurance.in' },
-                                                { name: 'Guwahati', email: 'guwahati@pibinsurance.in' }
+                                                { name: 'Guwahati', email: 'guwahati@pibinsurance.in' },
+                                                { name: 'Jamshedpur', email: 'jamshedpur@pibinsurance.in' }
                                             ].map(city => (
                                                 <div key={city.name} className="city-email-tag">
                                                     <div className="city-tag-top">

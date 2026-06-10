@@ -14,7 +14,7 @@ const Footer = () => {
                 <div className="footer-main">
                     <div data-aos="fade-up" data-aos-delay="200" className="footer-col">
                         <div className="footer-logo mb-4">
-                            <img src={`${import.meta.env.BASE_URL}assets/logo.png`} alt="PIB Insurance Brokers" style={{ height: '50px', width: 'auto', filter: 'brightness(0) invert(1)' }} />
+                            <img src={`${import.meta.env.BASE_URL}assets/logo.png`} alt="PIB Insurance Brokers" width="167" height="50" style={{ filter: 'brightness(0) invert(1)' }} />
                         </div>
                         <p className="office-title">CORPORATE OFFICE :</p>
                         <p>B/3rd Floor, Chintamani Plaza, Chakala, Andheri Kurla Road, Andheri East, Mumbai — 400093</p>
@@ -48,7 +48,11 @@ const Footer = () => {
 
                     <div data-aos="fade-up" data-aos-delay="400" className="footer-col">
                         <h3 data-aos="fade-up" data-aos-delay="200">FOR GRIEVANCES</h3>
-                        <p data-aos="fade-up" data-aos-delay="200"><strong>Mr. Virendra Pandey – Grievance Officer</strong></p>
+                        <p data-aos="fade-up" data-aos-delay="200">
+                            <strong>Mr. Upendra Pandey – Grievance Officer</strong><br />
+                            BAF LLB LLM<br />
+                            SRM University
+                        </p>
                         <hr />
                         <p data-aos="fade-up" data-aos-delay="200">IRDAI Complaint Handling and Grievance Redressal Process</p>
                         <hr />
@@ -61,11 +65,10 @@ const Footer = () => {
                 <div className="footer-locations">
                     <h4>OUR PRESENCE ACROSS INDIA</h4>
                     <p data-aos="fade-up" data-aos-delay="200">
-                        <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> ·
-                        <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> ·
-                        <span>Kochi</span> · <span>Guwahati</span> · <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> ·
-                        <span>Bhubaneswar</span> · <span>Lucknow</span> · <span>Bhopal</span> · <span>Delhi</span> ·
-                        <span>Jaipur</span> · <span>Chandigarh</span>
+                        <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> · <span>Nagpur</span> · <span>Nashik</span> · <span>Vadodara</span> · <span>Rajkot</span> ·
+                        <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> · <span>Kochi</span> · <span>Coimbatore</span> · <span>Madurai</span> · <span>Vijaywada</span> · <span>Mangalore</span> · <span>Mysore</span> ·
+                        <span>Delhi</span> · <span>Jaipur</span> · <span>Chandigarh</span> · <span>Lucknow</span> · <span>Bhopal</span> · <span>Ludhiana</span> · <span>Agra</span> · <span>Kanpur</span> · <span>Amritsar</span> ·
+                        <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> · <span>Bhubaneswar</span> · <span>Guwahati</span> · <span>Jamshedpur</span>
                     </p>
                 </div>
 

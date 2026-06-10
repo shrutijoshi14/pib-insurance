@@ -4,8 +4,8 @@ import SEO from '../components/SEO';
 const About = () => {
     return (
         <>
-            <SEO 
-                title="About Us | PIB Insurance - Trusted IRDAI Broker" 
+            <SEO
+                title="About Us | PIB Insurance - Trusted IRDAI Broker"
                 description="PIB Insurance Brokers is your dedicated partner in risk management. Learn about our journey, expertise, and commitment to securing your future."
                 canonical="https://pibinsurance.in/about"
             />
@@ -24,14 +24,14 @@ const About = () => {
             <section className="about-section">
                 <div className="about-container">
                     {/* LEFT IMAGE */}
-                    <MotionItem className="about-image" variant="zoomIn">
+                    <MotionItem className="about-image" variant="fadeRight">
                         <img src={`${import.meta.env.BASE_URL}assets/family-insurance.png`} alt="Happy Indian family protected by PIB Insurance coverage" width="800" height="600" loading="lazy" decoding="async" />
                     </MotionItem>
 
                     {/* RIGHT TEXT */}
-                    <MotionSection className="about-text" delay={0.2}>
+                    <MotionSection className="about-text" delay={0.2} variant="fadeLeft">
                         <p>
-                            Established in 2019 by <b>Mr. Virendra Pandey</b>, an accomplished management professional from the
+                            Established on <b>8th Dec 2022</b> by <b>Mr. Virendra Pandey</b>, an accomplished management professional from the
                             <b>Indian Institute of Management (IIM) Indore</b>, PIB Insurance Broker has rapidly grown into a
                             trusted name in the Indian insurance broking industry.
                         </p>
@@ -61,11 +61,7 @@ const About = () => {
             {/* CEO MESSAGE */}
             <section className="ceo-section">
                 <div className="ceo-container">
-                    <MotionItem className="ceo-img" variant="zoomIn">
-                        <img src={`${import.meta.env.BASE_URL}assets/CEO.jpeg`} alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
-                    </MotionItem>
-
-                    <MotionSection className="ceo-text" delay={0.2}>
+                    <MotionSection className="ceo-text" delay={0.2} variant="fadeRight">
                         <span className="tag">MESSAGE FROM CEO’S DESK</span>
 
                         <p>
@@ -99,6 +95,33 @@ const About = () => {
                             future for India.
                         </p>
                     </MotionSection>
+
+                    <MotionItem className="ceo-img" variant="fadeLeft">
+                        <img src={`${import.meta.env.BASE_URL}assets/CEO.jpeg`} alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
+                    </MotionItem>
+                </div>
+            </section>
+
+            {/* DEVELOPER SECTION */}
+            <section className="developer-section">
+                <div className="developer-container">
+                    <MotionItem className="developer-img" variant="fadeRight">
+                        <img src={`${import.meta.env.BASE_URL}assets/Professional Photo rsized.jpeg`} alt="Shruti Joshi, IT Head – IT & Web Development at PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
+                    </MotionItem>
+
+                    <MotionSection className="developer-text" delay={0.2} variant="fadeLeft">
+                        <span className="tag">IT HEAD – IT & WEB DEVELOPMENT</span>
+                        <h2>Shruti Joshi</h2>
+                        <p>
+                            Shruti Joshi leads the Information Technology and Web Development functions at PIB Insurance Brokers Pvt. Ltd., driving the organization’s digital initiatives and technology strategy. With a strong focus on innovation, operational efficiency, and customer experience, she plays a key role in enhancing PIB’s digital ecosystem and technology infrastructure.
+                        </p>
+                        <p>
+                            She oversees website development and management, digital platform optimization, process automation, and technology implementation across the organization. Her expertise in web technologies and digital transformation supports the continuous improvement of internal operations while ensuring seamless and user-friendly digital experiences for clients and stakeholders.
+                        </p>
+                        <p>
+                            Committed to leveraging technology as a strategic business enabler, Shruti actively contributes to strengthening PIB Insurance’s digital presence and advancing the company’s vision of delivering innovative, accessible, and customer-focused insurance solutions.
+                        </p>
+                    </MotionSection>
                 </div>
             </section>
 
@@ -107,8 +130,8 @@ const About = () => {
                 <div className="container">
                     <MotionSection className="promise-intro">
                         <p>PIB Insurance Brokers Pvt. Ltd. is an IRDAI-licensed direct broker (License No. 935) with offices in Mumbai
-                        and New Delhi. We work for you — not for any insurer. That means we compare the market, recommend
-                        what genuinely fits your needs, and stand with you through claims and renewals.</p>
+                            and New Delhi. We work for you — not for any insurer. That means we compare the market, recommend
+                            what genuinely fits your needs, and stand with you through claims and renewals.</p>
                     </MotionSection>
                     <MotionList className="row g-4" stagger={0.15}>
                         <div className="col-md-4">

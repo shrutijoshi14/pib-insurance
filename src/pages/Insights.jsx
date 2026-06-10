@@ -159,7 +159,7 @@ const Insights = () => {
                                             <MotionItem key={idx} className="insight-card" inherit>
                                                 <div className="insight-img">
                                                     <span className="insight-tag">{item.tag}</span>
-                                                    <img src={item.img} alt={item.title} loading="lazy" />
+                                                    <img src={item.img} alt={item.title} width="1200" height="800" decoding="async" loading="lazy" />
                                                 </div>
                                                 <div className="insight-body">
                                                     <div className="insight-metadata">

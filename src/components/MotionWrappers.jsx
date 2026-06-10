@@ -24,15 +24,16 @@ const variants = {
     }
 };
 
-export const MotionSection = ({ children, className, delay = 0, component = "div" }) => {
+export const MotionSection = ({ children, className, delay = 0, variant = "fadeUp", component = "div" }) => {
     const Component = motion[component] || motion.div;
+    const selectedVariant = variants[variant] || variants.fadeUp;
     
     return (
         <Component
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
-            variants={variants.fadeUp}
+            variants={selectedVariant}
             transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
             className={className}
         >

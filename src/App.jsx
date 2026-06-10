@@ -17,6 +17,7 @@ const InsuranceDetail = lazy(() => import('./pages/InsuranceDetail'));
 const ThankYou = lazy(() => import('./pages/ThankYou'));
 const Careers = lazy(() => import('./pages/Careers'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const Login = lazy(() => import('./pages/Login'));
 
 function RouteChangeListener() {
   const { pathname } = useLocation();
@@ -53,6 +54,7 @@ function App() {
             <Route path="/claims" element={<Claim />} />
             <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/login" element={<Login />} />
 
             {/* Hierarchical Insurance Routes */}
             <Route path="/individual-insurance" element={<InsuranceDetail />} />

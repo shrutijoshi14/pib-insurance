@@ -159,13 +159,18 @@
 }
 
 .modal-content::-webkit-scrollbar-track {
-    background: #f4f7fc;
-    border-radius: 10px;
+    background: transparent;
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-    background: var(--blue-main);
+    background: rgba(27, 117, 187, 0.4);
     border-radius: 10px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(27, 117, 187, 0.7);
 }
 
 .industry-modal.active .modal-content {

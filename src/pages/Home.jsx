@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import {
     MotionSection,
     MotionItem,
     MotionList,
 } from "../components/MotionWrappers";
 import SEO from "../components/SEO";
+import bridgeVideo from "../assets/Bridge.mp4";
+import heroBg from "../assets/hero-video-poster.jpg";
 
 const StatCounter = ({ end, duration = 2000, suffix = "" }) => {
     const [count, setCount] = useState(0);
@@ -71,39 +72,22 @@ const Home = () => {
             />
             {/* HERO SECTION */}
             <section className="hero">
-                <div className="hero-overlay"></div>
-                <div className="hero-container">
-                    <motion.div
-                        className="hero-content"
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, ease: [0.2, 1, 0.3, 1] }}
-                    >
-                        <h1>Managing risk for modern businesses</h1>
-                        <p className="subtext">
-                            Expert risk management and personalized insurance solutions
-                            designed to perform when it matters most.
-                        </p>
-                        <p className="subtext">
-                            Trusted by businesses across industries to navigate risk with
-                            clarity.
-                        </p>
-                        <div className="hero-buttons">
-                            <Link to="/contact" className="btn primary">
-                                GET QUOTE
-                            </Link>
-                            <a href="#contact" className="btn secondary">
-                                REQUEST A CALL BACK
-                            </a>
-                        </div>
-                    </motion.div>
-                </div>
+                <video
+                    className="hero-bg-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster={heroBg}
+                >
+                    <source src={bridgeVideo} type="video/mp4" />
+                </video>
             </section>
 
             {/* WHY CHOOSE US */}
             <section className="why-section">
                 <div className="why-container">
-                    <MotionSection className="why-content">
+                    <MotionSection className="why-content" variant="fadeRight">
                         <h2>Why Choose Us</h2>
                         <p className="intro">
                             We deliver comprehensive coverage, strong partnerships, and
@@ -145,7 +129,7 @@ const Home = () => {
                             </MotionItem>
                         </div>
                     </MotionSection>
-                    <MotionSection className="why-image" delay={0.2}>
+                    <MotionSection className="why-image" delay={0.2} variant="fadeLeft">
                         <img
                             src={`${import.meta.env.BASE_URL}assets/group-meeting.png`}
                             alt="PIB Insurance team of experts discussing corporate strategy and risk management"
@@ -466,6 +450,21 @@ const Home = () => {
                                 <h4>Group Travel Insurance</h4>
                                 <p>Travel coverage for employees.</p>
                                 <Link to="/group-insurance/group-travel-insurance" aria-label="Learn more about Group Travel Insurance">Learn More</Link>
+                            </div>
+                            <div className="card">
+                                <div className="img-wrap">
+                                    <img
+                                        src={`${import.meta.env.BASE_URL}assets/group-overseas-mediclaim-hero.png`}
+                                        alt="Group Overseas Mediclaim"
+                                        width="1200"
+                                        height="800"
+                                        decoding="async"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <h4>Group Overseas Mediclaim</h4>
+                                <p>Global medical and travel safety for international teams.</p>
+                                <Link to="/group-insurance/group-overseas-mediclaim" aria-label="Learn more about Group Overseas Mediclaim">Learn More</Link>
                             </div>
                         </MotionList>
                     </div>
