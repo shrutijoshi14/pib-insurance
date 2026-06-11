@@ -1,382 +1,653 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core pages -->
   <url>
     <loc>https://pibinsurance.in/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/about</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/contact</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/industries</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/insights</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/careers</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/claims</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/privacy-policy</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/login</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.6</priority>
   </url>
-
-  <!-- Category Hubs -->
   <url>
     <loc>https://pibinsurance.in/individual-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/group-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/liability</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/engineering</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/property</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/marine</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/motor</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/miscellaneous</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.9</priority>
   </url>
-
-  <!-- Individual Products -->
   <url>
     <loc>https://pibinsurance.in/individual-insurance/life-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/individual-insurance/health-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/individual-insurance/home-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/individual-insurance/motor-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/individual-insurance/travel-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/individual-insurance/accidental-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Group Products -->
   <url>
     <loc>https://pibinsurance.in/group-insurance/group-health-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/group-insurance/group-term-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/group-insurance/group-personal-accident</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/group-insurance/group-travel-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/group-insurance/group-overseas-mediclaim</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/group-insurance/employee-health-wellness</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/group-insurance/keyman-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Commercial Products: Liability -->
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/public-liability-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/product-liability-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/commercial-general-liability</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/professional-indemnity</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/directors-officers-liability</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/cyber-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/errors-omissions-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/commercial-crime-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/fidelity-guarantee-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/title-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Commercial Products: Engineering -->
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/contractor-all-risk</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/erection-all-risk</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/machinery-breakdown</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/contractors-plant-machinery</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/electronic-equipment</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/boiler-pressure-plant</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/workmens-compensation</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Commercial Products: Property -->
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/standard-fire-special-perils</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/property-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/fire-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/industrial-all-risk</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/bharat-sookshma-udyam</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/bharat-laghu-udyam</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/office-factory-warehouse</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/business-interruption-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Commercial Products: Marine -->
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/marine-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/inland-transit-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/import-export-cargo</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/marine-hull-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/carriers-legal-liability</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Commercial Products: Motor -->
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/commercial-vehicle-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/motor-fleet-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/passenger-carrying-vehicle</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
-
-  <!-- Commercial Products: Miscellaneous -->
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/burglary-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/money-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pibinsurance.in/commercial-insurance/fidelity-guarantee-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/event-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/travel-insurance-misc</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/shop-insurance</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/sme-package-policies</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://pibinsurance.in/commercial-insurance/specialized-risk-covers</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/term-insurance-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/whole-life-insurance-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/endowment-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/money-back-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/ulips-unit-linked-insurance-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/child-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/retirement-pension-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/participating-par-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/non-participating-non-par-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/guaranteed-income-return-plans</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/individual-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/family-floater-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/senior-citizen-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/group-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/critical-illness-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/personal-accident-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/top-up-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/super-top-up-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/disease-specific-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/maternity-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/hospital-cash-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/opd-health-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/personal-health-insurance-with-wellness-benefits</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/building-insurance-structure-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/contents-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/comprehensive-home-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/fire-and-special-perils-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/burglary-and-theft-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/tenant-s-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/landlord-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/holiday-home-second-home-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/bharat-griha-raksha-policy</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/third-party-liability-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/comprehensive-motor-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/own-damage-od-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/private-car-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/two-wheeler-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/commercial-vehicle-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/passenger-carrying-vehicle-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/goods-carrying-vehicle-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/fleet-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/motor-add-on-covers</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/international-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/domestic-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/single-trip-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/multi-trip-annual-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/family-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/student-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/senior-citizen-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/corporate-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/group-travel-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/individual-personal-accident-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/family-personal-accident-insurance</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/group-personal-accident-insurance-gpa</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/accidental-death-cover-ad</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/permanent-total-disability-ptd</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/permanent-partial-disability-ppd</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/temporary-total-disability-ttd</loc>
+    <lastmod>2026-06-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pibinsurance.in/individual-insurance/accident-medical-expense-cover</loc>
+    <lastmod>2026-06-11</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
