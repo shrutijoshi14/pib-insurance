@@ -1,4 +1,4 @@
-import{f as e,l as t,m as n,t as r}from"./proxy-B3mupvaD.js";import{t as i}from"./index-Dtja8sqz.js";import{n as a,r as o,t as s}from"./MotionWrappers-D7oZwAqf.js";import{t as c}from"./SEO-AaUxQtOi.js";var l=n(e(),1),u={it:{title:`IT companies`,icon:`fa-laptop-code`,desc:`
+import{f as e,l as t,m as n,t as r}from"./proxy-B3mupvaD.js";import{t as i}from"./index-BgYWpULp.js";import{n as a,r as o,t as s}from"./MotionWrappers-D7oZwAqf.js";import{t as c}from"./SEO-AaUxQtOi.js";var l=n(e(),1),u={it:{title:`IT companies`,icon:`fa-laptop-code`,desc:`
             <div class="modal-inner-content">
                 <h3>Information Technology (IT) Industry Insurance Solutions</h3>
                 <p class="section-title">Industry Overview</p>
