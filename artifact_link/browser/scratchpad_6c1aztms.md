@@ -1,0 +1,5 @@
+# Verification Checklist
+- [x] Term Insurance Plans: http://localhost:5173/individual-insurance/term-insurance-plans (Verified: className is `hero-term-insurance-plans`, backgroundImage is `term-insurance.jpg`)
+- [x] Whole Life Insurance Plans: http://localhost:5173/individual-insurance/whole-life-insurance-plans (Verified: className is `hero-whole-life-insurance-plans`, backgroundImage is `employee-families-hero.png`)
+- [x] Endowment Plans: http://localhost:5173/individual-insurance/endowment-plans (Verified: className is `hero-endowment-plans`, backgroundImage is `endowment-plans-hero.png`)
+- [x] Retirement Pension Plans: http://localhost:5173/individual-insurance/retirement-pension-plans (Verified: className is `hero-retirement-pension-plans`, backgroundImage is `retirement-plans-hero.png`)

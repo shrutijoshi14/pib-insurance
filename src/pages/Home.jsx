@@ -265,7 +265,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/commercial-property-insurance.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/office-factory-warehouse-hero.jpg`}
                                         alt="Property Insurance"
                                         width="1200"
                                         height="800"
@@ -280,7 +280,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/business-interruption-insurance.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/business-interruption-hero.png`}
                                         alt="Business Interruption Insurance"
                                         width="1200"
                                         height="800"
@@ -295,7 +295,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/fire-insurance.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/fire-insurance-hero.png`}
                                         alt="Fire Insurance"
                                         width="1200"
                                         height="800"
@@ -310,7 +310,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/marine-insurance.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/marine-insurance-hero.jpg`}
                                         alt="Marine Insurance"
                                         width="1200"
                                         height="800"
@@ -325,7 +325,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/workmen-compensation.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/workmen-compensation-hero.png`}
                                         alt="Workmen's Compensation"
                                         width="1200"
                                         height="800"
@@ -340,7 +340,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/professional-indemnity.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/professional-indemnity-hero.png`}
                                         alt="Professional Indemnity"
                                         width="1200"
                                         height="800"
@@ -370,7 +370,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/cybe-insurance.jpg`}
+                                        src={`${import.meta.env.BASE_URL}assets/cyber-security-hero.png`}
                                         alt="Cyber Insurance"
                                         width="1200"
                                         height="800"
@@ -409,7 +409,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/employee-families.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/employee-families-hero.png`}
                                         alt="Group Term"
                                         width="1200"
                                         height="800"
@@ -424,7 +424,7 @@ const Home = () => {
                             <div className="card">
                                 <div className="img-wrap">
                                     <img
-                                        src={`${import.meta.env.BASE_URL}assets/group-insurance-2.png`}
+                                        src={`${import.meta.env.BASE_URL}assets/group-personal-accident-hero.png`}
                                         alt="Group Accident"
                                         width="1200"
                                         height="800"
@@ -486,12 +486,12 @@ const Home = () => {
                                         loading="lazy"
                                     />
                                 </div>
-                                <h4>Term Insurance</h4>
+                                <h4>Life Insurance</h4>
                                 <p>
-                                    Protect your business continuity with comprehensive term life
+                                    Protect your family's future with comprehensive life insurance
                                     coverage.
                                 </p>
-                                <Link to="/individual-insurance/term-insurance" aria-label="Learn more about Term Insurance">Learn More</Link>
+                                <Link to="/individual-insurance/life-insurance" aria-label="Learn more about Life Insurance">Learn More</Link>
                             </div>
                             <div className="card">
                                 <div className="img-wrap">

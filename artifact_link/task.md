@@ -1,0 +1,11 @@
+- [x] Fix missing sidebar tab icon in `Navbar.jsx` and `insuranceData.js` by using the free `fa-house-lock` icon
+- [x] Fix sub-icon rendering compatibility in `InsuranceDetail.jsx` and `Navbar.jsx`
+- [x] Update duplicate background mappings in `style.css` (created and ran unique assignments solver mapping 128 pages to 100% unique photographic assets)
+  - [x] Personal Accident duplicates
+  - [x] Home Insurance duplicates
+  - [x] Travel Insurance duplicates
+  - [x] Motor Insurance duplicates
+  - [x] Health Insurance duplicates
+  - [x] Other submenu duplicates
+- [x] Verify build and local pages render backgrounds uniquely and icons display
+- [x] Update `walkthrough.md` with achievements

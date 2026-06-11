@@ -20,7 +20,15 @@
     top: 100px;
     /* Reduced to sit closer to navbar */
     height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
     z-index: 10;
+}
+
+.insurance-sidebar::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
 }
 
 .sidebar-menu {
@@ -135,6 +143,32 @@
     margin-bottom: 15px;
     font-size: 16px; /* Increased from 15px */
     color: var(--text-dark);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 4px solid transparent;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease, transform 0.3s ease;
+}
+
+.features-list li.highlight-scroll {
+    animation: highlightGlow 2.5s ease-in-out;
+}
+
+@keyframes highlightGlow {
+    0% {
+        background-color: rgba(27, 117, 187, 0.15);
+        border-left-color: #1b75bb;
+        transform: scale(1.02);
+    }
+    30% {
+        background-color: rgba(27, 117, 187, 0.15);
+        border-left-color: #1b75bb;
+        transform: scale(1.02);
+    }
+    100% {
+        background-color: transparent;
+        border-left-color: transparent;
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 576px) {

@@ -433,5 +433,173 @@ export const industryData = {
                 </div>
             </div>
         `
+    },
+    ironsteel: {
+        title: "Iron & Steel",
+        icon: 'fa-gears',
+        desc: `
+            <div class="modal-inner-content">
+                <h3>Iron & Steel Industry Insurance Solutions</h3>
+                <p class="section-title">Industry Overview</p>
+                <p>The Iron and Steel industry is the foundation of modern industrialization, manufacturing, and infrastructure development. With extreme operating temperatures, heavy machinery, and continuous high-volume production, steel plants are among the most capital-intensive and hazardous working environments. The sector in India is expanding rapidly, driven by urbanization and the demand for infrastructure, automotive, and engineering sectors.</p>
+                <p>However, the risks are substantial. Industrial fires, furnace breakouts, machinery breakdowns, and occupational hazards for workers can cause catastrophic financial losses and operational stoppage. Ensuring comprehensive protection is critical to safeguard the massive capital investments and human lives involved in metal manufacturing.</p>
+
+                <div class="solutions-grid mt-4">
+                    <h4>Our Insurance Solutions for the Iron & Steel Sector</h4>
+                    <p>At PIB Insurance Brokers, we offer comprehensive risk management covers to shield your steel manufacturing plants:</p>
+                    <ul class="modal-list">
+                        <li><strong>Industrial All Risks (IAR) Insurance:</strong> Comprehensive protection covering fire, natural calamities, machinery breakdown, and business interruption in a single package.</li>
+                        <li><strong>Machinery Breakdown (MBD) Insurance:</strong> Covers the repair and replacement costs of critical plant machinery, furnaces, and rolling mills.</li>
+                        <li><strong>Workmen’s Compensation Insurance:</strong> Mandatory coverage to protect workers against occupational injuries and health hazards in high-temperature zones.</li>
+                        <li><strong>Public & Third-Party Liability:</strong> Protection against legal liabilities arising from bodily injuries or property damage caused to third parties in the vicinity of the plant.</li>
+                        <li><strong>Marine Cargo & Transit Insurance:</strong> Covers inland and global transit of raw materials like iron ore and coal, as well as finished steel products.</li>
+                    </ul>
+                </div>
+            </div>
+        `
+    },
+    sugar: {
+        title: "Sugar Industry",
+        icon: 'fa-cubes',
+        desc: `
+            <div class="modal-inner-content">
+                <h3>Sugar Industry Insurance Solutions</h3>
+                <p class="section-title">Industry Overview</p>
+                <p>As one of the largest agricultural processing industries in India, the sugar industry plays a vital role in rural livelihood and economic growth. Operating seasonally, sugar mills process massive quantities of sugarcane into sugar, molasses, bagasse, and ethanol. This complex lifecycle involves heavy boilers, chemical refining, and extensive storage facilities that present unique operational hazards.</p>
+                <p>Due to the highly combustible nature of bagasse and dust explosions in sugar warehouses, fire is an ever-present risk. Additionally, boiler explosions, seasonal machinery failures during the crushing period, and dependency on regional supply chains can cause severe financial losses. Customized insurance shields are essential to secure seasonal cash flow and protect assets.</p>
+
+                <div class="solutions-grid mt-4">
+                    <h4>Our Insurance Solutions for Sugar Mills</h4>
+                    <p>We provide specialized risk solutions to protect your processing units, warehouses, and personnel:</p>
+                    <ul class="modal-list">
+                        <li><strong>Boiler & Pressure Plant (BPP) Insurance:</strong> Covers physical damage to boilers and pressure vessels, along with third-party liability from explosions.</li>
+                        <li><strong>Fire & Special Perils Insurance:</strong> Protection for sugar warehouses, bagasse storage yards, and production units against fire, lightning, and storms.</li>
+                        <li><strong>Business Interruption (Consequential Loss):</strong> Replaces lost profits and covers fixed costs during periods when operations are halted due to insured damage.</li>
+                        <li><strong>Workmen’s Compensation Insurance:</strong> Shields the mill from liabilities related to worker accidents during crushing and maintenance seasons.</li>
+                        <li><strong>Stock & Transit Insurance:</strong> Protects raw sugarcane during transit and refined sugar bags stored in godowns against theft or fire damage.</li>
+                    </ul>
+                </div>
+            </div>
+        `
+    },
+    solarwind: {
+        title: "Solar & Wind",
+        icon: 'fa-solar-panel',
+        desc: `
+            <div class="modal-inner-content">
+                <h3>Solar & Wind Energy Insurance Solutions</h3>
+                <p class="section-title">Industry Overview</p>
+                <p>India is a global frontrunner in renewable energy, with massive solar parks and wind farms sprouting across desert and coastal regions. These installations represent highly sensitive, high-value assets deployed in remote, open-air environments. Because they are completely exposed to the elements, they are highly vulnerable to natural perils and operational volatility.</p>
+                <p>Lightning strikes, cyclones, hailstorms, grid failure, and turbine breakdown present persistent operational risks. Furthermore, delays in start-up or revenue losses due to low resource availability can disrupt financing covenants. Custom-tailored renewable energy insurance helps developers, operators, and investors protect their yield and capital.</p>
+
+                <div class="solutions-grid mt-4">
+                    <h4>Our Insurance Solutions for Solar & Wind Assets</h4>
+                    <p>At PIB Insurance Brokers, we structure specialized green energy policies covering the entire lifecycle from construction to generation:</p>
+                    <ul class="modal-list">
+                        <li><strong>Solar/Wind PV Operational Package:</strong> An all-risk cover for solar panels, inverters, wind turbines, substations, and transmission lines against physical damage.</li>
+                        <li><strong>Machinery Breakdown (MBD) Insurance:</strong> Coverage for mechanical and electrical failures of wind turbine gearboxes, generators, and solar tracking systems.</li>
+                        <li><strong>Delay in Start-Up (DSU) / Advance Loss of Profits (ALOP):</strong> Protects project developers from lost revenue if the commercial operation date is delayed by an insured peril during construction.</li>
+                        <li><strong>Marine Transit Insurance (Project Cargo):</strong> Covers transport of photovoltaic modules, cells, and wind turbines from overseas or domestic suppliers.</li>
+                        <li><strong>Environmental & Third-Party Liability:</strong> Protects against third-party bodily injury, property damage, and environmental compliance issues at remote project sites.</li>
+                    </ul>
+                </div>
+            </div>
+        `
+    },
+    tea: {
+        title: "Tea Industry",
+        icon: 'fa-leaf',
+        desc: `
+            <div class="modal-inner-content">
+                <h3>Tea Industry Insurance Solutions</h3>
+                <p class="section-title">Industry Overview</p>
+                <p>The tea industry is one of India's oldest and most prestigious agro-industries, with major centers in Assam, West Bengal, and the Nilgiris. The sector encompasses sprawling tea estates, a large manual labor force, and processing factories that dry, ferment, and package tea leaves for domestic and export markets. Managing a tea plantation involves navigating weather risks, crop diseases, factory hazards, and complex export logistics.</p>
+                <p>For tea producers, crop losses due to frost or drought, fires in drying factories, and logistics delays can severely impact profitability. Additionally, the well-being of the large plantation workforce is both a legal obligation and key to operational continuity, making targeted group health and liability programs indispensable.</p>
+
+                <div class="solutions-grid mt-4">
+                    <h4>Our Insurance Solutions for the Tea Sector</h4>
+                    <p>We design custom risk transfer solutions for tea estates, processing units, and logistics chains:</p>
+                    <ul class="modal-list">
+                        <li><strong>Plantation & Crop Insurance:</strong> Protects tea bushes against natural perils, drought, frost, and crop diseases.</li>
+                        <li><strong>Tea Factory Fire & Allied Perils:</strong> Covers processing machinery, drying ovens, sorting units, and warehouses against fire, water damage, and theft.</li>
+                        <li><strong>Group Health & Personal Accident Insurance:</strong> Provides vital healthcare and accident covers for estate workers, pluckers, and factory staff.</li>
+                        <li><strong>Marine Cargo & Export Transit Cover:</strong> Shields finished tea chests and bags against water damage, moisture, and theft during global transit.</li>
+                        <li><strong>Product Liability Insurance:</strong> Protects tea brands against claims arising from contamination or product packaging issues.</li>
+                    </ul>
+                </div>
+            </div>
+        `
+    },
+    agriculture: {
+        title: "Agriculture",
+        icon: 'fa-tractor',
+        desc: `
+            <div class="modal-inner-content">
+                <h3>Agriculture & Agribusiness Insurance Solutions</h3>
+                <p class="section-title">Industry Overview</p>
+                <p>Agriculture is the primary livelihood source for a vast majority of India's population and is the backbone of the food processing and retail supply chains. Modern agribusiness is highly diverse, ranging from organic farming and seed processing to cold chain logistics and fertilizer manufacturing. However, agriculture remains highly susceptible to weather fluctuations, climate change, pests, and price volatility.</p>
+                <p>A single season of deficient monsoon, cold storage machinery failure, or crop disease can wipe out investments. For agribusinesses, food processors, and cold chains, safeguarding assets, transport fleets, and storage facilities against unpredictable interruptions is vital to keep the supply chain secure.</p>
+
+                <div class="solutions-grid mt-4">
+                    <h4>Our Insurance Solutions for Agriculture & Agribusiness</h4>
+                    <p>PIB Insurance Brokers provides custom risk management strategies tailored to agribusinesses and storage operators:</p>
+                    <ul class="modal-list">
+                        <li><strong>Crop & Weather-Indexed Insurance:</strong> Protects farming enterprises from crop yield losses due to erratic rainfall, drought, or floods.</li>
+                        <li><strong>Cold Storage & Deterioration of Stock (DoS):</strong> Covers spoilage of perishable goods and farm produce if cold storage machinery breaks down.</li>
+                        <li><strong>Agribusiness Property & Machinery Insurance:</strong> Safeguards seed processing units, tractors, harvesters, and irrigation systems against fire and damage.</li>
+                        <li><strong>Transit Insurance (Spoilage & Damage Cover):</strong> Covers transport of farm produce and fertilizers from fields to processing units and retail outlets.</li>
+                        <li><strong>Public & Product Liability Insurance:</strong> Shields food processors and seed brands against claims arising from food contamination.</li>
+                    </ul>
+                </div>
+            </div>
+        `
+    },
+    plywood: {
+        title: "Plywood & Laminate",
+        icon: 'fa-layer-group',
+        desc: `
+            <div class="modal-inner-content">
+                <h3>Plywood & Laminate Industry Insurance Solutions</h3>
+                <p class="section-title">Industry Overview</p>
+                <p>The plywood and decorative laminate industry in India is a major segment of the building materials and home decor sectors. Manufacturing processes involve chemical adhesive formulation, veneer peeling, hot pressing, and sanding. Since wood, resins, and solvents are highly flammable, the industry operates under elevated risk of industrial fires and dust explosions.</p>
+                <p>A fire outbreak in a wood yard or pressing facility can destroy entire plants, finished inventory, and raw timber logs in minutes. Furthermore, heavy machinery, chemical mixing hazards, and boiler operations require high standards of safety compliance and comprehensive insurance coverage to ensure business resilience.</p>
+
+                <div class="solutions-grid mt-4">
+                    <h4>Our Insurance Solutions for Plywood & Laminate Manufacturers</h4>
+                    <p>We provide comprehensive and specialized risk protection for manufacturing facilities and wood yards:</p>
+                    <ul class="modal-list">
+                        <li><strong>Fire & Special Perils Insurance:</strong> Essential cover protecting factory premises, timber stockyards, and finished laminates from fire, explosion, and natural calamities.</li>
+                        <li><strong>Boiler & Pressure Plant (BPP) Insurance:</strong> Covers hydraulic hot presses and steam boilers against explosion and implosion risks.</li>
+                        <li><strong>Workmen’s Compensation Insurance:</strong> Protects workers handling heavy cutters, veneer peelers, and chemical adhesives.</li>
+                        <li><strong>Business Interruption Insurance:</strong> Replaces lost profits and covers fixed operational costs during downtime caused by fire or boiler damage.</li>
+                        <li><strong>Public & Product Liability Insurance:</strong> Shields against third-party injuries and claims relating to adhesive off-gassing or structural product defects.</li>
+                    </ul>
+                </div>
+            </div>
+        `
+    },
+    oilgas: {
+        title: "Oil & Gas",
+        icon: 'fa-droplet',
+        desc: `
+            <div class="modal-inner-content">
+                <h3>Oil & Gas Industry Insurance Solutions</h3>
+                <p class="section-title">Industry Overview</p>
+                <p>The Oil & Gas sector is a strategic core industry of India's economy, spanning upstream exploration, midstream transport (pipelines), and downstream refining and marketing. Due to the high volatility, high pressures, and extreme hazards associated with hydrocarbons, operations in this sector are highly regulated and carry significant risk profiles.</p>
+                <p>Explosions, pipeline leaks, environmental pollution, blowouts, and deepwater accidents can trigger multi-crore liabilities, environmental damage, and massive business interruptions. For companies in this sector, specialized energy package policies and environmental covers are the first line of defense to secure investments and operations.</p>
+
+                <div class="solutions-grid mt-4">
+                    <h4>Our Insurance Solutions for the Oil & Gas Sector</h4>
+                    <p>At PIB Insurance Brokers, we help energy enterprises mitigate risks across onshore and offshore installations:</p>
+                    <ul class="modal-list">
+                        <li><strong>Energy Exploration & Production (E&P) Package:</strong> Comprehensive cover for offshore platforms, drilling rigs, and onshore wells against blowouts and physical damage.</li>
+                        <li><strong>Environmental & Pollution Liability:</strong> Covers the massive cost of oil spill cleanups, environmental restoration, and regulatory penalties.</li>
+                        <li><strong>Machinery Breakdown & Boiler Insurance:</strong> Protection for high-value refinery columns, compressors, and pipeline pumps from mechanical failure.</li>
+                        <li><strong>Business Interruption (Loss of Production):</strong> Compensates for severe revenue losses when oil rigs or refinery units shut down due to an insured accident.</li>
+                        <li><strong>Marine Transit & Cargo Cover (Hydrocarbons):</strong> Protection for crude oil and gas during transport via tankers, vessels, or pipeline distribution networks.</li>
+                    </ul>
+                </div>
+            </div>
+        `
     }
 };

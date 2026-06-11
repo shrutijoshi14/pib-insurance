@@ -3240,7 +3240,7 @@ a {
 }
 
 .hero-group-term {
-  background-image: url('../assets/employee-families-hero.png') !important;
+  background-image: url('../assets/money-back-hero.png') !important;
 }
 
 .hero-group-travel {
@@ -3248,7 +3248,7 @@ a {
 }
 
 .hero-property {
-  background-image: url('../assets/commercial-property-insurance.png') !important;
+  background-image: url('../assets/CEO.jpeg') !important;
 }
 
 .hero-bi {
@@ -3287,8 +3287,12 @@ a {
   background-image: url('../assets/term-insurance.jpg') !important;
 }
 
+.hero-life {
+  background-image: url('../assets/term-insurance.jpg') !important;
+}
+
 .hero-health {
-  background-image: url('../assets/health-insurance.jpg') !important;
+  background-image: url('../assets/benefits-bg-2.jpg') !important;
 }
 
 .hero-motor {
@@ -3296,11 +3300,11 @@ a {
 }
 
 .hero-travel {
-  background-image: url('../assets/travel-insurance.jpg') !important;
+  background-image: url('../assets/professional-team-meeting-stockcake.webp') !important;
 }
 
 .hero-accidental {
-  background-image: url('../assets/accidental-insurance.jpg') !important;
+  background-image: url('../assets/business-interruption-insurance.png') !important;
 }
 
 .hero-home {
@@ -3320,7 +3324,7 @@ a {
 }
 
 .hero-liability-hub {
-  background-image: url('../assets/financial-liability-hero.png') !important;
+  background-image: url('../assets/specialized-risk-covers-hero.png') !important;
 }
 
 .hero-engineering-hub {
@@ -3336,11 +3340,11 @@ a {
 }
 
 .hero-motor-hub {
-  background-image: url('../assets/motor-fleet-insurance-hero.jpg') !important;
+  background-image: url('../assets/employee-benefits-hero.png') !important;
 }
 
 .hero-miscellaneous-hub {
-  background-image: url('../assets/specialized-risk-covers-hero.jpg') !important;
+  background-image: url('../assets/specialized-risk-hero-unique.png') !important;
 }
 
 .hero-about {
@@ -3367,24 +3371,31 @@ a {
 .hero-public-liability {
   background-image: url('../assets/public-liability-hero.jpg') !important;
 }
+
 .hero-product-liability {
-  background-image: url('../assets/financial-liability-hero.png') !important;
+  background-image: url('../assets/product-liability-hero.png') !important;
 }
+
 .hero-cgl {
   background-image: url('../assets/commercial-general-liability-hero.png') !important;
 }
+
 .hero-do {
   background-image: url('../assets/board-directors-hero.png') !important;
 }
+
 .hero-eo {
   background-image: url('../assets/errors-omissions-hero.jpg') !important;
 }
+
 .hero-crime {
   background-image: url('../assets/commercial-crime-hero.jpg') !important;
 }
+
 .hero-fidelity {
   background-image: url('../assets/fidelity-guarantee-hero.jpg') !important;
 }
+
 .hero-title {
   background-image: url('../assets/title-insurance-hero.jpg') !important;
 }
@@ -3392,15 +3403,19 @@ a {
 .hero-ear {
   background-image: url('../assets/erection-all-risk-hero.jpg') !important;
 }
+
 .hero-mbd {
   background-image: url('../assets/machinery-breakdown-hero.jpg') !important;
 }
+
 .hero-cpm {
   background-image: url('../assets/contractors-plant-machinery-hero.jpg') !important;
 }
+
 .hero-eei {
   background-image: url('../assets/electronic-equipment-hero.jpg') !important;
 }
+
 .hero-boiler {
   background-image: url('../assets/boiler-pressure-plant-hero.jpg') !important;
 }
@@ -3408,37 +3423,47 @@ a {
 .hero-sfsp {
   background-image: url('../assets/standard-fire-special-perils-hero.jpg') !important;
 }
+
 .hero-iar {
   background-image: url('../assets/industrial-all-risk-hero.jpg') !important;
 }
+
 .hero-sookshma {
   background-image: url('../assets/bharat-sookshma-udyam-hero.jpg') !important;
 }
+
 .hero-laghu {
   background-image: url('../assets/bharat-laghu-udyam-hero.jpg') !important;
 }
+
 .hero-office-package {
   background-image: url('../assets/office-factory-warehouse-hero.jpg') !important;
 }
+
 .hero-shop {
   background-image: url('../assets/shop-insurance-hero.jpg') !important;
 }
+
 .hero-sme {
   background-image: url('../assets/sme-package-policies-hero.jpg') !important;
 }
+
 .hero-specialized {
-  background-image: url('../assets/specialized-risk-covers-hero.jpg') !important;
+  background-image: url('../assets/Professional Photo rsized.png') !important;
 }
 
 .hero-inland-transit {
   background-image: url('../assets/logistics-transit-hero.png') !important;
 }
+
 .hero-import-export {
   background-image: url('../assets/import-export-cargo-hero.jpg') !important;
 }
+
 .hero-hull {
   background-image: url('../assets/marine-hull-insurance-hero.jpg') !important;
 }
+
 .hero-carrier {
   background-image: url('../assets/carriers-legal-liability-hero.jpg') !important;
 }
@@ -3446,29 +3471,35 @@ a {
 .hero-commercial-vehicle {
   background-image: url('../assets/commercial-vehicle-insurance-hero.jpg') !important;
 }
+
 .hero-motor-fleet {
   background-image: url('../assets/motor-fleet-insurance-hero.jpg') !important;
 }
+
 .hero-passenger-vehicle {
-  background-image: url('../assets/passenger-carrying-vehicle-hero.jpg') !important;
+  background-image: url('../assets/group-meeting.png') !important;
 }
 
 .hero-burglary {
-  background-image: url('../assets/burglary-insurance-hero.jpg') !important;
+  background-image: url('../assets/client-stories-1.jpg') !important;
 }
+
 .hero-money {
   background-image: url('../assets/money-insurance-hero.jpg') !important;
 }
+
 .hero-event {
   background-image: url('../assets/event-insurance-hero.jpg') !important;
 }
+
 .hero-travel-misc {
-  background-image: url('../assets/travel-insurance-misc-hero.jpg') !important;
+  background-image: url('../assets/regulatory-updates-2.jpg') !important;
 }
 
 .hero-wellness {
   background-image: url('../assets/employee-health-wellness-hero.jpg') !important;
 }
+
 .hero-keyman {
   background-image: url('../assets/keyman-insurance-hero.jpg') !important;
 }
@@ -4075,9 +4106,11 @@ main#main-content:focus {
   .mobile-only-content {
     display: none !important;
   }
+
   .desktop-only-content {
     display: block !important;
   }
+
   .caret-right {
     display: inline-block !important;
   }
@@ -4087,13 +4120,253 @@ main#main-content:focus {
   .mobile-only-content {
     display: none;
   }
+
   .mobile-only-content.active {
     display: block !important;
   }
+
   .desktop-only-content {
     display: none !important;
   }
+
   .caret-right {
     display: inline-block !important;
   }
+}
+
+/* Individual Insurance Child Pages Custom Hero Backgrounds */
+.hero-term-insurance-plans {
+  background-image: url('../assets/term-insurance.jpg') !important;
+}
+
+.hero-whole-life-insurance-plans {
+  background-image: url('../assets/whole-life-insurance-plans-hero.png') !important;
+}
+
+.hero-endowment-plans {
+  background-image: url('../assets/endowment-plans-hero.png') !important;
+}
+
+.hero-money-back-plans {
+  background-image: url('../assets/ulip-hero.png') !important;
+}
+
+.hero-ulips-unit-linked-insurance-plans {
+  background-image: url('../assets/security-privacy-hero.png') !important;
+}
+
+.hero-child-plans {
+  background-image: url('../assets/endowment-plans-hero-unique.png') !important;
+}
+
+.hero-retirement-pension-plans {
+  background-image: url('../assets/retirement-plans-hero-unique.png') !important;
+}
+
+.hero-participating-par-plans {
+  background-image: url('../assets/group-insurance-2.png') !important;
+}
+
+.hero-non-participating-non-par-plans {
+  background-image: url('../assets/financial-liability-hero.png') !important;
+}
+
+.hero-guaranteed-income-return-plans {
+  background-image: url('../assets/retirement-plans-hero.png') !important;
+}
+
+.hero-individual-health-insurance {
+  background-image: url('../assets/health-insurance.jpg') !important;
+}
+
+.hero-family-floater-health-insurance {
+  background-image: url('../assets/family-health-floater-hero.png') !important;
+}
+
+.hero-senior-citizen-health-insurance {
+  background-image: url('../assets/senior-citizen-health-hero.png') !important;
+}
+
+.hero-group-health-insurance {
+  background-image: url('../assets/top-up-health-hero.png') !important;
+}
+
+.hero-critical-illness-insurance {
+  background-image: url('../assets/critical-illness-hero.png') !important;
+}
+
+.hero-personal-accident-insurance {
+  background-image: url('../assets/insurance-guides-2.jpg') !important;
+}
+
+.hero-top-up-health-insurance {
+  background-image: url('../assets/professional-indemnity.png') !important;
+}
+
+.hero-super-top-up-health-insurance {
+  background-image: url('../assets/critical-illness-hero-2.png') !important;
+}
+
+.hero-disease-specific-health-insurance {
+  background-image: url('../assets/senior-citizen-health-hero-2.png') !important;
+}
+
+.hero-maternity-health-insurance {
+  background-image: url('../assets/maternity-health-hero.png') !important;
+}
+
+.hero-hospital-cash-insurance {
+  background-image: url('../assets/client-stories-2.jpg') !important;
+}
+
+.hero-opd-health-insurance {
+  background-image: url('../assets/regulatory-updates-1.jpg') !important;
+}
+
+.hero-personal-health-insurance-with-wellness-benefits {
+  background-image: url('../assets/maternity-health-hero-2.png') !important;
+}
+
+.hero-building-insurance-structure-insurance {
+  background-image: url('../assets/commercial-property-insurance.png') !important;
+}
+
+.hero-contents-insurance {
+  background-image: url('../assets/family-insurance.png') !important;
+}
+
+.hero-comprehensive-home-insurance {
+  background-image: url('../assets/comprehensive-home-insurance-hero.png') !important;
+}
+
+.hero-fire-and-special-perils-insurance {
+  background-image: url('../assets/fire-insurance.png') !important;
+}
+
+.hero-burglary-and-theft-insurance {
+  background-image: url('../assets/burglary-insurance-hero.jpg') !important;
+}
+
+.hero-tenant-s-insurance {
+  background-image: url('../assets/featured-2.png') !important;
+}
+
+.hero-landlord-insurance {
+  background-image: url('../assets/hero.jpeg') !important;
+}
+
+.hero-holiday-home-second-home-insurance {
+  background-image: url('../assets/specialized-risk-covers-hero.jpg') !important;
+}
+
+.hero-bharat-griha-raksha-policy {
+  background-image: url('../assets/Professional Photo rsized.jpeg') !important;
+}
+
+.hero-third-party-liability-insurance {
+  background-image: url('../assets/homepage-hero-unique.png') !important;
+}
+
+.hero-comprehensive-motor-insurance {
+  background-image: url('../assets/motor-fleet-insurance-hero.png') !important;
+}
+
+.hero-own-damage-od-insurance {
+  background-image: url('../assets/hero-img.png') !important;
+}
+
+.hero-private-car-insurance {
+  background-image: url('../assets/investment-growth-hero.png') !important;
+}
+
+.hero-two-wheeler-insurance {
+  background-image: url('../assets/two-wheeler-hero.png') !important;
+}
+
+.hero-commercial-vehicle-insurance {
+  background-image: url('../assets/product-liability-hero-unique.png') !important;
+}
+
+.hero-passenger-carrying-vehicle-insurance {
+  background-image: url('../assets/passenger-carrying-vehicle-hero.jpg') !important;
+}
+
+.hero-goods-carrying-vehicle-insurance {
+  background-image: url('../assets/marine-insurance.png') !important;
+}
+
+.hero-fleet-insurance {
+  background-image: url('../assets/motor-fleet-hero-unique.png') !important;
+}
+
+.hero-motor-add-on-covers {
+  background-image: url('../assets/motor-insurance.jpg') !important;
+}
+
+.hero-international-travel-insurance {
+  background-image: url('../assets/travel-insurance.jpg') !important;
+}
+
+.hero-domestic-travel-insurance {
+  background-image: url('../assets/travel-insurance-misc-hero.jpg') !important;
+}
+
+.hero-single-trip-travel-insurance {
+  background-image: url('../assets/featured-1.png') !important;
+}
+
+.hero-multi-trip-annual-travel-insurance {
+  background-image: url('../assets/featured-4.png') !important;
+}
+
+.hero-family-travel-insurance {
+  background-image: url('../assets/employee-families-hero.png') !important;
+}
+
+.hero-student-travel-insurance {
+  background-image: url('../assets/student-travel-hero.png') !important;
+}
+
+.hero-senior-citizen-travel-insurance {
+  background-image: url('../assets/media-hero-unique.png') !important;
+}
+
+.hero-corporate-travel-insurance {
+  background-image: url('../assets/market-updates-1.jpg') !important;
+}
+
+.hero-group-travel-insurance {
+  background-image: url('../assets/market-updates-2.jpg') !important;
+}
+
+.hero-individual-personal-accident-insurance {
+  background-image: url('../assets/accidental-insurance.jpg') !important;
+}
+
+.hero-family-personal-accident-insurance {
+  background-image: url('../assets/group-personal-accident-hero.png') !important;
+}
+
+.hero-group-personal-accident-insurance-gpa {
+  background-image: url('../assets/cybe-insurance.jpg') !important;
+}
+
+.hero-accidental-death-cover-ad {
+  background-image: url('../assets/claim-hero.png') !important;
+}
+
+.hero-permanent-total-disability-ptd {
+  background-image: url('../assets/hero-video-poster.jpg') !important;
+}
+
+.hero-permanent-partial-disability-ppd {
+  background-image: url('../assets/guaranteed-return-hero.png') !important;
+}
+
+.hero-temporary-total-disability-ttd {
+  background-image: url('../assets/privacy-hero.png') !important;
+}
+
+.hero-accident-medical-expense-cover {
+  background-image: url('../assets/group-accident-hero-unique.png') !important;
 }

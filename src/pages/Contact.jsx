@@ -357,7 +357,7 @@ const Contact = () => {
                                                 { name: 'Coimbatore', email: 'coimbatore@pibinsurance.in' },
                                                 { name: 'Madurai', email: 'madurai@pibinsurance.in' },
                                                 { name: 'Vijaywada', email: 'vijaywada@pibinsurance.in' },
-                                                { name: 'Mangalore', email: 'mangalore@pibinsurance.in' },
+                                                { name: 'Mangaluru', email: 'mangaluru@pibinsurance.in' },
                                                 { name: 'Mysore', email: 'mysore@pibinsurance.in' }
                                             ].map(city => (
                                                 <div key={city.name} className="city-email-tag">

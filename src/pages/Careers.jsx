@@ -150,7 +150,7 @@ const jobListings = {
                 title: 'Locations Served',
                 icon: 'fa-location-dot',
                 type: 'text-box',
-                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangalore | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
+                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangaluru | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
             }
         ]
     },
@@ -239,7 +239,7 @@ const jobListings = {
                 title: 'Locations Served',
                 icon: 'fa-location-dot',
                 type: 'text-box',
-                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangalore | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
+                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangaluru | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
             }
         ]
     },
@@ -325,7 +325,7 @@ const jobListings = {
                 title: 'Locations Served',
                 icon: 'fa-location-dot',
                 type: 'text-box',
-                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangalore | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
+                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangaluru | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
             }
         ]
     },
@@ -423,7 +423,7 @@ const jobListings = {
                 title: 'Job Locations',
                 icon: 'fa-location-dot',
                 type: 'text-box',
-                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangalore | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
+                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangaluru | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
             }
         ]
     }

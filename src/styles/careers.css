@@ -1,7 +1,7 @@
 /* CAREERS CSS - SCOPED MODAL STYLES */
 
 .hero-careers {
-    background-image: url('/assets/careers-hero.png') !important;
+    background-image: url('../assets/careers-hero.png') !important;
 }
 
 .careers-intro {

@@ -81,6 +81,104 @@ const commercialCategories = {
     }
 };
 
+const individualCategories = {
+    'life-insurance': {
+        title: 'Life Insurance',
+        icon: 'fa-heart',
+        products: [
+            { path: '/individual-insurance/term-insurance-plans', title: 'Term Insurance Plans', icon: 'fa-clock' },
+            { path: '/individual-insurance/whole-life-insurance-plans', title: 'Whole Life Insurance Plans', icon: 'fa-infinity' },
+            { path: '/individual-insurance/endowment-plans', title: 'Endowment Plans', icon: 'fa-piggy-bank' },
+            { path: '/individual-insurance/money-back-plans', title: 'Money Back Plans', icon: 'fa-coins' },
+            { path: '/individual-insurance/ulips-unit-linked-insurance-plans', title: 'ULIPs (Unit Linked Plans)', icon: 'fa-chart-line' },
+            { path: '/individual-insurance/child-plans', title: 'Child Plans', icon: 'fa-child' },
+            { path: '/individual-insurance/retirement-pension-plans', title: 'Retirement/Pension Plans', icon: 'fa-person-cane' },
+            { path: '/individual-insurance/participating-par-plans', title: 'Participating (PAR) Plans', icon: 'fa-handshake' },
+            { path: '/individual-insurance/non-participating-non-par-plans', title: 'Non-Participating (NON-PAR)', icon: 'fa-shield' },
+            { path: '/individual-insurance/guaranteed-income-return-plans', title: 'Guaranteed Income Plans', icon: 'fa-sack-dollar' }
+        ]
+    },
+    'health-insurance': {
+        title: 'Health Insurance',
+        icon: 'fa-stethoscope',
+        products: [
+            { path: '/individual-insurance/individual-health-insurance', title: 'Individual Health Insurance', icon: 'fa-user' },
+            { path: '/individual-insurance/family-floater-health-insurance', title: 'Family Floater Insurance', icon: 'fa-users' },
+            { path: '/individual-insurance/senior-citizen-health-insurance', title: 'Senior Citizen Insurance', icon: 'fa-person-cane' },
+            { path: '/individual-insurance/group-health-insurance', title: 'Group Health Insurance', icon: 'fa-users-gear' },
+            { path: '/individual-insurance/critical-illness-insurance', title: 'Critical Illness Insurance', icon: 'fa-heart-circle-exclamation' },
+            { path: '/individual-insurance/personal-accident-insurance', title: 'Personal Accident Insurance', icon: 'fa-user-shield' },
+            { path: '/individual-insurance/top-up-health-insurance', title: 'Top-Up Health Insurance', icon: 'fa-circle-plus' },
+            { path: '/individual-insurance/super-top-up-health-insurance', title: 'Super Top-Up Health', icon: 'fa-shield-plus' },
+            { path: '/individual-insurance/disease-specific-health-insurance', title: 'Disease-Specific Health', icon: 'fa-virus-slash' },
+            { path: '/individual-insurance/maternity-health-insurance', title: 'Maternity Health Insurance', icon: 'fa-baby' },
+            { path: '/individual-insurance/hospital-cash-insurance', title: 'Hospital Cash Insurance', icon: 'fa-money-bill-wave' },
+            { path: '/individual-insurance/opd-health-insurance', title: 'OPD Health Insurance', icon: 'fa-user-doctor' },
+            { path: '/individual-insurance/personal-health-insurance-with-wellness-benefits', title: 'Wellness Benefits Insurance', icon: 'fa-heart-pulse' }
+        ]
+    },
+    'home-insurance': {
+        title: 'Home Insurance',
+        icon: 'fa-house',
+        products: [
+            { path: '/individual-insurance/building-insurance-structure-insurance', title: 'Building Structure Insurance', icon: 'fa-building' },
+            { path: '/individual-insurance/contents-insurance', title: 'Contents Insurance', icon: 'fa-couch' },
+            { path: '/individual-insurance/comprehensive-home-insurance', title: 'Comprehensive Home Cover', icon: 'fa-house-lock' },
+            { path: '/individual-insurance/fire-and-special-perils-insurance', title: 'Fire & Special Perils', icon: 'fa-fire-burner' },
+            { path: '/individual-insurance/burglary-and-theft-insurance', title: 'Burglary & Theft Insurance', icon: 'fa-mask' },
+            { path: '/individual-insurance/tenant-s-insurance', title: "Tenant's Insurance", icon: 'fa-key' },
+            { path: '/individual-insurance/landlord-insurance', title: 'Landlord Insurance', icon: 'fa-file-invoice-dollar' },
+            { path: '/individual-insurance/holiday-home-second-home-insurance', title: 'Holiday Home Insurance', icon: 'fa-umbrella-beach' },
+            { path: '/individual-insurance/bharat-griha-raksha-policy', title: 'Bharat Griha Raksha Policy', icon: 'fa-shield-halved' }
+        ]
+    },
+    'motor-insurance': {
+        title: 'Motor Insurance',
+        icon: 'fa-car',
+        products: [
+            { path: '/individual-insurance/third-party-liability-insurance', title: 'Third-Party Liability', icon: 'fa-scale-balanced' },
+            { path: '/individual-insurance/comprehensive-motor-insurance', title: 'Comprehensive Motor Cover', icon: 'fa-shield-check' },
+            { path: '/individual-insurance/own-damage-od-insurance', title: 'Own Damage (OD) Insurance', icon: 'fa-car-burst' },
+            { path: '/individual-insurance/private-car-insurance', title: 'Private Car Insurance', icon: 'fa-car' },
+            { path: '/individual-insurance/two-wheeler-insurance', title: 'Two-Wheeler Insurance', icon: 'fa-motorcycle' },
+            { path: '/individual-insurance/commercial-vehicle-insurance', title: 'Commercial Vehicle Cover', icon: 'fa-truck' },
+            { path: '/individual-insurance/passenger-carrying-vehicle-insurance', title: 'Passenger Carrying Vehicle', icon: 'fa-bus' },
+            { path: '/individual-insurance/goods-carrying-vehicle-insurance', title: 'Goods Carrying Vehicle', icon: 'fa-truck-flatbed' },
+            { path: '/individual-insurance/fleet-insurance', title: 'Fleet Insurance', icon: 'fa-car-side' },
+            { path: '/individual-insurance/motor-add-on-covers', title: 'Motor Add-On Covers', icon: 'fa-gears' }
+        ]
+    },
+    'travel-insurance': {
+        title: 'Travel Insurance',
+        icon: 'fa-plane',
+        products: [
+            { path: '/individual-insurance/international-travel-insurance', title: 'International Travel Cover', icon: 'fa-earth-americas' },
+            { path: '/individual-insurance/domestic-travel-insurance', title: 'Domestic Travel Insurance', icon: 'fa-map-location-dot' },
+            { path: '/individual-insurance/single-trip-travel-insurance', title: 'Single Trip Insurance', icon: 'fa-passport' },
+            { path: '/individual-insurance/multi-trip-annual-travel-insurance', title: 'Multi-Trip Annual Cover', icon: 'fa-calendar-days' },
+            { path: '/individual-insurance/family-travel-insurance', title: 'Family Travel Insurance', icon: 'fa-people-group' },
+            { path: '/individual-insurance/student-travel-insurance', title: 'Student Travel Insurance', icon: 'fa-user-graduate' },
+            { path: '/individual-insurance/senior-citizen-travel-insurance', title: 'Senior Citizen Travel', icon: 'fa-person-cane' },
+            { path: '/individual-insurance/corporate-travel-insurance', title: 'Corporate Travel Insurance', icon: 'fa-briefcase' },
+            { path: '/individual-insurance/group-travel-insurance', title: 'Group Travel Insurance', icon: 'fa-users' }
+        ]
+    },
+    'accidental-insurance': {
+        title: 'Personal Accident',
+        icon: 'fa-shield-halved',
+        products: [
+            { path: '/individual-insurance/individual-personal-accident-insurance', title: 'Individual PA Insurance', icon: 'fa-user' },
+            { path: '/individual-insurance/family-personal-accident-insurance', title: 'Family PA Insurance', icon: 'fa-people-roof' },
+            { path: '/individual-insurance/group-personal-accident-insurance-gpa', title: 'Group PA Insurance (GPA)', icon: 'fa-users-gear' },
+            { path: '/individual-insurance/accidental-death-cover-ad', title: 'Accidental Death Cover (AD)', icon: 'fa-skull-crossbones' },
+            { path: '/individual-insurance/permanent-total-disability-ptd', title: 'Permanent Total (PTD)', icon: 'fa-wheelchair' },
+            { path: '/individual-insurance/permanent-partial-disability-ppd', title: 'Permanent Partial (PPD)', icon: 'fa-user-minus' },
+            { path: '/individual-insurance/temporary-total-disability-ttd', title: 'Temporary Total (TTD)', icon: 'fa-clock' },
+            { path: '/individual-insurance/accident-medical-expense-cover', title: 'Accident Medical Cover', icon: 'fa-file-waveform' }
+        ]
+    }
+};
+
 const groupProducts = [
     { path: '/group-insurance/group-health-insurance', title: 'Group Health Insurance (GMC)', icon: 'fa-users' },
     { path: '/group-insurance/group-term-insurance', title: 'Group Term Insurance (GTL)', icon: 'fa-file-shield' },
@@ -159,6 +257,15 @@ const Navbar = () => {
                 }
             } else if (isIndividualSubmenuActive) {
                 setActiveDropdown('individual');
+                const activeCatEntry = Object.entries(individualCategories).find(([catKey, cat]) =>
+                    cat.products.some(p => p.path.split('#')[0] === location.pathname) ||
+                    location.pathname === `/individual-insurance/${catKey}`
+                );
+                if (activeCatEntry) {
+                    setMobileSubcategoryOpen(activeCatEntry[0]);
+                } else {
+                    setMobileSubcategoryOpen(null);
+                }
             }
         } else {
             setActiveDropdown(null);
@@ -194,7 +301,7 @@ const Navbar = () => {
                 <div className="topbar-inner">
                     <div className="logo-wrap">
                         <Link to="/" className="logo" aria-label="PIB Insurance Home">
-                            <img src={`${import.meta.env.BASE_URL}assets/logo.png`} alt="PIB Insurance Brokers" width="167" height="50" fetchpriority="high" decoding="async" />
+                            <img src={`${import.meta.env.BASE_URL}assets/logo.png`} alt="PIB Insurance Brokers" width="167" height="50" fetchPriority="high" decoding="async" />
                         </Link>
                         <Link to="/login" className="claim-btn mobile-claim" aria-label="Login to portal">
                             <span className="btn-text">LOGIN</span>
@@ -272,7 +379,7 @@ const Navbar = () => {
                                             className={({ isActive }) => isActive ? "page-active" : ""}
                                             onClick={closeMenu}
                                         >
-                                            <span className="sub-icon"><i className={`fa ${prod.icon}`}></i></span>
+                                            <span className="sub-icon"><i className={`fa-solid ${prod.icon}`}></i></span>
                                             {prod.title}
                                         </NavLink>
                                     </li>
@@ -312,7 +419,7 @@ const Navbar = () => {
                                                     }
                                                 }}
                                             >
-                                                <span className="sub-icon"><i className={`fa ${cat.icon}`}></i></span>
+                                                <span className="sub-icon"><i className={`fa-solid ${cat.icon}`}></i></span>
                                                 <span>{cat.title}</span>
                                                 <i className="fa fa-chevron-right caret-right"></i>
                                             </NavLink>
@@ -326,7 +433,7 @@ const Navbar = () => {
                                                                 className={({ isActive }) => `mega-product-link ${isActive ? 'page-active' : ''}`}
                                                                 onClick={closeMenu}
                                                             >
-                                                                <span className="sub-icon"><i className={`fa ${prod.icon}`}></i></span>
+                                                                <span className="sub-icon"><i className={`fa-solid ${prod.icon}`}></i></span>
                                                                 <span>{prod.title}</span>
                                                             </NavLink>
                                                         </li>
@@ -339,7 +446,7 @@ const Navbar = () => {
                             </div>
                         </li>
 
-                        <li className={`dropdown ${activeDropdown === 'individual' ? 'active' : ''} ${isIndividualActive ? 'page-active' : ''}`}>
+                        <li className={`dropdown mega-dropdown ${activeDropdown === 'individual' ? 'active' : ''} ${isIndividualActive ? 'page-active' : ''}`}>
                             <NavLink
                                 to="/individual-insurance"
                                 className="dropdown-trigger"
@@ -350,14 +457,52 @@ const Navbar = () => {
                             >
                                 INDIVIDUAL INSURANCE <i className="fa fa-chevron-down caret" style={{ transform: activeDropdown === 'individual' ? 'rotate(180deg)' : 'rotate(0deg)' }}></i>
                             </NavLink>
-                            <ul className="submenu" role="menu">
-                                <li role="none"><NavLink to="/individual-insurance/term-insurance" role="menuitem" className={({ isActive }) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-heart-pulse"></i></span>Term Insurance</NavLink></li>
-                                <li role="none"><NavLink to="/individual-insurance/health-insurance" role="menuitem" className={({ isActive }) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-stethoscope"></i></span>Health Insurance</NavLink></li>
-                                <li role="none"><NavLink to="/individual-insurance/home-insurance" role="menuitem" className={({ isActive }) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-house"></i></span>Home Insurance</NavLink></li>
-                                <li role="none"><NavLink to="/individual-insurance/motor-insurance" role="menuitem" className={({ isActive }) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-car"></i></span>Motor Insurance</NavLink></li>
-                                <li role="none"><NavLink to="/individual-insurance/travel-insurance" role="menuitem" className={({ isActive }) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-plane"></i></span>Travel Insurance</NavLink></li>
-                                <li role="none"><NavLink to="/individual-insurance/accidental-insurance" role="menuitem" className={({ isActive }) => isActive ? "page-active" : ""}><span className="sub-icon"><i className="fa fa-shield-halved"></i></span>Personal Accident</NavLink></li>
-                            </ul>
+                            <div className="mega-submenu" role="menu">
+                                <div className="mega-submenu-sidebar">
+                                    {Object.entries(individualCategories).map(([catKey, cat]) => (
+                                        <div key={catKey} className="mega-subcategory-item">
+                                            <NavLink
+                                                to={`/individual-insurance/${catKey}`}
+                                                className={({ isActive }) => {
+                                                    const isProdActive = cat.products.some(p => p.path.split('#')[0] === location.pathname);
+                                                    const isHubActive = isActive || location.pathname === `/individual-insurance/${catKey}`;
+                                                    const isMobileOpen = mobileSubcategoryOpen === catKey;
+                                                    return `mega-subcategory-btn ${(isHubActive || isProdActive || isMobileOpen) ? 'active' : ''}`;
+                                                }}
+                                                onClick={(e) => {
+                                                    if (window.innerWidth < 992) {
+                                                        e.preventDefault();
+                                                        setMobileSubcategoryOpen(mobileSubcategoryOpen === catKey ? null : catKey);
+                                                    } else {
+                                                        closeMenu();
+                                                    }
+                                                }}
+                                            >
+                                                <span className="sub-icon"><i className={`fa-solid ${cat.icon}`}></i></span>
+                                                <span>{cat.title}</span>
+                                                <i className="fa fa-chevron-right caret-right"></i>
+                                            </NavLink>
+                                            <div className={`mega-submenu-content ${mobileSubcategoryOpen === catKey ? 'active' : ''}`}>
+                                                <ul className="mega-product-list">
+                                                    {cat.products.map((prod) => (
+                                                        <li key={prod.path} role="none">
+                                                            <NavLink
+                                                                to={prod.path}
+                                                                role="menuitem"
+                                                                className={({ isActive }) => `mega-product-link ${isActive ? 'page-active' : ''}`}
+                                                                onClick={closeMenu}
+                                                            >
+                                                                <span className="sub-icon"><i className={`fa-solid ${prod.icon}`}></i></span>
+                                                                <span>{prod.title}</span>
+                                                            </NavLink>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </li>
 
                         <li><NavLink to="/industries" className={({ isActive }) => isActive ? "page-active" : ""} aria-label="Industries we serve">INDUSTRIES</NavLink></li>

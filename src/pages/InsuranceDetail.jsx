@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import { insuranceData } from '../data/insuranceData';
 import { MotionSection, MotionItem, MotionList } from '../components/MotionWrappers';
@@ -5,6 +6,7 @@ import SEO from '../components/SEO';
 
 const sidebarMenus = {
     commercial: [
+        { path: '/commercial-insurance', title: 'Commercial Overview', icon: 'fa-house-user' },
         { path: '/commercial-insurance/liability', title: 'Liability & Financial Lines', icon: 'fa-scale-balanced' },
         { path: '/commercial-insurance/engineering', title: 'Engineering & Industrial', icon: 'fa-industry' },
         { path: '/commercial-insurance/property', title: 'Property & Fire', icon: 'fa-building' },
@@ -13,6 +15,7 @@ const sidebarMenus = {
         { path: '/commercial-insurance/miscellaneous', title: 'Miscellaneous Solutions', icon: 'fa-cubes' }
     ],
     group: [
+        { path: '/group-insurance', title: 'Group Overview', icon: 'fa-house-user' },
         { path: '/group-insurance/group-health-insurance', title: 'Group Health Insurance', icon: 'fa-users' },
         { path: '/group-insurance/group-term-insurance', title: 'Group Term Insurance', icon: 'fa-file-shield' },
         { path: '/group-insurance/group-personal-accident', title: 'Group Personal Accident', icon: 'fa-shield-halved' },
@@ -22,7 +25,8 @@ const sidebarMenus = {
         { path: '/group-insurance/keyman-insurance', title: 'Keyman Insurance Solutions', icon: 'fa-key' }
     ],
     individual: [
-        { path: '/individual-insurance/term-insurance', title: 'Term Insurance', icon: 'fa-heart-pulse' },
+        { path: '/individual-insurance', title: 'Individual Overview', icon: 'fa-house-user' },
+        { path: '/individual-insurance/life-insurance', title: 'Life Insurance', icon: 'fa-heart' },
         { path: '/individual-insurance/health-insurance', title: 'Health Insurance', icon: 'fa-stethoscope' },
         { path: '/individual-insurance/home-insurance', title: 'Home Insurance', icon: 'fa-house' },
         { path: '/individual-insurance/motor-insurance', title: 'Motor Insurance', icon: 'fa-car' },
@@ -30,6 +34,7 @@ const sidebarMenus = {
         { path: '/individual-insurance/accidental-insurance', title: 'Personal Accident', icon: 'fa-shield-halved' }
     ],
     liability: [
+        { path: '/commercial-insurance/liability', title: 'Liability Overview', icon: 'fa-house-user' },
         { path: '/commercial-insurance/public-liability-insurance', title: 'Public Liability Insurance', icon: 'fa-scale-balanced' },
         { path: '/commercial-insurance/product-liability-insurance', title: 'Product Liability Insurance', icon: 'fa-box-open' },
         { path: '/commercial-insurance/commercial-general-liability', title: 'Commercial General Liability', icon: 'fa-briefcase' },
@@ -42,6 +47,7 @@ const sidebarMenus = {
         { path: '/commercial-insurance/title-insurance', title: 'Title Insurance', icon: 'fa-file-signature' }
     ],
     engineering: [
+        { path: '/commercial-insurance/engineering', title: 'Engineering Overview', icon: 'fa-house-user' },
         { path: '/commercial-insurance/contractor-all-risk', title: 'Contractors All Risk (CAR)', icon: 'fa-trowel-bricks' },
         { path: '/commercial-insurance/erection-all-risk', title: 'Erection All Risk (EAR)', icon: 'fa-screwdriver-wrench' },
         { path: '/commercial-insurance/machinery-breakdown', title: 'Machinery Breakdown', icon: 'fa-gears' },
@@ -51,6 +57,7 @@ const sidebarMenus = {
         { path: '/commercial-insurance/workmens-compensation', title: 'Workmen’s Compensation', icon: 'fa-hard-hat' }
     ],
     property: [
+        { path: '/commercial-insurance/property', title: 'Property Overview', icon: 'fa-house-user' },
         { path: '/commercial-insurance/standard-fire-special-perils', title: 'Standard Fire & Special Perils', icon: 'fa-fire-extinguisher' },
         { path: '/commercial-insurance/property-insurance', title: 'Property Insurance', icon: 'fa-building' },
         { path: '/commercial-insurance/fire-insurance', title: 'Fire Insurance', icon: 'fa-fire' },
@@ -61,6 +68,7 @@ const sidebarMenus = {
         { path: '/commercial-insurance/business-interruption-insurance', title: 'Business Interruption', icon: 'fa-clock-rotate-left' }
     ],
     marine: [
+        { path: '/commercial-insurance/marine', title: 'Marine Overview', icon: 'fa-house-user' },
         { path: '/commercial-insurance/marine-insurance', title: 'Marine Cargo Insurance', icon: 'fa-ship' },
         { path: '/commercial-insurance/inland-transit-insurance', title: 'Inland Transit Insurance', icon: 'fa-truck-ramp-box' },
         { path: '/commercial-insurance/import-export-cargo', title: 'Import & Export Cargo', icon: 'fa-anchor' },
@@ -68,11 +76,13 @@ const sidebarMenus = {
         { path: '/commercial-insurance/carriers-legal-liability', title: 'Carrier’s Legal Liability', icon: 'fa-business-time' }
     ],
     motor: [
+        { path: '/commercial-insurance/motor', title: 'Motor Overview', icon: 'fa-house-user' },
         { path: '/commercial-insurance/commercial-vehicle-insurance', title: 'Commercial Vehicle Insurance', icon: 'fa-truck-front' },
         { path: '/commercial-insurance/motor-fleet-insurance', title: 'Motor Fleet Insurance', icon: 'fa-car-side' },
         { path: '/commercial-insurance/passenger-carrying-vehicle', title: 'Passenger Carrying Vehicle', icon: 'fa-bus' }
     ],
     miscellaneous: [
+        { path: '/commercial-insurance/miscellaneous', title: 'Miscellaneous Overview', icon: 'fa-house-user' },
         { path: '/commercial-insurance/burglary-insurance', title: 'Burglary Insurance', icon: 'fa-vault' },
         { path: '/commercial-insurance/money-insurance', title: 'Money Insurance', icon: 'fa-coins' },
         { path: '/commercial-insurance/fidelity-guarantee-insurance', title: 'Fidelity Guarantee', icon: 'fa-handshake-slash' },
@@ -82,6 +92,13 @@ const sidebarMenus = {
         { path: '/commercial-insurance/sme-package-policies', title: 'SME Package Policies', icon: 'fa-box-tissue' },
         { path: '/commercial-insurance/specialized-risk-covers', title: 'Specialized Risk Covers', icon: 'fa-shield-heart' }
     ]
+};
+
+const slugify = (text) => {
+    return text
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
 };
 
 const InsuranceDetail = () => {
@@ -94,13 +111,104 @@ const InsuranceDetail = () => {
 
     // Attempt to find data by :type param, then by last part of path
     const dataKey = type || lastPart;
-    const data = insuranceData[dataKey];
+
+    // Check if path is under individual-insurance or individual
+    const isIndividualPath = location.pathname.includes('/individual-insurance/') || location.pathname.includes('/individual/');
+
+    let data = null;
+    let customSidebar = null;
+
+    if (isIndividualPath) {
+        // Search inside individual categories features list
+        const individualCategoryKeys = [
+            'life-insurance',
+            'health-insurance',
+            'home-insurance',
+            'motor-insurance',
+            'travel-insurance',
+            'accidental-insurance'
+        ];
+
+        for (const catKey of individualCategoryKeys) {
+            const cat = insuranceData[catKey];
+            if (cat && cat.features) {
+                const matchedFeature = cat.features.find(f => slugify(f.title) === dataKey);
+                if (matchedFeature) {
+                    // Split the text into sentences for bullet points
+                    const sentences = matchedFeature.text
+                        .split(/\.\s+/)
+                        .map(s => s.trim())
+                        .filter(s => s.length > 0)
+                        .map(s => s.endsWith('.') ? s : s + '.');
+
+                    const heroText = sentences[0] || matchedFeature.text;
+
+                    // Build dynamic sidebar showing all sub-products in this category
+                    customSidebar = [
+                        { path: `/individual-insurance/${catKey}`, title: `${cat.title} Overview`, icon: 'fa-house-user' },
+                        ...cat.features.map(f => ({
+                            path: `/individual-insurance/${slugify(f.title)}`,
+                            title: f.title,
+                            icon: f.icon
+                        }))
+                    ];
+
+                    data = {
+                        title: matchedFeature.title,
+                        heroClass: 'hero-' + dataKey,
+                        heroTitle: matchedFeature.title,
+                        heroInfo: cat.title,
+                        heroText: heroText,
+                        breadcrumb: `HOME / INDIVIDUAL INSURANCE / ${cat.title.toUpperCase()}`,
+                        contentTitle: matchedFeature.title,
+                        contentText: matchedFeature.text,
+                        coveredTitle: "Key Coverage & Details",
+                        features: sentences.map(sentence => ({
+                            icon: matchedFeature.icon || 'fa-circle-check',
+                            title: '',
+                            text: sentence
+                        })),
+                        whyMatters: cat.whyMatters || [],
+                        considerTitle: cat.considerTitle || 'Who Should Consider This',
+                        considerText: cat.considerText || '',
+                        ctaTitle: cat.ctaTitle || 'Protect What Matters Most',
+                        ctaText: cat.ctaText || '',
+                        customSidebar: customSidebar
+                    };
+                    break;
+                }
+            }
+        }
+    }
+
+    // Fallback to direct lookup in insuranceData
+    if (!data) {
+        data = insuranceData[dataKey];
+    }
+
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.replace('#', '');
+            const decodedId = decodeURIComponent(id);
+            const element = document.getElementById(decodedId);
+            if (element) {
+                const timer = setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    element.classList.add('highlight-scroll');
+                    setTimeout(() => {
+                        element.classList.remove('highlight-scroll');
+                    }, 2000);
+                }, 300);
+                return () => clearTimeout(timer);
+            }
+        }
+    }, [location.pathname, location.hash, dataKey]);
 
     if (!data) {
         return <div className="container py-5 text-center"><h1>Page Not Found</h1><p>We couldn't find the insurance page you're looking for.</p></div>;
     }
 
-    const sidebar = sidebarMenus[data.sidebarType] || [];
+    const sidebar = data.customSidebar || sidebarMenus[data.sidebarType] || [];
 
     return (
         <>
@@ -131,7 +239,7 @@ const InsuranceDetail = () => {
                                 <ul className="sidebar-menu">
                                     {sidebar.map((item) => (
                                         <li key={item.path} className={location.pathname === item.path ? 'page-active' : ''}>
-                                            <Link to={item.path} aria-label={`View details for ${item.title}`}><i className={`fa ${item.icon}`}></i> {item.title}</Link>
+                                            <Link to={item.path} aria-label={`View details for ${item.title}`}><i className={`fa-solid ${item.icon || 'fa-circle-check'}`}></i> {item.title}</Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -151,8 +259,8 @@ const InsuranceDetail = () => {
                                 <h4 className="section-title"><i className="fa fa-notes-medical me-3"></i> {data.coveredTitle}</h4>
                                 <MotionList className="features-list" stagger={0.1}>
                                     {data.features.map((feature, index) => (
-                                        <li key={index}>
-                                            <i className={`fa ${feature.icon}`}></i>
+                                        <li key={index} id={slugify(feature.title)}>
+                                            <i className={`fa-solid ${feature.icon}`}></i>
                                             <div><strong>{feature.title}</strong> {feature.text}</div>
                                         </li>
                                     ))}
@@ -167,7 +275,7 @@ const InsuranceDetail = () => {
                                     {data.whyMatters.map((item, index) => (
                                         <div key={index} className="col-12 col-xxl-6">
                                             <div className="matter-item">
-                                                <div className="matter-icon"><i className={`fa ${item.icon}`}></i></div>
+                                                <div className="matter-icon"><i className={`fa-solid ${item.icon}`}></i></div>
                                                 <div>{item.text}</div>
                                             </div>
                                         </div>
