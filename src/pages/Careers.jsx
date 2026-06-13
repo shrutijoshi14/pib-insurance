@@ -426,8 +426,132 @@ const jobListings = {
                 content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangaluru | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
             }
         ]
+    },
+    'eb-underwriter': {
+        id: 'eb-underwriter',
+        category: 'underwriting',
+        title: 'Underwriter / Placement Executive – GMC / GTL / GPA',
+        subtitle: 'Department: Employee Benefits Insurance | Experience: 2–8 Years',
+        dept: 'Employee Benefits Insurance',
+        location: 'Mumbai & PAN India',
+        overview: 'Responsible for underwriting support, placement, insurer negotiations, renewals, policy servicing, claims coordination and client relationship management for Group Mediclaim (GMC), Group Term Life (GTL) and Group Personal Accident (GPA) insurance portfolios.',
+        sections: [
+            {
+                title: 'Products Handled',
+                icon: 'fa-shield-halved',
+                type: 'tags',
+                items: [
+                    'Group Mediclaim Insurance (GMC)',
+                    'Group Term Life Insurance (GTL)',
+                    'Group Personal Accident Insurance (GPA)',
+                    'Corporate Health Insurance',
+                    'Employee Benefit Programs',
+                    'Critical Illness Insurance',
+                    'Top-Up & Super Top-Up Policies'
+                ]
+            },
+            {
+                title: 'Key Responsibilities',
+                icon: 'fa-list-check',
+                type: 'list',
+                items: [
+                    'Risk Assessment & Underwriting',
+                    'Placement & Insurer Coordination',
+                    'Renewal Management',
+                    'Claims Management',
+                    'Client Relationship Management',
+                    'Compliance & Documentation'
+                ]
+            },
+            {
+                title: 'Required Skills',
+                icon: 'fa-gear',
+                type: 'list',
+                items: [
+                    'Knowledge of GMC, GTL, GPA products, underwriting, claims handling, employee benefits servicing and insurer coordination.'
+                ]
+            },
+            {
+                title: 'Experience',
+                icon: 'fa-clock',
+                type: 'list',
+                items: [
+                    '2 to 8 Years of experience in Employee Benefits Insurance.'
+                ]
+            },
+            {
+                title: 'Locations Served',
+                icon: 'fa-location-dot',
+                type: 'text-box',
+                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangaluru | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
+            }
+        ]
+    },
+    'fleet-underwriter': {
+        id: 'fleet-underwriter',
+        category: 'underwriting',
+        title: 'Underwriter / Placement Executive (Fleet & Commercial Insurance)',
+        subtitle: 'Department: Motor & Commercial Insurance | Experience: 2–8 Years',
+        dept: 'Motor & Commercial Insurance',
+        location: 'Mumbai & PAN India',
+        overview: 'Responsible for underwriting support, insurer coordination, quotation management, policy placement, renewals, claims assistance, and servicing of Fleet, Commercial Vehicle, and Corporate Motor Insurance portfolios.',
+        sections: [
+            {
+                title: 'Products Handled',
+                icon: 'fa-shield-halved',
+                type: 'tags',
+                items: [
+                    'Commercial Vehicle Fleet Insurance',
+                    'Passenger Vehicle Fleet Insurance',
+                    'Logistics & Transport Fleet Insurance',
+                    'Private Car & Motor Insurance',
+                    'Goods Carrying Vehicle Insurance',
+                    'Passenger Carrying Vehicle Insurance',
+                    'Motor Package Policies',
+                    'Liability Insurance',
+                    'Miscellaneous Corporate Insurance Products'
+                ]
+            },
+            {
+                title: 'Key Responsibilities',
+                icon: 'fa-list-check',
+                type: 'list',
+                items: [
+                    'Risk Assessment & Underwriting',
+                    'Placement & Insurer Coordination',
+                    'Renewal Management',
+                    'Policy Servicing',
+                    'Claims Support',
+                    'Client Relationship Management',
+                    'Compliance & Documentation'
+                ]
+            },
+            {
+                title: 'Required Skills',
+                icon: 'fa-gear',
+                type: 'list',
+                items: [
+                    'Knowledge of Fleet & Commercial Motor Insurance, underwriting, placement, renewals, claims handling, insurer negotiations, and client servicing.'
+                ]
+            },
+            {
+                title: 'Experience',
+                icon: 'fa-clock',
+                type: 'list',
+                items: [
+                    '2 to 8 Years of experience in Fleet & Commercial Motor Insurance.'
+                ]
+            },
+            {
+                title: 'Locations Served',
+                icon: 'fa-location-dot',
+                type: 'text-box',
+                content: 'Mumbai | Pune | Raipur | Ahmedabad | Surat | Nagpur | Nashik | Vadodara | Rajkot | Chennai | Bangalore | Hyderabad | Visakhapatnam | Cochin | Coimbatore | Madurai | Vijaywada | Mangaluru | Mysore | Delhi | Jaipur | Chandigarh | Lucknow | Bhopal | Ludhiana | Agra | Kanpur | Amritsar | Kolkata | Patna | Ranchi | Bhubaneswar | Guwahati | Jamshedpur'
+            }
+        ]
     }
 };
+
 
 const Careers = () => {
     const navigate = useNavigate();
