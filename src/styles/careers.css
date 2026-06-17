@@ -182,14 +182,14 @@
 }
 
 .filter-tab.active {
-    background: linear-gradient(135deg, #0a2e6e 0%, #001f54 100%);
-    border-color: #0a2e6e;
+    background: linear-gradient(135deg, #00a3e0 0%, #247dc2 100%);
+    border-color: #00a3e0;
     color: #fff;
-    box-shadow: 0 10px 20px rgba(10, 46, 110, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 163, 224, 0.25);
 }
 
 .filter-tab.active i {
-    color: #00a3e0;
+    color: #fff;
 }
 
 /* OPEN POSITIONS */
@@ -528,7 +528,7 @@
 }
 
 .apply-info-side {
-    background: linear-gradient(135deg, #0a2e6e 0%, #001f54 100%);
+    background: linear-gradient(135deg, #00a3e0 0%, #247dc2 100%);
     padding: 80px 60px;
     color: #fff;
     display: flex;
@@ -567,12 +567,12 @@
 .apply-contact .item i {
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00a3e0;
+    color: #fff;
 }
 
 .apply-form-side {
@@ -914,4 +914,133 @@
     .section-header h2 {
         font-size: 28px;
     }
+}
+
+/* ==========================================================================
+   CATEGORY COLOR-CODING OVERRIDES (CARDS, TAGS, FILTER TABS & MODALS)
+   ========================================================================== */
+
+/* --- Corporate Sales (Indigo Theme) --- */
+.filter-tab.tab-sales.active {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+    border-color: #6366f1 !important;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25) !important;
+}
+
+.filter-tab.tab-sales::after {
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%) !important;
+}
+
+.dept.dept-sales {
+    background: #e0e7ff !important;
+    color: #6366f1 !important;
+}
+
+.position-card.card-sales:hover {
+    border-color: #6366f1 !important;
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.15) !important;
+}
+
+.position-card.card-sales .apply-btn-outline::after {
+    background: linear-gradient(135deg, #818cf8 0%, #6366f1 100%) !important;
+}
+
+.position-card.card-sales .apply-btn-outline:hover {
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.25) !important;
+}
+
+.modal-card-sales .job-meta {
+    background: #e0e7ff !important;
+    color: #6366f1 !important;
+}
+
+.modal-card-sales .jd-section h4 i,
+.modal-card-sales .jd-section ul li::before {
+    color: #6366f1 !important;
+}
+
+
+/* --- Underwriting & Technical (Teal Theme) --- */
+.filter-tab.tab-underwriting.active {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0d9488 100%) !important;
+    border-color: #0d9488 !important;
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25) !important;
+}
+
+.filter-tab.tab-underwriting::after {
+    background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%) !important;
+}
+
+.dept.dept-underwriting {
+    background: #ccfbf1 !important;
+    color: #0d9488 !important;
+}
+
+.position-card.card-underwriting:hover {
+    border-color: #0d9488 !important;
+    box-shadow: 0 12px 30px rgba(13, 148, 136, 0.15) !important;
+}
+
+.position-card.card-underwriting .apply-btn-outline::after {
+    background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%) !important;
+}
+
+.position-card.card-underwriting .apply-btn-outline:hover {
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 8px 20px rgba(13, 148, 136, 0.25) !important;
+}
+
+.modal-card-underwriting .job-meta {
+    background: #ccfbf1 !important;
+    color: #0d9488 !important;
+}
+
+.modal-card-underwriting .jd-section h4 i,
+.modal-card-underwriting .jd-section ul li::before {
+    color: #0d9488 !important;
+}
+
+
+/* --- Operations (Amber Theme) --- */
+.filter-tab.tab-operations.active {
+    background: linear-gradient(135deg, #f97316 0%, #d97706 100%) !important;
+    border-color: #d97706 !important;
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.25) !important;
+}
+
+.filter-tab.tab-operations::after {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%) !important;
+}
+
+.dept.dept-operations {
+    background: #fef3c7 !important;
+    color: #d97706 !important;
+}
+
+.position-card.card-operations:hover {
+    border-color: #d97706 !important;
+    box-shadow: 0 12px 30px rgba(217, 119, 6, 0.15) !important;
+}
+
+.position-card.card-operations .apply-btn-outline::after {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%) !important;
+}
+
+.position-card.card-operations .apply-btn-outline:hover {
+    color: #fff !important;
+    border-color: transparent !important;
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.25) !important;
+}
+
+.modal-card-operations .job-meta {
+    background: #fef3c7 !important;
+    color: #d97706 !important;
+}
+
+.modal-card-operations .jd-section h4 i,
+.modal-card-operations .jd-section ul li::before {
+    color: #d97706 !important;
 }

@@ -9,13 +9,16 @@
 /* ========== GLOBAL PERFORMANCE & ACCESSIBILITY ========== */
 :root {
   color-scheme: light;
-  --blue-dark: #2d3436;
-  --blue-mid: #2c3e50;
-  --blue-main: #1b75bb;
-  --blue-light: #2980b9;
-  --blue-sky: #3498db;
-  --accent: #1b75bb;
-  --accent-hover: #155a8a;
+  --blue-dark: #1e293b;
+  /* Dark slate blue-gray */
+  --blue-mid: #1b4f91;
+  --blue-main: #247dc2;
+  /* Better, slightly lighter vibrant blue instead of #1b75bb */
+  --blue-light: #3498db;
+  /* Lighter bright blue */
+  --blue-sky: #00a3e0;
+  --accent: #247dc2;
+  --accent-hover: #1c5f94;
   --white: #ffffff;
   --gray-light: #f9fbfe;
   --gray-border: #e8eef5;
@@ -100,13 +103,13 @@ body {
   width: 100%;
   z-index: 2000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: #0a2e6e;
+  background: var(--blue-dark);
   box-shadow: none;
 }
 
 .navbar.scrolled {
   position: fixed !important;
-  background: #0a2e6e !important;
+  background: var(--blue-dark) !important;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -579,7 +582,6 @@ p {
   flex-shrink: 0;
 }
 
-/* ========== CLAIM BUTTON ========== */
 .claim-btn {
   background: transparent;
   color: var(--blue-main);
@@ -594,7 +596,6 @@ p {
   flex-shrink: 0;
   cursor: pointer;
   box-shadow: 0 3px 10px rgba(27, 117, 187, 0.1);
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
   display: flex;
   align-items: center;
   gap: 7px;
@@ -606,29 +607,6 @@ p {
 .mobile-claim,
 .mobile-only {
   display: none !important;
-}
-
-.claim-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
-  transform: skewX(-25deg);
-  transition: left 0.5s ease;
-}
-
-.claim-btn:hover::before {
-  left: 150%;
-}
-
-.claim-btn:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(27, 117, 187, 0.3);
-  background: var(--blue-main);
-  color: #fff;
 }
 
 /* ========== MOBILE OVERLAY ========== */
@@ -1447,23 +1425,6 @@ body {
   z-index: 1;
 }
 
-.btn.primary::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  transform: scale(0);
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-  z-index: -1;
-  opacity: 1;
-}
-
-.btn.primary:hover::after {
-  transform: scale(2);
-  opacity: 0;
-}
-
 .btn.primary:hover {
   background: var(--blue-dark);
   transform: translateY(-3px) scale(1.03);
@@ -1477,24 +1438,6 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  transition: color 0.4s ease, border-color 0.4s ease;
-}
-
-.btn.secondary::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  z-index: -1;
-  transition: top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 50px;
-}
-
-.btn.secondary:hover::before {
-  top: 0;
 }
 
 .btn.secondary:hover {
@@ -2099,30 +2042,11 @@ body {
   overflow: hidden;
   color: var(--text-dark);
   z-index: 1;
-  transition: color 0.4s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-}
-
-/* LIQUID HOVER EFFECT */
-.tab::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--blue-main);
-  z-index: -1;
-  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 30px;
-}
-
-.tab:hover::before {
-  top: 0;
 }
 
 .tab:hover {
   color: #fff;
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.03);
   box-shadow: 0 8px 20px rgba(26, 111, 168, 0.3);
 }
 
@@ -2133,10 +2057,6 @@ body {
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0 8px 25px rgba(26, 111, 168, 0.5);
   animation: tabPulse 2s infinite;
-}
-
-.tab.active::before {
-  display: none;
 }
 
 @keyframes tabPulse {
@@ -2638,7 +2558,7 @@ a {
   display: inline-flex;
   gap: 60px;
   align-items: center;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 150s linear infinite;
 }
 
 .partners-scroll-track:hover {
@@ -2658,7 +2578,7 @@ a {
 @media (max-width: 768px) {
   .partners-scroll-track {
     gap: 40px;
-    animation-duration: 20s;
+    animation-duration: 100s;
   }
 
   .partner-logo img {
@@ -2680,6 +2600,30 @@ a {
 .partner-logo:hover {
   opacity: 1;
   transform: scale(1.05);
+}
+
+.partner-logo.text-badge-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  padding: 0 24px;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f6f9 100%);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #00384a;
+  box-shadow: 0 4px 12px rgba(0, 56, 74, 0.04);
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+
+.partner-logo.text-badge-logo:hover {
+  border-color: #00384a;
+  background: linear-gradient(135deg, #f4f6f9 0%, #ffffff 100%);
+  box-shadow: 0 6px 16px rgba(0, 56, 74, 0.08);
 }
 
 /* --- Footer Section --- */
@@ -3236,11 +3180,11 @@ a {
 
 .hero-group-personal-accident,
 .hero-group-accident {
-  background-image: url('../assets/group-accident-hero.jpg') !important;
+  background-image: url('../assets/group-personal-accident.png') !important;
 }
 
 .hero-group-term {
-  background-image: url('../assets/money-back-hero.png') !important;
+  background-image: url('../assets/employee-families.png') !important;
 }
 
 .hero-group-travel {
@@ -3252,15 +3196,15 @@ a {
 }
 
 .hero-bi {
-  background-image: url('../assets/business-interruption-hero.png') !important;
+  background-image: url('../assets/business-interruption-insurance.png') !important;
 }
 
 .hero-workmen {
-  background-image: url('../assets/workmen-compensation-hero.png') !important;
+  background-image: url('../assets/workmen-compensation.png') !important;
 }
 
 .hero-pi {
-  background-image: url('../assets/professional-indemnity-hero.png') !important;
+  background-image: url('../assets/professional-indemnity.png') !important;
 }
 
 .hero-car {
@@ -3268,7 +3212,7 @@ a {
 }
 
 .hero-cyber {
-  background-image: url('../assets/cyber-security-hero.png') !important;
+  background-image: url('../assets/cybe-insurance.jpg') !important;
 }
 
 .hero-liability {
@@ -3276,11 +3220,11 @@ a {
 }
 
 .hero-marine {
-  background-image: url('../assets/marine-insurance-hero.jpg') !important;
+  background-image: url('../assets/marine-insurance.png') !important;
 }
 
 .hero-fire {
-  background-image: url('../assets/fire-insurance-hero.png') !important;
+  background-image: url('../assets/fire-insurance.png') !important;
 }
 
 .hero-term {
@@ -3348,7 +3292,7 @@ a {
 }
 
 .hero-about {
-  background-image: url('../assets/group-meeting-hero.png') !important;
+  background-image: url('../assets/group-meeting.png') !important;
 }
 
 .hero-industries {
@@ -3364,7 +3308,7 @@ a {
 }
 
 .hero-claim {
-  background-image: url('../assets/claims-advisory-hero.png') !important;
+  background-image: url('../assets/claim-hero.png') !important;
 }
 
 /* Page Specific Hero Backgrounds - New Additions (Unique & Diverse Mappings) */
@@ -3437,7 +3381,7 @@ a {
 }
 
 .hero-office-package {
-  background-image: url('../assets/office-factory-warehouse-hero.jpg') !important;
+  background-image: url('../assets/commercial-property-insurance.png') !important;
 }
 
 .hero-shop {
@@ -3505,7 +3449,7 @@ a {
 }
 
 .hero-group-overseas-mediclaim {
-  background-image: url('../assets/group-overseas-mediclaim-hero.png') !important;
+  background-image: url('../assets/group-overseas-mediclaim.png') !important;
 }
 
 
@@ -3698,12 +3642,200 @@ img {
   transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-/* Global Button Hover Effect */
+/* Global Uiverse Liquid Hover Effect (Gaurav-WebDev Overhaul) */
+button:not(.btn-close):not(.job-modal-close),
+.btn,
+.btn-pib,
+.claim-btn,
+.apply-btn-outline,
+.filter-tab,
+.filter-btn,
+.tab,
+.pos-tab-btn,
+.pos-btn,
+.pos-btn-secondary,
+.pos-logout-btn,
+.portal-submit-btn,
+.subscribe-btn,
+.read-more-btn {
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  transition: color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease !important;
+}
+
+/* Ensure direct text nodes and child elements stay on top of the liquid fill */
+button:not(.btn-close):not(.job-modal-close)>*,
+.btn>*,
+.btn-pib>*,
+.claim-btn>*,
+.apply-btn-outline>*,
+.filter-tab>*,
+.filter-btn>*,
+.tab>*,
+.pos-tab-btn>*,
+.pos-btn>*,
+.pos-btn-secondary>*,
+.pos-logout-btn>*,
+.portal-submit-btn>*,
+.subscribe-btn>*,
+.read-more-btn>* {
+  position: relative;
+  z-index: 2;
+}
+
+/* Pseudo-element circle setup for each group */
+button:not(.btn-close):not(.job-modal-close)::after,
+.btn::after,
+.btn-pib::after,
+.claim-btn::after,
+.apply-btn-outline::after,
+.filter-tab::after,
+.filter-btn::after,
+.tab::after,
+.pos-tab-btn::after,
+.pos-btn::after,
+.pos-btn-secondary::after,
+.pos-logout-btn::after,
+.portal-submit-btn::after,
+.subscribe-btn::after,
+.read-more-btn::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -15px !important;
+  top: -15px !important;
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50% !important;
+  z-index: -1 !important;
+  transform: scale(0) !important;
+  transform-origin: center !important;
+  opacity: 0 !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease-out !important;
+}
+
+/* Liquid Expand Color Mappings */
+
+/* Group 1: Filled Brand Buttons (Expand Dark Slate/Gray) */
+.btn-pib::after,
+.btn.primary::after,
+.pos-btn::after,
+.portal-submit-btn::after {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+}
+
+/* Group 2: Outline / Transparent Buttons (Expand Brand Blue Gradient) */
+.btn.secondary::after,
+.apply-btn-outline::after,
+.claim-btn::after,
+.pos-btn-secondary::after,
+.read-more-btn::after {
+  background: linear-gradient(135deg, #00a3e0 0%, #247dc2 100%) !important;
+}
+
+/* Group 3: Inactive Tabs & Filters (Expand Brand Blue Gradient) */
+.tab:not(.active)::after,
+.filter-tab:not(.active)::after,
+.filter-btn:not(.active)::after,
+.pos-tab-btn:not(.active)::after {
+  background: linear-gradient(135deg, #00a3e0 0%, #247dc2 100%) !important;
+}
+
+/* Group 4: Special Red Buttons (Expand solid Red) */
+.pos-logout-btn::after {
+  background: #ef4444 !important;
+}
+
+/* Group 5: Newsletter Subscribe Button (Expand Brand Blue) */
+.subscribe-btn::after {
+  background: var(--pib-primary) !important;
+}
+
+/* Triggering Hover Expand States */
+button:not(.btn-close):not(.job-modal-close):hover::after,
+.btn:hover::after,
+.btn-pib:hover::after,
+.claim-btn:hover::after,
+.apply-btn-outline:hover::after,
+.pos-btn:hover::after,
+.pos-btn-secondary:hover::after,
+.pos-logout-btn:hover::after,
+.portal-submit-btn:hover::after,
+.subscribe-btn:hover::after,
+.read-more-btn:hover::after,
+.tab:not(.active):hover::after,
+.filter-tab:not(.active):hover::after,
+.filter-btn:not(.active):hover::after,
+.pos-tab-btn:not(.active):hover::after {
+  transform: scale(25) !important;
+  opacity: 1 !important;
+}
+
+/* General hover lift and glow drop-shadow */
 .btn:hover,
-button:hover,
+button:not(.btn-close):not(.job-modal-close):hover,
+.btn-pib:hover,
+.claim-btn:hover,
+.apply-btn-outline:hover,
+.filter-tab:hover,
+.filter-btn:hover,
+.tab:hover,
+.pos-tab-btn:hover,
+.pos-btn:hover,
+.pos-btn-secondary:hover,
+.pos-logout-btn:hover,
+.portal-submit-btn:hover,
+.subscribe-btn:hover,
+.read-more-btn:hover,
 .hero-buttons a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px) scale(1.03) !important;
+  box-shadow: 0 10px 25px rgba(36, 125, 194, 0.35) !important;
+}
+
+/* Typography and Border Hover States */
+.btn.secondary:hover,
+.apply-btn-outline:hover,
+.claim-btn:hover,
+.pos-btn-secondary:hover,
+.read-more-btn:hover {
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.tab:not(.active):hover,
+.filter-tab:not(.active):hover,
+.filter-btn:not(.active):hover,
+.pos-tab-btn:not(.active):hover {
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.pos-logout-btn:hover {
+  color: #fff !important;
+  border-color: transparent !important;
+}
+
+.subscribe-btn:hover {
+  color: #fff !important;
+}
+
+/* Match icon colors on hover */
+button:not(.btn-close):not(.job-modal-close):hover i,
+.btn:hover i,
+.btn-pib:hover i,
+.claim-btn:hover i,
+.apply-btn-outline:hover i,
+.filter-tab:hover i,
+.filter-btn:hover i,
+.tab:hover i,
+.pos-tab-btn:hover i,
+.pos-btn:hover i,
+.pos-btn-secondary:hover i,
+.pos-logout-btn:hover i,
+.portal-submit-btn:hover i,
+.subscribe-btn:hover i,
+.read-more-btn:hover i {
+  color: #fff !important;
 }
 
 /* Standardizing link hover */

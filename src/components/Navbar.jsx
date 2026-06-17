@@ -105,7 +105,6 @@ const individualCategories = {
             { path: '/individual-insurance/individual-health-insurance', title: 'Individual Health Insurance', icon: 'fa-user' },
             { path: '/individual-insurance/family-floater-health-insurance', title: 'Family Floater Insurance', icon: 'fa-users' },
             { path: '/individual-insurance/senior-citizen-health-insurance', title: 'Senior Citizen Insurance', icon: 'fa-person-cane' },
-            { path: '/individual-insurance/group-health-insurance', title: 'Group Health Insurance', icon: 'fa-users-gear' },
             { path: '/individual-insurance/critical-illness-insurance', title: 'Critical Illness Insurance', icon: 'fa-heart-circle-exclamation' },
             { path: '/individual-insurance/personal-accident-insurance', title: 'Personal Accident Insurance', icon: 'fa-user-shield' },
             { path: '/individual-insurance/top-up-health-insurance', title: 'Top-Up Health Insurance', icon: 'fa-circle-plus' },
@@ -189,6 +188,10 @@ const groupProducts = [
     { path: '/group-insurance/keyman-insurance', title: 'Keyman Insurance Solutions', icon: 'fa-key' }
 ];
 
+const aboutProducts = [
+    { path: '/leadership', title: 'Leadership', icon: 'fa-people-group' }
+];
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
@@ -231,6 +234,7 @@ const Navbar = () => {
     const isGroupActive = location.pathname.startsWith('/group-insurance') || location.pathname.startsWith('/group/');
     const isCommercialActive = location.pathname.startsWith('/commercial-insurance') || location.pathname.startsWith('/commercial/');
     const isIndividualActive = location.pathname.startsWith('/individual-insurance') || location.pathname.startsWith('/individual/');
+    const isAboutActive = location.pathname === '/about' || location.pathname === '/leadership';
 
     const isGroupSubmenuActive = location.pathname.startsWith('/group-insurance/');
     const isCommercialSubmenuActive = location.pathname.startsWith('/commercial-insurance/');
@@ -242,7 +246,9 @@ const Navbar = () => {
 
     useEffect(() => {
         if (isMenuOpen) {
-            if (isGroupSubmenuActive) {
+            if (location.pathname === '/about' || location.pathname === '/leadership') {
+                setActiveDropdown('about');
+            } else if (isGroupSubmenuActive) {
                 setActiveDropdown('group');
             } else if (isCommercialSubmenuActive) {
                 setActiveDropdown('commercial');
@@ -357,7 +363,33 @@ const Navbar = () => {
                             </button>
                         </li>
                         <li className="mobile-only"><NavLink to="/" className={({ isActive }) => isActive ? "page-active" : ""}>HOME</NavLink></li>
-                        <li><NavLink to="/about" className={({ isActive }) => isActive ? "page-active" : ""}>ABOUT US</NavLink></li>
+                        <li className={`dropdown ${activeDropdown === 'about' ? 'active' : ''} ${isAboutActive ? 'page-active' : ''}`}>
+                            <NavLink
+                                to="/about"
+                                className="dropdown-trigger"
+                                onClick={(e) => handleDropdownToggle(e, 'about')}
+                                aria-haspopup="true"
+                                aria-expanded={activeDropdown === 'about'}
+                                aria-label="About Us Menu"
+                            >
+                                ABOUT US <i className="fa fa-chevron-down caret" style={{ transform: activeDropdown === 'about' ? 'rotate(180deg)' : 'rotate(0deg)' }}></i>
+                            </NavLink>
+                            <ul className="submenu" role="menu">
+                                {aboutProducts.map((prod) => (
+                                    <li key={prod.path} role="none">
+                                        <NavLink
+                                            to={prod.path}
+                                            role="menuitem"
+                                            className={({ isActive }) => isActive ? "page-active" : ""}
+                                            onClick={closeMenu}
+                                        >
+                                            <span className="sub-icon"><i className={`fa-solid ${prod.icon}`}></i></span>
+                                            {prod.title}
+                                        </NavLink>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
 
                         <li className={`dropdown ${activeDropdown === 'group' ? 'active' : ''} ${isGroupActive ? 'page-active' : ''}`}>
                             <NavLink

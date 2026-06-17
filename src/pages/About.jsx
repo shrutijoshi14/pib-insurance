@@ -102,29 +102,6 @@ const About = () => {
                 </div>
             </section>
 
-            {/* DEVELOPER SECTION */}
-            <section className="developer-section">
-                <div className="developer-container">
-                    <MotionItem className="developer-img" variant="fadeRight">
-                        <img src={`${import.meta.env.BASE_URL}assets/Professional Photo rsized.jpeg`} alt="Shruti Joshi, IT Head – IT & Web Development at PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
-                    </MotionItem>
-
-                    <MotionSection className="developer-text" delay={0.2} variant="fadeLeft">
-                        <span className="tag">IT HEAD – IT & WEB DEVELOPMENT</span>
-                        <h2>Shruti Joshi</h2>
-                        <p>
-                            Shruti Joshi leads the Information Technology and Web Development functions at PIB Insurance Brokers Pvt. Ltd., driving the organization’s digital initiatives and technology strategy. With a strong focus on innovation, operational efficiency, and customer experience, she plays a key role in enhancing PIB’s digital ecosystem and technology infrastructure.
-                        </p>
-                        <p>
-                            She oversees website development and management, digital platform optimization, process automation, and technology implementation across the organization. Her expertise in web technologies and digital transformation supports the continuous improvement of internal operations while ensuring seamless and user-friendly digital experiences for clients and stakeholders.
-                        </p>
-                        <p>
-                            Committed to leveraging technology as a strategic business enabler, Shruti actively contributes to strengthening PIB Insurance’s digital presence and advancing the company’s vision of delivering innovative, accessible, and customer-focused insurance solutions.
-                        </p>
-                    </MotionSection>
-                </div>
-            </section>
-
             {/* PROMISE SECTION */}
             <section className="promise-section">
                 <div className="container">
@@ -163,9 +140,11 @@ const About = () => {
             <section className="mv-section">
                 <div className="mv-container">
                     <MotionItem className="mv-box mission" variant="fadeRight">
-                        <i className="fa-solid fa-bullseye"></i>
                         <div className="mv-content">
-                            <h3>MISSION</h3>
+                            <div className="mv-header-row">
+                                <i className="fa-solid fa-bullseye"></i>
+                                <h3>MISSION</h3>
+                            </div>
                             <p>
                                 Our mission is to stand firmly on the side of our clients—delivering insurance solutions that are
                                 optimized for cost, coverage, and long-term value. We are committed to guiding individuals and
@@ -176,9 +155,11 @@ const About = () => {
                     </MotionItem>
 
                     <MotionItem className="mv-box vision" variant="fadeLeft">
-                        <i className="fa-solid fa-lightbulb"></i>
                         <div className="mv-content">
-                            <h3>VISION</h3>
+                            <div className="mv-header-row">
+                                <i className="fa-solid fa-lightbulb"></i>
+                                <h3>VISION</h3>
+                            </div>
                             <p>
                                 Our vision is to be India’s most client-centric insurance broker, recognized for delivering
                                 customized solutions, fair pricing, and unwavering post-sales support. We aspire to redefine

@@ -73,7 +73,7 @@ const jobListings = {
         id: 'property-underwriter',
         category: 'underwriting',
         title: 'Property Insurance Underwriting',
-        subtitle: 'Job Title: Property Insurance Executive / Underwriter / Placement Specialist',
+        subtitle: 'Job Title: Property Insurance Underwriter / Placement Specialist',
         dept: 'Underwriting',
         location: 'Mumbai & PAN India (30+ Locations)',
         overview: 'We are looking for a Property Insurance professional responsible for handling property insurance business including Fire Insurance, Industrial All Risk (IAR), Burglary Insurance, Engineering Insurance, and other commercial property lines.',
@@ -158,7 +158,7 @@ const jobListings = {
         id: 'liability-underwriter',
         category: 'underwriting',
         title: 'Liability Insurance Underwriting',
-        subtitle: 'Job Title: Liability Insurance Executive / Underwriter / Placement Specialist',
+        subtitle: 'Job Title: Liability Insurance Underwriter / Placement Specialist',
         dept: 'Underwriting',
         location: 'Mumbai & PAN India (30+ Locations)',
         overview: 'We are looking for a Liability Insurance professional responsible for handling various liability insurance products including Public Liability Insurance, Product Liability, Professional Indemnity, Directors & Officers (D&O), Cyber Liability, Employers Liability, and Commercial General Liability policies.',
@@ -247,7 +247,7 @@ const jobListings = {
         id: 'marine-underwriter',
         category: 'underwriting',
         title: 'Marine Insurance Underwriting',
-        subtitle: 'Job Title: Marine Insurance Executive / Underwriter / Placement Specialist',
+        subtitle: 'Job Title: Marine Insurance Underwriter / Placement Specialist',
         dept: 'Underwriting',
         location: 'Mumbai & PAN India (30+ Locations)',
         overview: 'We are looking for a Marine Insurance professional responsible for handling marine cargo and hull insurance business, underwriting support, client servicing, policy issuance, claims coordination, and placement activities with insurance companies.',
@@ -332,11 +332,11 @@ const jobListings = {
     'operations-executive': {
         id: 'operations-executive',
         category: 'operations',
-        title: 'Operations / Back Office Executive',
-        subtitle: 'Position: Operations Executive / Back Office Executive – Insurance Broking',
+        title: 'Operations / Back Office',
+        subtitle: 'Position: Operations / Back Office – Insurance Broking',
         dept: 'Operations & Client Servicing',
         location: 'Mumbai & PAN India (30+ Locations)',
-        overview: 'We are looking for a proactive, detail-oriented, and organized Operations / Back Office Executive to manage daily insurance broking operations, policy servicing, insurer coordination, documentation, and client support activities. The ideal candidate should possess good knowledge of insurance processes, strong communication skills, and the ability to handle multiple operational tasks efficiently while maintaining accuracy and timelines.',
+        overview: 'We are looking for a proactive, detail-oriented, and organized Operations / Back Office Professional to manage daily insurance broking operations, policy servicing, insurer coordination, documentation, and client support activities. The ideal candidate should possess good knowledge of insurance processes, strong communication skills, and the ability to handle multiple operational tasks efficiently while maintaining accuracy and timelines.',
         sections: [
             {
                 title: 'Key Responsibilities',
@@ -430,7 +430,7 @@ const jobListings = {
     'eb-underwriter': {
         id: 'eb-underwriter',
         category: 'underwriting',
-        title: 'Underwriter / Placement Executive – GMC / GTL / GPA',
+        title: 'Underwriter / Placement – GMC / GTL / GPA',
         subtitle: 'Department: Employee Benefits Insurance | Experience: 2–8 Years',
         dept: 'Employee Benefits Insurance',
         location: 'Mumbai & PAN India',
@@ -490,7 +490,7 @@ const jobListings = {
     'fleet-underwriter': {
         id: 'fleet-underwriter',
         category: 'underwriting',
-        title: 'Underwriter / Placement Executive (Fleet & Commercial Insurance)',
+        title: 'Underwriter / Placement (Fleet & Commercial Motor Insurance)',
         subtitle: 'Department: Motor & Commercial Insurance | Experience: 2–8 Years',
         dept: 'Motor & Commercial Insurance',
         location: 'Mumbai & PAN India',
@@ -794,25 +794,25 @@ const Careers = () => {
                     {/* CATEGORY FILTER TABS */}
                     <div className="category-filter-tabs text-center mb-5">
                         <button
-                            className={`filter-tab ${activeCategory === 'all' ? 'active' : ''}`}
+                            className={`filter-tab tab-all ${activeCategory === 'all' ? 'active' : ''}`}
                             onClick={() => setActiveCategory('all')}
                         >
                             <i className="fa-solid fa-layer-group"></i> All Positions
                         </button>
                         <button
-                            className={`filter-tab ${activeCategory === 'sales' ? 'active' : ''}`}
+                            className={`filter-tab tab-sales ${activeCategory === 'sales' ? 'active' : ''}`}
                             onClick={() => setActiveCategory('sales')}
                         >
                             <i className="fa-solid fa-chart-line"></i> Corporate Sales
                         </button>
                         <button
-                            className={`filter-tab ${activeCategory === 'underwriting' ? 'active' : ''}`}
+                            className={`filter-tab tab-underwriting ${activeCategory === 'underwriting' ? 'active' : ''}`}
                             onClick={() => setActiveCategory('underwriting')}
                         >
                             <i className="fa-solid fa-file-shield"></i> Underwriting & Technical
                         </button>
                         <button
-                            className={`filter-tab ${activeCategory === 'operations' ? 'active' : ''}`}
+                            className={`filter-tab tab-operations ${activeCategory === 'operations' ? 'active' : ''}`}
                             onClick={() => setActiveCategory('operations')}
                         >
                             <i className="fa-solid fa-briefcase"></i> Operations
@@ -823,9 +823,9 @@ const Careers = () => {
                         {Object.values(jobListings)
                             .filter(job => activeCategory === 'all' || job.category === activeCategory)
                             .map((job) => (
-                                <MotionItem className="position-card" variant="fadeUp" key={job.id}>
+                                <MotionItem className={`position-card card-${job.category}`} variant="fadeUp" key={job.id}>
                                     <div className="job-info">
-                                        <span className="dept">{job.dept}</span>
+                                        <span className={`dept dept-${job.category}`}>{job.dept}</span>
                                         <h3>{job.title}</h3>
                                         <span className="loc">
                                             <i className="fa-solid fa-location-dot"></i> {job.location}
@@ -855,7 +855,7 @@ const Careers = () => {
                             onClick={() => toggleJobModal(null)}
                         >
                             <motion.div
-                                className="job-modal-container"
+                                className={`job-modal-container modal-card-${job.category}`}
                                 initial={{ y: "100%", opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }}
                                 exit={{ y: "100%", opacity: 0 }}
