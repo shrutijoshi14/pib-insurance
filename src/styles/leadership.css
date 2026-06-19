@@ -243,6 +243,7 @@
     box-shadow: 0 10px 30px rgba(11, 44, 61, 0.05);
     border: 1px solid rgba(27, 117, 187, 0.08);
     text-align: left;
+    flex-shrink: 0;
 }
 
 .leader-profile-image {
@@ -521,5 +522,202 @@
 
     .leader-card-info h3 {
         font-size: 19px;
+    }
+}
+
+/* Custom Styles for Professional Association Layout */
+.association-layout-view {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.association-intro-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(11, 44, 61, 0.04);
+    border: 1px solid rgba(27, 117, 187, 0.06);
+    text-align: left;
+}
+
+.association-lead-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--blue-dark, #0a2e6e);
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+.association-sub-text {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--text-dark, #555);
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 0;
+}
+
+.association-partners-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.association-profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.association-profile-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(11, 44, 61, 0.04);
+    border: 1px solid rgba(27, 117, 187, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.association-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(10, 46, 110, 0.08);
+}
+
+.association-profile-img {
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    overflow: hidden;
+    background: #f8faff;
+}
+
+.association-profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.6s ease;
+}
+
+.association-profile-card:hover .association-profile-img img {
+    transform: scale(1.04);
+}
+
+.association-profile-info {
+    padding: 30px 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.association-profile-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--blue-dark, #0a2e6e);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.association-profile-credentials {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue-main, #1b75bb);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.association-profile-desg {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-dark, #333);
+    margin-bottom: 12px;
+}
+
+.association-profile-exp {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: var(--blue-main, #1b75bb);
+    background: rgba(27, 117, 187, 0.06);
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    font-weight: 600;
+}
+
+.association-profile-exp i {
+    font-size: 12px;
+}
+
+.association-profile-bio {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-dark, #555);
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.association-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.association-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.association-link-btn.primary {
+    background: var(--blue-main, #1b75bb);
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(27, 117, 187, 0.15);
+}
+
+.association-link-btn.primary:hover {
+    background: var(--blue-dark, #0a2e6e);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(10, 46, 110, 0.25);
+}
+
+.association-link-btn.secondary {
+    background: #ffffff;
+    color: var(--blue-main, #1b75bb) !important;
+    border-color: rgba(27, 117, 187, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.association-link-btn.secondary:hover {
+    background: var(--blue-main, #1b75bb);
+    color: #ffffff !important;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(27, 117, 187, 0.2);
+}
+
+@media (max-width: 768px) {
+    .association-profiles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }

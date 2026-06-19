@@ -54,6 +54,70 @@ const leadersData = [
         social: {
             email: "info@pibinsurance.in"
         }
+    },
+    {
+        slug: 'urvaksh-ghadiali',
+        name: 'Mr. Anil Thakker & Mr. Urvaksh Ghadiali',
+        designation: 'Professional Association - R B Davar Surveyors',
+        image: 'assets/Urvaksh.jpeg',
+        subTitle: 'R B Davar Insurance Surveyors & Loss Assessors LLP',
+        highlights: [
+            'Claims Advisory & Claims Management',
+            'Fire, Engineering & Marine Loss Assessments',
+            'Risk Inspections & Safety Audits',
+            'Asset & Insurance Valuation Services',
+            'Investigation & Root Cause Analysis',
+            'PAN-India Survey Support'
+        ],
+        bio: [
+            "PIB Insurance Brokers Pvt. Ltd. is pleased to explore a professional association with R B Davar Insurance Surveyors & Loss Assessors LLP, a reputed insurance surveying and loss assessment firm with over five decades of experience in the Indian insurance industry.",
+            "This collaboration reflects our shared commitment to delivering transparent, professional, and technically sound risk and claims solutions to clients across India."
+        ],
+        social: {
+            email: "info@pibinsurance.in"
+        },
+        associationDetails: {
+            title: "Professional Association with R B Davar Surveyors & Loss Assessors LLP",
+            description: "PIB Insurance Brokers Pvt. Ltd. is pleased to explore a professional association with R B Davar Insurance Surveyors & Loss Assessors LLP, a reputed insurance surveying and loss assessment firm with over five decades of experience in the Indian insurance industry.",
+            partners: [
+                {
+                    name: "Mr. Anil Thakker",
+                    credentials: "F.I.I.S.A., A.S.M.E., A.I.I.I.",
+                    designation: "Principal Surveyor & Partner",
+                    experience: "Over 49 years of experience",
+                    image: "assets/Thakkar.jpeg",
+                    expandedBio: [
+                        "Mr. Anil Thakker is a highly distinguished and veteran surveyor in the Indian insurance industry, serving as a Partner and Principal Surveyor at R B Davar Insurance Surveyors & Loss Assessors LLP. With an illustrious career spanning over 49 years, he holds prestigious professional credentials including F.I.I.S.A., A.S.M.E., and A.I.I.I., reflecting his deep expertise and commitment to professional excellence.",
+                        "Throughout his five decades of practice, Mr. Thakker has specialized in Marine, Fire, Engineering, Risk Inspection, Valuation, and the management of large and complex claims. He has successfully guided major corporations, insurers, and clients through complex claim settlement processes, technical disputes, and root-cause analyses across India.",
+                        "As a key partner in R B Davar Insurance Surveyors & Loss Assessors LLP, Mr. Thakker continues to provide strategic leadership and technical mentorship. His association with PIB Insurance Brokers brings invaluable technical depth and risk inspection expertise, enhancing the claims advisory and risk management services available to clients."
+                    ]
+                },
+                {
+                    name: "Mr. Urvaksh Ghadiali",
+                    credentials: "B.E. Mechanical, Chartered Engineer, IRDAI Fellow Surveyor",
+                    designation: "Partner",
+                    experience: "Over 20 years of experience",
+                    image: "assets/Urvaksh.jpeg",
+                    expandedBio: [
+                        "Mr. Urvaksh Ghadiali is a dynamic engineering and insurance surveying professional, serving as a Partner at R B Davar Insurance Surveyors & Loss Assessors LLP with over 20 years of rich experience. He is a qualified Mechanical Engineer (B.E. Mechanical), a Chartered Engineer, and a Fellow of the Insurance Institute of India (IRDAI Fellow Surveyor), representing the highest standards of technical qualification in the field.",
+                        "Mr. Ghadiali has extensive expertise across Fire, Engineering, and Marine Surveys, as well as Asset Valuation, Risk Engineering, Project Risk Assessments, and the handling of large industrial claims. His strong engineering background allows him to conduct detailed technical audits, safety inspections, and forensic analysis of root causes for major industrial incidents.",
+                        "At the professional association between PIB Insurance Brokers and R B Davar Surveyors, Mr. Ghadiali plays a vital role in executing risk assessments and technical support services. His commitment to transparent, professional, and technically sound solutions ensures that clients receive robust support in risk engineering and claims advisory services across India."
+                    ]
+                }
+            ],
+            services: [
+                "Claims Advisory & Claims Management",
+                "Fire, Engineering & Marine Loss Assessments",
+                "Risk Inspections & Safety Audits",
+                "Asset & Insurance Valuation Services",
+                "Investigation & Root Cause Analysis",
+                "PAN-India Survey and Technical Support Services"
+            ],
+            websites: {
+                pib: "http://www.pibinsurance.in",
+                rbdavar: "http://www.rbdavar.com"
+            }
+        }
     }
 ];
 
@@ -89,11 +153,16 @@ const Leadership = () => {
             );
         }
 
+        const isAssociation = !!leader.associationDetails;
+        const pageTitle = isAssociation ? 'Mr. Urvaksh Ghadiali' : leader.name;
+        const pageSubtitle = isAssociation ? 'Partner, R B Davar Surveyors' : leader.subTitle;
+        const pageDesignation = isAssociation ? 'Partner' : leader.designation;
+
         return (
             <>
                 <SEO
-                    title={`${leader.name} - ${leader.designation} | PIB Insurance`}
-                    description={`Read the profile of ${leader.name}, ${leader.designation} at PIB Insurance Brokers.`}
+                    title={`${pageTitle} - ${pageDesignation} | PIB Insurance`}
+                    description={`Read the profile of ${pageTitle}, ${pageDesignation} at PIB Insurance Brokers.`}
                     canonical={`https://pibinsurance.in/leadership/${leader.slug}`}
                 />
 
@@ -102,9 +171,9 @@ const Leadership = () => {
                     <div className="industries-hero-container">
                         <div className="industries-hero-content">
                             <div className="hero-header-row">
-                                <h1>{leader.name}</h1>
+                                <h1>{pageTitle}</h1>
                             </div>
-                            <div className="breadcrumb-custom">HOME / LEADERSHIP / {leader.name.toUpperCase()}</div>
+                            <div className="breadcrumb-custom">HOME / LEADERSHIP / {pageTitle.toUpperCase()}</div>
                         </div>
                     </div>
                 </section>
@@ -118,58 +187,143 @@ const Leadership = () => {
                                 <i className="fa-solid fa-arrow-left"></i> Back to Leadership
                             </Link>
                             
-                            <div className="leader-profile-card">
-                                <div className="leader-profile-image">
-                                    {leader.image ? (
-                                        <img src={`${import.meta.env.BASE_URL}${leader.image}`} alt={leader.name} width="350" height="400" loading="lazy" decoding="async" className={leader.slug === 'desh-dipak' ? 'crop-top-border' : ''} />
-                                    ) : (
-                                        <PlaceholderAvatar />
-                                    )}
-                                </div>
-                                <div className="leader-profile-info">
-                                    <span className="leader-profile-tag">{leader.designation}</span>
-                                    <h2>{leader.name}</h2>
-                                    {leader.subTitle && <p className="leader-profile-subtitle">{leader.subTitle}</p>}
-                                    
-                                    <div className="leader-profile-social">
-                                        {leader.social.linkedin && (
-                                            <a href={leader.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-btn linkedin-btn">
-                                                <i className="fab fa-linkedin"></i> Connect on LinkedIn
-                                            </a>
-                                        )}
-                                        {leader.social.email && (
-                                            <a href={`mailto:${leader.social.email}`} className="social-btn email-btn">
-                                                <i className="fa-solid fa-envelope"></i> Contact Office
-                                            </a>
+                            {isAssociation ? (
+                                <>
+                                    {leader.associationDetails.partners.map((partner, index) => (
+                                        <div className="leader-profile-card association-sidebar-card" key={index} style={{ marginBottom: index === 0 ? '20px' : '0px' }}>
+                                            <div className="leader-profile-image">
+                                                <img src={`${import.meta.env.BASE_URL}${partner.image}`} alt={partner.name} width="350" height="400" loading="lazy" decoding="async" />
+                                            </div>
+                                            <div className="leader-profile-info">
+                                                <span className="leader-profile-tag">{partner.designation}</span>
+                                                <h2>{partner.name}</h2>
+                                                <p className="leader-profile-subtitle">{partner.credentials}</p>
+                                                
+                                                <div className="leader-profile-social">
+                                                    <a href={`mailto:info@pibinsurance.in`} className="social-btn email-btn">
+                                                        <i className="fa-solid fa-envelope"></i> Contact Office
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </>
+                            ) : (
+                                <div className="leader-profile-card">
+                                    <div className="leader-profile-image">
+                                        {leader.image ? (
+                                            <img src={`${import.meta.env.BASE_URL}${leader.image}`} alt={pageTitle} width="350" height="400" loading="lazy" decoding="async" className={leader.slug === 'desh-dipak' ? 'crop-top-border' : ''} />
+                                        ) : (
+                                            <PlaceholderAvatar />
                                         )}
                                     </div>
+                                    <div className="leader-profile-info">
+                                        <span className="leader-profile-tag">{pageDesignation}</span>
+                                        <h2>{pageTitle}</h2>
+                                        {pageSubtitle && <p className="leader-profile-subtitle">{pageSubtitle}</p>}
+                                        
+                                        <div className="leader-profile-social">
+                                            {leader.social.linkedin && (
+                                                <a href={leader.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-btn linkedin-btn">
+                                                    <i className="fab fa-linkedin"></i> Connect on LinkedIn
+                                                </a>
+                                            )}
+                                            {leader.social.email && (
+                                                <a href={`mailto:${leader.social.email}`} className="social-btn email-btn">
+                                                    <i className="fa-solid fa-envelope"></i> Contact Office
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </MotionItem>
 
                         {/* RIGHT COLUMN: Bio and Details */}
-                        <MotionSection className="leader-bio-details" delay={0.2} variant="fadeLeft">
-                            <div className="bio-section-card">
-                                <h3 className="section-title">Biography</h3>
-                                <div className="leader-bio">
-                                    {leader.bio.map((paragraph, index) => (
-                                        <p key={index}>{paragraph}</p>
-                                    ))}
+                        {!isAssociation ? (
+                            <MotionSection className="leader-bio-details" delay={0.2} variant="fadeLeft">
+                                <div className="bio-section-card">
+                                    <h3 className="section-title">Biography</h3>
+                                    <div className="leader-bio">
+                                        {leader.bio.map((paragraph, index) => (
+                                            <p key={index}>{paragraph}</p>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div className="bio-section-card highlights-card">
-                                <h3 className="section-title">Key Areas of Expertise</h3>
-                                <div className="leader-highlights-grid">
-                                    {leader.highlights.map(hl => (
-                                        <div key={hl} className="expertise-item">
-                                            <i className="fa-solid fa-circle-check"></i>
-                                            <span>{hl}</span>
-                                        </div>
-                                    ))}
+                                <div className="bio-section-card highlights-card">
+                                    <h3 className="section-title">Key Areas of Expertise</h3>
+                                    <div className="leader-highlights-grid">
+                                        {leader.highlights.map(hl => (
+                                            <div key={hl} className="expertise-item">
+                                                <i className="fa-solid fa-circle-check"></i>
+                                                <span>{hl}</span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        </MotionSection>
+                            </MotionSection>
+                        ) : (
+                            /* CUSTOM ASSOCIATION LAYOUT FOR THE RIGHT COLUMN */
+                            <MotionSection className="leader-bio-details" delay={0.2} variant="fadeLeft">
+                                <div className="bio-section-card">
+                                    <h3 className="section-title">Professional Association</h3>
+                                    <p className="association-lead-text">
+                                        PIB Insurance Brokers Pvt. Ltd. is pleased to explore a professional association with 
+                                        <strong> R B Davar Insurance Surveyors & Loss Assessors LLP</strong>, a reputed insurance 
+                                        surveying and loss assessment firm with over five decades of experience in the Indian 
+                                        insurance industry.
+                                    </p>
+                                    <p className="association-sub-text">
+                                        This collaboration reflects our shared commitment to delivering transparent, professional, 
+                                        and technically sound risk and claims solutions to clients across India.
+                                    </p>
+                                </div>
+
+                                <div className="bio-section-card">
+                                    <h3 className="section-title">Biography – Mr. Anil Thakker</h3>
+                                    <div className="leader-bio">
+                                        {leader.associationDetails.partners[0].expandedBio.map((paragraph, index) => (
+                                            <p key={index}>{paragraph}</p>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="bio-section-card">
+                                    <h3 className="section-title">Biography – Mr. Urvaksh Ghadiali</h3>
+                                    <div className="leader-bio">
+                                        {leader.associationDetails.partners[1].expandedBio.map((paragraph, index) => (
+                                            <p key={index}>{paragraph}</p>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="bio-section-card highlights-card">
+                                    <h3 className="section-title">Joint Scope of Services & Support</h3>
+                                    <div className="leader-highlights-grid">
+                                        {leader.associationDetails.services.map((service, index) => (
+                                            <div key={index} className="expertise-item">
+                                                <i className="fa-solid fa-circle-check"></i>
+                                                <span>{service}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="bio-section-card association-websites-card">
+                                    <h3 className="section-title">Learn More & Connect</h3>
+                                    <p>To find out more about our organizations and services, visit our respective websites:</p>
+                                    <div className="association-links">
+                                        <a href={leader.associationDetails.websites.pib} target="_blank" rel="noopener noreferrer" className="association-link-btn primary">
+                                            <i className="fa-solid fa-globe"></i> PIB Insurance
+                                        </a>
+                                        <a href={leader.associationDetails.websites.rbdavar} target="_blank" rel="noopener noreferrer" className="association-link-btn secondary">
+                                            <i className="fa-solid fa-globe"></i> R B Davar Surveyors
+                                        </a>
+                                    </div>
+                                </div>
+                            </MotionSection>
+                        )}
                     </div>
                 </section>
             </>
