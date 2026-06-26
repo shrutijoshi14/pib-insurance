@@ -8,6 +8,7 @@ import {
 import SEO from "../components/SEO";
 import bridgeVideo from "../assets/Bridge.mp4";
 import heroBg from "../assets/hero-video-poster.jpg";
+import Partners from "../components/home/Partners";
 
 const StatCounter = ({ end, duration = 2000, suffix = "" }) => {
     const [count, setCount] = useState(0);
@@ -44,70 +45,6 @@ const StatCounter = ({ end, duration = 2000, suffix = "" }) => {
     return <span ref={countRef}>{count}{suffix}</span>;
 };
 
-const partnerInsurers = [
-    // --- 25 LIFE INSURERS ---
-    { name: "ACKO LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/31.png" },
-    { name: "ADITYA BIRLA SUN LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/adityabirlasunlifeinsurance.com", domain: "adityabirlasunlifeinsurance.com" },
-    { name: "AGEAS FEDERAL LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/29.png" },
-    { name: "AVIVA LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/avivaindia.com", domain: "avivaindia.com" },
-    { name: "AXIS MAX LIFE INSURANCE LIMITED", logo: "images/partners/25.png" },
-    { name: "BAJAJ LIFE INSURANCE LIMITED", logo: "images/partners/7.png" },
-    { name: "BANDHAN LIFE INSURANCE LIMITED", logo: "https://logos.hunter.io/bandhanlife.com", domain: "bandhanlife.com" },
-    { name: "BHARTI AXA LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/bhartiaxa.com", domain: "bhartiaxa.com" },
-    { name: "CANARA HSBC LIFE INSURANCE COMPANY LIMITED", logo: "https://www.canarahsbclife.com/content/dam/choice/header/images/logo.png", domain: "canarahsbclife.com" },
-    { name: "CREDITACCESS LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/creditaccesslife.com", domain: "creditaccesslife.com" },
-    { name: "EDELWEISS LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/edelweisstokio.in", domain: "edelweisstokio.in" },
-    { name: "GENERALI CENTRAL LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/futuregenerali.in", domain: "futuregenerali.in" },
-    { name: "GODIGIT LIFE INSURANCE LIMITED", logo: "images/partners/30.png" },
-    { name: "HDFC LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/34.png" },
-    { name: "ICICI PRUDENTIAL LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/35.png" },
-    { name: "INDIAFIRST LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/indiafirstlife.com", domain: "indiafirstlife.com" },
-    { name: "KOTAK MAHINDRA LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/17.png" },
-    { name: "PNB METLIFE LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/19.png" },
-    { name: "PRAMERICA LIFE INSURANCE LIMITED", logo: "https://logos.hunter.io/pramericalife.in", domain: "pramericalife.in" },
-    { name: "RELIANCE NIPPON LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/9.png" },
-    { name: "SBI LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/18.png" },
-    { name: "SHRIRAM LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/24.png" },
-    { name: "STAR UNION DAI-ICHI LIFE INSURANCE COMPANY LIMITED", logo: "https://logos.hunter.io/sudlife.in", domain: "sudlife.in" },
-    { name: "TATA AIA LIFE INSURANCE COMPANY LIMITED", logo: "images/partners/37.png" },
-    { name: "LIFE INSURANCE CORPORATION OF INDIA", logo: "images/partners/12.png" },
-
-    // --- 34 GENERAL INSURERS ---
-    { name: "The New India Assurance Co Ltd", logo: "images/partners/1.png" },
-    { name: "ICICI Lombard General Insurance Co Ltd", logo: "images/partners/2.png" },
-    { name: "Bajaj Allianz General Insurance Limited", logo: "images/partners/3.png" },
-    { name: "The Oriental Insurance Co Ltd", logo: "images/partners/4.png" },
-    { name: "United India Insurance Co Ltd", logo: "images/partners/5.png" },
-    { name: "Tata AIG General Insurance Co Ltd", logo: "images/partners/6.png" },
-    { name: "National Insurance Co Ltd", logo: "images/partners/15.png" },
-    { name: "Star Health & Allied Insurance Co Ltd", logo: "images/partners/14.png" },
-    { name: "HDFC Ergo General Insurance Co Ltd", logo: "images/partners/13.png" },
-    { name: "SBI General Insurance Co Ltd", logo: "images/partners/22.png" },
-    { name: "Reliance General Insurance Co Ltd", logo: "images/partners/9.png" },
-    { name: "Agriculture Insurance Co of India Ltd", logo: "https://logos.hunter.io/aicofindia.com", domain: "aicofindia.com" },
-    { name: "Go Digit General Insurance Ltd", logo: "images/partners/30.png" },
-    { name: "IFFCO-Tokio General Insurance Co Ltd", logo: "images/partners/27.png" },
-    { name: "Care Health Insurance Ltd", logo: "images/partners/26.png" },
-    { name: "Cholamandalam MS General Insurance Co Ltd", logo: "https://logos.hunter.io/cholainsurance.com", domain: "cholainsurance.com" },
-    { name: "Niva bupa health insurance company limited", logo: "images/partners/28.png" },
-    { name: "Universal Sompo General Insurance Co Ltd", logo: "https://logos.hunter.io/universalsompo.com", domain: "universalsompo.com" },
-    { name: "Aditya Birla Health Insurance Co Ltd", logo: "https://logos.hunter.io/adityabirlahealth.com", domain: "adityabirlahealth.com" },
-    { name: "Generali Central Insurance Company Limited", logo: "https://logos.hunter.io/futuregenerali.in", domain: "futuregenerali.in" },
-    { name: "Royal Sundaram General Insurance Co Ltd", logo: "https://logos.hunter.io/royalsundaram.in", domain: "royalsundaram.in" },
-    { name: "Shriram General Insurance Co Ltd", logo: "images/partners/24.png" },
-    { name: "Magma General Insurance Limited", logo: "images/partners/23.png" },
-    { name: "Liberty General Insurance Co. Ltd", logo: "https://logos.hunter.io/libertyinsurance.in", domain: "libertyinsurance.in" },
-    { name: "Acko General Insurance Ltd", logo: "images/partners/31.png" },
-    { name: "Zurich Kotak Mahindra General Insurance Co", logo: "images/partners/21.png" },
-    { name: "ManipalCigna Health Insurance Co Ltd", logo: "images/partners/16.png" },
-    { name: "ECGC Ltd", logo: "https://logos.hunter.io/ecgc.in", domain: "ecgc.in" },
-    { name: "Zuno General Insurance Co Ltd", logo: "https://logos.hunter.io/hizuno.com", domain: "hizuno.com" },
-    { name: "Kshema General insurance", logo: "https://logos.hunter.io/kshema.co", domain: "kshema.co" },
-    { name: "Raheja QBE General Insurance Co Ltd", logo: "https://logos.hunter.io/rahejaqbe.com", domain: "rahejaqbe.com" },
-    { name: "Navi General Insurance Co. Ltd", logo: "https://logos.hunter.io/navi.com", domain: "navi.com" },
-    { name: "Galaxy Health Insurance Company Ltd", logo: "https://www.galaxyhealth.com/_astro/LogoNW1.X876WOf3_Z1B8TGB.webp", domain: "galaxyhealth.com" },
-    { name: "Narayana Health Insurance Ltd", logo: "https://logos.hunter.io/narayanahealth.org", domain: "narayanahealth.org" }
-];
 
 const Home = () => {
     const [activeTab, setActiveTab] = useState("commercial");
@@ -976,40 +913,7 @@ const Home = () => {
             </section>
 
             {/* PARTNERS */}
-            <section className="partners-section py-5">
-                <div className="container text-center">
-                    <MotionSection>
-                        <h2 className="mb-2">Our Trusted Partners</h2>
-                        <p className="section-subtext mb-5">
-                            Working with leading insurers to provide you the best coverage
-                        </p>
-                    </MotionSection>
-                    <MotionItem className="partners-scroll-wrapper" variant="zoomIn">
-                        <div className="partners-scroll-track">
-                            {[...partnerInsurers, ...partnerInsurers].map((insurer, idx) => (
-                                <div key={idx} className="partner-logo">
-                                    <img
-                                        src={insurer.logo.startsWith('http') ? insurer.logo : `${import.meta.env.BASE_URL}${insurer.logo}`}
-                                        alt={`${insurer.name} Logo`}
-                                        width="150"
-                                        height="80"
-                                        loading="eager"
-                                        decoding="async"
-                                        onError={(e) => {
-                                            if (insurer.domain && !e.target.dataset.fallbackTried) {
-                                                e.target.dataset.fallbackTried = 'true';
-                                                e.target.src = `https://www.google.com/s2/favicons?sz=128&domain=${insurer.domain}`;
-                                            } else {
-                                                e.target.style.display = 'none';
-                                            }
-                                        }}
-                                    />
-                                </div>
-                            ))}
-                        </div>
-                    </MotionItem>
-                </div>
-            </section>
+            <Partners />
         </>
     );
 };

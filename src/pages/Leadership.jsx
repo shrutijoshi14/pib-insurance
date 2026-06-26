@@ -161,8 +161,12 @@ const Leadership = () => {
         return (
             <>
                 <SEO
-                    title={`${pageTitle} - ${pageDesignation} | PIB Insurance`}
-                    description={`Read the profile of ${pageTitle}, ${pageDesignation} at PIB Insurance Brokers.`}
+                    title={isAssociation 
+                        ? 'Mr. Urvaksh Ghadiali & Mr. Anil Thakker - R B Davar Surveyors Association | PIB Insurance' 
+                        : `${leader.name} - ${leader.designation} | PIB Insurance`}
+                    description={isAssociation 
+                        ? 'Profile of Mr. Urvaksh Ghadiali and Mr. Anil Thakker of R B Davar Insurance Surveyors & Loss Assessors LLP in association with PIB Insurance Brokers.'
+                        : `Read the profile of ${leader.name}, ${leader.designation} at PIB Insurance Brokers.`}
                     canonical={`https://pibinsurance.in/leadership/${leader.slug}`}
                 />
 
@@ -192,7 +196,7 @@ const Leadership = () => {
                                     {leader.associationDetails.partners.map((partner, index) => (
                                         <div className="leader-profile-card association-sidebar-card" key={index} style={{ marginBottom: index === 0 ? '20px' : '0px' }}>
                                             <div className="leader-profile-image">
-                                                <img src={`${import.meta.env.BASE_URL}${partner.image}`} alt={partner.name} width="350" height="400" loading="lazy" decoding="async" />
+                                                <img src={`${import.meta.env.BASE_URL}${partner.image}`} alt={`${partner.name} - ${partner.designation} (${partner.credentials})`} width="350" height="400" loading="lazy" decoding="async" />
                                             </div>
                                             <div className="leader-profile-info">
                                                 <span className="leader-profile-tag">{partner.designation}</span>
@@ -212,7 +216,7 @@ const Leadership = () => {
                                 <div className="leader-profile-card">
                                     <div className="leader-profile-image">
                                         {leader.image ? (
-                                            <img src={`${import.meta.env.BASE_URL}${leader.image}`} alt={pageTitle} width="350" height="400" loading="lazy" decoding="async" className={leader.slug === 'desh-dipak' ? 'crop-top-border' : ''} />
+                                            <img src={`${import.meta.env.BASE_URL}${leader.image}`} alt={`${leader.name} - ${leader.designation} | PIB Insurance Brokers`} width="350" height="400" loading="lazy" decoding="async" className={leader.slug === 'desh-dipak' ? 'crop-top-border' : ''} />
                                         ) : (
                                             <PlaceholderAvatar />
                                         )}
@@ -334,8 +338,8 @@ const Leadership = () => {
     return (
         <>
             <SEO
-                title="Our Leadership | PIB Insurance - Guided by Expertise"
-                description="Meet the leadership team at PIB Insurance Brokers. Learn about our board, advisors, and digital leads driving trust and innovation."
+                title="Our Leadership & Advisors | PIB Insurance Brokers"
+                description="Meet the leadership team, senior insurance advisors, and professional associates at PIB Insurance Brokers. Learn about our digital leads and strategic survey association with R B Davar Surveyors."
                 canonical="https://pibinsurance.in/leadership"
             />
 
@@ -374,7 +378,17 @@ const Leadership = () => {
                                 <div className="leader-card">
                                     <div className="leader-card-image">
                                         {leader.image ? (
-                                            <img src={`${import.meta.env.BASE_URL}${leader.image}`} alt={leader.name} width="350" height="400" loading="lazy" decoding="async" className={leader.slug === 'desh-dipak' ? 'crop-top-border' : ''} />
+                                            <img 
+                                                src={`${import.meta.env.BASE_URL}${leader.image}`} 
+                                                alt={leader.slug === 'urvaksh-ghadiali' 
+                                                    ? 'Mr. Anil Thakker & Mr. Urvaksh Ghadiali - R B Davar Insurance Surveyors LLP Professional Association' 
+                                                    : `${leader.name} - ${leader.designation}`} 
+                                                width="350" 
+                                                height="400" 
+                                                loading="lazy" 
+                                                decoding="async" 
+                                                className={leader.slug === 'desh-dipak' ? 'crop-top-border' : ''} 
+                                            />
                                         ) : (
                                             <PlaceholderAvatar />
                                         )}
