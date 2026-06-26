@@ -628,8 +628,8 @@ const Home = () => {
                                         }}
                                     >
                                         {expandedInsights[1]
-                                            ? "Show Less \u2190"
-                                            : "Read More \u2192"}
+                                            ? "Show Less"
+                                            : "Read More"}
                                     </button>
                                 </div>
                             </div>
@@ -672,8 +672,8 @@ const Home = () => {
                                         }}
                                     >
                                         {expandedInsights[2]
-                                            ? "Show Less \u2190"
-                                            : "Read More \u2192"}
+                                            ? "Show Less"
+                                            : "Read More"}
                                     </button>
                                 </div>
                             </div>
@@ -718,8 +718,8 @@ const Home = () => {
                                         }}
                                     >
                                         {expandedInsights[3]
-                                            ? "Show Less \u2190"
-                                            : "Read More \u2192"}
+                                            ? "Show Less"
+                                            : "Read More"}
                                     </button>
                                 </div>
                             </div>
@@ -765,8 +765,8 @@ const Home = () => {
                                         }}
                                     >
                                         {expandedInsights[4]
-                                            ? "Show Less \u2190"
-                                            : "Read More \u2192"}
+                                            ? "Show Less"
+                                            : "Read More"}
                                     </button>
                                 </div>
                             </div>
@@ -835,10 +835,9 @@ const Home = () => {
                                         <small>Chartered Accountant</small>
                                     </div>
                                 </div>
-                                <i className="fa fa-quote-left quote-icon-main mb-3"></i>
                                 <div className="testimonial-content">
                                     <p className="quote-text">
-                                        "PIB Insurance has helped us with specialized solutions tailored to our practice. Their team understands the nuances of professional risk and has ensured we are well protected with the right coverage."
+                                        PIB Insurance has helped us with specialized solutions tailored to our practice. Their team understands the nuances of professional risk and has ensured we are well protected with the right coverage.
                                     </p>
                                 </div>
                                 <button
@@ -855,24 +854,23 @@ const Home = () => {
                             <div className={`testimonial-card ${expandedTestimonials[2] ? "expanded" : ""}`}>
                                 <div className="profile mb-3">
                                     <img
-                                        src="https://placehold.co/150x150?text=UT"
-                                        alt="Mr. Umesh Thakkar"
+                                        src="https://placehold.co/150x150?text=KV"
+                                        alt="Kareem K Vastani"
                                         className="profile-img"
                                     />
                                     <div className="profile-info">
-                                        <h6 className="mb-0">Mr. Umesh Thakkar</h6>
-                                        <small>Director, Nav Bharat Metallic Oxide Industries</small>
+                                        <h6 className="mb-0">Kareem K Vastani</h6>
+                                        <small>Bharat Bakeries | Eros Sweets | KK Enterprises & Bombay Bakers</small>
                                     </div>
                                 </div>
-                                <i className="fa fa-quote-left quote-icon-main mb-3"></i>
                                 <div className="testimonial-content">
                                     <p className="quote-text">
-                                        "We appreciate PIB Insurance's expertise in handling complex industrial and environmental risks. Their support across multiple coverage areas has been critical for our operations. Their proactive approach and strong technical expertise make them a highly reliable risk management partner."
+                                        We appreciate PIB Insurance's expertise in handling complex industrial and environmental risks. Their support across multiple coverage areas has been critical for our operations. Their proactive approach and strong technical expertise make them a highly reliable risk management partner.
                                     </p>
                                 </div>
                                 <button
                                     className="read-more-btn testimonial-toggle"
-                                    aria-label={expandedTestimonials[2] ? "Show less from Mr. Umesh Thakkar" : "Read more from Mr. Umesh Thakkar"}
+                                    aria-label={expandedTestimonials[2] ? "Show less from Kareem K Vastani" : "Read more from Kareem K Vastani"}
                                     onClick={() => toggleTestimonial(2)}
                                 >
                                     {expandedTestimonials[2] ? "Read Less" : "Read More"}
@@ -893,10 +891,9 @@ const Home = () => {
                                         <small>SVP, Welspun</small>
                                     </div>
                                 </div>
-                                <i className="fa fa-quote-left quote-icon-main mb-3"></i>
                                 <div className="testimonial-content">
                                     <p className="quote-text">
-                                        "PIB Insurance Brokers Private Limited has been providing insurance advisory and brokerage services to our organization for Group Medical, Group Personal Accident, and Group Term Life policies for several years. Over the years, they have consistently provided insurance services to me personally as well as to our organization. This association has been built on a long-standing professional relationship, continuity of service, and sustained engagement over time."
+                                        PIB Insurance Brokers Private Limited has been providing insurance advisory and brokerage services to our organization for Group Medical, Group Personal Accident, and Group Term Life policies for several years. Over the years, they have consistently provided insurance services to me personally as well as to our organization. This association has been built on a long-standing professional relationship, continuity of service, and sustained engagement over time.
                                     </p>
                                 </div>
                                 <button

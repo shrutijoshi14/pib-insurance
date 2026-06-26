@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Activity, Stethoscope, ShieldPlus, Briefcase, Car, Plane, Home, ShieldAlert, ArrowRight } from 'lucide-react';
+import { Activity, Stethoscope, ShieldPlus, Briefcase, Car, Plane, Home, ShieldAlert } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const categories = [
@@ -75,7 +75,7 @@ const Categories = () => {
                   </p>
 
                   <div className="inline-flex items-center gap-2 text-blue-nav font-black text-[11px] uppercase tracking-widest group-hover:gap-4 transition-all">
-                     Learn more <ArrowRight size={14} strokeWidth={3} />
+                     Learn more
                   </div>
                </Link>
              )

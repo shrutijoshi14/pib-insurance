@@ -168,7 +168,7 @@ const Insights = () => {
                                                     </div>
                                                     <h3>{item.title}</h3>
                                                     <p>{item.text}</p>
-                                                    <a href="#" className="read-more">Read More <i className="fa-solid fa-arrow-right"></i></a>
+                                                    <a href="#" className="read-more">Read More</a>
                                                 </div>
                                             </MotionItem>
                                         ))}

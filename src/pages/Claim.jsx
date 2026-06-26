@@ -533,7 +533,7 @@ const Claim = () => {
 
                                     <div className="col-12">
                                         <button type="submit" className="get-quote-btn" disabled={isSubmitting}>
-                                            {isSubmitting ? <><i className="fa fa-spinner fa-spin"></i> GENERATING QUOTE...</> : <>GET A QUOTE NOW <i className="fa fa-arrow-right ms-2"></i></>}
+                                            {isSubmitting ? <><i className="fa fa-spinner fa-spin"></i> GENERATING QUOTE...</> : <>GET A QUOTE NOW</>}
                                         </button>
                                     </div>
                                 </div>

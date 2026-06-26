@@ -1,4 +1,4 @@
-import { Phone, Mail, ArrowRight } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function CTAContact() {
@@ -55,7 +55,7 @@ export default function CTAContact() {
                 to="/contact"
                 className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#00384a] px-8 py-5 rounded-2xl transition-all font-bold text-sm tracking-widest uppercase"
               >
-                Request Callback <ArrowRight size={20} />
+                Request Callback
               </Link>
             </div>
           </div>

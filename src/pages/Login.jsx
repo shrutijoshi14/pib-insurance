@@ -358,7 +358,7 @@ const PosDashboard = ({ onLogout }) => {
                             <div className="pos-section-title">
                                 <span>Comparison & Quotes</span>
                                 <button className="pos-btn pos-btn-secondary" onClick={() => setQuotes(null)}>
-                                    <i className="fa-solid fa-arrow-left"></i> Re-Calculate
+                                    Re-Calculate
                                 </button>
                             </div>
 
@@ -377,7 +377,7 @@ const PosDashboard = ({ onLogout }) => {
                                             <p>incl. GST | Est. Comm: ₹{Math.round(q.prem * q.commRate)}</p>
                                         </div>
                                         <button className="pos-btn" onClick={() => handleSelectQuote(q)}>
-                                            Issue Policy <i className="fa-solid fa-chevron-right"></i>
+                                            Issue Policy
                                         </button>
                                     </div>
                                 </div>
@@ -390,7 +390,7 @@ const PosDashboard = ({ onLogout }) => {
                             <div className="pos-section-title">
                                 <span>Enter Customer & Issuance Details</span>
                                 <button className="pos-btn pos-btn-secondary" onClick={() => setSelectedQuote(null)}>
-                                    <i className="fa-solid fa-arrow-left"></i> Back to Quotes
+                                    Back to Quotes
                                 </button>
                             </div>
                             
@@ -595,7 +595,7 @@ const PosDashboard = ({ onLogout }) => {
                             <div className="pos-section-title" style={{width: '100%'}}>
                                 <span>POSP Compliance Certificate</span>
                                 <button className="pos-btn pos-btn-secondary" onClick={() => setShowCert(false)}>
-                                    <i className="fa-solid fa-arrow-left"></i> Back to Modules
+                                    Back to Modules
                                 </button>
                             </div>
 
@@ -773,7 +773,6 @@ const Login = () => {
                 <div className="portal-container">
                     <div className="portal-back-wrap" data-aos="fade-right">
                         <Link to="/" className="portal-back-btn" aria-label="Back to Homepage">
-                            <i className="fa fa-arrow-left"></i>
                             <span>Back to Home</span>
                         </Link>
                     </div>

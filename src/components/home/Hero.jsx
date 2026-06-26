@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
@@ -68,7 +68,7 @@ export default function Hero() {
               to="/quote"
               className="bg-[#3a9dc4] hover:bg-[#2d8ab3] text-white font-bold px-12 py-5 rounded-full flex items-center gap-3 transition-all text-sm uppercase tracking-widest shadow-2xl shadow-[#3a9dc4]/20 w-full sm:w-auto justify-center"
             >
-              Get Free Quote <ArrowRight size={20} />
+              Get Free Quote
             </Link>
             
             <Link

@@ -78,7 +78,7 @@ const Industries = () => {
                                         </div>
                                         <h4>{industry.title}</h4>
                                         <div className="card-overlay">
-                                            <span>View Details <i className="fa-solid fa-arrow-right"></i></span>
+                                            <span>View Details</span>
                                         </div>
                                     </div>
                                 </MotionItem>

@@ -188,7 +188,7 @@ const Leadership = () => {
                         {/* LEFT COLUMN: Profile Card */}
                         <MotionItem className="leader-profile-sidebar" delay={0.1} variant="fadeRight">
                             <Link to="/leadership" className="back-to-team">
-                                <i className="fa-solid fa-arrow-left"></i> Back to Leadership
+                                Back to Leadership
                             </Link>
                             
                             {isAssociation ? (

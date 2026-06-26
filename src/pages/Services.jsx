@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { HeartPulse, Car, Plane, Briefcase, Shield, ArrowRight, Home, Activity } from 'lucide-react';
+import { HeartPulse, Car, Plane, Briefcase, Shield, Home, Activity } from 'lucide-react';
 
 const serviceData = {
   individual: [
@@ -69,7 +69,7 @@ export default function ServicesPage() {
                   to={`/quote?service=${service.id}`}
                   className="w-full inline-flex items-center justify-center gap-2 bg-gray-50 text-primary px-6 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors border border-gray-100"
                 >
-                  Get Quote <ArrowRight size={18} />
+                  Get Quote
                 </Link>
               </div>
             )

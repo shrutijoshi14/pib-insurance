@@ -3643,7 +3643,7 @@ img {
 }
 
 /* Global Uiverse Liquid Hover Effect (Gaurav-WebDev Overhaul) */
-button:not(.btn-close):not(.job-modal-close),
+button:not(.btn-close):not(.job-modal-close):not(.read-more-btn),
 .btn,
 .btn-pib,
 .claim-btn,
@@ -3656,8 +3656,7 @@ button:not(.btn-close):not(.job-modal-close),
 .pos-btn-secondary,
 .pos-logout-btn,
 .portal-submit-btn,
-.subscribe-btn,
-.read-more-btn {
+.subscribe-btn {
   position: relative !important;
   overflow: hidden !important;
   z-index: 1 !important;
@@ -3665,7 +3664,7 @@ button:not(.btn-close):not(.job-modal-close),
 }
 
 /* Ensure direct text nodes and child elements stay on top of the liquid fill */
-button:not(.btn-close):not(.job-modal-close)>*,
+button:not(.btn-close):not(.job-modal-close):not(.read-more-btn)>*,
 .btn>*,
 .btn-pib>*,
 .claim-btn>*,
@@ -3678,14 +3677,13 @@ button:not(.btn-close):not(.job-modal-close)>*,
 .pos-btn-secondary>*,
 .pos-logout-btn>*,
 .portal-submit-btn>*,
-.subscribe-btn>*,
-.read-more-btn>* {
+.subscribe-btn>* {
   position: relative;
   z-index: 2;
 }
 
 /* Pseudo-element circle setup for each group */
-button:not(.btn-close):not(.job-modal-close)::after,
+button:not(.btn-close):not(.job-modal-close):not(.read-more-btn)::after,
 .btn::after,
 .btn-pib::after,
 .claim-btn::after,
@@ -3698,8 +3696,7 @@ button:not(.btn-close):not(.job-modal-close)::after,
 .pos-btn-secondary::after,
 .pos-logout-btn::after,
 .portal-submit-btn::after,
-.subscribe-btn::after,
-.read-more-btn::after {
+.subscribe-btn::after {
   content: "" !important;
   position: absolute !important;
   left: -15px !important;
@@ -3728,8 +3725,7 @@ button:not(.btn-close):not(.job-modal-close)::after,
 .btn.secondary::after,
 .apply-btn-outline::after,
 .claim-btn::after,
-.pos-btn-secondary::after,
-.read-more-btn::after {
+.pos-btn-secondary::after {
   background: linear-gradient(135deg, #00a3e0 0%, #247dc2 100%) !important;
 }
 
@@ -3752,7 +3748,7 @@ button:not(.btn-close):not(.job-modal-close)::after,
 }
 
 /* Triggering Hover Expand States */
-button:not(.btn-close):not(.job-modal-close):hover::after,
+button:not(.btn-close):not(.job-modal-close):not(.read-more-btn):hover::after,
 .btn:hover::after,
 .btn-pib:hover::after,
 .claim-btn:hover::after,
@@ -3762,7 +3758,6 @@ button:not(.btn-close):not(.job-modal-close):hover::after,
 .pos-logout-btn:hover::after,
 .portal-submit-btn:hover::after,
 .subscribe-btn:hover::after,
-.read-more-btn:hover::after,
 .tab:not(.active):hover::after,
 .filter-tab:not(.active):hover::after,
 .filter-btn:not(.active):hover::after,
@@ -3773,7 +3768,7 @@ button:not(.btn-close):not(.job-modal-close):hover::after,
 
 /* General hover lift and glow drop-shadow */
 .btn:hover,
-button:not(.btn-close):not(.job-modal-close):hover,
+button:not(.btn-close):not(.job-modal-close):not(.read-more-btn):hover,
 .btn-pib:hover,
 .claim-btn:hover,
 .apply-btn-outline:hover,
@@ -3786,7 +3781,6 @@ button:not(.btn-close):not(.job-modal-close):hover,
 .pos-logout-btn:hover,
 .portal-submit-btn:hover,
 .subscribe-btn:hover,
-.read-more-btn:hover,
 .hero-buttons a:hover {
   transform: translateY(-3px) scale(1.03) !important;
   box-shadow: 0 10px 25px rgba(36, 125, 194, 0.35) !important;
@@ -3796,8 +3790,7 @@ button:not(.btn-close):not(.job-modal-close):hover,
 .btn.secondary:hover,
 .apply-btn-outline:hover,
 .claim-btn:hover,
-.pos-btn-secondary:hover,
-.read-more-btn:hover {
+.pos-btn-secondary:hover {
   color: #fff !important;
   border-color: transparent !important;
 }
@@ -3820,7 +3813,7 @@ button:not(.btn-close):not(.job-modal-close):hover,
 }
 
 /* Match icon colors on hover */
-button:not(.btn-close):not(.job-modal-close):hover i,
+button:not(.btn-close):not(.job-modal-close):not(.read-more-btn):hover i,
 .btn:hover i,
 .btn-pib:hover i,
 .claim-btn:hover i,
@@ -3833,8 +3826,7 @@ button:not(.btn-close):not(.job-modal-close):hover i,
 .pos-btn-secondary:hover i,
 .pos-logout-btn:hover i,
 .portal-submit-btn:hover i,
-.subscribe-btn:hover i,
-.read-more-btn:hover i {
+.subscribe-btn:hover i {
   color: #fff !important;
 }
 
