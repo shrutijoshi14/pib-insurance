@@ -103,7 +103,6 @@ const partnersList = [
   { name: "HDFC ERGO", website: "hdfcergo.com", category: "general" },
   { name: "SBI General", website: "sbigeneral.in", category: "general" },
   { name: "Reliance General", website: "reliancegeneral.co.in", category: "general" },
-  { name: "Agriculture Insurance Company of India", website: "aicofindia.com", category: "general" },
   { name: "Go Digit General", website: "godigit.com", category: "general" },
   { name: "IFFCO Tokio", website: "iffcotokio.co.in", category: "general" },
   { name: "Care Health", website: "careinsurance.com", category: "general" },
@@ -179,125 +178,62 @@ const PartnerCard = ({ partner }) => {
     return (words[0][0] + words[1][0]).toUpperCase();
   };
 
+  const getFullSrc = (src) => {
+    if (!src) return "";
+    if (src.startsWith("/")) {
+      const base = import.meta.env.BASE_URL || "/";
+      return `${base.replace(/\/$/, "")}${src}`;
+    }
+    return src;
+  };
+
   const cleanUrl = website.startsWith("http") ? website : `https://www.${website}`;
 
   return (
-    <MotionItem variant="zoomIn" className="h-full">
-      <a
-        href={cleanUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="partner-card h-full"
-        title={`Visit ${name} website`}
-      >
-        <div className="partner-logo-wrapper">
-          {loadStage === 2 ? (
-            <div className="partner-fallback-badge">
-              {getInitials(name)}
-            </div>
-          ) : (
-            <img
-              src={imgSrc}
-              alt={`${name} Logo`}
-              className="partner-logo-img"
-              loading="lazy"
-              onError={handleError}
-            />
-          )}
+    <a
+      href={cleanUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="partner-logo-item"
+      title={`Visit ${name} website`}
+    >
+      {loadStage === 2 ? (
+        <div className="partner-logo-badge">
+          {getInitials(name)}
         </div>
-        <div className="partner-name">{name}</div>
-      </a>
-    </MotionItem>
+      ) : (
+        <img
+          src={getFullSrc(imgSrc)}
+          alt={`${name} Logo`}
+          className="partner-logo-image"
+          loading="lazy"
+          onError={handleError}
+        />
+      )}
+    </a>
   );
 };
 
 export default function Partners() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [activeTab, setActiveTab] = useState("all");
-
-  const filteredPartners = partnersList.filter((partner) => {
-    const matchesSearch =
-      partner.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      partner.website.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    if (activeTab === "all") return matchesSearch;
-    return partner.category === activeTab && matchesSearch;
-  });
-
-  const countByCategory = (category) => {
-    if (category === "all") return partnersList.length;
-    return partnersList.filter(p => p.category === category).length;
-  };
+  // Duplicate list to create a seamless infinite scroll effect
+  const duplicatedList = [...partnersList, ...partnersList];
 
   return (
-    <section className="partners-grid-section">
+    <section className="partners-carousel-section">
       <div className="container">
         <MotionSection className="partners-header">
           <h2 className="partners-title">Our Trusted Partners</h2>
           <p className="partners-subtitle">
-            Partnering with {partnersList.length} leading insurers to bring you the best coverage and value.
+            Partnering with leading insurers to bring you the best coverage and value.
           </p>
         </MotionSection>
+      </div>
 
-        {/* Search & Filters */}
-        <div className="partners-controls">
-          <div className="partners-search-box">
-            <i className="fa-solid fa-magnifying-glass partners-search-icon"></i>
-            <input
-              type="text"
-              placeholder="Search by insurance partner name or website..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="partners-search-input"
-            />
-            {searchTerm && (
-              <button
-                className="partners-search-clear"
-                onClick={() => setSearchTerm("")}
-                aria-label="Clear search query"
-              >
-                <i className="fa-solid fa-xmark"></i>
-              </button>
-            )}
-          </div>
-
-          <div className="partners-tabs">
-            <button
-              onClick={() => setActiveTab("all")}
-              className={`partners-tab-btn ${activeTab === "all" ? "active" : ""}`}
-            >
-              All Partners ({countByCategory("all")})
-            </button>
-            <button
-              onClick={() => setActiveTab("life")}
-              className={`partners-tab-btn ${activeTab === "life" ? "active" : ""}`}
-            >
-              Life Insurance ({countByCategory("life")})
-            </button>
-            <button
-              onClick={() => setActiveTab("general")}
-              className={`partners-tab-btn ${activeTab === "general" ? "active" : ""}`}
-            >
-              General & Health ({countByCategory("general")})
-            </button>
-          </div>
-        </div>
-
-        {/* Partners Grid */}
-        <div className="partners-grid-container">
-          {filteredPartners.length > 0 ? (
-            <MotionList className="partners-grid" stagger={0.03}>
-              {filteredPartners.map((partner, index) => (
-                <PartnerCard key={`${partner.name}-${index}`} partner={partner} />
-              ))}
-            </MotionList>
-          ) : (
-            <MotionSection className="partners-no-results">
-              <i className="fa-solid fa-magnifying-glass-chart"></i>
-              <h4>No Insurance Partners Found</h4>
-              <p>We couldn't find any partners matching "{searchTerm}". Try checking your spelling or searching for a different keyword.</p>
-            </MotionSection>
-          )}
+      <div className="partners-carousel-wrapper">
+        <div className="partners-carousel-track">
+          {duplicatedList.map((partner, index) => (
+            <PartnerCard key={`${partner.name}-${index}`} partner={partner} />
+          ))}
         </div>
       </div>
     </section>

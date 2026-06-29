@@ -335,7 +335,7 @@ const Navbar = () => {
                             <div className="contact-icon"><i className="fa fa-phone"></i></div>
                             <div className="contact-text">
                                 <span className="label">Talk to our experts</span>
-                                <span className="value">+91 9820419276</span>
+                                <span className="value">+91 9820006729</span>
                             </div>
                         </div>
                     </div>

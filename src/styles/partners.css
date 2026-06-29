@@ -2,16 +2,19 @@
    INSURANCE PARTNERS SECTION STYLING
    ========================================= */
 
-.partners-grid-section {
+.partners-carousel-section {
   padding: 5rem 0;
   background-color: var(--gray-light);
   border-top: 1px solid var(--gray-border);
   border-bottom: 1px solid var(--gray-border);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .partners-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .partners-title {
@@ -35,277 +38,154 @@
   margin: 0 auto;
 }
 
-/* Search and Filters Controls */
-.partners-controls {
-  max-width: 900px;
-  margin: 0 auto 3.5rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 0 1rem;
-}
-
-/* Search Bar */
-.partners-search-box {
+/* Infinite Horizontal Scroll Carousel */
+.partners-carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 1.5rem 0;
   position: relative;
-  max-width: 500px;
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
 }
 
-.partners-search-icon {
+/* Vignette/Fade Effects on Left and Right Edges */
+.partners-carousel-wrapper::before,
+.partners-carousel-wrapper::after {
+  content: "";
   position: absolute;
-  left: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
   pointer-events: none;
-  font-size: 1.1rem;
 }
 
-.partners-search-input {
-  width: 100%;
-  padding: 0.85rem 3rem 0.85rem 3rem;
-  font-size: 0.95rem;
-  font-family: inherit;
-  border: 1.5px solid var(--gray-border);
-  border-radius: 50px;
-  background-color: var(--white);
-  color: var(--text-dark);
-  box-shadow: 0 4px 12px rgba(11, 44, 61, 0.03);
-  transition: all 0.25s ease;
+.partners-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--gray-light) 0%, rgba(244, 247, 252, 0) 100%);
 }
 
-.partners-search-input:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(36, 125, 194, 0.15);
-  background-color: var(--white);
+.partners-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--gray-light) 0%, rgba(244, 247, 252, 0) 100%);
 }
 
-.partners-search-clear {
-  position: absolute;
-  right: 1.25rem;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  background: transparent;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 4px;
-  border-radius: 50%;
+@media (max-width: 576px) {
+  .partners-carousel-wrapper::before,
+  .partners-carousel-wrapper::after {
+    width: 60px;
+  }
+}
+
+.partners-carousel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: partners-scroll-left 90s linear infinite;
+}
+
+.partners-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes partners-scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Individual partner logo item */
+.partner-logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
-}
-
-.partners-search-clear:hover {
-  color: var(--accent);
-  background-color: rgba(36, 125, 194, 0.08);
-}
-
-/* Tabs */
-.partners-tabs {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.partners-tab-btn {
-  padding: 0.6rem 1.25rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border: 1.5px solid var(--gray-border);
-  border-radius: 30px;
-  background-color: var(--white);
-  color: var(--text-muted);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.partners-tab-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background-color: rgba(36, 125, 194, 0.02);
-}
-
-.partners-tab-btn.active {
-  background-color: var(--accent);
-  border-color: var(--accent);
-  color: var(--white);
-  box-shadow: 0 4px 12px rgba(36, 125, 194, 0.25);
-}
-
-/* Grid Layout */
-.partners-grid-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-
-@media (min-width: 576px) {
-  .partners-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .partners-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .partners-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-
-@media (min-width: 1200px) {
-  .partners-grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-/* Partner Card Styling */
-.partner-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   background-color: var(--white);
   border: 1.5px solid var(--gray-border);
   border-radius: 12px;
-  padding: 1.25rem;
-  height: 150px;
+  padding: 1rem 1.5rem;
+  height: 85px;
+  width: 180px;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: 0 4px 10px rgba(11, 44, 61, 0.02);
-  position: relative;
-  overflow: hidden;
+  flex-shrink: 0;
+  min-width: 0;
 }
 
-.partner-card:hover {
-  transform: translateY(-6px);
+.partner-logo-item:hover {
+  transform: translateY(-5px);
   border-color: var(--accent);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Grayscale to Color Transition */
-.partner-logo-wrapper {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 60px;
-  margin-bottom: 0.75rem;
-}
-
-.partner-logo-img {
+.partner-logo-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   filter: none;
-  opacity: 0.95;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 1;
+  transition: all 0.3s ease;
 }
 
-.partner-card:hover .partner-logo-img {
-  filter: none;
-  opacity: 1;
+.partner-logo-item:hover .partner-logo-image {
   transform: scale(1.04);
 }
 
 /* Fallback Initials Badge */
-.partner-fallback-badge {
+.partner-logo-badge {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--blue-main) 0%, var(--blue-mid) 100%);
   color: var(--white);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   box-shadow: 0 4px 10px rgba(36, 125, 194, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
-/* Partner Name */
-.partner-name {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--blue-dark);
-  text-align: center;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: auto;
-  transition: color 0.2s ease;
-  font-family: 'Outfit', 'Inter', sans-serif;
+.partner-logo-item:hover .partner-logo-badge {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(36, 125, 194, 0.35);
 }
 
-.partner-card:hover .partner-name {
-  color: var(--accent);
+@media (max-width: 768px) {
+  .partners-carousel-track {
+    gap: 1.5rem;
+    animation-duration: 70s;
+  }
+  .partner-logo-item {
+    height: 75px;
+    width: 150px;
+    padding: 0.75rem 1.25rem;
+  }
+  .partner-logo-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 0.95rem;
+  }
 }
 
-/* External Link Hover Overlay Indicator */
-.partner-card::after {
-  content: '\f08e';
-  font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free', sans-serif;
-  font-weight: 900;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  opacity: 0;
-  transform: translate(-3px, 3px);
-  transition: all 0.2s ease;
-}
-
-.partner-card:hover::after {
-  opacity: 0.6;
-  transform: translate(0, 0);
-}
-
-/* Empty/No Results State */
-.partners-no-results {
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: var(--white);
-  border: 1.5px dashed var(--gray-border);
-  border-radius: 12px;
-  color: var(--text-muted);
-  grid-column: 1 / -1;
-}
-
-.partners-no-results i {
-  font-size: 2.5rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-  opacity: 0.5;
-}
-
-.partners-no-results h4 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--blue-dark);
-}
-
-.partners-no-results p {
-  font-size: 0.95rem;
+@media (max-width: 480px) {
+  .partners-carousel-track {
+    gap: 1rem;
+    animation-duration: 55s;
+  }
+  .partner-logo-item {
+    height: 65px;
+    width: 130px;
+    padding: 0.6rem 1rem;
+  }
+  .partner-logo-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
 }
