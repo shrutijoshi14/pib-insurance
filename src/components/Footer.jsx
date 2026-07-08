@@ -68,7 +68,7 @@ const Footer = () => {
                         <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> · <span>Nagpur</span> · <span>Nashik</span> · <span>Vadodara</span> · <span>Rajkot</span> ·
                         <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> · <span>Kochi</span> · <span>Coimbatore</span> · <span>Madurai</span> · <span>Vijaywada</span> · <span>Mangaluru</span> · <span>Mysore</span> ·
                         <span>Delhi</span> · <span>Jaipur</span> · <span>Chandigarh</span> · <span>Lucknow</span> · <span>Bhopal</span> · <span>Ludhiana</span> · <span>Agra</span> · <span>Kanpur</span> · <span>Amritsar</span> ·
-                        <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> · <span>Bhubaneswar</span> · <span>Guwahati</span> · <span>Jamshedpur</span>
+                        <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> · <span>Bhubaneswar</span> · <span>Guwahati</span> · <span>Jamshedpur</span> ·<span>Indore</span>
                     </p>
                 </div>
 

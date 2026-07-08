@@ -280,17 +280,17 @@ const Contact = () => {
                                                 <label>Your Message / Requirements</label>
                                             </div>
                                         </div>
-                                        
+
                                         <div className={`form-group checkbox-group mb-4 ${touched.agreed && !formData.agreed ? 'has-error' : ''}`}>
                                             <label className="checkbox-container">
-                                                <input 
-                                                    type="checkbox" 
-                                                    name="agreed" 
-                                                    checked={formData.agreed} 
-                                                    onChange={handleInputChange} 
+                                                <input
+                                                    type="checkbox"
+                                                    name="agreed"
+                                                    checked={formData.agreed}
+                                                    onChange={handleInputChange}
                                                 />
                                                 <span className="checkbox-text">
-                                                    i confirm i have read and agree to the 
+                                                    i confirm i have read and agree to the
                                                     <a href="/privacy-policy" className="policy-link" onClick={(e) => e.stopPropagation()}> Privacy and Data Protection policies</a>.
                                                 </span>
                                             </label>
@@ -387,7 +387,8 @@ const Contact = () => {
                                                 { name: 'Ludhiana', email: 'ludhiana@pibinsurance.in' },
                                                 { name: 'Agra', email: 'agra@pibinsurance.in' },
                                                 { name: 'Kanpur', email: 'kanpur@pibinsurance.in' },
-                                                { name: 'Amritsar', email: 'amritsar@pibinsurance.in' }
+                                                { name: 'Amritsar', email: 'amritsar@pibinsurance.in' },
+                                                { name: 'Indore', email: 'indore@pibinsurance.in' }
                                             ].map(city => (
                                                 <div key={city.name} className="city-email-tag">
                                                     <div className="city-tag-top">
