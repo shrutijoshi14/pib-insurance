@@ -2867,7 +2867,19 @@ a {
   font-size: 13.5px;
   line-height: 2.2;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 12px auto;
+}
+
+.footer-locations p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-locations p strong {
+  color: #4fc3f7 !important;
+  font-weight: 700;
+  margin-right: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .footer-locations p span {

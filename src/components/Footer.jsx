@@ -65,10 +65,20 @@ const Footer = () => {
                 <div className="footer-locations">
                     <h4>OUR PRESENCE ACROSS INDIA</h4>
                     <p data-aos="fade-up" data-aos-delay="200">
-                        <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> · <span>Nagpur</span> · <span>Nashik</span> · <span>Vadodara</span> · <span>Rajkot</span> ·
-                        <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> · <span>Kochi</span> · <span>Coimbatore</span> · <span>Madurai</span> · <span>Vijaywada</span> · <span>Mangaluru</span> · <span>Mysore</span> ·
-                        <span>Delhi</span> · <span>Jaipur</span> · <span>Chandigarh</span> · <span>Lucknow</span> · <span>Bhopal</span> · <span>Ludhiana</span> · <span>Agra</span> · <span>Kanpur</span> · <span>Amritsar</span> ·
-                        <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> · <span>Bhubaneswar</span> · <span>Guwahati</span> · <span>Jamshedpur</span> ·<span>Indore</span>
+                        <strong>West: </strong>
+                        <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> · <span>Nagpur</span> · <span>Nashik</span> · <span>Vadodara</span> · <span>Rajkot</span>
+                    </p>
+                    <p data-aos="fade-up" data-aos-delay="300">
+                        <strong>South: </strong>
+                        <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> · <span>Kochi</span> · <span>Coimbatore</span> · <span>Madurai</span> · <span>Vijaywada</span> · <span>Mangaluru</span> · <span>Mysore</span>
+                    </p>
+                    <p data-aos="fade-up" data-aos-delay="400">
+                        <strong>North: </strong>
+                        <span>Delhi</span> · <span>Jaipur</span> · <span>Chandigarh</span> · <span>Lucknow</span> · <span>Bhopal</span> · <span>Ludhiana</span> · <span>Agra</span> · <span>Kanpur</span> · <span>Amritsar</span> · <span>Indore</span>
+                    </p>
+                    <p data-aos="fade-up" data-aos-delay="500">
+                        <strong>East: </strong>
+                        <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> · <span>Bhubaneswar</span> · <span>Guwahati</span> · <span>Jamshedpur</span>
                     </p>
                 </div>
 
