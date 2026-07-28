@@ -763,6 +763,7 @@ const Login = () => {
                 title="Secure Login Portal | PIB Insurance"
                 description="Secure login portal for client accounts, employee consoles, claims registration, instant quotes, and employee benefits portals."
                 canonical="https://pibinsurance.in/login"
+                noindex={true}
             />
             
             <div className="login-portal-page">
