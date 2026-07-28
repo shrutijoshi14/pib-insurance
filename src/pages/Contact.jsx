@@ -77,18 +77,49 @@ const Contact = () => {
         try {
             // Generate the ID here so it's the SAME one sent to the sheet and the Thank You page
             const refId = `PIB-${Math.floor(100000 + Math.random() * 900000)}`;
+            const now = new Date();
+            const formattedTimestamp = now.toLocaleString('en-IN', {
+                dateStyle: 'medium',
+                timeStyle: 'medium',
+                timeZone: 'Asia/Kolkata'
+            });
 
-            // Prepare the data
+            // Prepare the data with camelCase, aliases, and human-readable sheet headers
             const payload = {
                 ...formData,
-                referenceId: refId
+                timestamp: formattedTimestamp,
+                referenceId: refId,
+                name: `${formData.firstName} ${formData.lastName}`.trim(),
+                email: formData.businessEmail,
+                phone: `${formData.countryCode} ${formData.phoneNumber}`.trim(),
+                company: formData.organizationName,
+                organization: formData.organizationName,
+
+                // Friendly column headers for Google Sheets
+                "Timestamp": formattedTimestamp,
+                "Date & Time": formattedTimestamp,
+                "Submission Date": formattedTimestamp,
+                "Reference ID": refId,
+                "First Name": formData.firstName,
+                "Last Name": formData.lastName,
+                "Full Name": `${formData.firstName} ${formData.lastName}`.trim(),
+                "Job Title": formData.jobTitle,
+                "Business Email": formData.businessEmail,
+                "Country Code": formData.countryCode,
+                "Phone Number": formData.phoneNumber,
+                "Personal Location": formData.personalLocation,
+                "Organization Name": formData.organizationName,
+                "Industry": formData.industry,
+                "Annual Revenue": formData.annualRevenue,
+                "Employee Headcount": formData.employeeHeadcount,
+                "Message": formData.message
             };
 
-            // Send to Google Sheets
+            // Send to Google Sheets (use 'text/plain' to prevent CORS preflight header stripping with mode: 'no-cors')
             await fetch(SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify(payload)
             });
 
@@ -165,7 +196,7 @@ const Contact = () => {
                                         <i className="fa-solid fa-building"></i>
                                         <div>
                                             <h4>Corporate</h4>
-                                            <p>+91 9820006729<br />+91 9820006779</p>
+                                            <p>+91 9820006779<br />+91 9820006780</p>
                                             <p>corporate@pibinsurance.in</p>
                                         </div>
                                     </MotionItem>
@@ -375,7 +406,7 @@ const Contact = () => {
                                         <h4>North</h4>
                                         <div className="zonal-contact-header">
                                             <p className="zonal-email"><i className="fa fa-envelope me-2"></i>north@pibinsurance.in</p>
-                                            <p className="zonal-phone"><i className="fa fa-phone me-2"></i>+91 98200 06729</p>
+                                            <p className="zonal-phone"><i className="fa fa-phone me-2"></i>+91 98200 06779</p>
                                         </div>
                                         <div className="city-grid">
                                             {[
@@ -405,7 +436,7 @@ const Contact = () => {
                                         <h4>East</h4>
                                         <div className="zonal-contact-header">
                                             <p className="zonal-email"><i className="fa fa-envelope me-2"></i>east@pibinsurance.in</p>
-                                            <p className="zonal-phone"><i className="fa fa-phone me-2"></i>+91 98200 06779</p>
+                                            <p className="zonal-phone"><i className="fa fa-phone me-2"></i>+91 98200 06780</p>
                                         </div>
                                         <div className="city-grid">
                                             {[

@@ -33,8 +33,8 @@ const Industries = () => {
 
     return (
         <>
-            <SEO 
-                title="Industries We Serve | Tailored Corporate Risk Solutions" 
+            <SEO
+                title="Industries We Serve | Tailored Corporate Risk Solutions"
                 description="PIB Insurance provides specialized risk management and insurance solutions tailored to the unique challenges of your industry."
                 canonical="https://pibinsurance.in/industries"
             />
@@ -67,10 +67,10 @@ const Industries = () => {
                             const industry = industryData[key];
                             return (
                                 <MotionItem key={key} className="col-md-6 col-lg-3" inherit>
-                                    <div 
-                                        className="industry-card" 
+                                    <div
+                                        className="industry-card"
                                         onClick={() => openModal(key)}
-                                        role="button" 
+                                        role="button"
                                         aria-label={`View ${industry.title} insurance details`}
                                     >
                                         <div className="icon-wrap">
@@ -91,16 +91,16 @@ const Industries = () => {
             {/* INDUSTRY MODAL */}
             <AnimatePresence>
                 {selectedIndustry && (
-                    <motion.div 
-                        className="industry-modal active" 
-                        id="industryModal" 
+                    <motion.div
+                        className="industry-modal active"
+                        id="industryModal"
                         onClick={closeModal}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
-                        <motion.div 
-                            className="modal-content" 
+                        <motion.div
+                            className="modal-content"
                             onClick={(e) => e.stopPropagation()}
                             initial={{ scale: 0.9, opacity: 0, y: 20 }}
                             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -119,9 +119,9 @@ const Industries = () => {
                                 </button>
                             </div>
                             <div className="modal-body">
-                                <div 
-                                    className="modal-desc" 
-                                    id="modalDesc" 
+                                <div
+                                    className="modal-desc"
+                                    id="modalDesc"
                                     dangerouslySetInnerHTML={{ __html: selectedIndustry.desc }}
                                 />
                             </div>

@@ -107,8 +107,8 @@ const Insights = () => {
 
     return (
         <>
-            <SEO 
-                title="Insurance Insights & Market Updates | PIB Insurance" 
+            <SEO
+                title="Insurance Insights & Market Updates | PIB Insurance"
                 description="Expert market analysis, regulatory updates, and insurance guides to help you make smarter decisions for your business."
                 canonical="https://pibinsurance.in/insights"
             />
@@ -141,9 +141,9 @@ const Insights = () => {
                     <div id="insightsSections">
                         <AnimatePresence mode="popLayout">
                             {sections.filter(s => filter === 'all' || s.id === filter).map(section => (
-                                <motion.div 
-                                    key={section.id} 
-                                    className="insight-category-section" 
+                                <motion.div
+                                    key={section.id}
+                                    className="insight-category-section"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, scale: 0.95 }}

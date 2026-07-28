@@ -631,18 +631,37 @@ const Careers = () => {
 
         setStatus({ loading: true, success: false, error: '' });
 
-        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyXb_An-Ye9fCk3CuafZ5A3b3CzHiZ4DJSx9Li6LDmHoYAnYZnR3lh6gNDphB7r7oYS/exec";
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw9UUtuCPLFzfz2ttCp4wL2nB2YVwP2dI2So6sY22zVxfSNwVkk5NpPW3uQvllyEd-Z/exec";
 
         try {
             const refId = `PIB-CAREER-${Math.floor(100000 + Math.random() * 900000)}`;
+            const now = new Date();
+            const formattedTimestamp = now.toLocaleString('en-IN', {
+                dateStyle: 'medium',
+                timeStyle: 'medium',
+                timeZone: 'Asia/Kolkata'
+            });
+
             let resumeBase64 = '';
+            let rawBase64 = '';
+            let fileName = '';
+            let fileType = '';
 
             if (formData.resume) {
                 resumeBase64 = await getBase64(formData.resume);
+                // Strip the data:application/xxx;base64, prefix for Google Apps Script Utilities.base64Decode
+                if (typeof resumeBase64 === 'string' && resumeBase64.includes(',')) {
+                    rawBase64 = resumeBase64.split(',')[1];
+                } else {
+                    rawBase64 = resumeBase64;
+                }
+                fileName = formData.resume.name || 'resume';
+                fileType = formData.resume.type || 'application/pdf';
             }
 
             const payload = {
                 type: 'career',
+                timestamp: formattedTimestamp,
                 name: formData.name,
                 email: formData.email,
                 phone: formData.phone,
@@ -653,7 +672,29 @@ const Careers = () => {
                 sourceOther: formData.source === 'Other' ? formData.sourceOther : '',
                 referralName: formData.source === 'Friend' ? formData.referralName : '',
                 resume: resumeBase64,
-                referenceId: refId
+                resumeData: rawBase64,
+                rawBase64: rawBase64,
+                fileName: fileName,
+                resumeName: fileName,
+                fileType: fileType,
+                mimeType: fileType,
+                referenceId: refId,
+
+                // Friendly column headers for Google Sheets
+                "Timestamp": formattedTimestamp,
+                "Date & Time": formattedTimestamp,
+                "Submission Date": formattedTimestamp,
+                "Reference ID": refId,
+                "Full Name": formData.name,
+                "Email Address": formData.email,
+                "Phone Number": formData.phone,
+                "Position Applied": formData.position,
+                "Experience": formData.appliedBefore === 'No' ? formData.experience : '',
+                "Applied Before": formData.appliedBefore,
+                "Source": formData.source,
+                "Source Other": formData.source === 'Other' ? formData.sourceOther : '',
+                "Referral Name": formData.source === 'Friend' ? formData.referralName : '',
+                "Resume Name": fileName
             };
 
             // Use 'text/plain' to avoid CORS preflight issues with Google Apps Script

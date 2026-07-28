@@ -25,7 +25,7 @@ const Footer = () => {
                             <a href="https://www.instagram.com/pib_insurancebrokers?igsh=YXkydzhnaTQ3OTNi" target="_blank" rel="noopener noreferrer" aria-label="PIB Insurance on Instagram">
                                 <i className="fab fa-instagram"></i>
                             </a>
-                            <a href="https://wa.me/919820006729" target="_blank" rel="noopener noreferrer" aria-label="Contact PIB Insurance on WhatsApp">
+                            <a href="https://wa.me/919820006779" target="_blank" rel="noopener noreferrer" aria-label="Contact PIB Insurance on WhatsApp">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
                         </div>
