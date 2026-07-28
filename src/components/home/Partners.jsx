@@ -45,21 +45,21 @@ const logoOverrides = {
   "indiafirstlife.com": "/assets/logos/indiafirst.png",
   "futuregenerali.in": "/assets/logos/generali_life.svg", // Fallback, but overridden in component
   "avivaindia.com": "/assets/logos/aviva.webp",
-  "bandhanlife.com": "https://logo.clearbit.com/bandhanbank.com",                 // Bandhan Life uses Bandhan Group logo
+  "bandhanlife.com": "https://www.google.com/s2/favicons?sz=128&domain=bandhanlife.com",
   "edelweisslife.in": "/assets/logos/edelweiss.svg",
-  "pramericalife.in": "https://logo.clearbit.com/prudential.com",                 // Pramerica uses Prudential rock logo
-  "adityabirlacapital.com": "https://logo.clearbit.com/adityabirlacapital.com",   // Aditya Birla Group logo
+  "pramericalife.in": "https://www.google.com/s2/favicons?sz=128&domain=pramericalife.in",
+  "adityabirlacapital.com": "https://www.google.com/s2/favicons?sz=128&domain=adityabirlacapital.com",
   "libertyinsurance.in": "/assets/logos/liberty.png",
-  "cholainsurance.com": "https://logo.clearbit.com/cholamandalam.com",            // Cholamandalam MS uses Chola logo
+  "cholainsurance.com": "https://www.google.com/s2/favicons?sz=128&domain=cholaims.com",
   "universalsompo.com": "/assets/logos/universalsompo.png",
   "creditaccesslife.com": "/assets/logos/creditaccess.png",
   "aicofindia.com": "/assets/logos/aic.png",
   "royalsundaram.in": "/assets/logos/royalsundaram.jpg",
-  "ecgc.in": "https://logo.clearbit.com/ecgc.in",
+  "ecgc.in": "https://www.google.com/s2/favicons?sz=128&domain=ecgc.in",
   "zuno.in": "/assets/logos/zuno.png",
-  "kshema.co": "https://logo.clearbit.com/kshema.co",
+  "kshema.co": "https://www.google.com/s2/favicons?sz=128&domain=kshema.co",
   "rahejaqbe.com": "/assets/logos/rahejaqbe.jpg",
-  "navi.com": "https://logo.clearbit.com/navi.com",
+  "navi.com": "https://www.google.com/s2/favicons?sz=128&domain=navi.com",
   "narayanahealthinsurance.com": "/assets/logos/narayana.svg"
 };
 
@@ -130,8 +130,8 @@ const partnersList = [
 const PartnerCard = ({ partner }) => {
   const { name, website } = partner;
   
-  // Resolve primary logo URL: check override map first, otherwise construct clearbit URL
-  let primaryUrl = logoOverrides[website] || `https://logo.clearbit.com/${website}`;
+  // Resolve primary logo URL: check override map first, otherwise construct Google Favicon URL
+  let primaryUrl = logoOverrides[website] || `https://www.google.com/s2/favicons?sz=128&domain=${website}`;
   
   // Direct shared domains to their correct separate local assets
   if (name === "Generali India Life Insurance") {

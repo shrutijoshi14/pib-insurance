@@ -1,3 +1,4 @@
+import ceoImg from '../assets/CEO.jpeg';
 import { MotionSection, MotionItem, MotionList } from '../components/MotionWrappers';
 import SEO from '../components/SEO';
 
@@ -97,7 +98,7 @@ const About = () => {
                     </MotionSection>
 
                     <MotionItem className="ceo-img" variant="fadeLeft">
-                        <img src={`${import.meta.env.BASE_URL}assets/CEO.jpeg`} alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
+                        <img src={ceoImg} alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
                     </MotionItem>
                 </div>
             </section>

@@ -64,22 +64,30 @@ const Footer = () => {
 
                 <div className="footer-locations">
                     <h4>OUR PRESENCE ACROSS INDIA</h4>
-                    <p data-aos="fade-up" data-aos-delay="200">
-                        <strong>West: </strong>
-                        <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> · <span>Nagpur</span> · <span>Nashik</span> · <span>Vadodara</span> · <span>Rajkot</span>
-                    </p>
-                    <p data-aos="fade-up" data-aos-delay="300">
-                        <strong>South: </strong>
-                        <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> · <span>Kochi</span> · <span>Coimbatore</span> · <span>Madurai</span> · <span>Vijaywada</span> · <span>Mangaluru</span> · <span>Mysore</span>
-                    </p>
-                    <p data-aos="fade-up" data-aos-delay="400">
-                        <strong>North: </strong>
-                        <span>Delhi</span> · <span>Jaipur</span> · <span>Chandigarh</span> · <span>Lucknow</span> · <span>Bhopal</span> · <span>Ludhiana</span> · <span>Agra</span> · <span>Kanpur</span> · <span>Amritsar</span> · <span>Indore</span>
-                    </p>
-                    <p data-aos="fade-up" data-aos-delay="500">
-                        <strong>East: </strong>
-                        <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> · <span>Bhubaneswar</span> · <span>Guwahati</span> · <span>Jamshedpur</span>
-                    </p>
+                    <div className="location-row" data-aos="fade-up" data-aos-delay="200">
+                        <strong>West:</strong>
+                        <span className="location-cities">
+                            <span>Mumbai</span> · <span>Pune</span> · <span>Raipur</span> · <span>Ahmedabad</span> · <span>Surat</span> · <span>Nagpur</span> · <span>Nashik</span> · <span>Vadodara</span> · <span>Rajkot</span> · <span>Chhatrapati Sambhajinagar</span> · <span>Solapur</span> · <span>Vapi</span>
+                        </span>
+                    </div>
+                    <div className="location-row" data-aos="fade-up" data-aos-delay="300">
+                        <strong>South:</strong>
+                        <span className="location-cities">
+                            <span>Chennai</span> · <span>Bengaluru</span> · <span>Hyderabad</span> · <span>Visakhapatnam</span> · <span>Kochi</span> · <span>Coimbatore</span> · <span>Madurai</span> · <span>Vijaywada</span> · <span>Mangaluru</span> · <span>Mysore</span> · <span>Hosur</span> · <span>Tiruppur</span> · <span>Trichy</span>
+                        </span>
+                    </div>
+                    <div className="location-row" data-aos="fade-up" data-aos-delay="400">
+                        <strong>North:</strong>
+                        <span className="location-cities">
+                            <span>Delhi</span> · <span>Gurugram</span> · <span>Greater Noida</span> · <span>Faridabad</span> · <span>Ghaziabad</span> · <span>Jaipur</span> · <span>Chandigarh</span> · <span>Lucknow</span> · <span>Bhopal</span> · <span>Ludhiana</span> · <span>Agra</span> · <span>Kanpur</span> · <span>Amritsar</span> · <span>Indore</span> · <span>Baddi</span> · <span>Haridwar</span>
+                        </span>
+                    </div>
+                    <div className="location-row" data-aos="fade-up" data-aos-delay="500">
+                        <strong>East:</strong>
+                        <span className="location-cities">
+                            <span>Kolkata</span> · <span>Patna</span> · <span>Ranchi</span> · <span>Bhubaneswar</span> · <span>Guwahati</span> · <span>Jamshedpur</span> · <span>Rourkela</span> · <span>Durgapur</span> · <span>Haldia</span> · <span>Bokaro</span> · <span>Angul</span> · <span>Jorhat</span> · <span>Paradip</span> · <span>Bhagalpur</span>
+                        </span>
+                    </div>
                 </div>
 
                 <div className="footer-bottom">
