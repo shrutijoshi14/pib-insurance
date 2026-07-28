@@ -1,0 +1,16 @@
+{
+  "short_name": "PIB Insurance",
+  "name": "PIB Insurance Brokers Pvt. Ltd.",
+  "description": "IRDAI registered direct insurance broker in India providing risk management and corporate insurance solutions.",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "type": "image/png",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0b2c3d",
+  "theme_color": "#0b2c3d",
+  "display": "standalone"
+}
