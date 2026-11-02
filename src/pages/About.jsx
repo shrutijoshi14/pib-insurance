@@ -1,4 +1,5 @@
 import ceoImg from '../assets/CEO.jpeg';
+import ushaImg from '../assets/usha_pandey.png';
 import { MotionSection, MotionItem, MotionList } from '../components/MotionWrappers';
 import SEO from '../components/SEO';
 
@@ -100,6 +101,67 @@ const About = () => {
                     <MotionItem className="ceo-img" variant="fadeLeft">
                         <img src={ceoImg} alt="Mr. Virendra Pandey, CEO of PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
                     </MotionItem>
+                </div>
+            </section>
+
+            {/* CHAIRPERSON & LEADERSHIP SECTION */}
+            <section className="chairperson-section">
+                <div className="chairperson-container">
+                    <MotionItem className="chairperson-img" variant="fadeRight">
+                        <img src={ushaImg} alt="Mrs. Usha Pandey, Director & Chairperson of PIB Insurance Brokers" width="400" height="500" loading="lazy" decoding="async" />
+                    </MotionItem>
+
+                    <MotionSection className="chairperson-text" delay={0.2} variant="fadeLeft">
+                        <span className="tag">LEADERSHIP AT PIB INSURANCE BROKERS</span>
+                        <h2>Mrs. Usha Pandey</h2>
+                        <div className="chairperson-designation">Director & Chairperson</div>
+
+                        <p>
+                            At PIB Insurance Brokers Private Limited, we believe that strong leadership, integrity, and a commitment to excellence are the foundations of long-term success.
+                        </p>
+
+                        <p>
+                            We are proud to recognize <strong>Mrs. Usha Pandey</strong>, Director & Chairperson of PIB Insurance Brokers Private Limited, for her valuable contribution, leadership, and long-standing association with the organization.
+                        </p>
+
+                        <p>
+                            Her leadership reflects our commitment to professional excellence, ethical business practices, trusted relationships, and customer-centric service. Her association with PIB Insurance Brokers represents continuity, dedication, and a shared vision for the company’s growth and development.
+                        </p>
+
+                        <p>
+                            PIB Insurance Brokers Private Limited provides comprehensive insurance and risk management solutions across Life Insurance, Health Insurance, Employee Benefits, Property & Fire Insurance, Marine Insurance, Engineering Insurance, Motor Insurance, Liability Insurance, Cyber Insurance, and other specialized insurance segments.
+                        </p>
+
+                        <p>
+                            With a focus on customized insurance solutions, risk advisory, claims management, and technology-enabled services, we remain committed to supporting corporate clients and individuals across India.
+                        </p>
+
+                        <p>
+                            At PIB Insurance Brokers, we continue to build on our values of integrity, transparency, innovation, and service excellence to create lasting value for our clients, employees, and business partners.
+                        </p>
+
+                        <div className="chairperson-footer">
+                            <div className="company-slogan">
+                                <strong>PIB Insurance Brokers Private Limited</strong>
+                                <span>Your Trusted Partner in Risk Management and Insurance Solutions</span>
+                            </div>
+
+                            <div className="chairperson-contact">
+                                <span className="contact-heading">Contact Details:</span>
+                                <div className="contact-links">
+                                    <a href="https://www.pibinsurance.in" target="_blank" rel="noopener noreferrer">
+                                        <i className="fa-solid fa-globe"></i> https://www.pibinsurance.in
+                                    </a>
+                                    <a href="mailto:info@pibinsurance.in">
+                                        <i className="fa-solid fa-envelope"></i> info@pibinsurance.in
+                                    </a>
+                                    <a href="mailto:ushapandey@pibinsurance.in">
+                                        <i className="fa-solid fa-envelope-open-text"></i> ushapandey@pibinsurance.in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </MotionSection>
                 </div>
             </section>
 

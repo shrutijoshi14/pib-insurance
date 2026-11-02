@@ -3348,6 +3348,10 @@ a {
   background-image: url('../assets/group-meeting.png') !important;
 }
 
+.hero-achievements {
+  background-image: url('../assets/achievements/trophy-showcase.jpg') !important;
+}
+
 .hero-industries {
   background-image: url('../assets/featured-3.jpg') !important;
 }

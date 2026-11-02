@@ -189,7 +189,8 @@ const groupProducts = [
 ];
 
 const aboutProducts = [
-    { path: '/leadership', title: 'Leadership', icon: 'fa-people-group' }
+    { path: '/leadership', title: 'Leadership', icon: 'fa-people-group' },
+    { path: '/achievements', title: 'Achievements', icon: 'fa-trophy' }
 ];
 
 const Navbar = () => {
@@ -234,7 +235,7 @@ const Navbar = () => {
     const isGroupActive = location.pathname.startsWith('/group-insurance') || location.pathname.startsWith('/group/');
     const isCommercialActive = location.pathname.startsWith('/commercial-insurance') || location.pathname.startsWith('/commercial/');
     const isIndividualActive = location.pathname.startsWith('/individual-insurance') || location.pathname.startsWith('/individual/');
-    const isAboutActive = location.pathname === '/about' || location.pathname === '/leadership';
+    const isAboutActive = location.pathname === '/about' || location.pathname === '/leadership' || location.pathname === '/achievements';
 
     const isGroupSubmenuActive = location.pathname.startsWith('/group-insurance/');
     const isCommercialSubmenuActive = location.pathname.startsWith('/commercial-insurance/');
@@ -246,7 +247,7 @@ const Navbar = () => {
 
     useEffect(() => {
         if (isMenuOpen) {
-            if (location.pathname === '/about' || location.pathname === '/leadership') {
+            if (location.pathname === '/about' || location.pathname === '/leadership' || location.pathname === '/achievements') {
                 setActiveDropdown('about');
             } else if (isGroupSubmenuActive) {
                 setActiveDropdown('group');
@@ -335,7 +336,7 @@ const Navbar = () => {
                             <div className="contact-icon"><i className="fa fa-phone"></i></div>
                             <div className="contact-text">
                                 <span className="label">Talk to our experts</span>
-                                <span className="value">+91 9820006729</span>
+                                <span className="value">+91 9702662444</span>
                             </div>
                         </div>
                     </div>

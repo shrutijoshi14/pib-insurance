@@ -19,6 +19,7 @@ const Careers = lazy(() => import('./pages/Careers'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Login = lazy(() => import('./pages/Login'));
 const Leadership = lazy(() => import('./pages/Leadership'));
+const Achievements = lazy(() => import('./pages/Achievements'));
 
 function RouteChangeListener() {
   const { pathname } = useLocation();
@@ -50,6 +51,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/leadership" element={<Leadership />} />
             <Route path="/leadership/:slug" element={<Leadership />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/about/achievements" element={<Achievements />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/insights" element={<Insights />} />
